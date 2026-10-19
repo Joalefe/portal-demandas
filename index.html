@@ -993,4 +993,117 @@
         mensagemAlerta = '🚨 ATENÇÃO: Plantão Intermediário não entregue (Prazo das 16:00 expirado)!';
         devePiscar = false;
       }
-      else if (horaDecimal >= 20.0 && horaDecimal < 22.0 && !
+      else if (horaDecimal >= 20.0 && horaDecimal < 22.0 && !tardeEntregue) {
+        mensagemAlerta = '⚠️ ALERTA: Plantão da Tarde não foi entregue!';
+        devePiscar = true;
+      } else if (horaDecimal >= 22.0 && !tardeEntregue) {
+        mensagemAlerta = '🚨 ATENÇÃO: Plantão da Tarde não entregue (Prazo das 22:00 expirado)!';
+        devePiscar = false;
+      }
+
+      if (mensagemAlerta) {
+        textoAlerta.innerText = mensagemAlerta;
+        containerAlerta.classList.remove('hidden');
+        if (devePiscar) {
+          containerAlerta.classList.add('animate-piscar');
+        } else {
+          containerAlerta.classList.remove('animate-piscar');
+        }
+      } else {
+        containerAlerta.classList.add('hidden');
+        containerAlerta.classList.remove('animate-piscar');
+      }
+
+      renderPlantao();
+    }
+
+    // Executa verificação a cada 30 segundos
+    setInterval(verificarAlertasPlantao, 30000);
+
+    // --- PESSOAS E CATEGORIAS ---
+    function openModalPessoas() { renderListaPessoas(); openModal('modal-pessoas'); }
+    function renderListaPessoas() {
+      document.getElementById('lista-pessoas').innerHTML = (state.pessoas || []).map(p => `
+        <li class="py-2 flex justify-between items-center text-sm text-slate-200">
+          <span>${escapeHtml(p)}</span>
+          <button onclick="removePessoa('${escapeHtml(p)}')" class="text-xs text-rose-400 hover:text-rose-300">Remover</button>
+        </li>
+      `).join('');
+    }
+
+    function addPessoa() {
+      const input = document.getElementById('input-nova-pessoa');
+      const val = input.value.trim();
+      state.pessoas = state.pessoas || [];
+      if (val && !state.pessoas.includes(val)) {
+        state.pessoas.push(val);
+        input.value = '';
+        saveStorage();
+        renderListaPessoas();
+        renderAvisos();
+      }
+    }
+
+    function removePessoa(p) {
+      state.pessoas = (state.pessoas || []).filter(x => x !== p);
+      saveStorage();
+      renderListaPessoas();
+      renderAvisos();
+    }
+
+    function openModalCategorias() { renderListaCategorias(); openModal('modal-categorias'); }
+    function renderListaCategorias() {
+      document.getElementById('lista-categorias').innerHTML = (state.categorias || []).map(c => `
+        <li class="py-2 flex justify-between items-center text-sm text-slate-200">
+          <span>${escapeHtml(c)}</span>
+          <button onclick="removeCategoria('${escapeHtml(c)}')" class="text-xs text-rose-400 hover:text-rose-300">Remover</button>
+        </li>
+      `).join('');
+    }
+
+    function addCategoria() {
+      const input = document.getElementById('input-nova-categoria');
+      const val = input.value.trim();
+      state.categorias = state.categorias || [];
+      if (val && !state.categorias.includes(val)) {
+        state.categorias.push(val);
+        input.value = '';
+        saveStorage();
+        renderListaCategorias();
+        updateCategoriaOptions();
+        renderDemandas();
+      }
+    }
+
+    function removeCategoria(c) {
+      state.categorias = (state.categorias || []).filter(x => x !== c);
+      saveStorage();
+      renderListaCategorias();
+      updateCategoriaOptions();
+      renderDemandas();
+    }
+
+    function updateCategoriaOptions() {
+      const cats = state.categorias || ['Chamados', 'Projetos', 'Manutenção'];
+      const optionsHtml = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+
+      const selFormD = document.getElementById('demanda-categoria');
+      if (selFormD) selFormD.innerHTML = optionsHtml;
+
+      const selFormDFilter = document.getElementById('filter-demandas-categoria');
+      if (selFormDFilter) {
+        const curr = selFormDFilter.value;
+        selFormDFilter.innerHTML = `<option value="todas">Todas Categorias</option>` + optionsHtml;
+        selFormDFilter.value = curr;
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    window.addEventListener('DOMContentLoaded', () => { loadStorage(); });
+  </script>
+</body>
+</html>
