@@ -6,9 +6,19 @@
   ],
   "categorias": [
     "Chamados",
+    "Projetos",
+    "Manutenção",
     "DEMANDA"
   ],
   "avisos": [
+    {
+      "id": "1792442583598",
+      "titulo": "união soviética",
+      "mensagem": "flamengo",
+      "cor": "postit-purple",
+      "lidosPor": [],
+      "arquivado": false
+    },
     {
       "id": "1792442163205",
       "titulo": "teste",
@@ -22,7 +32,24 @@
       "arquivado": true
     }
   ],
-  "demandas": [],
+  "demandas": [
+    {
+      "id": "1792448661840",
+      "titulo": "Konica",
+      "descricao1": "Problema em reconhecer papel a4, aguardando troca de peça.",
+      "descricao2": "",
+      "categoria": "Chamados",
+      "status": "em_andamento"
+    },
+    {
+      "id": "1792448292503",
+      "titulo": "kaell",
+      "descricao1": "teste",
+      "descricao2": "teste",
+      "categoria": "Manutenção",
+      "status": "em_andamento"
+    }
+  ],
   "plantao": [
     {
       "id": "auto_1792444313653_Intermediário",
