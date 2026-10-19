@@ -53,7 +53,7 @@
           </button>
         </nav>
       </div>
-      <div id="sync-status" class="text-xs text-slate-400">Conectando ao GitHub...</div>
+      <div id="sync-status" class="text-xs text-slate-400">A conectar...</div>
     </div>
   </header>
 
@@ -293,13 +293,13 @@
       return btoa(unescape(encodeURIComponent(str)));
     }
 
-    // Carregar dados diretamente da API do GitHub
+    // Carregar dados diretamente da API do GitHub com parâmetro anti-cache
     async function loadStorage() {
       const statusEl = document.getElementById('sync-status');
-      statusEl.innerText = 'Sincronizando com GitHub...';
+      statusEl.innerText = 'Sincronizando...';
 
       try {
-        const res = await fetch(API_URL, {
+        const res = await fetch(API_URL + '?t=' + new Date().getTime(), {
           headers: { 
             'Authorization': `token ${GITHUB_TOKEN}`,
             'Accept': 'application/vnd.github.v3+json'
@@ -319,7 +319,7 @@
           state = { ...state, ...cloudData };
         }
 
-        statusEl.innerText = '☁️ Sincronizado com GitHub';
+        statusEl.innerText = '☁️ Sincronizado';
         statusEl.className = 'text-xs text-emerald-400';
 
         updateCategoriaOptions();
@@ -335,11 +335,10 @@
     // Salvar dados na API do GitHub
     async function saveStorage() {
       const statusEl = document.getElementById('sync-status');
-      statusEl.innerText = 'Salvando...';
+      statusEl.innerText = 'A salvar...';
 
       try {
-        // Pega o SHA mais atual para evitar conflitos
-        const resGet = await fetch(API_URL, {
+        const resGet = await fetch(API_URL + '?t=' + new Date().getTime(), {
           headers: { 
             'Authorization': `token ${GITHUB_TOKEN}`,
             'Accept': 'application/vnd.github.v3+json'
@@ -371,7 +370,7 @@
         if (resPut.ok) {
           const dataPut = await resPut.json();
           currentSha = dataPut.content.sha;
-          statusEl.innerText = '☁️ Sincronizado com GitHub';
+          statusEl.innerText = '☁️ Sincronizado';
           statusEl.className = 'text-xs text-emerald-400';
         } else {
           statusEl.innerText = '⚠️ Erro ao salvar';
@@ -420,7 +419,7 @@
     function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
     function renderAvisos() {
-      document.getElementById('count-pessoas').innerText = state.pessoas.length;
+      document.getElementById('count-pessoas').innerText = (state.pessoas || []).length;
 
       const ativos = (state.avisos || []).filter(a => !a.arquivado);
       const lidos = (state.avisos || []).filter(a => a.arquivado);
@@ -438,7 +437,7 @@
       };
 
       const renderCard = (a) => {
-        const totalReq = Math.min(3, state.pessoas.length || 1);
+        const totalReq = Math.min(3, (state.pessoas || []).length || 1);
         const lidosCount = (a.lidosPor || []).length;
 
         return `
@@ -492,7 +491,7 @@
         aviso.lidosPor.push(pessoa);
       }
 
-      const totalReq = Math.min(3, state.pessoas.length || 1);
+      const totalReq = Math.min(3, (state.pessoas || []).length || 1);
       aviso.arquivado = aviso.lidosPor.length >= totalReq;
 
       saveStorage();
@@ -625,7 +624,7 @@
     }
 
     function updateDemandaStatus(id, newStatus) {
-      const d = state.demandas.find(x => x.id === id);
+      const d = (state.demandas || []).find(x => x.id === id);
       if (d) {
         d.status = newStatus;
         saveStorage();
@@ -638,7 +637,7 @@
       updateCategoriaOptions();
 
       if (id) {
-        const d = state.demandas.find(x => x.id === id);
+        const d = (state.demandas || []).find(x => x.id === id);
         if (d) {
           document.getElementById('demanda-id').value = d.id;
           document.getElementById('demanda-titulo').value = d.titulo;
@@ -767,12 +766,15 @@
       const selFilter = document.getElementById('filter-demandas-categoria');
       const cats = state.categorias || ['Chamados', 'Projetos', 'Manutenção'];
 
-      selForm.innerHTML = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
-
-      const currFilter = selFilter.value;
-      selFilter.innerHTML = `<option value="todas">Todas Categorias</option>` +
-        cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
-      selFilter.value = currFilter;
+      if (selForm) {
+        selForm.innerHTML = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+      }
+      if (selFilter) {
+        const currFilter = selFilter.value;
+        selFilter.innerHTML = `<option value="todas">Todas Categorias</option>` +
+          cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+        selFilter.value = currFilter;
+      }
     }
 
     function escapeHtml(str) {
