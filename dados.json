@@ -49,16 +49,6 @@
   ],
   "plantao": [
     {
-      "id": "1792449156987",
-      "titulo": "19/10/2026 - Manhã",
-      "descricao": "jaolefe",
-      "rubsDesvinculados": "jaolefe",
-      "rubsBloqueados": "ok",
-      "etiquetasRibbon": "ok",
-      "horaRegistro": "19:32",
-      "criadoEm": 1792449156987
-    },
-    {
       "id": "1792448975243",
       "titulo": "19/10/2026 - Tarde",
       "descricao": "teste",
