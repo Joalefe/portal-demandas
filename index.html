@@ -53,7 +53,12 @@
           </button>
         </nav>
       </div>
-      <div id="sync-status" class="text-xs text-slate-400">A conectar...</div>
+      <div class="flex items-center gap-3">
+        <button onclick="promptForToken()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-2.5 py-1 rounded transition" title="Configurar Token">
+          🔑 Token
+        </button>
+        <div id="sync-status" class="text-xs text-slate-400">A conectar...</div>
+      </div>
     </div>
   </header>
 
@@ -116,9 +121,8 @@
 
   </main>
 
-  <!-- MODAIS -->
+  <!-- MODAIS DE LÓGICA -->
 
-  <!-- Modal Pessoas -->
   <div id="modal-pessoas" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-md p-5 space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -133,7 +137,6 @@
     </div>
   </div>
 
-  <!-- Modal Categorias -->
   <div id="modal-categorias" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-md p-5 space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -148,7 +151,6 @@
     </div>
   </div>
 
-  <!-- Modal Criar/Editar Aviso -->
   <div id="modal-aviso" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -202,7 +204,6 @@
     </div>
   </div>
 
-  <!-- Modal Ler Aviso Completo -->
   <div id="modal-view-aviso" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div id="view-aviso-card" class="rounded-xl w-full max-w-lg p-6 space-y-4 text-slate-900 shadow-2xl transition-all">
       <div class="flex justify-between items-start">
@@ -221,7 +222,6 @@
     </div>
   </div>
 
-  <!-- Modal Criar/Editar Demanda -->
   <div id="modal-demanda" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -264,20 +264,14 @@
     </div>
   </div>
 
-  <!-- SCRIPT LÓGICA COM GITHUB API -->
+  <!-- SCRIPT LÓGICA COM GITHUB API + LOCALSTORAGE TOKEN -->
   <script>
-    // =========================================================================
-    // CONFIGURAÇÕES DO SEU GITHUB
-    // =========================================================================
     const GITHUB_USERNAME = 'joalefe';
     const REPO_NAME       = 'portal-demandas';
     const JSON_PATH       = 'dados.json';
-    const GITHUB_TOKEN    = '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';
-    // =========================================================================
+    const API_URL         = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${JSON_PATH}`;
 
-    const API_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${JSON_PATH}`;
     let currentSha = '';
-
     let state = {
       pessoas: ['Ana', 'Carlos', 'Mariana'],
       categorias: ['Chamados', 'Projetos', 'Manutenção'],
@@ -285,27 +279,54 @@
       demandas: []
     };
 
-    function base64ToUtf8(str) {
-      return decodeURIComponent(escape(atob(str)));
+    function getToken() {
+      let token = localStorage.getItem('portal_github_token');
+      if (!token) {
+        token = promptForToken();
+      }
+      return token;
     }
 
-    function utf8ToBase64(str) {
-      return btoa(unescape(encodeURIComponent(str)));
+    function promptForToken() {
+      const token = prompt('Digite o seu Personal Access Token do GitHub (ghp_...):');
+      if (token && token.trim() !== '') {
+        localStorage.setItem('portal_github_token', token.trim());
+        loadStorage();
+        return token.trim();
+      }
+      return null;
     }
 
-    // Carregar dados diretamente da API do GitHub com parâmetro anti-cache
+    function base64ToUtf8(str) { return decodeURIComponent(escape(atob(str))); }
+    function utf8ToBase64(str) { return btoa(unescape(encodeURIComponent(str))); }
+
     async function loadStorage() {
+      const token = getToken();
       const statusEl = document.getElementById('sync-status');
+      
+      if (!token) {
+        statusEl.innerText = '⚠️ Sem Token';
+        statusEl.className = 'text-xs text-amber-400';
+        return;
+      }
+
       statusEl.innerText = 'Sincronizando...';
 
       try {
         const res = await fetch(API_URL + '?t=' + new Date().getTime(), {
           headers: { 
-            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Authorization': `token ${token}`,
             'Accept': 'application/vnd.github.v3+json'
           },
           cache: 'no-store'
         });
+
+        if (res.status === 401) {
+          alert('Token do GitHub inválido ou expirado. Por favor insira um token válido.');
+          localStorage.removeItem('portal_github_token');
+          promptForToken();
+          return;
+        }
 
         if (!res.ok) throw new Error('Erro ao conectar com o GitHub.');
 
@@ -315,9 +336,7 @@
         const jsonTexto = base64ToUtf8(data.content.replace(/\n/g, ''));
         const cloudData = JSON.parse(jsonTexto);
 
-        if (cloudData) {
-          state = { ...state, ...cloudData };
-        }
+        if (cloudData) { state = { ...state, ...cloudData }; }
 
         statusEl.innerText = '☁️ Sincronizado';
         statusEl.className = 'text-xs text-emerald-400';
@@ -332,15 +351,17 @@
       }
     }
 
-    // Salvar dados na API do GitHub
     async function saveStorage() {
+      const token = getToken();
       const statusEl = document.getElementById('sync-status');
+      if (!token) return;
+
       statusEl.innerText = 'A salvar...';
 
       try {
         const resGet = await fetch(API_URL + '?t=' + new Date().getTime(), {
           headers: { 
-            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Authorization': `token ${token}`,
             'Accept': 'application/vnd.github.v3+json'
           },
           cache: 'no-store'
@@ -361,7 +382,7 @@
         const resPut = await fetch(API_URL, {
           method: 'PUT',
           headers: {
-            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Authorization': `token ${token}`,
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(payload)
@@ -386,10 +407,8 @@
     function switchMainTab(tab) {
       document.getElementById('tab-content-avisos').classList.toggle('hidden', tab !== 'avisos');
       document.getElementById('tab-content-demandas').classList.toggle('hidden', tab !== 'demandas');
-
       const btnA = document.getElementById('tab-btn-avisos');
       const btnD = document.getElementById('tab-btn-demandas');
-
       if (tab === 'avisos') {
         btnA.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow";
         btnD.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
@@ -402,10 +421,8 @@
     function switchAvisosSubtab(sub) {
       document.getElementById('subtab-content-ativos').classList.toggle('hidden', sub !== 'ativos');
       document.getElementById('subtab-content-lidos').classList.toggle('hidden', sub !== 'lidos');
-
       const btnA = document.getElementById('subtab-btn-ativos');
       const btnL = document.getElementById('subtab-btn-lidos');
-
       if (sub === 'ativos') {
         btnA.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
         btnL.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50";
@@ -420,10 +437,8 @@
 
     function renderAvisos() {
       document.getElementById('count-pessoas').innerText = (state.pessoas || []).length;
-
       const ativos = (state.avisos || []).filter(a => !a.arquivado);
       const lidos = (state.avisos || []).filter(a => a.arquivado);
-
       document.getElementById('count-avisos-ativos').innerText = ativos.length;
       document.getElementById('count-avisos-lidos').innerText = lidos.length;
 
@@ -439,7 +454,6 @@
       const renderCard = (a) => {
         const totalReq = Math.min(3, (state.pessoas || []).length || 1);
         const lidosCount = (a.lidosPor || []).length;
-
         return `
           <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between transition hover:-translate-y-1">
             <div>
@@ -454,7 +468,6 @@
                 ${escapeHtml(a.mensagem)}
               </p>
             </div>
-
             <div class="border-t border-black/10 pt-3 mt-2 space-y-2">
               <div class="flex justify-between items-center text-[10px] font-bold uppercase tracking-wider opacity-75">
                 <span>Leitura (${lidosCount}/${totalReq})</span>
@@ -483,17 +496,14 @@
     function toggleLeitura(avisoId, pessoa) {
       const aviso = state.avisos.find(a => a.id === avisoId);
       if (!aviso) return;
-
       aviso.lidosPor = aviso.lidosPor || [];
       if (aviso.lidosPor.includes(pessoa)) {
         aviso.lidosPor = aviso.lidosPor.filter(p => p !== pessoa);
       } else {
         aviso.lidosPor.push(pessoa);
       }
-
       const totalReq = Math.min(3, (state.pessoas || []).length || 1);
       aviso.arquivado = aviso.lidosPor.length >= totalReq;
-
       saveStorage();
       renderAvisos();
     }
@@ -501,7 +511,6 @@
     function viewAviso(id) {
       const a = state.avisos.find(x => x.id === id);
       if (!a) return;
-
       const modalCard = document.getElementById('view-aviso-card');
       const bgColors = {
         'postit-yellow': 'bg-amber-200 text-amber-950',
@@ -511,23 +520,19 @@
         'postit-purple': 'bg-purple-200 text-purple-950',
         'postit-orange': 'bg-orange-200 text-orange-950'
       };
-
       modalCard.className = `rounded-xl w-full max-w-lg p-6 space-y-4 shadow-2xl transition-all ${bgColors[a.cor]}`;
       document.getElementById('view-aviso-titulo').innerText = a.titulo;
       document.getElementById('view-aviso-mensagem').innerText = a.mensagem;
-
       document.getElementById('view-aviso-leitores').innerHTML = (state.pessoas || []).map(p => `
         <div class="flex items-center gap-1.5">
           <span>${(a.lidosPor || []).includes(p) ? '✅' : '⏳'}</span>
           <span>${escapeHtml(p)}</span>
         </div>
       `).join('');
-
       document.getElementById('view-aviso-btn-edit').onclick = () => {
         closeModal('modal-view-aviso');
         openModalAviso(a.id);
       };
-
       openModal('modal-view-aviso');
     }
 
@@ -554,7 +559,6 @@
       const titulo = document.getElementById('aviso-titulo').value;
       const mensagem = document.getElementById('aviso-mensagem').value;
       const cor = document.querySelector('input[name="aviso-cor"]:checked').value;
-
       state.avisos = state.avisos || [];
       if (id) {
         const a = state.avisos.find(x => x.id === id);
@@ -567,7 +571,6 @@
           arquivado: false
         });
       }
-
       saveStorage();
       renderAvisos();
       closeModal('modal-aviso');
@@ -584,17 +587,14 @@
     function renderDemandas() {
       const filterStatus = document.getElementById('filter-demandas-status').value;
       const filterCat = document.getElementById('filter-demandas-categoria').value;
-
       let list = state.demandas || [];
       if (filterStatus !== 'todos') list = list.filter(d => d.status === filterStatus);
       if (filterCat !== 'todas') list = list.filter(d => d.categoria === filterCat);
-
       const statusBadges = {
         'pendente': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
         'em_andamento': 'bg-sky-500/10 text-sky-400 border-sky-500/20',
         'concluido': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
       };
-
       document.getElementById('container-demandas').innerHTML = list.map(d => `
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3 flex flex-col justify-between">
           <div>
@@ -610,7 +610,6 @@
             <h4 class="font-bold text-white text-base">${escapeHtml(d.titulo)}</h4>
             <p class="text-xs text-slate-400 mt-1 line-clamp-3">${escapeHtml(d.descricao)}</p>
           </div>
-
           <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs">
             <span class="text-slate-500">👤 ${escapeHtml(d.responsavel || 'Sem dono')}</span>
             <select onchange="updateDemandaStatus('${d.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[d.status]} bg-slate-950">
@@ -635,7 +634,6 @@
     function openModalDemanda(id = null) {
       document.getElementById('form-demanda-inner').reset();
       updateCategoriaOptions();
-
       if (id) {
         const d = (state.demandas || []).find(x => x.id === id);
         if (d) {
@@ -662,7 +660,6 @@
       const categoria = document.getElementById('demanda-categoria').value;
       const status = document.getElementById('demanda-status').value;
       const responsavel = document.getElementById('demanda-responsavel').value;
-
       state.demandas = state.demandas || [];
       if (id) {
         const d = state.demandas.find(x => x.id === id);
@@ -677,7 +674,6 @@
           titulo, descricao, categoria, status, responsavel
         });
       }
-
       saveStorage();
       renderDemandas();
       closeModal('modal-demanda');
@@ -691,11 +687,7 @@
       }
     }
 
-    function openModalPessoas() {
-      renderListaPessoas();
-      openModal('modal-pessoas');
-    }
-
+    function openModalPessoas() { renderListaPessoas(); openModal('modal-pessoas'); }
     function renderListaPessoas() {
       document.getElementById('lista-pessoas').innerHTML = (state.pessoas || []).map(p => `
         <li class="py-2 flex justify-between items-center text-sm text-slate-200">
@@ -725,11 +717,7 @@
       renderAvisos();
     }
 
-    function openModalCategorias() {
-      renderListaCategorias();
-      openModal('modal-categorias');
-    }
-
+    function openModalCategorias() { renderListaCategorias(); openModal('modal-categorias'); }
     function renderListaCategorias() {
       document.getElementById('lista-categorias').innerHTML = (state.categorias || []).map(c => `
         <li class="py-2 flex justify-between items-center text-sm text-slate-200">
@@ -765,14 +753,10 @@
       const selForm = document.getElementById('demanda-categoria');
       const selFilter = document.getElementById('filter-demandas-categoria');
       const cats = state.categorias || ['Chamados', 'Projetos', 'Manutenção'];
-
-      if (selForm) {
-        selForm.innerHTML = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
-      }
+      if (selForm) { selForm.innerHTML = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join(''); }
       if (selFilter) {
         const currFilter = selFilter.value;
-        selFilter.innerHTML = `<option value="todas">Todas Categorias</option>` +
-          cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+        selFilter.innerHTML = `<option value="todas">Todas Categorias</option>` + cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
         selFilter.value = currFilter;
       }
     }
@@ -782,9 +766,7 @@
       return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      loadStorage();
-    });
+    window.addEventListener('DOMContentLoaded', () => { loadStorage(); });
   </script>
 </body>
 </html>
