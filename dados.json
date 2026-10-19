@@ -40,15 +40,6 @@
       "descricao2": "teste",
       "categoria": "Manutenção",
       "status": "em_andamento"
-    },
-    {
-      "id": "1792442691346",
-      "titulo": "contabilidade",
-      "categoria": "Chamados",
-      "status": "pendente",
-      "responsavel": "",
-      "descricao1": "Retirar informativos Razão despesas ",
-      "descricao2": ""
     }
   ],
   "plantao": [
