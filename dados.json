@@ -52,6 +52,16 @@
   ],
   "plantao": [
     {
+      "id": "1792448114612",
+      "titulo": "19/10/2026 - Manhã",
+      "descricao": "teste",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "ok",
+      "etiquetasRibbon": "ok",
+      "horaRegistro": "19:15",
+      "criadoEm": 1792448114612
+    },
+    {
       "id": "1792447906100",
       "titulo": "19/10/2026 - Manhã",
       "descricao": "cc",
