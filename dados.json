@@ -16,7 +16,9 @@
       "titulo": "Sérgio ",
       "mensagem": "Sérgio ainda não tem acessos",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Ana"
+      ],
       "arquivado": false,
       "criadoEm": 1792448751896
     },
