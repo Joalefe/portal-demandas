@@ -135,8 +135,11 @@
           📋 Histórico de Passagens de Plantão
         </div>
         <div class="flex items-center gap-2">
+          <button onclick="apagarPlantoesAntigos()" class="text-xs bg-rose-950/60 hover:bg-rose-900 text-rose-300 border border-rose-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar registros com mais de 10 dias">
+            🗑️ Limpar Antigos (+10 dias)
+          </button>
           <button onclick="openModalPlantao()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
-            + Nova Passagem de Plantão
+            + Novo Plantão
           </button>
         </div>
       </div>
@@ -897,6 +900,52 @@
       }
     }
 
+    // --- FUNÇÃO PARA APAGAR PLANTÕES COM MAIS DE 10 DIAS COM SENHA DE CONSCIENTIZAÇÃO ---
+    function apagarPlantoesAntigos() {
+      const senhaInformada = prompt('ATENÇÃO: Você está prestes a apagar registros de plantão com mais de 10 dias.\n\nDigite a senha de conscientização para prosseguir:');
+      
+      if (senhaInformada === null) return; // Clicou em cancelar
+
+      if (senhaInformada.trim() !== 'CPD_675') {
+        alert('Senha incorreta! A limpeza de registros antigos foi cancelada.');
+        return;
+      }
+
+      const hoje = new Date();
+      // Zera horas para comparar apenas os dias correntes
+      hoje.setHours(0, 0, 0, 0);
+
+      const plantoesAntes = (state.plantao || []).length;
+
+      // Filtra mantendo apenas os plantões que NÃO ultrapassaram 10 dias
+      state.plantao = (state.plantao || []).filter(p => {
+        // Tenta extrair a data do título (formato esperado: DD/MM/AAAA)
+        const matchData = p.titulo ? p.titulo.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null;
+        if (!matchData) {
+          return true; // Se não achar data no título por segurança mantém
+        }
+
+        const dia = parseInt(matchData[1], 10);
+        const mes = parseInt(matchData[2], 10) - 1;
+        const ano = parseInt(matchData[3], 10);
+
+        const dataPlantao = new Date(ano, mes, dia);
+        dataPlantao.setHours(0, 0, 0, 0);
+
+        const diffTempo = hoje - dataPlantao;
+        const diffDias = diffTempo / (1000 * 60 * 60 * 24);
+
+        // Retorna true se tiver menos ou igual a 10 dias de idade
+        return diffDias <= 10;
+      });
+
+      const plantoesRemovidos = plantoesAntes - state.plantao.length;
+
+      saveStorage();
+      renderPlantao();
+      alert(`Limpeza concluída com sucesso!\n\nForam removidos ${plantoesRemovidos} registros com mais de 10 dias.`);
+    }
+
     // --- GERAÇÃO AUTOMÁTICA DE PLANTÕES PERDIDOS E ALERTAS ---
     function verificarEGerarPlantoesPerdidos() {
       const agora = new Date();
@@ -918,7 +967,6 @@
         return (h + m/60) < horaLimite;
       };
 
-      // Regras de prazos e turnos
       const validacoes = [
         { termo: 'Manhã', limite: 14.0, textoGerado: `⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).` },
         { termo: 'Intermediário', limite: 16.0, textoGerado: `⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).` },
@@ -929,7 +977,6 @@
         const jaPassouDoLimite = horaDecimal >= val.limite;
         const entregueNoPrazo = foiEntregue(val.termo, val.limite);
         
-        // Verifica se o sistema já gerou esse alerta automático para hoje
         const tituloEsperado = `${dataHojeStr} - ${val.termo}`;
         const jaGerouAutomatico = state.plantao.some(p => p.titulo === tituloEsperado && p.sistemaGerou === true);
 
