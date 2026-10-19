@@ -52,10 +52,11 @@
     {
       "id": "1792442691346",
       "titulo": "contabilidade",
-      "descricao": "Retirar informativos Razão despesas ",
       "categoria": "Chamados",
       "status": "pendente",
-      "responsavel": ""
+      "responsavel": "",
+      "descricao1": "Retirar informativos Razão despesas ",
+      "descricao2": ""
     }
   ],
   "plantao": [
