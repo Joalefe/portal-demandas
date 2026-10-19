@@ -222,6 +222,7 @@
     </div>
   </div>
 
+  <!-- Modal Demanda atualizado com Descrição 1 e Descrição 2 -->
   <div id="modal-demanda" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -235,8 +236,12 @@
           <input type="text" id="demanda-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
         <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição</label>
-          <textarea id="demanda-descricao" rows="3" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição 1</label>
+          <textarea id="demanda-descricao1" rows="2" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição 2</label>
+          <textarea id="demanda-descricao2" rows="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
@@ -251,10 +256,6 @@
               <option value="concluido">Concluído</option>
             </select>
           </div>
-        </div>
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Responsável</label>
-          <input type="text" id="demanda-responsavel" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
           <button type="button" onclick="closeModal('modal-demanda')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
@@ -608,10 +609,20 @@
               </div>
             </div>
             <h4 class="font-bold text-white text-base">${escapeHtml(d.titulo)}</h4>
-            <p class="text-xs text-slate-400 mt-1 line-clamp-3">${escapeHtml(d.descricao)}</p>
+            <div class="mt-2 space-y-2 text-xs">
+              <div>
+                <span class="font-semibold text-slate-400">Descrição 1:</span>
+                <p class="text-slate-300 mt-0.5">${escapeHtml(d.descricao1 || '')}</p>
+              </div>
+              ${d.descricao2 ? `
+                <div class="border-t border-slate-800/60 pt-1.5">
+                  <span class="font-semibold text-slate-400">Descrição 2:</span>
+                  <p class="text-slate-300 mt-0.5">${escapeHtml(d.descricao2)}</p>
+                </div>
+              ` : ''}
+            </div>
           </div>
-          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs">
-            <span class="text-slate-500">👤 ${escapeHtml(d.responsavel || 'Sem dono')}</span>
+          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-end text-xs">
             <select onchange="updateDemandaStatus('${d.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[d.status]} bg-slate-950">
               <option value="pendente" ${d.status === 'pendente' ? 'selected' : ''}>Pendente</option>
               <option value="em_andamento" ${d.status === 'em_andamento' ? 'selected' : ''}>Em Andamento</option>
@@ -639,10 +650,10 @@
         if (d) {
           document.getElementById('demanda-id').value = d.id;
           document.getElementById('demanda-titulo').value = d.titulo;
-          document.getElementById('demanda-descricao').value = d.descricao;
+          document.getElementById('demanda-descricao1').value = d.descricao1 || d.descricao || '';
+          document.getElementById('demanda-descricao2').value = d.descricao2 || '';
           document.getElementById('demanda-categoria').value = d.categoria;
           document.getElementById('demanda-status').value = d.status;
-          document.getElementById('demanda-responsavel').value = d.responsavel;
           document.getElementById('modal-demanda-title').innerText = 'Editar Demanda';
         }
       } else {
@@ -656,22 +667,27 @@
       e.preventDefault();
       const id = document.getElementById('demanda-id').value;
       const titulo = document.getElementById('demanda-titulo').value;
-      const descricao = document.getElementById('demanda-descricao').value;
+      const descricao1 = document.getElementById('demanda-descricao1').value;
+      const descricao2 = document.getElementById('demanda-descricao2').value;
       const categoria = document.getElementById('demanda-categoria').value;
       const status = document.getElementById('demanda-status').value;
-      const responsavel = document.getElementById('demanda-responsavel').value;
+      
       state.demandas = state.demandas || [];
       if (id) {
         const d = state.demandas.find(x => x.id === id);
         if (d) {
-          d.titulo = titulo; d.descricao = descricao;
-          d.categoria = categoria; d.status = status;
-          d.responsavel = responsavel;
+          d.titulo = titulo; 
+          d.descricao1 = descricao1; 
+          d.descricao2 = descricao2;
+          d.categoria = categoria; 
+          d.status = status;
+          delete d.descricao; // Limpa campo antigo se existia
+          delete d.responsavel;
         }
       } else {
         state.demandas.unshift({
           id: Date.now().toString(),
-          titulo, descricao, categoria, status, responsavel
+          titulo, descricao1, descricao2, categoria, status
         });
       }
       saveStorage();
