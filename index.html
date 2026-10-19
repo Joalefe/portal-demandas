@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Demandas e Avisos</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 650px; margin: 30px auto; padding: 0 15px; background-color: #f8f9fa; color: #212529; }
+    h1 { color: #0d6efd; font-size: 1.6rem; margin-bottom: 20px; text-align: center; }
+    .box-form { background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px; }
+    form { display: flex; gap: 10px; }
+    input[type="text"] { flex: 1; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem; outline: none; }
+    input[type="text"]:focus { border-color: #0d6efd; }
+    button { padding: 12px 20px; background: #0d6efd; color: white; border: none; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+    button:hover { background: #0b5ed7; }
+    button:disabled { background: #6c757d; cursor: not-allowed; }
+    #status-msg { text-align: center; font-size: 0.9rem; color: #6c757d; margin-bottom: 15px; }
+    .card { background: #ffffff; border-left: 4px solid #0d6efd; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; }
+    .card-texto { font-size: 1rem; word-break: break-word; }
+    .card-num { color: #0d6efd; font-weight: bold; margin-right: 8px; }
+  </style>
+</head>
+<body>
+
+  <h1>📋 Portal de Demandas e Avisos</h1>
+
+  <div class="box-form">
+    <form id="form-demanda">
+      <input type="text" id="input-texto" placeholder="Digite um aviso ou demanda..." required>
+      <button type="submit" id="btn-salvar">Adicionar</button>
+    </form>
+  </div>
+
+  <div id="status-msg">Carregando dados...</div>
+  <div id="lista-demandas"></div>
+
+  <script>
+    // =========================================================================
+    // CONFIGURAÇÕES DO SEU GITHUB (Já preenchidas com seus dados)
+    // =========================================================================
+    const GITHUB_USERNAME = 'joalefe';
+    const REPO_NAME       = 'portal demandas';
+    const JSON_PATH       = 'dados.json';
+    const GITHUB_TOKEN    = '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';
+    // =========================================================================
+
+    const API_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${JSON_PATH}`;
+    let currentSha = '';
+
+    // Função para tratar texto UTF-8 em Base64 sem quebrar acentos
+    function base64ToUtf8(str) {
+      return decodeURIComponent(escape(atob(str)));
+    }
+
+    function utf8ToBase64(str) {
+      return btoa(unescape(encodeURIComponent(str)));
+    }
+
+    // 1. CARREGAR DADOS DO GITHUB
+    async function carregarDados() {
+      const statusEl = document.getElementById('status-msg');
+      statusEl.innerText = 'Buscando avisos atualizados...';
+
+      try {
+        const res = await fetch(API_URL, {
+          headers: { 
+            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          cache: 'no-store'
+        });
+
+        if (!res.ok) throw new Error('Erro ao conectar com o GitHub.');
+
+        const data = await res.json();
+        currentSha = data.sha;
+
+        const jsonTexto = base64ToUtf8(data.content.replace(/\n/g, ''));
+        const dados = JSON.parse(jsonTexto);
+
+        exibirDemandas(dados.demandas || []);
+        statusEl.innerText = '';
+      } catch (err) {
+        console.error(err);
+        statusEl.innerText = '⚠️ Falha ao carregar. Verifique o usuário, nome do repositório ou token.';
+      }
+    }
+
+    // 2. EXIBIR LISTA NO HTML
+    function exibirDemandas(lista) {
+      const container = document.getElementById('lista-demandas');
+      container.innerHTML = '';
+
+      if (lista.length === 0) {
+        container.innerHTML = '<div style="text-align:center; color:#6c757d;">Nenhum aviso ou demanda cadastrada.</div>';
+        return;
+      }
+
+      // Exibe os itens mais recentes primeiro
+      lista.slice().reverse().forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'card';
+        div.innerHTML = `
+          <div class="card-texto">
+            <span class="card-num">#${lista.length - index}</span> ${item}
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    // 3. SALVAR NOVA DEMANDA NO GITHUB
+    async function salvarDemanda(e) {
+      e.preventDefault();
+
+      const input = document.getElementById('input-texto');
+      const btn = document.getElementById('btn-salvar');
+      const novaDemanda = input.value.trim();
+
+      if (!novaDemanda) return;
+
+      btn.disabled = true;
+      btn.innerText = 'Salvando...';
+
+      try {
+        // Busca a versão mais atual do arquivo para sincronizar
+        const resGet = await fetch(API_URL, {
+          headers: { 
+            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          cache: 'no-store'
+        });
+
+        const dataGet = await resGet.json();
+        currentSha = dataGet.sha;
+
+        const jsonTexto = base64ToUtf8(dataGet.content.replace(/\n/g, ''));
+        const dadosAtuais = JSON.parse(jsonTexto);
+
+        // Adiciona a nova demanda
+        dadosAtuais.demandas = dadosAtuais.demandas || [];
+        dadosAtuais.demandas.push(novaDemanda);
+
+        const novoConteudoJson = JSON.stringify(dadosAtuais, null, 2);
+        const conteudoBase64 = utf8ToBase64(novoConteudoJson);
+
+        const payload = {
+          message: 'Novo aviso/demanda adicionado via portal',
+          content: conteudoBase64,
+          sha: currentSha
+        };
+
+        const resPut = await fetch(API_URL, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (resPut.ok) {
+          input.value = '';
+          await carregarDados();
+        } else {
+          alert('Erro ao salvar no GitHub. Verifique as permissões do token.');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Ocorreu um erro de conexão ao tentar salvar.');
+      } finally {
+        btn.disabled = false;
+        btn.innerText = 'Adicionar';
+      }
+    }
+
+    document.getElementById('form-demanda').addEventListener('submit', salvarDemanda);
+
+    // Carrega os dados assim que abre a página
+    carregarDados();
+  </script>
+</body>
+</html>
