@@ -33,6 +33,14 @@
   ],
   "demandas": [
     {
+      "id": "1792442765913",
+      "titulo": "sistema novo de pdv",
+      "descricao": "PDV 12 formatado e ja configurado no sistema novo, acompanhar os proximos passos via email",
+      "categoria": "Chamados",
+      "status": "pendente",
+      "responsavel": ""
+    },
+    {
       "id": "1792442691346",
       "titulo": "contabilidade",
       "descricao": "Retirar informativos Razão despesas ",
