@@ -49,16 +49,6 @@
   ],
   "plantao": [
     {
-      "id": "1792448975243",
-      "titulo": "19/10/2026 - Tarde",
-      "descricao": "teste",
-      "rubsDesvinculados": "teste",
-      "rubsBloqueados": "teste",
-      "etiquetasRibbon": "teste",
-      "horaRegistro": "19:29",
-      "criadoEm": 1792448975243
-    },
-    {
       "id": "auto_1792444313653_Intermediário",
       "titulo": "19/10/2026 - Intermediário",
       "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
