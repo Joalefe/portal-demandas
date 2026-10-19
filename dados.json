@@ -24,16 +24,7 @@
       "arquivado": true
     }
   ],
-  "demandas": [
-    {
-      "id": "1792442691346",
-      "titulo": "contabilidade",
-      "descricao": "Retirar informativos Razão despesas ",
-      "categoria": "Chamados",
-      "status": "pendente",
-      "responsavel": ""
-    }
-  ],
+  "demandas": [],
   "plantao": [
     {
       "id": "auto_1792444313653_Intermediário",
