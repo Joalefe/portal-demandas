@@ -308,8 +308,8 @@
           </div>
           <div class="grid grid-cols-4 gap-1.5 mb-2">
             <button type="button" onclick="preencherPeriodo('Manhã')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">☀️ Manhã</button>
-            <button type="button" onclick="preencherPeriodo('Tarde')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌤️ Tarde</button>
-            <button type="button" onclick="preencherPeriodo('Noite')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌙 Noite</button>
+            <button type="button" onclick="preencherPeriodo('Intermediário')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌤️ Intermed.</button>
+            <button type="button" onclick="preencherPeriodo('Tarde')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌙 Tarde</button>
             <button type="button" onclick="preencherPeriodo('Madrugada')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">✨ Madruga</button>
           </div>
           <input type="text" id="plantao-titulo" required placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
@@ -891,39 +891,48 @@
       const horaDecimal = horaAtual + minAtual / 60;
       const dataHojeStr = getDataAtualFormatada();
 
-      // Verifica se existe plantão do dia de hoje registrado
+      // Pega todos os plantões de hoje cadastrados
       const plantoesHoje = (state.plantao || []).filter(p => p.titulo && p.titulo.includes(dataHojeStr));
-      
-      // Checa especificamente se há plantão cadastrado antes das 14:00 (para a regra da manhã)
-      const plantaoManhaEntregueNoHorario = plantoesHoje.some(p => {
-        if (!p.horaRegistro) return true; // se legado sem hora, considera entregue
-        const [h, m] = p.horaRegistro.split(':').map(Number);
-        return (h + m/60) < 14.0;
-      });
+
+      // Função auxiliar para verificar se um período específico foi entregue antes de seu prazo limite
+      const foiEntregueNoHorario = (termoPeriodo, horaLimite) => {
+        const plantaoEncontrado = plantoesHoje.find(p => p.titulo.toLowerCase().includes(termoPeriodo.toLowerCase()));
+        if (!plantaoEncontrado) return false;
+        if (!plantaoEncontrado.horaRegistro) return true; // legado
+        const [h, m] = plantaoEncontrado.horaRegistro.split(':').map(Number);
+        return (h + m/60) < horaLimite;
+      };
+
+      const manhaEntregue = foiEntregueNoHorario('manhã', 14.0);
+      const intermedEntregue = foiEntregueNoHorario('intermediário', 16.0);
+      const tardeEntregue = foiEntregueNoHorario('tarde', 22.0);
 
       let mensagemAlerta = '';
       let devePiscar = false;
 
-      // 1. Manhã: 13:00 às 14:00 (ou depois se não foi entregue antes das 14:00)
-      const estaNoHorarioManha = horaDecimal >= 13.0 && horaDecimal < 14.0;
-      const passouDas14SemEntregar = horaDecimal >= 14.0 && !plantaoManhaEntregueNoHorario;
-
-      if (estaNoHorarioManha && !plantaoManhaEntregueNoHorario) {
+      // 1. Manhã: 13:00 às 14:00 (ou travado após as 14:00 se não entregue)
+      if (horaDecimal >= 13.0 && horaDecimal < 14.0 && !manhaEntregue) {
         mensagemAlerta = '⚠️ ALERTA: Plantão da Manhã não foi entregue!';
         devePiscar = true;
-      } else if (passouDas14SemEntregar) {
-        mensagemAlerta = '🚨 ATENÇÃO: Plantão não entregue (Prazo das 14:00 expirado)!';
-        devePiscar = false; // Fica fixo após passar do horário
+      } else if (horaDecimal >= 14.0 && !manhaEntregue) {
+        mensagemAlerta = '🚨 ATENÇÃO: Plantão da Manhã não entregue (Prazo das 14:00 expirado)!';
+        devePiscar = false;
       } 
-      // 2. Intermediário: 15:00 - 16:00
-      else if (horaDecimal >= 15.0 && horaDecimal < 16.0) {
-        mensagemAlerta = '⏰ Alerta de Plantão Intermediário (15:00 - 16:00)';
+      // 2. Intermediário: 15:00 às 16:00 (ou travado após as 16:00 se não entregue)
+      else if (horaDecimal >= 15.0 && horaDecimal < 16.0 && !intermedEntregue) {
+        mensagemAlerta = '⚠️ ALERTA: Plantão Intermediário não foi entregue!';
         devePiscar = true;
-      } 
-      // 3. Tarde: 20:00 - 22:00
-      else if (horaDecimal >= 20.0 && horaDecimal < 22.0) {
-        mensagemAlerta = '🌙 Alerta de Plantão da Tarde (20:00 - 22:00)';
+      } else if (horaDecimal >= 16.0 && !intermedEntregue) {
+        mensagemAlerta = '🚨 ATENÇÃO: Plantão Intermediário não entregue (Prazo das 16:00 expirado)!';
+        devePiscar = false;
+      }
+      // 3. Tarde: 20:00 às 22:00 (ou travado após as 22:00 se não entregue)
+      else if (horaDecimal >= 20.0 && horaDecimal < 22.0 && !tardeEntregue) {
+        mensagemAlerta = '⚠️ ALERTA: Plantão da Tarde não foi entregue!';
         devePiscar = true;
+      } else if (horaDecimal >= 22.0 && !tardeEntregue) {
+        mensagemAlerta = '🚨 ATENÇÃO: Plantão da Tarde não entregue (Prazo das 22:00 expirado)!';
+        devePiscar = false;
       }
 
       if (mensagemAlerta) {
