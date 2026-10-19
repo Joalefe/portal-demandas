@@ -146,18 +146,14 @@
     <section id="tab-content-plantao" class="space-y-6 hidden">
       <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
         <div class="text-sm font-medium text-slate-300">
-          📋 Histórico de Passagens de Plantão & Envio por E-mail
+          📋 Histórico de Passagens de Plantão (Envio Direto por E-mail)
         </div>
         <div class="flex items-center gap-2">
           <button onclick="apagarPlantoesAntigos()" class="text-xs bg-rose-950/60 hover:bg-rose-900 text-rose-300 border border-rose-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar registros com mais de 10 dias">
             🗑️ Limpar Antigos (+10d)
           </button>
-          <!-- Botão para abrir o Formulário de Envio por E-mail -->
-          <button onclick="openModalPlantaoEmail()" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
-            ✉️ Enviar Plantão (Formulário)
-          </button>
-          <button onclick="openModalPlantao()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
-            + Novo Plantão
+          <button onclick="openModalPlantao()" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
+            + Nova Passagem de Plantão
           </button>
         </div>
       </div>
@@ -316,17 +312,26 @@
     </div>
   </div>
 
-  <!-- Modal Passagem de Plantão (Texto Longo Original) -->
+  <!-- MODAL: Passagem de Plantão unificada com FormSubmit (Salva no app e envia por e-mail) -->
   <div id="modal-plantao" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
-    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
         <h3 id="modal-plantao-title" class="text-base font-semibold text-white">Nova Passagem de Plantão</h3>
         <button onclick="closeModal('modal-plantao')" class="text-slate-400 hover:text-white">✕</button>
       </div>
-      <form id="form-plantao-inner" onsubmit="savePlantao(event)" class="space-y-4">
+
+      <!-- FORMULÁRIO COM FORMSUBMIT (Envia por e-mail e dispara a função interna de salvar) -->
+      <form action="https://formsubmit.co/joalefe@outlook.com" method="POST" onsubmit="savePlantaoComEmail(event)" class="space-y-4">
+
+        <!-- CONFIGURAÇÕES DO FORMSUBMIT -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="📋 Relatório de Passagem de Plantão - Portal">
+        <input type="hidden" name="_template" value="box">
+        
+        <!-- Campo oculto para manter o ID se for edição -->
         <input type="hidden" id="plantao-id">
         <input type="hidden" id="plantao-horario-registro">
-        
+
         <div>
           <div class="flex justify-between items-center mb-1">
             <label class="block text-xs font-medium text-slate-400">Título (Data e Período)</label>
@@ -338,69 +343,46 @@
             <button type="button" onclick="preencherPeriodo('Tarde')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌙 Tarde</button>
             <button type="button" onclick="preencherPeriodo('Madrugada')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">✨ Madruga</button>
           </div>
-          <input type="text" id="plantao-titulo" required placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" id="plantao-titulo" name="titulo_plantao" required placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Identificação / Responsável</label>
+            <input type="text" name="responsavel" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Seu E-mail (para retorno)</label>
+            <input type="email" name="email" required placeholder="seu@email.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
         </div>
 
         <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição do Plantão (Texto Longo)</label>
-          <textarea id="plantao-descricao" rows="7" required placeholder="Escreva aqui todos os detalhes, ocorrências e repasses do plantão..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
-        </div>
-
-        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
-          <button type="button" onclick="closeModal('modal-plantao')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
-          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-5 py-2 rounded-lg font-medium">Salvar Plantão</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- MODAL: Formulário de Envio de Plantão por E-mail (FormSubmit Otimizado) -->
-  <div id="modal-plantao-email" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
-    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
-      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-        <h3 class="text-base font-semibold text-white">✉️ Enviar Passagem de Plantão por E-mail</h3>
-        <button onclick="closeModal('modal-plantao-email')" class="text-slate-400 hover:text-white">✕</button>
-      </div>
-
-      <!-- FORMULÁRIO CONFIGURADO COM FORMSUBMIT -->
-      <form action="https://formsubmit.co/joalefe@outlook.com" method="POST" class="space-y-4">
-
-        <!-- CONFIGURAÇÕES VISUAIS E EXTRAS DO FORMSUBMIT -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="📋 Relatório de Passagem de Plantão - Portal">
-        <input type="hidden" name="_template" value="box">
-
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Identificação / Responsável</label>
-          <input type="text" name="responsavel" required placeholder="Seu nome ou equipe" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
-        </div>
-
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Seu E-mail (para retorno)</label>
-          <input type="email" name="email" required placeholder="seu@email.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição Geral do Plantão</label>
+          <textarea id="plantao-descricao" name="descricao_geral" rows="3" required placeholder="Detalhes gerais da passagem de plantão..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
         </div>
 
         <!-- 1. Rubs Desvinculados (Obrigatório) -->
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Desvinculados *</label>
-          <textarea name="rubs_desvinculados" rows="3" required placeholder="Informe os detalhes sobre rubs desvinculados..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <textarea id="plantao-rubs-desvinculados" name="rubs_desvinculados" rows="2" required placeholder="Informe os detalhes sobre rubs desvinculados..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
         </div>
 
         <!-- 2. Rubs Bloqueados e quem foi bloqueado (Obrigatório) -->
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Bloqueados (Informar quem foi bloqueado) *</label>
-          <textarea name="rubs_bloqueados" rows="3" required placeholder="Informe os rubs bloqueados e especifique quem foi o responsável/envolvido..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <textarea id="plantao-rubs-bloqueados" name="rubs_bloqueados" rows="2" required placeholder="Informe os rubs bloqueados e especifique quem foi o responsável/envolvido..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
         </div>
 
         <!-- 3. Etiquetas e Ribbon Abastecidas (Obrigatório) -->
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Etiquetas e Ribbon Abastecidas *</label>
-          <textarea name="etiquetas_ribbon" rows="3" required placeholder="Informe a situação das etiquetas e ribbons abastecidas..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <textarea id="plantao-etiquetas" name="etiquetas_ribbon" rows="2" required placeholder="Informe a situação das etiquetas e ribbons abastecidas..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
         </div>
 
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
-          <button type="button" onclick="closeModal('modal-plantao-email')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
-          <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-5 py-2 rounded-lg font-medium shadow">Enviar por E-mail</button>
+          <button type="button" onclick="closeModal('modal-plantao')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-5 py-2 rounded-lg font-medium shadow">Salvar e Enviar Plantão</button>
         </div>
       </form>
     </div>
@@ -589,10 +571,6 @@
 
     function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
     function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
-
-    function openModalPlantaoEmail() {
-      openModal('modal-plantao-email');
-    }
 
     function renderAvisos() {
       document.getElementById('count-pessoas').innerText = (state.pessoas || []).length;
@@ -905,8 +883,11 @@
                   `}
                 </div>
               </div>
-              <div class="mt-2 text-xs">
+              <div class="mt-2 text-xs space-y-1.5">
                 <p class="${isSistema ? 'text-rose-200/90 font-medium' : 'text-slate-300'} whitespace-pre-wrap leading-relaxed">${escapeHtml(p.descricao || '')}</p>
+                ${p.rubsDesvinculados ? `<div class="pt-1 border-t border-slate-800"><span class="font-semibold text-slate-400">Rubs Desvinculados:</span> <span class="text-slate-300">${escapeHtml(p.rubsDesvinculados)}</span></div>` : ''}
+                ${p.rubsBloqueados ? `<div class="pt-1 border-t border-slate-800"><span class="font-semibold text-slate-400">Rubs Bloqueados:</span> <span class="text-slate-300">${escapeHtml(p.rubsBloqueados)}</span></div>` : ''}
+                ${p.etiquetasRibbon ? `<div class="pt-1 border-t border-slate-800"><span class="font-semibold text-slate-400">Etiquetas/Ribbon:</span> <span class="text-slate-300">${escapeHtml(p.etiquetasRibbon)}</span></div>` : ''}
               </div>
             </div>
             <div class="border-t ${isSistema ? 'border-rose-900/40' : 'border-slate-800/80'} pt-2 text-[10px] text-slate-500 flex justify-between">
@@ -933,7 +914,14 @@
     }
 
     function openModalPlantao(id = null) {
-      document.getElementById('form-plantao-inner').reset();
+      // Limpa os campos visuais do form
+      document.getElementById('plantao-id').value = '';
+      document.getElementById('plantao-titulo').value = `${getDataAtualFormatada()} - Manhã`;
+      document.getElementById('plantao-descricao').value = '';
+      document.getElementById('plantao-rubs-desvinculados').value = '';
+      document.getElementById('plantao-rubs-bloqueados').value = '';
+      document.getElementById('plantao-etiquetas').value = '';
+
       if (id) {
         const p = (state.plantao || []).find(x => x.id === id);
         if (p) {
@@ -944,25 +932,30 @@
           document.getElementById('plantao-id').value = p.id;
           document.getElementById('plantao-titulo').value = p.titulo;
           document.getElementById('plantao-descricao').value = p.descricao || '';
+          document.getElementById('plantao-rubs-desvinculados').value = p.rubsDesvinculados || '';
+          document.getElementById('plantao-rubs-bloqueados').value = p.rubsBloqueados || '';
+          document.getElementById('plantao-etiquetas').value = p.etiquetasRibbon || '';
           document.getElementById('plantao-horario-registro').value = p.horaRegistro || '';
           document.getElementById('modal-plantao-title').innerText = 'Editar Passagem de Plantão';
         }
       } else {
         const now = new Date();
         const horaStr = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
-        document.getElementById('plantao-id').value = '';
         document.getElementById('plantao-horario-registro').value = horaStr;
         document.getElementById('modal-plantao-title').innerText = 'Nova Passagem de Plantão';
-        document.getElementById('plantao-titulo').value = `${getDataAtualFormatada()} - Manhã`;
       }
       openModal('modal-plantao');
     }
 
-    function savePlantao(e) {
-      e.preventDefault();
+    function savePlantaoComEmail(e) {
+      // Deixa o FormSubmit disparar o envio por e-mail normalmente, 
+      // e simultaneamente salva no storage local do GitHub.
       const id = document.getElementById('plantao-id').value;
       const titulo = document.getElementById('plantao-titulo').value;
       const descricao = document.getElementById('plantao-descricao').value;
+      const rubsDesvinculados = document.getElementById('plantao-rubs-desvinculados').value;
+      const rubsBloqueados = document.getElementById('plantao-rubs-bloqueados').value;
+      const etiquetasRibbon = document.getElementById('plantao-etiquetas').value;
       
       let horaRegistro = document.getElementById('plantao-horario-registro').value;
       if (!horaRegistro) {
@@ -976,6 +969,9 @@
         if (p) {
           p.titulo = titulo; 
           p.descricao = descricao;
+          p.rubsDesvinculados = rubsDesvinculados;
+          p.rubsBloqueados = rubsBloqueados;
+          p.etiquetasRibbon = etiquetasRibbon;
           if (!p.horaRegistro) p.horaRegistro = horaRegistro;
         }
       } else {
@@ -983,6 +979,9 @@
           id: Date.now().toString(),
           titulo,
           descricao,
+          rubsDesvinculados,
+          rubsBloqueados,
+          etiquetasRibbon,
           horaRegistro,
           criadoEm: new Date().getTime()
         });
@@ -990,7 +989,7 @@
       saveStorage();
       renderPlantao();
       verificarAlertasPlantao();
-      closeModal('modal-plantao');
+      // O formulário submete via FormSubmit em seguida para o e-mail
     }
 
     function deletePlantao(id) {
@@ -1096,6 +1095,9 @@
             id: 'auto_' + Date.now() + '_' + val.termo,
             titulo: tituloEsperado,
             descricao: val.textoGerado,
+            rubsDesvinculados: 'N/A',
+            rubsBloqueados: 'N/A',
+            etiquetasRibbon: 'N/A',
             horaRegistro: String(Math.floor(val.limite)).padStart(2, '0') + ':00',
             sistemaGerou: true,
             criadoEm: new Date().getTime()
