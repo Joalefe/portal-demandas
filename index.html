@@ -130,9 +130,6 @@
         </div>
 
         <div class="flex items-center gap-2">
-          <button onclick="apagarDemandasAntigas()" class="text-xs bg-amber-950/60 hover:bg-amber-900 text-amber-300 border border-amber-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar demandas concluídas com mais de 10 dias">
-            🗑️ Limpar Antigas (+10d)
-          </button>
           <button onclick="openModalCategorias()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-lg">
             🏷️ Categorias
           </button>
@@ -140,11 +137,6 @@
             + Nova Demanda
           </button>
         </div>
-      </div>
-
-      <!-- Alerta visual de demandas antigas -->
-      <div id="alerta-demandas-antigas" class="hidden bg-amber-950/40 border border-amber-800/50 text-amber-200 px-4 py-2 rounded-lg text-xs flex items-center justify-between">
-        <span>⚠️ Existem demandas concluídas com mais de 10 dias acumuladas. Utilize o botão "Limpar Antigas (+10d)" para higienizar o painel.</span>
       </div>
 
       <div id="container-demandas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
@@ -763,16 +755,12 @@
           </div>
         </div>
       `).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda encontrada.</p>`;
-      checarAlertasItensAntigos();
     }
 
     function updateDemandaStatus(id, newStatus) {
       const d = (state.demandas || []).find(x => x.id === id);
       if (d) {
         d.status = newStatus;
-        if (newStatus === 'concluido' && !d.concluidoEm) {
-          d.concluidoEm = new Date().getTime();
-        }
         saveStorage();
         renderDemandas();
       }
@@ -816,18 +804,13 @@
           d.descricao1 = descricao1; 
           d.descricao2 = descricao2;
           d.categoria = categoria; 
-          if (d.status !== 'concluido' && status === 'concluido') {
-            d.concluidoEm = new Date().getTime();
-          }
           d.status = status;
           delete d.descricao;
         }
       } else {
         state.demandas.unshift({
           id: Date.now().toString(),
-          titulo, descricao1, descricao2, categoria, status,
-          criadoEm: new Date().getTime(),
-          concluidoEm: status === 'concluido' ? new Date().getTime() : null
+          titulo, descricao1, descricao2, categoria, status
         });
       }
       saveStorage();
@@ -841,30 +824,6 @@
         saveStorage();
         renderDemandas();
       }
-    }
-
-    function apagarDemandasAntigas() {
-      const senhaInformada = prompt('ATENÇÃO: Você vai apagar demandas CONCLUÍDAS com mais de 10 dias.\n\nDigite a senha de conscientização para prosseguir:');
-      if (senhaInformada === null) return;
-      if (senhaInformada.trim() !== 'CPD_675') {
-        alert('Senha incorreta!');
-        return;
-      }
-
-      const agora = new Date().getTime();
-      const limiteMs = 10 * 24 * 60 * 60 * 1000;
-      const antes = (state.demandas || []).length;
-
-      state.demandas = (state.demandas || []).filter(d => {
-        if (d.status !== 'concluido') return true; // Mantém pendentes e em andamento
-        const dataConclusao = d.concluidoEm || d.criadoEm || parseInt(d.id, 10);
-        return (agora - dataConclusao) <= limiteMs;
-      });
-
-      const removidas = antes - state.demandas.length;
-      saveStorage();
-      renderDemandas();
-      alert(`Limpeza concluída! Foram removidas ${removidas} demandas concluídas com mais de 10 dias.`);
     }
 
     // --- PASSAGEM DE PLANTÃO ---
@@ -1027,15 +986,7 @@
       });
       document.getElementById('alerta-avisos-antigos').classList.toggle('hidden', !temAvisosAntigos);
 
-      // 2. Demandas concluídas antigas
-      const temDemandasAntigas = (state.demandas || []).some(d => {
-        if (d.status !== 'concluido') return false;
-        const t = d.concluidoEm || d.criadoEm || parseInt(d.id, 10);
-        return (new Date().getTime() - t) > limiteMs;
-      });
-      document.getElementById('alerta-demandas-antigas').classList.toggle('hidden', !temDemandasAntigas);
-
-      // 3. Plantões antigos
+      // 2. Plantões antigos
       const temPlantoesAntigos = (state.plantao || []).some(p => {
         const matchData = p.titulo ? p.titulo.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null;
         if (!matchData) return false;
