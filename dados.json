@@ -1,3 +1,6 @@
 {
+  "pessoas": ["Ana", "Carlos", "Mariana"],
+  "categorias": ["Chamados", "Projetos", "Manutenção"],
+  "avisos": [],
   "demandas": []
 }
