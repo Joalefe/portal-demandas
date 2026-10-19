@@ -49,14 +49,14 @@
   ],
   "plantao": [
     {
-      "id": "1792448916828",
-      "titulo": "19/10/2026 - Tarde",
-      "descricao": "sérgio cobrou acesso",
-      "rubsDesvinculados": "sim",
-      "rubsBloqueados": "não",
-      "etiquetasRibbon": "sim",
-      "horaRegistro": "19:27",
-      "criadoEm": 1792448916828
+      "id": "1792448975243",
+      "titulo": "19/10/2026 - Manhã",
+      "descricao": "teste",
+      "rubsDesvinculados": "teste",
+      "rubsBloqueados": "teste",
+      "etiquetasRibbon": "teste",
+      "horaRegistro": "19:29",
+      "criadoEm": 1792448975243
     },
     {
       "id": "auto_1792444313653_Intermediário",
