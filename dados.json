@@ -1,6 +1,23 @@
 {
-  "pessoas": ["Ana", "Carlos", "Mariana"],
-  "categorias": ["Chamados", "Projetos", "Manutenção"],
-  "avisos": [],
+  "pessoas": [
+    "Ana",
+    "Carlos",
+    "Mariana"
+  ],
+  "categorias": [
+    "Chamados",
+    "Projetos",
+    "Manutenção"
+  ],
+  "avisos": [
+    {
+      "id": "1792442163205",
+      "titulo": "dd",
+      "mensagem": "dd",
+      "cor": "postit-orange",
+      "lidosPor": [],
+      "arquivado": false
+    }
+  ],
   "demandas": []
 }
