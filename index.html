@@ -26,11 +26,12 @@
     }
   </script>
   <style>
-    .line-clamp-4 {
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+    @keyframes piscar {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .animate-piscar {
+      animation: piscar 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
   </style>
 </head>
@@ -64,6 +65,11 @@
       </div>
     </div>
   </header>
+
+  <!-- Barra de Alerta / Pisca-Pisca de Plantão -->
+  <div id="container-alerta-plantao" class="w-full hidden bg-rose-950/80 border-b border-rose-900 px-4 py-2 text-center text-xs text-rose-200 font-medium z-20">
+    <span id="texto-alerta-plantao"></span>
+  </div>
 
   <!-- Main Content -->
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -284,7 +290,7 @@
     </div>
   </div>
 
-  <!-- Modal Passagem de Plantão (Ajustado para texto longo e sem categorias/status) -->
+  <!-- Modal Passagem de Plantão -->
   <div id="modal-plantao" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -293,6 +299,7 @@
       </div>
       <form id="form-plantao-inner" onsubmit="savePlantao(event)" class="space-y-4">
         <input type="hidden" id="plantao-id">
+        <input type="hidden" id="plantao-horario-registro">
         
         <div>
           <div class="flex justify-between items-center mb-1">
@@ -305,7 +312,7 @@
             <button type="button" onclick="preencherPeriodo('Noite')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌙 Noite</button>
             <button type="button" onclick="preencherPeriodo('Madrugada')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">✨ Madruga</button>
           </div>
-          <input type="text" id="plantao-titulo" required placeholder="Ex: 24/10/2026 - Noite" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" id="plantao-titulo" required placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
 
         <div>
@@ -403,6 +410,7 @@
         renderAvisos();
         renderDemandas();
         renderPlantao();
+        verificarAlertasPlantao();
       } catch (err) {
         console.error(err);
         statusEl.innerText = '⚠️ Erro de sincronização';
@@ -786,8 +794,9 @@
               <p class="text-slate-300 whitespace-pre-wrap leading-relaxed">${escapeHtml(p.descricao || '')}</p>
             </div>
           </div>
-          <div class="border-t border-slate-800/80 pt-2 text-[10px] text-slate-500 text-right">
-            Registro de Plantão
+          <div class="border-t border-slate-800/80 pt-2 text-[10px] text-slate-500 flex justify-between">
+            <span>Registrado às: ${p.horaRegistro || 'N/D'}</span>
+            <span>Plantão</span>
           </div>
         </div>
       `).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum registro de plantão encontrado.</p>`;
@@ -813,12 +822,15 @@
         if (p) {
           document.getElementById('plantao-id').value = p.id;
           document.getElementById('plantao-titulo').value = p.titulo;
-          // Compatibilidade caso venha de dados antigos ou descrição única
           document.getElementById('plantao-descricao').value = p.descricao || p.descricao1 || '';
+          document.getElementById('plantao-horario-registro').value = p.horaRegistro || '';
           document.getElementById('modal-plantao-title').innerText = 'Editar Passagem de Plantão';
         }
       } else {
+        const now = new Date();
+        const horaStr = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
         document.getElementById('plantao-id').value = '';
+        document.getElementById('plantao-horario-registro').value = horaStr;
         document.getElementById('modal-plantao-title').innerText = 'Nova Passagem de Plantão';
         document.getElementById('plantao-titulo').value = `${getDataAtualFormatada()} - Manhã`;
       }
@@ -831,26 +843,31 @@
       const titulo = document.getElementById('plantao-titulo').value;
       const descricao = document.getElementById('plantao-descricao').value;
       
+      let horaRegistro = document.getElementById('plantao-horario-registro').value;
+      if (!horaRegistro) {
+        const now = new Date();
+        horaRegistro = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+      }
+
       state.plantao = state.plantao || [];
       if (id) {
         const p = state.plantao.find(x => x.id === id);
         if (p) {
           p.titulo = titulo; 
           p.descricao = descricao;
-          delete p.descricao1;
-          delete p.descricao2;
-          delete p.categoria;
-          delete p.status;
+          if (!p.horaRegistro) p.horaRegistro = horaRegistro;
         }
       } else {
         state.plantao.unshift({
           id: Date.now().toString(),
           titulo,
-          descricao
+          descricao,
+          horaRegistro
         });
       }
       saveStorage();
       renderPlantao();
+      verificarAlertasPlantao();
       closeModal('modal-plantao');
     }
 
@@ -859,8 +876,72 @@
         state.plantao = state.plantao.filter(p => p.id !== id);
         saveStorage();
         renderPlantao();
+        verificarAlertasPlantao();
       }
     }
+
+    // --- LÓGICA DE ALERTA PISCA-PISCA DOS PLANTÕES ---
+    function verificarAlertasPlantao() {
+      const containerAlerta = document.getElementById('container-alerta-plantao');
+      const textoAlerta = document.getElementById('texto-alerta-plantao');
+      
+      const agora = new Date();
+      const horaAtual = agora.getHours();
+      const minAtual = agora.getMinutes();
+      const horaDecimal = horaAtual + minAtual / 60;
+      const dataHojeStr = getDataAtualFormatada();
+
+      // Verifica se existe plantão do dia de hoje registrado
+      const plantoesHoje = (state.plantao || []).filter(p => p.titulo && p.titulo.includes(dataHojeStr));
+      
+      // Checa especificamente se há plantão cadastrado antes das 14:00 (para a regra da manhã)
+      const plantaoManhaEntregueNoHorario = plantoesHoje.some(p => {
+        if (!p.horaRegistro) return true; // se legado sem hora, considera entregue
+        const [h, m] = p.horaRegistro.split(':').map(Number);
+        return (h + m/60) < 14.0;
+      });
+
+      let mensagemAlerta = '';
+      let devePiscar = false;
+
+      // 1. Manhã: 13:00 às 14:00 (ou depois se não foi entregue antes das 14:00)
+      const estaNoHorarioManha = horaDecimal >= 13.0 && horaDecimal < 14.0;
+      const passouDas14SemEntregar = horaDecimal >= 14.0 && !plantaoManhaEntregueNoHorario;
+
+      if (estaNoHorarioManha && !plantaoManhaEntregueNoHorario) {
+        mensagemAlerta = '⚠️ ALERTA: Plantão da Manhã não foi entregue!';
+        devePiscar = true;
+      } else if (passouDas14SemEntregar) {
+        mensagemAlerta = '🚨 ATENÇÃO: Plantão não entregue (Prazo das 14:00 expirado)!';
+        devePiscar = false; // Fica fixo após passar do horário
+      } 
+      // 2. Intermediário: 15:00 - 16:00
+      else if (horaDecimal >= 15.0 && horaDecimal < 16.0) {
+        mensagemAlerta = '⏰ Alerta de Plantão Intermediário (15:00 - 16:00)';
+        devePiscar = true;
+      } 
+      // 3. Tarde: 20:00 - 22:00
+      else if (horaDecimal >= 20.0 && horaDecimal < 22.0) {
+        mensagemAlerta = '🌙 Alerta de Plantão da Tarde (20:00 - 22:00)';
+        devePiscar = true;
+      }
+
+      if (mensagemAlerta) {
+        textoAlerta.innerText = mensagemAlerta;
+        containerAlerta.classList.remove('hidden');
+        if (devePiscar) {
+          containerAlerta.classList.add('animate-piscar');
+        } else {
+          containerAlerta.classList.remove('animate-piscar');
+        }
+      } else {
+        containerAlerta.classList.add('hidden');
+        containerAlerta.classList.remove('animate-piscar');
+      }
+    }
+
+    // Executa verificação a cada 30 segundos
+    setInterval(verificarAlertasPlantao, 30000);
 
     // --- PESSOAS E CATEGORIAS ---
     function openModalPessoas() { renderListaPessoas(); openModal('modal-pessoas'); }
@@ -932,11 +1013,11 @@
       const selFormD = document.getElementById('demanda-categoria');
       if (selFormD) selFormD.innerHTML = optionsHtml;
 
-      const selFilterD = document.getElementById('filter-demandas-categoria');
-      if (selFilterD) {
-        const curr = selFilterD.value;
-        selFilterD.innerHTML = `<option value="todas">Todas Categorias</option>` + optionsHtml;
-        selFilterD.value = curr;
+      const selFormDFilter = document.getElementById('filter-demandas-categoria');
+      if (selFormDFilter) {
+        const curr = selFormDFilter.value;
+        selFormDFilter.innerHTML = `<option value="todas">Todas Categorias</option>` + optionsHtml;
+        selFormDFilter.value = curr;
       }
     }
 
