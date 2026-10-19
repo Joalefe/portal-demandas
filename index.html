@@ -33,6 +33,12 @@
     .animate-piscar {
       animation: piscar 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body class="h-full text-slate-100 flex flex-col font-sans bg-slate-950 antialiased">
@@ -87,6 +93,9 @@
         </div>
 
         <div class="flex items-center gap-2">
+          <button onclick="apagarAvisosAntigos()" class="text-xs bg-amber-950/60 hover:bg-amber-900 text-amber-300 border border-amber-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar avisos com mais de 10 dias">
+            🗑️ Limpar Antigos (+10d)
+          </button>
           <button onclick="openModalPessoas()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-lg flex items-center gap-1">
             👥 Pessoas (<span id="count-pessoas">0</span>)
           </button>
@@ -94,6 +103,11 @@
             + Novo Aviso
           </button>
         </div>
+      </div>
+
+      <!-- Alerta visual de avisos antigos -->
+      <div id="alerta-avisos-antigos" class="hidden bg-amber-950/40 border border-amber-800/50 text-amber-200 px-4 py-2 rounded-lg text-xs flex items-center justify-between">
+        <span>⚠️ Existem avisos com mais de 10 dias acumulados. Utilize o botão "Limpar Antigos (+10d)" para higienizar o painel.</span>
       </div>
 
       <div id="subtab-content-ativos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
@@ -116,6 +130,9 @@
         </div>
 
         <div class="flex items-center gap-2">
+          <button onclick="apagarDemandasAntigas()" class="text-xs bg-amber-950/60 hover:bg-amber-900 text-amber-300 border border-amber-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar demandas concluídas com mais de 10 dias">
+            🗑️ Limpar Antigas (+10d)
+          </button>
           <button onclick="openModalCategorias()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-lg">
             🏷️ Categorias
           </button>
@@ -123,6 +140,11 @@
             + Nova Demanda
           </button>
         </div>
+      </div>
+
+      <!-- Alerta visual de demandas antigas -->
+      <div id="alerta-demandas-antigas" class="hidden bg-amber-950/40 border border-amber-800/50 text-amber-200 px-4 py-2 rounded-lg text-xs flex items-center justify-between">
+        <span>⚠️ Existem demandas concluídas com mais de 10 dias acumuladas. Utilize o botão "Limpar Antigas (+10d)" para higienizar o painel.</span>
       </div>
 
       <div id="container-demandas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
@@ -136,12 +158,17 @@
         </div>
         <div class="flex items-center gap-2">
           <button onclick="apagarPlantoesAntigos()" class="text-xs bg-rose-950/60 hover:bg-rose-900 text-rose-300 border border-rose-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar registros com mais de 10 dias">
-            🗑️ Limpar Antigos (+10 dias)
+            🗑️ Limpar Antigos (+10d)
           </button>
           <button onclick="openModalPlantao()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
             + Novo Plantão
           </button>
         </div>
+      </div>
+
+      <!-- Alerta visual de plantões antigos -->
+      <div id="alerta-plantoes-antigos" class="hidden bg-rose-950/40 border border-rose-800/50 text-rose-200 px-4 py-2 rounded-lg text-xs flex items-center justify-between">
+        <span>⚠️ Existem registros de plantão com mais de 10 dias acumulados. Utilize o botão "Limpar Antigos (+10d)" para higienizar o painel.</span>
       </div>
 
       <div id="container-plantao" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
@@ -415,6 +442,7 @@
         verificarEGerarPlantoesPerdidos();
         renderPlantao();
         verificarAlertasPlantao();
+        checarAlertasItensAntigos();
       } catch (err) {
         console.error(err);
         statusEl.innerText = '⚠️ Erro de sincronização';
@@ -570,6 +598,7 @@
 
       document.getElementById('subtab-content-ativos').innerHTML = ativos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso ativo.</p>`;
       document.getElementById('subtab-content-lidos').innerHTML = lidos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso no histórico.</p>`;
+      checarAlertasItensAntigos();
     }
 
     function toggleLeitura(avisoId, pessoa) {
@@ -647,7 +676,8 @@
           id: Date.now().toString(),
           titulo, mensagem, cor,
           lidosPor: [],
-          arquivado: false
+          arquivado: false,
+          criadoEm: new Date().getTime()
         });
       }
       saveStorage();
@@ -661,6 +691,29 @@
         saveStorage();
         renderAvisos();
       }
+    }
+
+    function apagarAvisosAntigos() {
+      const senhaInformada = prompt('ATENÇÃO: Você está prestes a apagar avisos com mais de 10 dias.\n\nDigite a senha de conscientização para prosseguir:');
+      if (senhaInformada === null) return;
+      if (senhaInformada.trim() !== 'CPD_675') {
+        alert('Senha incorreta!');
+        return;
+      }
+
+      const agora = new Date().getTime();
+      const limiteMs = 10 * 24 * 60 * 60 * 1000;
+      const antes = (state.avisos || []).length;
+
+      state.avisos = (state.avisos || []).filter(a => {
+        const dataItem = a.criadoEm || parseInt(a.id, 10);
+        return (agora - dataItem) <= limiteMs;
+      });
+
+      const removidos = antes - state.avisos.length;
+      saveStorage();
+      renderAvisos();
+      alert(`Limpeza concluída! Foram removidos ${removidos} avisos com mais de 10 dias.`);
     }
 
     // --- DEMANDAS ---
@@ -710,12 +763,16 @@
           </div>
         </div>
       `).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda encontrada.</p>`;
+      checarAlertasItensAntigos();
     }
 
     function updateDemandaStatus(id, newStatus) {
       const d = (state.demandas || []).find(x => x.id === id);
       if (d) {
         d.status = newStatus;
+        if (newStatus === 'concluido' && !d.concluidoEm) {
+          d.concluidoEm = new Date().getTime();
+        }
         saveStorage();
         renderDemandas();
       }
@@ -759,13 +816,18 @@
           d.descricao1 = descricao1; 
           d.descricao2 = descricao2;
           d.categoria = categoria; 
+          if (d.status !== 'concluido' && status === 'concluido') {
+            d.concluidoEm = new Date().getTime();
+          }
           d.status = status;
           delete d.descricao;
         }
       } else {
         state.demandas.unshift({
           id: Date.now().toString(),
-          titulo, descricao1, descricao2, categoria, status
+          titulo, descricao1, descricao2, categoria, status,
+          criadoEm: new Date().getTime(),
+          concluidoEm: status === 'concluido' ? new Date().getTime() : null
         });
       }
       saveStorage();
@@ -779,6 +841,30 @@
         saveStorage();
         renderDemandas();
       }
+    }
+
+    function apagarDemandasAntigas() {
+      const senhaInformada = prompt('ATENÇÃO: Você vai apagar demandas CONCLUÍDAS com mais de 10 dias.\n\nDigite a senha de conscientização para prosseguir:');
+      if (senhaInformada === null) return;
+      if (senhaInformada.trim() !== 'CPD_675') {
+        alert('Senha incorreta!');
+        return;
+      }
+
+      const agora = new Date().getTime();
+      const limiteMs = 10 * 24 * 60 * 60 * 1000;
+      const antes = (state.demandas || []).length;
+
+      state.demandas = (state.demandas || []).filter(d => {
+        if (d.status !== 'concluido') return true; // Mantém pendentes e em andamento
+        const dataConclusao = d.concluidoEm || d.criadoEm || parseInt(d.id, 10);
+        return (agora - dataConclusao) <= limiteMs;
+      });
+
+      const removidas = antes - state.demandas.length;
+      saveStorage();
+      renderDemandas();
+      alert(`Limpeza concluída! Foram removidas ${removidas} demandas concluídas com mais de 10 dias.`);
     }
 
     // --- PASSAGEM DE PLANTÃO ---
@@ -811,6 +897,7 @@
           </div>
         `;
       }).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum registro de plantão encontrado.</p>`;
+      checarAlertasItensAntigos();
     }
 
     function getDataAtualFormatada() {
@@ -877,7 +964,8 @@
           id: Date.now().toString(),
           titulo,
           descricao,
-          horaRegistro
+          horaRegistro,
+          criadoEm: new Date().getTime()
         });
       }
       saveStorage();
@@ -900,50 +988,62 @@
       }
     }
 
-    // --- FUNÇÃO PARA APAGAR PLANTÕES COM MAIS DE 10 DIAS COM SENHA DE CONSCIENTIZAÇÃO ---
     function apagarPlantoesAntigos() {
       const senhaInformada = prompt('ATENÇÃO: Você está prestes a apagar registros de plantão com mais de 10 dias.\n\nDigite a senha de conscientização para prosseguir:');
-      
-      if (senhaInformada === null) return; // Clicou em cancelar
-
+      if (senhaInformada === null) return;
       if (senhaInformada.trim() !== 'CPD_675') {
-        alert('Senha incorreta! A limpeza de registros antigos foi cancelada.');
+        alert('Senha incorreta!');
         return;
       }
 
       const hoje = new Date();
-      // Zera horas para comparar apenas os dias correntes
       hoje.setHours(0, 0, 0, 0);
+      const antes = (state.plantao || []).length;
 
-      const plantoesAntes = (state.plantao || []).length;
-
-      // Filtra mantendo apenas os plantões que NÃO ultrapassaram 10 dias
       state.plantao = (state.plantao || []).filter(p => {
-        // Tenta extrair a data do título (formato esperado: DD/MM/AAAA)
         const matchData = p.titulo ? p.titulo.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null;
-        if (!matchData) {
-          return true; // Se não achar data no título por segurança mantém
-        }
-
-        const dia = parseInt(matchData[1], 10);
-        const mes = parseInt(matchData[2], 10) - 1;
-        const ano = parseInt(matchData[3], 10);
-
-        const dataPlantao = new Date(ano, mes, dia);
+        if (!matchData) return true;
+        const dataPlantao = new Date(parseInt(matchData[3], 10), parseInt(matchData[2], 10) - 1, parseInt(matchData[1], 10));
         dataPlantao.setHours(0, 0, 0, 0);
-
-        const diffTempo = hoje - dataPlantao;
-        const diffDias = diffTempo / (1000 * 60 * 60 * 24);
-
-        // Retorna true se tiver menos ou igual a 10 dias de idade
-        return diffDias <= 10;
+        return (hoje - dataPlantao) / (1000 * 60 * 60 * 24) <= 10;
       });
 
-      const plantoesRemovidos = plantoesAntes - state.plantao.length;
-
+      const removidos = antes - state.plantao.length;
       saveStorage();
       renderPlantao();
-      alert(`Limpeza concluída com sucesso!\n\nForam removidos ${plantoesRemovidos} registros com mais de 10 dias.`);
+      alert(`Limpeza concluída! Foram removidos ${removidos} registros com mais de 10 dias.`);
+    }
+
+    // --- VERIFICAÇÃO VISUAL DE ITENS COM MAIS DE 10 DIAS PARA ALERTAR NAS ABAS ---
+    function checarAlertasItensAntigos() {
+      const agora = new Date();
+      agora.setHours(0, 0, 0, 0);
+      const limiteMs = 10 * 24 * 60 * 60 * 1000;
+
+      // 1. Avisos antigos
+      const temAvisosAntigos = (state.avisos || []).some(a => {
+        const t = a.criadoEm || parseInt(a.id, 10);
+        return (new Date().getTime() - t) > limiteMs;
+      });
+      document.getElementById('alerta-avisos-antigos').classList.toggle('hidden', !temAvisosAntigos);
+
+      // 2. Demandas concluídas antigas
+      const temDemandasAntigas = (state.demandas || []).some(d => {
+        if (d.status !== 'concluido') return false;
+        const t = d.concluidoEm || d.criadoEm || parseInt(d.id, 10);
+        return (new Date().getTime() - t) > limiteMs;
+      });
+      document.getElementById('alerta-demandas-antigas').classList.toggle('hidden', !temDemandasAntigas);
+
+      // 3. Plantões antigos
+      const temPlantoesAntigos = (state.plantao || []).some(p => {
+        const matchData = p.titulo ? p.titulo.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null;
+        if (!matchData) return false;
+        const dataP = new Date(parseInt(matchData[3], 10), parseInt(matchData[2], 10) - 1, parseInt(matchData[1], 10));
+        dataP.setHours(0, 0, 0, 0);
+        return (agora - dataP) / (1000 * 60 * 60 * 24) > 10;
+      });
+      document.getElementById('alerta-plantoes-antigos').classList.toggle('hidden', !temPlantoesAntigos);
     }
 
     // --- GERAÇÃO AUTOMÁTICA DE PLANTÕES PERDIDOS E ALERTAS ---
@@ -986,7 +1086,8 @@
             titulo: tituloEsperado,
             descricao: val.textoGerado,
             horaRegistro: String(Math.floor(val.limite)).padStart(2, '0') + ':00',
-            sistemaGerou: true
+            sistemaGerou: true,
+            criadoEm: new Date().getTime()
           });
           houveMudanca = true;
         }
