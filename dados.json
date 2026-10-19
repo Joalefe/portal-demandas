@@ -16,9 +16,11 @@
       "mensagem": "Teste",
       "cor": "postit-yellow",
       "lidosPor": [
-        "Ana"
+        "Ana",
+        "Carlos",
+        "Mariana"
       ],
-      "arquivado": false
+      "arquivado": true
     }
   ],
   "demandas": []
