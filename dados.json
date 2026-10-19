@@ -12,6 +12,14 @@
   ],
   "avisos": [
     {
+      "id": "1792442583598",
+      "titulo": "união soviética",
+      "mensagem": "flamengo",
+      "cor": "postit-purple",
+      "lidosPor": [],
+      "arquivado": false
+    },
+    {
       "id": "1792442163205",
       "titulo": "teste",
       "mensagem": "Teste",
@@ -32,6 +40,22 @@
       "descricao2": "teste",
       "categoria": "Manutenção",
       "status": "em_andamento"
+    },
+    {
+      "id": "1792443253681",
+      "titulo": "DD",
+      "descricao1": "DDdfsdfsdfsdfsd",
+      "descricao2": "DD",
+      "categoria": "Projetos",
+      "status": "pendente"
+    },
+    {
+      "id": "1792442691346",
+      "titulo": "contabilidade",
+      "descricao": "Retirar informativos Razão despesas ",
+      "categoria": "Chamados",
+      "status": "pendente",
+      "responsavel": ""
     }
   ],
   "plantao": [
