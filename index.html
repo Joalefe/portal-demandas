@@ -51,6 +51,9 @@
           <button id="tab-btn-demandas" onclick="switchMainTab('demandas')" class="px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white">
             Demandas
           </button>
+          <button id="tab-btn-plantao" onclick="switchMainTab('plantao')" class="px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white">
+            Passagem de Plantão
+          </button>
         </nav>
       </div>
       <div class="flex items-center gap-3">
@@ -117,6 +120,31 @@
       </div>
 
       <div id="container-demandas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- ABA 3: PASSAGEM DE PLANTÃO -->
+    <section id="tab-content-plantao" class="space-y-6 hidden">
+      <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
+        <div class="flex items-center gap-3">
+          <select id="filter-plantao-status" onchange="renderPlantao()" class="bg-slate-950 text-slate-200 text-xs border border-slate-800 rounded-lg px-3 py-2">
+            <option value="todos">Todos Status</option>
+            <option value="pendente">Pendente</option>
+            <option value="em_andamento">Em Andamento</option>
+            <option value="concluido">Concluído</option>
+          </select>
+          <select id="filter-plantao-categoria" onchange="renderPlantao()" class="bg-slate-950 text-slate-200 text-xs border border-slate-800 rounded-lg px-3 py-2">
+            <option value="todas">Todas Categorias</option>
+          </select>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="openModalPlantao()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
+            + Novo Plantão
+          </button>
+        </div>
+      </div>
+
+      <div id="container-plantao" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
     </section>
 
   </main>
@@ -222,7 +250,7 @@
     </div>
   </div>
 
-  <!-- Modal Demanda atualizado com Descrição 1 e Descrição 2 -->
+  <!-- Modal Demanda -->
   <div id="modal-demanda" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -265,6 +293,49 @@
     </div>
   </div>
 
+  <!-- Modal Passagem de Plantão -->
+  <div id="modal-plantao" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="modal-plantao-title" class="text-base font-semibold text-white">Nova Passagem de Plantão</h3>
+        <button onclick="closeModal('modal-plantao')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <form id="form-plantao-inner" onsubmit="savePlantao(event)" class="space-y-4">
+        <input type="hidden" id="plantao-id">
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Título</label>
+          <input type="text" id="plantao-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição 1</label>
+          <textarea id="plantao-descricao1" rows="2" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição 2</label>
+          <textarea id="plantao-descricao2" rows="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Categoria</label>
+            <select id="plantao-categoria" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Status</label>
+            <select id="plantao-status" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+              <option value="pendente">Pendente</option>
+              <option value="em_andamento">Em Andamento</option>
+              <option value="concluido">Concluído</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="closeModal('modal-plantao')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- SCRIPT LÓGICA COM GITHUB API + LOCALSTORAGE TOKEN -->
   <script>
     const GITHUB_USERNAME = 'joalefe';
@@ -277,7 +348,8 @@
       pessoas: ['Ana', 'Carlos', 'Mariana'],
       categorias: ['Chamados', 'Projetos', 'Manutenção'],
       avisos: [],
-      demandas: []
+      demandas: [],
+      plantao: []
     };
 
     function getToken() {
@@ -345,6 +417,7 @@
         updateCategoriaOptions();
         renderAvisos();
         renderDemandas();
+        renderPlantao();
       } catch (err) {
         console.error(err);
         statusEl.innerText = '⚠️ Erro de sincronização';
@@ -408,14 +481,22 @@
     function switchMainTab(tab) {
       document.getElementById('tab-content-avisos').classList.toggle('hidden', tab !== 'avisos');
       document.getElementById('tab-content-demandas').classList.toggle('hidden', tab !== 'demandas');
+      document.getElementById('tab-content-plantao').classList.toggle('hidden', tab !== 'plantao');
+      
       const btnA = document.getElementById('tab-btn-avisos');
       const btnD = document.getElementById('tab-btn-demandas');
+      const btnP = document.getElementById('tab-btn-plantao');
+
+      btnA.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
+      btnD.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
+      btnP.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
+
       if (tab === 'avisos') {
         btnA.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow";
-        btnD.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
-      } else {
+      } else if (tab === 'demandas') {
         btnD.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow";
-        btnA.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
+      } else {
+        btnP.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow";
       }
     }
 
@@ -585,6 +666,7 @@
       }
     }
 
+    // --- DEMANDAS ---
     function renderDemandas() {
       const filterStatus = document.getElementById('filter-demandas-status').value;
       const filterCat = document.getElementById('filter-demandas-categoria').value;
@@ -681,8 +763,7 @@
           d.descricao2 = descricao2;
           d.categoria = categoria; 
           d.status = status;
-          delete d.descricao; // Limpa campo antigo se existia
-          delete d.responsavel;
+          delete d.descricao;
         }
       } else {
         state.demandas.unshift({
@@ -703,6 +784,140 @@
       }
     }
 
+    // --- PASSAGEM DE PLANTÃO ---
+    function renderPlantao() {
+      const filterStatus = document.getElementById('filter-plantao-status').value;
+      const filterCat = document.getElementById('filter-plantao-categoria').value;
+      let list = state.plantao || [];
+      if (filterStatus !== 'todos') list = list.filter(p => p.status === filterStatus);
+      if (filterCat !== 'todas') list = list.filter(p => p.categoria === filterCat);
+      const statusBadges = {
+        'pendente': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
+        'em_andamento': 'bg-sky-500/10 text-sky-400 border-sky-500/20',
+        'concluido': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+      };
+      document.getElementById('container-plantao').innerHTML = list.map(p => `
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3 flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                ${escapeHtml(p.categoria)}
+              </span>
+              <div class="flex gap-1 items-center">
+                <button onclick="moverParaDemandas('${p.id}')" class="text-[11px] bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded font-medium transition" title="Mover para Demandas">📦 Mover</button>
+                <button onclick="openModalPlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1">✏️</button>
+                <button onclick="deletePlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1">🗑️</button>
+              </div>
+            </div>
+            <h4 class="font-bold text-white text-base">${escapeHtml(p.titulo)}</h4>
+            <div class="mt-2 space-y-2 text-xs">
+              <div>
+                <span class="font-semibold text-slate-400">Descrição 1:</span>
+                <p class="text-slate-300 mt-0.5">${escapeHtml(p.descricao1 || '')}</p>
+              </div>
+              ${p.descricao2 ? `
+                <div class="border-t border-slate-800/60 pt-1.5">
+                  <span class="font-semibold text-slate-400">Descrição 2:</span>
+                  <p class="text-slate-300 mt-0.5">${escapeHtml(p.descricao2)}</p>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-end text-xs">
+            <select onchange="updatePlantaoStatus('${p.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[p.status]} bg-slate-950">
+              <option value="pendente" ${p.status === 'pendente' ? 'selected' : ''}>Pendente</option>
+              <option value="em_andamento" ${p.status === 'em_andamento' ? 'selected' : ''}>Em Andamento</option>
+              <option value="concluido" ${p.status === 'concluido' ? 'selected' : ''}>Concluído</option>
+            </select>
+          </div>
+        </div>
+      `).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum registro de plantão encontrado.</p>`;
+    }
+
+    function updatePlantaoStatus(id, newStatus) {
+      const p = (state.plantao || []).find(x => x.id === id);
+      if (p) {
+        p.status = newStatus;
+        saveStorage();
+        renderPlantao();
+      }
+    }
+
+    function openModalPlantao(id = null) {
+      document.getElementById('form-plantao-inner').reset();
+      updateCategoriaOptions();
+      if (id) {
+        const p = (state.plantao || []).find(x => x.id === id);
+        if (p) {
+          document.getElementById('plantao-id').value = p.id;
+          document.getElementById('plantao-titulo').value = p.titulo;
+          document.getElementById('plantao-descricao1').value = p.descricao1 || '';
+          document.getElementById('plantao-descricao2').value = p.descricao2 || '';
+          document.getElementById('plantao-categoria').value = p.categoria;
+          document.getElementById('plantao-status').value = p.status;
+          document.getElementById('modal-plantao-title').innerText = 'Editar Passagem de Plantão';
+        }
+      } else {
+        document.getElementById('plantao-id').value = '';
+        document.getElementById('modal-plantao-title').innerText = 'Nova Passagem de Plantão';
+      }
+      openModal('modal-plantao');
+    }
+
+    function savePlantao(e) {
+      e.preventDefault();
+      const id = document.getElementById('plantao-id').value;
+      const titulo = document.getElementById('plantao-titulo').value;
+      const descricao1 = document.getElementById('plantao-descricao1').value;
+      const descricao2 = document.getElementById('plantao-descricao2').value;
+      const categoria = document.getElementById('plantao-categoria').value;
+      const status = document.getElementById('plantao-status').value;
+      
+      state.plantao = state.plantao || [];
+      if (id) {
+        const p = state.plantao.find(x => x.id === id);
+        if (p) {
+          p.titulo = titulo; 
+          p.descricao1 = descricao1; 
+          p.descricao2 = descricao2;
+          p.categoria = categoria; 
+          p.status = status;
+        }
+      } else {
+        state.plantao.unshift({
+          id: Date.now().toString(),
+          titulo, descricao1, descricao2, categoria, status
+        });
+      }
+      saveStorage();
+      renderPlantao();
+      closeModal('modal-plantao');
+    }
+
+    function deletePlantao(id) {
+      if (confirm('Excluir passagem de plantão?')) {
+        state.plantao = state.plantao.filter(p => p.id !== id);
+        saveStorage();
+        renderPlantao();
+      }
+    }
+
+    function moverParaDemandas(id) {
+      const p = (state.plantao || []).find(x => x.id === id);
+      if (!p) return;
+
+      // Remove da plantao e adiciona nas demandas
+      state.plantao = state.plantao.filter(x => x.id !== id);
+      state.demandas = state.demandas || [];
+      state.demandas.unshift({ ...p });
+
+      saveStorage();
+      renderPlantao();
+      renderDemandas();
+      alert('Item movido para Demandas com sucesso!');
+    }
+
+    // --- PESSOAS E CATEGORIAS ---
     function openModalPessoas() { renderListaPessoas(); openModal('modal-pessoas'); }
     function renderListaPessoas() {
       document.getElementById('lista-pessoas').innerHTML = (state.pessoas || []).map(p => `
@@ -754,6 +969,7 @@
         renderListaCategorias();
         updateCategoriaOptions();
         renderDemandas();
+        renderPlantao();
       }
     }
 
@@ -763,17 +979,35 @@
       renderListaCategorias();
       updateCategoriaOptions();
       renderDemandas();
+      renderPlantao();
     }
 
     function updateCategoriaOptions() {
-      const selForm = document.getElementById('demanda-categoria');
-      const selFilter = document.getElementById('filter-demandas-categoria');
       const cats = state.categorias || ['Chamados', 'Projetos', 'Manutenção'];
-      if (selForm) { selForm.innerHTML = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join(''); }
-      if (selFilter) {
-        const currFilter = selFilter.value;
-        selFilter.innerHTML = `<option value="todas">Todas Categorias</option>` + cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
-        selFilter.value = currFilter;
+      const optionsHtml = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+
+      // Form Demanda
+      const selFormD = document.getElementById('demanda-categoria');
+      if (selFormD) selFormD.innerHTML = optionsHtml;
+
+      // Filter Demanda
+      const selFilterD = document.getElementById('filter-demandas-categoria');
+      if (selFilterD) {
+        const curr = selFilterD.value;
+        selFilterD.innerHTML = `<option value="todas">Todas Categorias</option>` + optionsHtml;
+        selFilterD.value = curr;
+      }
+
+      // Form Plantao
+      const selFormP = document.getElementById('plantao-categoria');
+      if (selFormP) selFormP.innerHTML = optionsHtml;
+
+      // Filter Plantao
+      const selFilterP = document.getElementById('filter-plantao-categoria');
+      if (selFilterP) {
+        const currP = selFilterP.value;
+        selFilterP.innerHTML = `<option value="todas">Todas Categorias</option>` + optionsHtml;
+        selFilterP.value = currP;
       }
     }
 
