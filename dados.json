@@ -50,5 +50,20 @@
       "responsavel": ""
     }
   ],
-  "plantao": []
+  "plantao": [
+    {
+      "id": "auto_1792444313653_Intermediário",
+      "titulo": "19/10/2026 - Intermediário",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
+      "horaRegistro": "16:00",
+      "sistemaGerou": true
+    },
+    {
+      "id": "auto_1792444313653_Manhã",
+      "titulo": "19/10/2026 - Manhã",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true
+    }
+  ]
 }
