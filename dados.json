@@ -32,16 +32,7 @@
       "arquivado": true
     }
   ],
-  "demandas": [
-    {
-      "id": "1792448292503",
-      "titulo": "kaell",
-      "descricao1": "teste",
-      "descricao2": "teste",
-      "categoria": "Manutenção",
-      "status": "em_andamento"
-    }
-  ],
+  "demandas": [],
   "plantao": [
     {
       "id": "auto_1792444313653_Intermediário",
