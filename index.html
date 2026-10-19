@@ -312,7 +312,7 @@
     </div>
   </div>
 
-  <!-- MODAL: Passagem de Plantão Padrão (Sem e-mail) -->
+  <!-- MODAL: Passagem de Plantão Padrão -->
   <div id="modal-plantao" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -369,21 +369,21 @@
     </div>
   </div>
 
-  <!-- MODAL: Formulário de Envio por E-mail EXCLUSIVO para a Tarde (FormSubmit) -->
+  <!-- MODAL: Formulário de Envio por E-mail EXCLUSIVO para a Tarde (FormSubmit com e-mail fixo oculto) -->
   <div id="modal-plantao-email" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-        <h3 class="text-base font-semibold text-white">✉️ Enviar Passagem de Plantão da Tarde (E-mail)</h3>
+        <h3 class="text-base font-semibold text-white">✉️ Passagem de Plantão da Tarde (Confirmação de Responsável)</h3>
         <button onclick="closeModal('modal-plantao-email')" class="text-slate-400 hover:text-white">✕</button>
       </div>
 
-      <form action="https://formsubmit.co/cpd_675@atacadao.com" method="POST" onsubmit="savePlantaoEmailSubmit(event)" class="space-y-4">
+      <form action="https://formsubmit.co/cpd_675@atacadao.com.br" method="POST" onsubmit="savePlantaoEmailSubmit(event)" class="space-y-4">
         <!-- CONFIGURAÇÕES FORMSUBMIT -->
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="📋 Relatório de Passagem de Plantão - Tarde">
         <input type="hidden" name="_template" value="box">
 
-        <!-- Campos espelho para o FormSubmit -->
+        <!-- Campos espelho ocultos para o FormSubmit -->
         <input type="hidden" id="email-titulo" name="titulo_plantao">
         <input type="hidden" id="email-descricao" name="descricao_geral">
         <input type="hidden" id="email-rubs-desv" name="rubs_desvinculados">
@@ -391,18 +391,12 @@
         <input type="hidden" id="email-etiquetas" name="etiquetas_ribbon">
 
         <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-300">
-          Você está enviando o plantão da tarde. Preencha seus dados abaixo para disparar o relatório por e-mail:
+          Você registrou um plantão da **Tarde**. Confirme seu nome para disparar o e-mail automaticamente para <strong>cpd_675@atacadao.com.br</strong>:
         </div>
 
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-medium text-slate-400 mb-1">Identificação / Responsável</label>
-            <input type="text" name="responsavel" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
-          </div>
-          <div>
-            <label class="block text-xs font-medium text-slate-400 mb-1">Seu E-mail (para retorno)</label>
-            <input type="email" name="email" required placeholder="seu@email.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
-          </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Identificação / Responsável</label>
+          <input type="text" name="responsavel" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
 
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
@@ -412,6 +406,20 @@
       </form>
     </div>
   </div>
+
+  <!-- FORMULÁRIO OCULTO PARA DISPARAR E-MAIL AUTOMÁTICO DOS OUTROS TURNOS -->
+  <form id="hidden-formsubmit-auto" action="https://formsubmit.co/cpd_675@atacadao.com.br" method="POST" target="hidden-iframe" class="hidden">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" id="auto-email-subject" value="📋 Relatório de Passagem de Plantão">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="responsavel" value="Automático / Sistema">
+    <input type="hidden" name="titulo_plantao" id="auto-email-titulo">
+    <input type="hidden" name="descricao_geral" id="auto-email-desc">
+    <input type="hidden" name="rubs_desvinculados" id="auto-email-rubs-desv">
+    <input type="hidden" name="rubs_bloqueados" id="auto-email-rubs-bloq">
+    <input type="hidden" name="etiquetas_ribbon" id="auto-email-etiquetas">
+  </form>
+  <iframe name="hidden-iframe" style="display:none;"></iframe>
 
   <!-- MODAL DE VISUALIZAÇÃO EM TELA CHEIA PARA OS CARDS -->
   <div id="modal-fullscreen" class="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 hidden backdrop-blur-md">
@@ -613,7 +621,6 @@
     function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
     function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
-    // Função universal para abrir conteúdo em tela cheia em qualquer aba
     function abrirFullscreen(titulo, htmlConteudo) {
       document.getElementById('fs-title').innerText = titulo;
       document.getElementById('fs-content').innerHTML = htmlConteudo;
@@ -639,11 +646,6 @@
       const renderCard = (a) => {
         const totalReq = Math.min(3, (state.pessoas || []).length || 1);
         const lidosCount = (a.lidosPor || []).length;
-        
-        // Codifica dados para visualização em tela cheia segura
-        const safeTitle = encodeURIComponent(a.titulo);
-        const safeMsg = encodeURIComponent(a.mensagem);
-
         return `
           <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between h-72 transition hover:-translate-y-1">
             <div class="overflow-hidden">
@@ -698,12 +700,6 @@
       aviso.arquivado = aviso.lidosPor.length >= totalReq;
       saveStorage();
       renderAvisos();
-    }
-
-    function viewAviso(id) {
-      const a = state.avisos.find(x => x.id === id);
-      if (!a) return;
-      abrirFullscreen(a.titulo, a.mensagem);
     }
 
     function openModalAviso(id = null) {
@@ -975,7 +971,7 @@
       e.preventDefault();
       const titulo = document.getElementById('plantao-titulo').value;
 
-      // Se o título contiver "Tarde", interceptamos e abrimos o modal de e-mail do FormSubmit
+      // Se for Tarde, abrimos o mini modal para confirmar o responsável antes de disparar o e-mail
       if (titulo.toLowerCase().includes('tarde')) {
         tempPlantaoBuffer = {
           id: document.getElementById('plantao-id').value,
@@ -987,7 +983,6 @@
           horaRegistro: document.getElementById('plantao-horario-registro').value
         };
 
-        // Popula os campos ocultos do form de e-mail
         document.getElementById('email-titulo').value = tempPlantaoBuffer.titulo;
         document.getElementById('email-descricao').value = tempPlantaoBuffer.descricao;
         document.getElementById('email-rubs-desv').value = tempPlantaoBuffer.rubsDesvinculados;
@@ -999,13 +994,30 @@
         return;
       }
 
-      // Demais turnos salvam direto sem e-mail
+      // Demais turnos (Manhã, Intermediário, Madrugada) salvam e disparam o e-mail automaticamente em segundo plano
       executarSalvarPlantaoFinal(null);
+      dispararEmailAutomatico({
+        titulo: titulo,
+        descricao: document.getElementById('plantao-descricao').value,
+        rubsDesv: document.getElementById('plantao-rubs-desvinculados').value,
+        rubsBloq: document.getElementById('plantao-rubs-bloqueados').value,
+        etiquetas: document.getElementById('plantao-etiquetas').value
+      });
     }
 
     function savePlantaoEmailSubmit(e) {
-      // Executa o envio do FormSubmit e salva no armazenamento local simultaneamente
       executarSalvarPlantaoFinal(tempPlantaoBuffer);
+    }
+
+    function dispararEmailAutomatico(dados) {
+      document.getElementById('auto-email-subject').value = `📋 Relatório de Passagem de Plantão - ${dados.titulo}`;
+      document.getElementById('auto-email-titulo').value = dados.titulo;
+      document.getElementById('auto-email-desc').value = dados.descricao;
+      document.getElementById('auto-email-rubs-desv').value = dados.rubsDesv;
+      document.getElementById('auto-email-rubs-bloq').value = dados.rubsBloq;
+      document.getElementById('auto-email-etiquetas').value = dados.etiquetas;
+
+      document.getElementById('hidden-formsubmit-auto').submit();
     }
 
     function executarSalvarPlantaoFinal(dadosBuffer) {
@@ -1093,20 +1105,17 @@
       alert(`Limpeza concluída! Foram removidos ${removidos} registros com mais de 10 dias.`);
     }
 
-    // --- VERIFICAÇÃO VISUAL DE ITENS COM MAIS DE 10 DIAS PARA ALERTAR NAS ABAS ---
     function checarAlertasItensAntigos() {
       const agora = new Date();
       agora.setHours(0, 0, 0, 0);
       const limiteMs = 10 * 24 * 60 * 60 * 1000;
 
-      // 1. Avisos antigos
       const temAvisosAntigos = (state.avisos || []).some(a => {
         const t = a.criadoEm || parseInt(a.id, 10);
         return (new Date().getTime() - t) > limiteMs;
       });
       document.getElementById('alerta-avisos-antigos').classList.toggle('hidden', !temAvisosAntigos);
 
-      // 2. Plantões antigos
       const temPlantoesAntigos = (state.plantao || []).some(p => {
         const matchData = p.titulo ? p.titulo.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null;
         if (!matchData) return false;
@@ -1117,7 +1126,6 @@
       document.getElementById('alerta-plantoes-antigos').classList.toggle('hidden', !temPlantoesAntigos);
     }
 
-    // --- GERAÇÃO AUTOMÁTICA DE PLANTÕES PERDIDOS E ALERTAS ---
     function verificarEGerarPlantoesPerdidos() {
       const agora = new Date();
       const horaAtual = agora.getHours();
@@ -1239,10 +1247,8 @@
       renderPlantao();
     }
 
-    // Executa verificação a cada 30 segundos
     setInterval(verificarAlertasPlantao, 30000);
 
-    // --- PESSOAS E CATEGORIAS ---
     function openModalPessoas() { renderListaPessoas(); openModal('modal-pessoas'); }
     function renderListaPessoas() {
       document.getElementById('lista-pessoas').innerHTML = (state.pessoas || []).map(p => `
