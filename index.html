@@ -146,13 +146,13 @@
     <section id="tab-content-plantao" class="space-y-6 hidden">
       <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
         <div class="text-sm font-medium text-slate-300">
-          📋 Histórico de Passagens de Plantão (Envio Direto por E-mail)
+          📋 Histórico de Passagens de Plantão
         </div>
         <div class="flex items-center gap-2">
           <button onclick="apagarPlantoesAntigos()" class="text-xs bg-rose-950/60 hover:bg-rose-900 text-rose-300 border border-rose-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar registros com mais de 10 dias">
             🗑️ Limpar Antigos (+10d)
           </button>
-          <button onclick="openModalPlantao()" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
+          <button onclick="openModalPlantao()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
             + Nova Passagem de Plantão
           </button>
         </div>
@@ -312,7 +312,7 @@
     </div>
   </div>
 
-  <!-- MODAL: Passagem de Plantão unificada com FormSubmit (Salva no app e envia por e-mail) -->
+  <!-- MODAL: Passagem de Plantão Padrão (Sem e-mail) -->
   <div id="modal-plantao" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -320,15 +320,7 @@
         <button onclick="closeModal('modal-plantao')" class="text-slate-400 hover:text-white">✕</button>
       </div>
 
-      <!-- FORMULÁRIO COM FORMSUBMIT (Envia por e-mail e dispara a função interna de salvar) -->
-      <form action="https://formsubmit.co/joalefe@outlook.com" method="POST" onsubmit="savePlantaoComEmail(event)" class="space-y-4">
-
-        <!-- CONFIGURAÇÕES DO FORMSUBMIT -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="📋 Relatório de Passagem de Plantão - Portal">
-        <input type="hidden" name="_template" value="box">
-        
-        <!-- Campo oculto para manter o ID se for edição -->
+      <form id="form-plantao-inner" onsubmit="savePlantao(event)" class="space-y-4">
         <input type="hidden" id="plantao-id">
         <input type="hidden" id="plantao-horario-registro">
 
@@ -343,7 +335,63 @@
             <button type="button" onclick="preencherPeriodo('Tarde')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌙 Tarde</button>
             <button type="button" onclick="preencherPeriodo('Madrugada')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">✨ Madruga</button>
           </div>
-          <input type="text" id="plantao-titulo" name="titulo_plantao" required placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" id="plantao-titulo" required placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição Geral do Plantão (Área Ampliada)</label>
+          <textarea id="plantao-descricao" rows="10" required placeholder="Escreva aqui detalhadamente todos os acontecimentos, ocorrências e repasses do plantão..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+        </div>
+
+        <!-- 1. Rubs Desvinculados (Obrigatório) -->
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Desvinculados *</label>
+          <textarea id="plantao-rubs-desvinculados" rows="2" required placeholder="Informe os detalhes sobre rubs desvinculados..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+
+        <!-- 2. Rubs Bloqueados e quem foi bloqueado (Obrigatório) -->
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Bloqueados (Informar quem foi bloqueado) *</label>
+          <textarea id="plantao-rubs-bloqueados" rows="2" required placeholder="Informe os rubs bloqueados e especifique quem foi o responsável/envolvido..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+
+        <!-- 3. Etiquetas e Ribbon Abastecidas (Obrigatório) -->
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Etiquetas e Ribbon Abastecidas *</label>
+          <textarea id="plantao-etiquetas" rows="2" required placeholder="Informe a situação das etiquetas e ribbons abastecidas..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="closeModal('modal-plantao')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-5 py-2 rounded-lg font-medium shadow">Salvar Plantão</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: Formulário de Envio por E-mail EXCLUSIVO para a Tarde (FormSubmit) -->
+  <div id="modal-plantao-email" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="text-base font-semibold text-white">✉️ Enviar Passagem de Plantão da Tarde (E-mail)</h3>
+        <button onclick="closeModal('modal-plantao-email')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+
+      <form action="https://formsubmit.co/joalefe@outlook.com" method="POST" onsubmit="savePlantaoEmailSubmit(event)" class="space-y-4">
+        <!-- CONFIGURAÇÕES FORMSUBMIT -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="📋 Relatório de Passagem de Plantão - Tarde">
+        <input type="hidden" name="_template" value="box">
+
+        <!-- Campos espelho para o FormSubmit -->
+        <input type="hidden" id="email-titulo" name="titulo_plantao">
+        <input type="hidden" id="email-descricao" name="descricao_geral">
+        <input type="hidden" id="email-rubs-desv" name="rubs_desvinculados">
+        <input type="hidden" id="email-rubs-bloq" name="rubs_bloqueados">
+        <input type="hidden" id="email-etiquetas" name="etiquetas_ribbon">
+
+        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-300">
+          Você está enviando o plantão da tarde. Preencha seus dados abaixo para disparar o relatório por e-mail:
         </div>
 
         <div class="grid grid-cols-2 gap-3">
@@ -357,34 +405,25 @@
           </div>
         </div>
 
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição Geral do Plantão</label>
-          <textarea id="plantao-descricao" name="descricao_geral" rows="3" required placeholder="Detalhes gerais da passagem de plantão..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
-        </div>
-
-        <!-- 1. Rubs Desvinculados (Obrigatório) -->
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Desvinculados *</label>
-          <textarea id="plantao-rubs-desvinculados" name="rubs_desvinculados" rows="2" required placeholder="Informe os detalhes sobre rubs desvinculados..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
-        </div>
-
-        <!-- 2. Rubs Bloqueados e quem foi bloqueado (Obrigatório) -->
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Bloqueados (Informar quem foi bloqueado) *</label>
-          <textarea id="plantao-rubs-bloqueados" name="rubs_bloqueados" rows="2" required placeholder="Informe os rubs bloqueados e especifique quem foi o responsável/envolvido..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
-        </div>
-
-        <!-- 3. Etiquetas e Ribbon Abastecidas (Obrigatório) -->
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Etiquetas e Ribbon Abastecidas *</label>
-          <textarea id="plantao-etiquetas" name="etiquetas_ribbon" rows="2" required placeholder="Informe a situação das etiquetas e ribbons abastecidas..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
-        </div>
-
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
-          <button type="button" onclick="closeModal('modal-plantao')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
-          <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-5 py-2 rounded-lg font-medium shadow">Salvar e Enviar Plantão</button>
+          <button type="button" onclick="closeModal('modal-plantao-email')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-5 py-2 rounded-lg font-medium shadow">Disparar E-mail e Salvar</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- MODAL DE VISUALIZAÇÃO EM TELA CHEIA PARA OS CARDS -->
+  <div id="modal-fullscreen" class="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 hidden backdrop-blur-md">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-3xl p-6 space-y-4 max-h-[85vh] overflow-y-auto relative shadow-2xl">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="fs-title" class="text-lg font-bold text-white">Visualização em Tela Cheia</h3>
+        <button onclick="closeModal('modal-fullscreen')" class="text-slate-400 hover:text-white text-lg">✕</button>
+      </div>
+      <div id="fs-content" class="text-sm text-slate-200 space-y-4 whitespace-pre-wrap leading-relaxed"></div>
+      <div class="flex justify-end pt-3 border-t border-slate-800">
+        <button onclick="closeModal('modal-fullscreen')" class="bg-slate-800 hover:bg-slate-700 text-white text-xs px-4 py-2 rounded-lg">Fechar</button>
+      </div>
     </div>
   </div>
 
@@ -403,6 +442,8 @@
       demandas: [],
       plantao: []
     };
+
+    let tempPlantaoBuffer = null;
 
     function getToken() {
       let token = localStorage.getItem('portal_github_token');
@@ -572,6 +613,13 @@
     function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
     function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
+    // Função universal para abrir conteúdo em tela cheia em qualquer aba
+    function abrirFullscreen(titulo, htmlConteudo) {
+      document.getElementById('fs-title').innerText = titulo;
+      document.getElementById('fs-content').innerHTML = htmlConteudo;
+      openModal('modal-fullscreen');
+    }
+
     function renderAvisos() {
       document.getElementById('count-pessoas').innerText = (state.pessoas || []).length;
       const ativos = (state.avisos || []).filter(a => !a.arquivado);
@@ -591,26 +639,32 @@
       const renderCard = (a) => {
         const totalReq = Math.min(3, (state.pessoas || []).length || 1);
         const lidosCount = (a.lidosPor || []).length;
+        
+        // Codifica dados para visualização em tela cheia segura
+        const safeTitle = encodeURIComponent(a.titulo);
+        const safeMsg = encodeURIComponent(a.mensagem);
+
         return `
-          <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between transition hover:-translate-y-1">
-            <div>
+          <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between h-72 transition hover:-translate-y-1">
+            <div class="overflow-hidden">
               <div class="flex justify-between items-start gap-2 mb-2">
-                <h4 class="font-bold text-base leading-snug">${escapeHtml(a.titulo)}</h4>
-                <div class="flex gap-1">
+                <h4 class="font-bold text-base leading-snug truncate">${escapeHtml(a.titulo)}</h4>
+                <div class="flex gap-1 shrink-0">
+                  <button onclick="abrirFullscreen('${escapeHtml(a.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(a.mensagem).replace(/`/g, '\\`')}\`)" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Tela Cheia">🔍</button>
                   <button onclick="openModalAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Editar">✏️</button>
                   <button onclick="deleteAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Excluir">🗑️</button>
                 </div>
               </div>
-              <p class="text-xs opacity-90 line-clamp-3 mb-4 cursor-pointer" onclick="viewAviso('${a.id}')">
+              <p class="text-xs opacity-90 line-clamp-3 mb-4">
                 ${escapeHtml(a.mensagem)}
               </p>
             </div>
-            <div class="border-t border-black/10 pt-3 mt-2 space-y-2">
+            <div class="border-t border-black/10 pt-3 mt-2 space-y-2 shrink-0">
               <div class="flex justify-between items-center text-[10px] font-bold uppercase tracking-wider opacity-75">
                 <span>Leitura (${lidosCount}/${totalReq})</span>
                 <span>${a.arquivado ? 'Lido/Arquivado' : 'Pendente'}</span>
               </div>
-              <div class="space-y-1">
+              <div class="space-y-1 max-h-16 overflow-y-auto">
                 ${(state.pessoas || []).map(p => {
                   const checked = (a.lidosPor || []).includes(p);
                   return `
@@ -649,29 +703,7 @@
     function viewAviso(id) {
       const a = state.avisos.find(x => x.id === id);
       if (!a) return;
-      const modalCard = document.getElementById('view-aviso-card');
-      const bgColors = {
-        'postit-yellow': 'bg-amber-200 text-amber-950',
-        'postit-blue': 'bg-sky-200 text-sky-950',
-        'postit-green': 'bg-emerald-200 text-emerald-950',
-        'postit-pink': 'bg-pink-200 text-pink-950',
-        'postit-purple': 'bg-purple-200 text-purple-950',
-        'postit-orange': 'bg-orange-200 text-orange-950'
-      };
-      modalCard.className = `rounded-xl w-full max-w-lg p-6 space-y-4 shadow-2xl transition-all ${bgColors[a.cor]}`;
-      document.getElementById('view-aviso-titulo').innerText = a.titulo;
-      document.getElementById('view-aviso-mensagem').innerText = a.mensagem;
-      document.getElementById('view-aviso-leitores').innerHTML = (state.pessoas || []).map(p => `
-        <div class="flex items-center gap-1.5">
-          <span>${(a.lidosPor || []).includes(p) ? '✅' : '⏳'}</span>
-          <span>${escapeHtml(p)}</span>
-        </div>
-      `).join('');
-      document.getElementById('view-aviso-btn-edit').onclick = () => {
-        closeModal('modal-view-aviso');
-        openModalAviso(a.id);
-      };
-      openModal('modal-view-aviso');
+      abrirFullscreen(a.titulo, a.mensagem);
     }
 
     function openModalAviso(id = null) {
@@ -758,41 +790,37 @@
         'em_andamento': 'bg-sky-500/10 text-sky-400 border-sky-500/20',
         'concluido': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
       };
-      document.getElementById('container-demandas').innerHTML = list.map(d => `
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3 flex flex-col justify-between">
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
-                ${escapeHtml(d.categoria)}
-              </span>
-              <div class="flex gap-1">
-                <button onclick="openModalDemanda('${d.id}')" class="text-xs text-slate-400 hover:text-white p-1">✏️</button>
-                <button onclick="deleteDemanda('${d.id}')" class="text-xs text-slate-400 hover:text-white p-1">🗑️</button>
-              </div>
-            </div>
-            <h4 class="font-bold text-white text-base">${escapeHtml(d.titulo)}</h4>
-            <div class="mt-2 space-y-2 text-xs">
-              <div>
-                <span class="font-semibold text-slate-400">Descrição 1:</span>
-                <p class="text-slate-300 mt-0.5">${escapeHtml(d.descricao1 || '')}</p>
-              </div>
-              ${d.descricao2 ? `
-                <div class="border-t border-slate-800/60 pt-1.5">
-                  <span class="font-semibold text-slate-400">Descrição 2:</span>
-                  <p class="text-slate-300 mt-0.5">${escapeHtml(d.descricao2)}</p>
+      document.getElementById('container-demandas').innerHTML = list.map(d => {
+        const conteudoDetalhado = `**Categoria:** ${d.categoria}\n**Status:** ${d.status}\n\n**Descrição 1:**\n${d.descricao1 || ''}\n\n${d.descricao2 ? '**Descrição 2:**\n' + d.descricao2 : ''}`;
+        return `
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3 flex flex-col justify-between h-72">
+            <div class="overflow-hidden">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 truncate max-w-[150px]">
+                  ${escapeHtml(d.categoria)}
+                </span>
+                <div class="flex gap-1 shrink-0">
+                  <button onclick="abrirFullscreen('${escapeHtml(d.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(conteudoDetalhado).replace(/`/g, '\\`')}\`)" class="text-xs bg-slate-800 hover:bg-slate-700 p-1.5 rounded text-slate-300" title="Tela Cheia">🔍</button>
+                  <button onclick="openModalDemanda('${d.id}')" class="text-xs text-slate-400 hover:text-white p-1">✏️</button>
+                  <button onclick="deleteDemanda('${d.id}')" class="text-xs text-slate-400 hover:text-white p-1">🗑️</button>
                 </div>
-              ` : ''}
+              </div>
+              <h4 class="font-bold text-white text-base truncate">${escapeHtml(d.titulo)}</h4>
+              <div class="mt-2 space-y-1 text-xs overflow-hidden">
+                <p class="text-slate-300 line-clamp-3">${escapeHtml(d.descricao1 || '')}</p>
+              </div>
+            </div>
+            <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs shrink-0">
+              <span class="text-[10px] text-slate-500">ID: ${d.id.slice(-4)}</span>
+              <select onchange="updateDemandaStatus('${d.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[d.status]} bg-slate-950">
+                <option value="pendente" ${d.status === 'pendente' ? 'selected' : ''}>Pendente</option>
+                <option value="em_andamento" ${d.status === 'em_andamento' ? 'selected' : ''}>Em Andamento</option>
+                <option value="concluido" ${d.status === 'concluido' ? 'selected' : ''}>Concluído</option>
+              </select>
             </div>
           </div>
-          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-end text-xs">
-            <select onchange="updateDemandaStatus('${d.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[d.status]} bg-slate-950">
-              <option value="pendente" ${d.status === 'pendente' ? 'selected' : ''}>Pendente</option>
-              <option value="em_andamento" ${d.status === 'em_andamento' ? 'selected' : ''}>Em Andamento</option>
-              <option value="concluido" ${d.status === 'concluido' ? 'selected' : ''}>Concluído</option>
-            </select>
-          </div>
-        </div>
-      `).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda encontrada.</p>`;
+        `;
+      }).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda encontrada.</p>`;
     }
 
     function updateDemandaStatus(id, newStatus) {
@@ -869,12 +897,15 @@
       let list = state.plantao || [];
       document.getElementById('container-plantao').innerHTML = list.map(p => {
         const isSistema = p.sistemaGerou === true;
+        const textoCompletoPlantao = `Descrição Geral:\n${p.descricao || 'N/A'}\n\nRubs Desvinculados:\n${p.rubsDesvinculados || 'N/A'}\n\nRubs Bloqueados:\n${p.rubsBloqueados || 'N/A'}\n\nEtiquetas/Ribbon:\n${p.etiquetasRibbon || 'N/A'}`;
+
         return `
-          <div class="${isSistema ? 'bg-rose-950/40 border-rose-900/60' : 'bg-slate-900 border-slate-800'} border rounded-xl p-5 space-y-3 flex flex-col justify-between shadow-md">
-            <div>
+          <div class="${isSistema ? 'bg-rose-950/40 border-rose-900/60' : 'bg-slate-900 border-slate-800'} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-72 shadow-md">
+            <div class="overflow-hidden">
               <div class="flex items-start justify-between gap-2 mb-2">
-                <h4 class="font-bold ${isSistema ? 'text-rose-300' : 'text-white'} text-base">${escapeHtml(p.titulo)}</h4>
-                <div class="flex gap-1 items-center">
+                <h4 class="font-bold ${isSistema ? 'text-rose-300' : 'text-white'} text-base truncate">${escapeHtml(p.titulo)}</h4>
+                <div class="flex gap-1 items-center shrink-0">
+                  <button onclick="abrirFullscreen('${escapeHtml(p.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(textoCompletoPlantao).replace(/`/g, '\\`')}\`)" class="text-xs bg-slate-800 hover:bg-slate-700 p-1 rounded text-slate-300" title="Tela Cheia">🔍</button>
                   ${!isSistema ? `
                     <button onclick="openModalPlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Editar">✏️</button>
                     <button onclick="deletePlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Excluir">🗑️</button>
@@ -883,14 +914,11 @@
                   `}
                 </div>
               </div>
-              <div class="mt-2 text-xs space-y-1.5">
-                <p class="${isSistema ? 'text-rose-200/90 font-medium' : 'text-slate-300'} whitespace-pre-wrap leading-relaxed">${escapeHtml(p.descricao || '')}</p>
-                ${p.rubsDesvinculados ? `<div class="pt-1 border-t border-slate-800"><span class="font-semibold text-slate-400">Rubs Desvinculados:</span> <span class="text-slate-300">${escapeHtml(p.rubsDesvinculados)}</span></div>` : ''}
-                ${p.rubsBloqueados ? `<div class="pt-1 border-t border-slate-800"><span class="font-semibold text-slate-400">Rubs Bloqueados:</span> <span class="text-slate-300">${escapeHtml(p.rubsBloqueados)}</span></div>` : ''}
-                ${p.etiquetasRibbon ? `<div class="pt-1 border-t border-slate-800"><span class="font-semibold text-slate-400">Etiquetas/Ribbon:</span> <span class="text-slate-300">${escapeHtml(p.etiquetasRibbon)}</span></div>` : ''}
+              <div class="mt-2 text-xs space-y-1 overflow-hidden">
+                <p class="${isSistema ? 'text-rose-200/90 font-medium' : 'text-slate-300'} line-clamp-3">${escapeHtml(p.descricao || '')}</p>
               </div>
             </div>
-            <div class="border-t ${isSistema ? 'border-rose-900/40' : 'border-slate-800/80'} pt-2 text-[10px] text-slate-500 flex justify-between">
+            <div class="border-t ${isSistema ? 'border-rose-900/40' : 'border-slate-800/80'} pt-2 text-[10px] text-slate-500 flex justify-between shrink-0">
               <span>Registrado às: ${p.horaRegistro || 'N/D'}</span>
               <span>${isSistema ? 'Sistema' : 'Plantão'}</span>
             </div>
@@ -914,13 +942,9 @@
     }
 
     function openModalPlantao(id = null) {
-      // Limpa os campos visuais do form
+      document.getElementById('form-plantao-inner').reset();
       document.getElementById('plantao-id').value = '';
       document.getElementById('plantao-titulo').value = `${getDataAtualFormatada()} - Manhã`;
-      document.getElementById('plantao-descricao').value = '';
-      document.getElementById('plantao-rubs-desvinculados').value = '';
-      document.getElementById('plantao-rubs-bloqueados').value = '';
-      document.getElementById('plantao-etiquetas').value = '';
 
       if (id) {
         const p = (state.plantao || []).find(x => x.id === id);
@@ -947,17 +971,52 @@
       openModal('modal-plantao');
     }
 
-    function savePlantaoComEmail(e) {
-      // Deixa o FormSubmit disparar o envio por e-mail normalmente, 
-      // e simultaneamente salva no storage local do GitHub.
-      const id = document.getElementById('plantao-id').value;
+    function savePlantao(e) {
+      e.preventDefault();
       const titulo = document.getElementById('plantao-titulo').value;
-      const descricao = document.getElementById('plantao-descricao').value;
-      const rubsDesvinculados = document.getElementById('plantao-rubs-desvinculados').value;
-      const rubsBloqueados = document.getElementById('plantao-rubs-bloqueados').value;
-      const etiquetasRibbon = document.getElementById('plantao-etiquetas').value;
+
+      // Se o título contiver "Tarde", interceptamos e abrimos o modal de e-mail do FormSubmit
+      if (titulo.toLowerCase().includes('tarde')) {
+        tempPlantaoBuffer = {
+          id: document.getElementById('plantao-id').value,
+          titulo: titulo,
+          descricao: document.getElementById('plantao-descricao').value,
+          rubsDesvinculados: document.getElementById('plantao-rubs-desvinculados').value,
+          rubsBloqueados: document.getElementById('plantao-rubs-bloqueados').value,
+          etiquetasRibbon: document.getElementById('plantao-etiquetas').value,
+          horaRegistro: document.getElementById('plantao-horario-registro').value
+        };
+
+        // Popula os campos ocultos do form de e-mail
+        document.getElementById('email-titulo').value = tempPlantaoBuffer.titulo;
+        document.getElementById('email-descricao').value = tempPlantaoBuffer.descricao;
+        document.getElementById('email-rubs-desv').value = tempPlantaoBuffer.rubsDesvinculados;
+        document.getElementById('email-rubs-bloq').value = tempPlantaoBuffer.rubsBloqueados;
+        document.getElementById('email-etiquetas').value = tempPlantaoBuffer.etiquetasRibbon;
+
+        closeModal('modal-plantao');
+        openModal('modal-plantao-email');
+        return;
+      }
+
+      // Demais turnos salvam direto sem e-mail
+      executarSalvarPlantaoFinal(null);
+    }
+
+    function savePlantaoEmailSubmit(e) {
+      // Executa o envio do FormSubmit e salva no armazenamento local simultaneamente
+      executarSalvarPlantaoFinal(tempPlantaoBuffer);
+    }
+
+    function executarSalvarPlantaoFinal(dadosBuffer) {
+      const id = dadosBuffer ? dadosBuffer.id : document.getElementById('plantao-id').value;
+      const titulo = dadosBuffer ? dadosBuffer.titulo : document.getElementById('plantao-titulo').value;
+      const descricao = dadosBuffer ? dadosBuffer.descricao : document.getElementById('plantao-descricao').value;
+      const rubsDesvinculados = dadosBuffer ? dadosBuffer.rubsDesvinculados : document.getElementById('plantao-rubs-desvinculados').value;
+      const rubsBloqueados = dadosBuffer ? dadosBuffer.rubsBloqueados : document.getElementById('plantao-rubs-bloqueados').value;
+      const etiquetasRibbon = dadosBuffer ? dadosBuffer.etiquetasRibbon : document.getElementById('plantao-etiquetas').value;
       
-      let horaRegistro = document.getElementById('plantao-horario-registro').value;
+      let horaRegistro = dadosBuffer ? dadosBuffer.horaRegistro : document.getElementById('plantao-horario-registro').value;
       if (!horaRegistro) {
         const now = new Date();
         horaRegistro = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
@@ -989,7 +1048,9 @@
       saveStorage();
       renderPlantao();
       verificarAlertasPlantao();
-      // O formulário submete via FormSubmit em seguida para o e-mail
+      closeModal('modal-plantao');
+      closeModal('modal-plantao-email');
+      tempPlantaoBuffer = null;
     }
 
     function deletePlantao(id) {
