@@ -354,7 +354,7 @@
     </div>
   </div>
 
-  <!-- NOVO MODAL: Formulário de Envio de Plantão por E-mail (FormSubmit) -->
+  <!-- MODAL: Formulário de Envio de Plantão por E-mail (FormSubmit Otimizado) -->
   <div id="modal-plantao-email" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -363,12 +363,12 @@
       </div>
 
       <!-- FORMULÁRIO CONFIGURADO COM FORMSUBMIT -->
-      <!-- IMPORTANTE: Substitua 'joalefe@outlook.com' pelo seu e-mail real onde deseja receber os relatórios -->
       <form action="https://formsubmit.co/joalefe@outlook.com" method="POST" class="space-y-4">
 
-        <!-- CONFIGURAÇÕES EXTRAS DO FORMSUBMIT -->
+        <!-- CONFIGURAÇÕES VISUAIS E EXTRAS DO FORMSUBMIT -->
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="[Portal] Nova Passagem de Plantão Enviada">
+        <input type="hidden" name="_subject" value="📋 Relatório de Passagem de Plantão - Portal">
+        <input type="hidden" name="_template" value="box">
 
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Identificação / Responsável</label>
