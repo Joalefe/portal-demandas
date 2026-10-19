@@ -293,7 +293,7 @@
     </div>
   </div>
 
-  <!-- Modal Passagem de Plantão -->
+  <!-- Modal Passagem de Plantão com Inserção Facilitada de Data e Período -->
   <div id="modal-plantao" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -302,10 +302,22 @@
       </div>
       <form id="form-plantao-inner" onsubmit="savePlantao(event)" class="space-y-4">
         <input type="hidden" id="plantao-id">
+        
         <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Título</label>
-          <input type="text" id="plantao-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <div class="flex justify-between items-center mb-1">
+            <label class="block text-xs font-medium text-slate-400">Título (Data e Período)</label>
+            <span class="text-[10px] text-indigo-400">Clique no período para preencher:</span>
+          </div>
+          <!-- Botões rápidos para preencher o período com a data atual -->
+          <div class="grid grid-cols-4 gap-1.5 mb-2">
+            <button type="button" onclick="preencherPeriodo('Manhã')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">☀️ Manhã</button>
+            <button type="button" onclick="preencherPeriodo('Tarde')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌤️ Tarde</button>
+            <button type="button" onclick="preencherPeriodo('Noite')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌙 Noite</button>
+            <button type="button" onclick="preencherPeriodo('Madrugada')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">✨ Madruga</button>
+          </div>
+          <input type="text" id="plantao-titulo" required placeholder="Ex: 24/10/2026 - Noite" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
+
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Descrição 1</label>
           <textarea id="plantao-descricao1" rows="2" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
@@ -843,6 +855,21 @@
       }
     }
 
+    // Função auxiliar para gerar a data atual no formato DD/MM/AAAA
+    function getDataAtualFormatada() {
+      const hoje = new Date();
+      const dia = String(hoje.getDate()).padStart(2, '0');
+      const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+      const ano = hoje.getFullYear();
+      return `${dia}/${mes}/${ano}`;
+    }
+
+    // Preenche automaticamente o título com a data de hoje + período escolhido
+    function preencherPeriodo(periodo) {
+      const dataHoje = getDataAtualFormatada();
+      document.getElementById('plantao-titulo').value = `${dataHoje} - ${periodo}`;
+    }
+
     function openModalPlantao(id = null) {
       document.getElementById('form-plantao-inner').reset();
       updateCategoriaOptions();
@@ -860,6 +887,8 @@
       } else {
         document.getElementById('plantao-id').value = '';
         document.getElementById('modal-plantao-title').innerText = 'Nova Passagem de Plantão';
+        // Já sugere a data de hoje com "Manhã" por padrão ao abrir novo
+        document.getElementById('plantao-titulo').value = `${getDataAtualFormatada()} - Manhã`;
       }
       openModal('modal-plantao');
     }
@@ -906,7 +935,6 @@
       const p = (state.plantao || []).find(x => x.id === id);
       if (!p) return;
 
-      // Remove da plantao e adiciona nas demandas
       state.plantao = state.plantao.filter(x => x.id !== id);
       state.demandas = state.demandas || [];
       state.demandas.unshift({ ...p });
@@ -986,11 +1014,9 @@
       const cats = state.categorias || ['Chamados', 'Projetos', 'Manutenção'];
       const optionsHtml = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
 
-      // Form Demanda
       const selFormD = document.getElementById('demanda-categoria');
       if (selFormD) selFormD.innerHTML = optionsHtml;
 
-      // Filter Demanda
       const selFilterD = document.getElementById('filter-demandas-categoria');
       if (selFilterD) {
         const curr = selFilterD.value;
@@ -998,11 +1024,9 @@
         selFilterD.value = curr;
       }
 
-      // Form Plantao
       const selFormP = document.getElementById('plantao-categoria');
       if (selFormP) selFormP.innerHTML = optionsHtml;
 
-      // Filter Plantao
       const selFilterP = document.getElementById('filter-plantao-categoria');
       if (selFilterP) {
         const currP = selFilterP.value;
