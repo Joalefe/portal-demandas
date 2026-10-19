@@ -15,7 +15,9 @@
       "titulo": "teste",
       "mensagem": "Teste",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Ana"
+      ],
       "arquivado": false
     }
   ],
