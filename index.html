@@ -409,6 +409,7 @@
         updateCategoriaOptions();
         renderAvisos();
         renderDemandas();
+        verificarEGerarPlantoesPerdidos();
         renderPlantao();
         verificarAlertasPlantao();
       } catch (err) {
@@ -780,26 +781,33 @@
     // --- PASSAGEM DE PLANTÃO ---
     function renderPlantao() {
       let list = state.plantao || [];
-      document.getElementById('container-plantao').innerHTML = list.map(p => `
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3 flex flex-col justify-between shadow-md">
-          <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <h4 class="font-bold text-white text-base">${escapeHtml(p.titulo)}</h4>
-              <div class="flex gap-1 items-center">
-                <button onclick="openModalPlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Editar">✏️</button>
-                <button onclick="deletePlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Excluir">🗑️</button>
+      document.getElementById('container-plantao').innerHTML = list.map(p => {
+        const isSistema = p.sistemaGerou === true;
+        return `
+          <div class="${isSistema ? 'bg-rose-950/40 border-rose-900/60' : 'bg-slate-900 border-slate-800'} border rounded-xl p-5 space-y-3 flex flex-col justify-between shadow-md">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h4 class="font-bold ${isSistema ? 'text-rose-300' : 'text-white'} text-base">${escapeHtml(p.titulo)}</h4>
+                <div class="flex gap-1 items-center">
+                  ${!isSistema ? `
+                    <button onclick="openModalPlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Editar">✏️</button>
+                    <button onclick="deletePlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Excluir">🗑️</button>
+                  ` : `
+                    <span class="text-[10px] bg-rose-500/20 text-rose-300 border border-rose-500/30 px-2 py-0.5 rounded font-semibold">⚠️ Automático</span>
+                  `}
+                </div>
+              </div>
+              <div class="mt-2 text-xs">
+                <p class="${isSistema ? 'text-rose-200/90 font-medium' : 'text-slate-300'} whitespace-pre-wrap leading-relaxed">${escapeHtml(p.descricao || '')}</p>
               </div>
             </div>
-            <div class="mt-2 text-xs">
-              <p class="text-slate-300 whitespace-pre-wrap leading-relaxed">${escapeHtml(p.descricao || '')}</p>
+            <div class="border-t ${isSistema ? 'border-rose-900/40' : 'border-slate-800/80'} pt-2 text-[10px] text-slate-500 flex justify-between">
+              <span>Registrado às: ${p.horaRegistro || 'N/D'}</span>
+              <span>${isSistema ? 'Sistema' : 'Plantão'}</span>
             </div>
           </div>
-          <div class="border-t border-slate-800/80 pt-2 text-[10px] text-slate-500 flex justify-between">
-            <span>Registrado às: ${p.horaRegistro || 'N/D'}</span>
-            <span>Plantão</span>
-          </div>
-        </div>
-      `).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum registro de plantão encontrado.</p>`;
+        `;
+      }).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum registro de plantão encontrado.</p>`;
     }
 
     function getDataAtualFormatada() {
@@ -820,9 +828,13 @@
       if (id) {
         const p = (state.plantao || []).find(x => x.id === id);
         if (p) {
+          if (p.sistemaGerou) {
+            alert('Este registro automático não pode ser editado.');
+            return;
+          }
           document.getElementById('plantao-id').value = p.id;
           document.getElementById('plantao-titulo').value = p.titulo;
-          document.getElementById('plantao-descricao').value = p.descricao || p.descricao1 || '';
+          document.getElementById('plantao-descricao').value = p.descricao || '';
           document.getElementById('plantao-horario-registro').value = p.horaRegistro || '';
           document.getElementById('modal-plantao-title').innerText = 'Editar Passagem de Plantão';
         }
@@ -872,16 +884,75 @@
     }
 
     function deletePlantao(id) {
+      const p = (state.plantao || []).find(x => x.id === id);
+      if (p && p.sistemaGerou) {
+        alert('Registros automáticos de plantão não entregue não podem ser excluídos.');
+        return;
+      }
       if (confirm('Excluir passagem de plantão?')) {
-        state.plantao = state.plantao.filter(p => p.id !== id);
+        state.plantao = state.plantao.filter(x => x.id !== id);
         saveStorage();
         renderPlantao();
         verificarAlertasPlantao();
       }
     }
 
-    // --- LÓGICA DE ALERTA PISCA-PISCA DOS PLANTÕES ---
+    // --- GERAÇÃO AUTOMÁTICA DE PLANTÕES PERDIDOS E ALERTAS ---
+    function verificarEGerarPlantoesPerdidos() {
+      const agora = new Date();
+      const horaAtual = agora.getHours();
+      const minAtual = agora.getMinutes();
+      const horaDecimal = horaAtual + minAtual / 60;
+      const dataHojeStr = getDataAtualFormatada();
+
+      state.plantao = state.plantao || [];
+      let houveMudanca = false;
+
+      const plantoesHoje = state.plantao.filter(p => p.titulo && p.titulo.includes(dataHojeStr));
+
+      const foiEntregue = (termoPeriodo, horaLimite) => {
+        const plantaoEncontrado = plantoesHoje.find(p => p.titulo.toLowerCase().includes(termoPeriodo.toLowerCase()) && !p.sistemaGerou);
+        if (!plantaoEncontrado) return false;
+        if (!plantaoEncontrado.horaRegistro) return true;
+        const [h, m] = plantaoEncontrado.horaRegistro.split(':').map(Number);
+        return (h + m/60) < horaLimite;
+      };
+
+      // Regras de prazos e turnos
+      const validacoes = [
+        { termo: 'Manhã', limite: 14.0, textoGerado: `⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).` },
+        { termo: 'Intermediário', limite: 16.0, textoGerado: `⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).` },
+        { termo: 'Tarde', limite: 22.0, textoGerado: `⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Tarde (Prazo limite das 22:00 expirado sem registro).` }
+      ];
+
+      validacoes.forEach(val => {
+        const jaPassouDoLimite = horaDecimal >= val.limite;
+        const entregueNoPrazo = foiEntregue(val.termo, val.limite);
+        
+        // Verifica se o sistema já gerou esse alerta automático para hoje
+        const tituloEsperado = `${dataHojeStr} - ${val.termo}`;
+        const jaGerouAutomatico = state.plantao.some(p => p.titulo === tituloEsperado && p.sistemaGerou === true);
+
+        if (jaPassouDoLimite && !entregueNoPrazo && !jaGerouAutomatico) {
+          state.plantao.unshift({
+            id: 'auto_' + Date.now() + '_' + val.termo,
+            titulo: tituloEsperado,
+            descricao: val.textoGerado,
+            horaRegistro: String(Math.floor(val.limite)).padStart(2, '0') + ':00',
+            sistemaGerou: true
+          });
+          houveMudanca = true;
+        }
+      });
+
+      if (houveMudanca) {
+        saveStorage();
+      }
+    }
+
     function verificarAlertasPlantao() {
+      verificarEGerarPlantoesPerdidos();
+
       const containerAlerta = document.getElementById('container-alerta-plantao');
       const textoAlerta = document.getElementById('texto-alerta-plantao');
       
@@ -891,14 +962,12 @@
       const horaDecimal = horaAtual + minAtual / 60;
       const dataHojeStr = getDataAtualFormatada();
 
-      // Pega todos os plantões de hoje cadastrados
-      const plantoesHoje = (state.plantao || []).filter(p => p.titulo && p.titulo.includes(dataHojeStr));
+      const plantoesHoje = (state.plantao || []).filter(p => p.titulo && p.titulo.includes(dataHojeStr) && !p.sistemaGerou);
 
-      // Função auxiliar para verificar se um período específico foi entregue antes de seu prazo limite
       const foiEntregueNoHorario = (termoPeriodo, horaLimite) => {
         const plantaoEncontrado = plantoesHoje.find(p => p.titulo.toLowerCase().includes(termoPeriodo.toLowerCase()));
         if (!plantaoEncontrado) return false;
-        if (!plantaoEncontrado.horaRegistro) return true; // legado
+        if (!plantaoEncontrado.horaRegistro) return true;
         const [h, m] = plantaoEncontrado.horaRegistro.split(':').map(Number);
         return (h + m/60) < horaLimite;
       };
@@ -910,7 +979,6 @@
       let mensagemAlerta = '';
       let devePiscar = false;
 
-      // 1. Manhã: 13:00 às 14:00 (ou travado após as 14:00 se não entregue)
       if (horaDecimal >= 13.0 && horaDecimal < 14.0 && !manhaEntregue) {
         mensagemAlerta = '⚠️ ALERTA: Plantão da Manhã não foi entregue!';
         devePiscar = true;
@@ -918,7 +986,6 @@
         mensagemAlerta = '🚨 ATENÇÃO: Plantão da Manhã não entregue (Prazo das 14:00 expirado)!';
         devePiscar = false;
       } 
-      // 2. Intermediário: 15:00 às 16:00 (ou travado após as 16:00 se não entregue)
       else if (horaDecimal >= 15.0 && horaDecimal < 16.0 && !intermedEntregue) {
         mensagemAlerta = '⚠️ ALERTA: Plantão Intermediário não foi entregue!';
         devePiscar = true;
@@ -926,116 +993,4 @@
         mensagemAlerta = '🚨 ATENÇÃO: Plantão Intermediário não entregue (Prazo das 16:00 expirado)!';
         devePiscar = false;
       }
-      // 3. Tarde: 20:00 às 22:00 (ou travado após as 22:00 se não entregue)
-      else if (horaDecimal >= 20.0 && horaDecimal < 22.0 && !tardeEntregue) {
-        mensagemAlerta = '⚠️ ALERTA: Plantão da Tarde não foi entregue!';
-        devePiscar = true;
-      } else if (horaDecimal >= 22.0 && !tardeEntregue) {
-        mensagemAlerta = '🚨 ATENÇÃO: Plantão da Tarde não entregue (Prazo das 22:00 expirado)!';
-        devePiscar = false;
-      }
-
-      if (mensagemAlerta) {
-        textoAlerta.innerText = mensagemAlerta;
-        containerAlerta.classList.remove('hidden');
-        if (devePiscar) {
-          containerAlerta.classList.add('animate-piscar');
-        } else {
-          containerAlerta.classList.remove('animate-piscar');
-        }
-      } else {
-        containerAlerta.classList.add('hidden');
-        containerAlerta.classList.remove('animate-piscar');
-      }
-    }
-
-    // Executa verificação a cada 30 segundos
-    setInterval(verificarAlertasPlantao, 30000);
-
-    // --- PESSOAS E CATEGORIAS ---
-    function openModalPessoas() { renderListaPessoas(); openModal('modal-pessoas'); }
-    function renderListaPessoas() {
-      document.getElementById('lista-pessoas').innerHTML = (state.pessoas || []).map(p => `
-        <li class="py-2 flex justify-between items-center text-sm text-slate-200">
-          <span>${escapeHtml(p)}</span>
-          <button onclick="removePessoa('${escapeHtml(p)}')" class="text-xs text-rose-400 hover:text-rose-300">Remover</button>
-        </li>
-      `).join('');
-    }
-
-    function addPessoa() {
-      const input = document.getElementById('input-nova-pessoa');
-      const val = input.value.trim();
-      state.pessoas = state.pessoas || [];
-      if (val && !state.pessoas.includes(val)) {
-        state.pessoas.push(val);
-        input.value = '';
-        saveStorage();
-        renderListaPessoas();
-        renderAvisos();
-      }
-    }
-
-    function removePessoa(p) {
-      state.pessoas = (state.pessoas || []).filter(x => x !== p);
-      saveStorage();
-      renderListaPessoas();
-      renderAvisos();
-    }
-
-    function openModalCategorias() { renderListaCategorias(); openModal('modal-categorias'); }
-    function renderListaCategorias() {
-      document.getElementById('lista-categorias').innerHTML = (state.categorias || []).map(c => `
-        <li class="py-2 flex justify-between items-center text-sm text-slate-200">
-          <span>${escapeHtml(c)}</span>
-          <button onclick="removeCategoria('${escapeHtml(c)}')" class="text-xs text-rose-400 hover:text-rose-300">Remover</button>
-        </li>
-      `).join('');
-    }
-
-    function addCategoria() {
-      const input = document.getElementById('input-nova-categoria');
-      const val = input.value.trim();
-      state.categorias = state.categorias || [];
-      if (val && !state.categorias.includes(val)) {
-        state.categorias.push(val);
-        input.value = '';
-        saveStorage();
-        renderListaCategorias();
-        updateCategoriaOptions();
-        renderDemandas();
-      }
-    }
-
-    function removeCategoria(c) {
-      state.categorias = (state.categorias || []).filter(x => x !== c);
-      saveStorage();
-      renderListaCategorias();
-      updateCategoriaOptions();
-      renderDemandas();
-    }
-
-    function updateCategoriaOptions() {
-      const cats = state.categorias || ['Chamados', 'Projetos', 'Manutenção'];
-      const optionsHtml = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
-
-      const selFormD = document.getElementById('demanda-categoria');
-      if (selFormD) selFormD.innerHTML = optionsHtml;
-
-      const selFormDFilter = document.getElementById('filter-demandas-categoria');
-      if (selFormDFilter) {
-        const curr = selFormDFilter.value;
-        selFormDFilter.innerHTML = `<option value="todas">Todas Categorias</option>` + optionsHtml;
-        selFormDFilter.value = curr;
-      }
-    }
-
-    function escapeHtml(str) {
-      if (!str) return '';
-      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-    }
-
-    window.addEventListener('DOMContentLoaded', () => { loadStorage(); });
-  </script>
-</body>
-</html>
+      else if (horaDecimal >= 20.0 && horaDecimal < 22.0 && !
