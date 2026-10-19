@@ -12,6 +12,15 @@
   ],
   "avisos": [
     {
+      "id": "1792448751896",
+      "titulo": "Sérgio ",
+      "mensagem": "Sérgio ainda não tem acessos",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "arquivado": false,
+      "criadoEm": 1792448751896
+    },
+    {
       "id": "1792442163205",
       "titulo": "teste",
       "mensagem": "Teste",
