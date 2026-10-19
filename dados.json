@@ -12,9 +12,9 @@
   "avisos": [
     {
       "id": "1792442163205",
-      "titulo": "dd",
-      "mensagem": "dd",
-      "cor": "postit-orange",
+      "titulo": "teste",
+      "mensagem": "Teste",
+      "cor": "postit-yellow",
       "lidosPor": [],
       "arquivado": false
     }
