@@ -1,46 +1,276 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark h-full bg-slate-950">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal de Demandas e Avisos</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            postit: {
+              yellow: '#fef08a',
+              blue: '#bae6fd',
+              green: '#bbf7d0',
+              pink: '#fbcfe8',
+              purple: '#e9d5ff',
+              orange: '#fed7aa'
+            }
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    * { box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 650px; margin: 30px auto; padding: 0 15px; background-color: #f8f9fa; color: #212529; }
-    h1 { color: #0d6efd; font-size: 1.6rem; margin-bottom: 20px; text-align: center; }
-    .box-form { background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px; }
-    form { display: flex; gap: 10px; }
-    input[type="text"] { flex: 1; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem; outline: none; }
-    input[type="text"]:focus { border-color: #0d6efd; }
-    button { padding: 12px 20px; background: #0d6efd; color: white; border: none; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.2s; }
-    button:hover { background: #0b5ed7; }
-    button:disabled { background: #6c757d; cursor: not-allowed; }
-    #status-msg { text-align: center; font-size: 0.9rem; color: #6c757d; margin-bottom: 15px; }
-    .card { background: #ffffff; border-left: 4px solid #0d6efd; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; }
-    .card-texto { font-size: 1rem; word-break: break-word; }
-    .card-num { color: #0d6efd; font-weight: bold; margin-right: 8px; }
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   </style>
 </head>
-<body>
+<body class="h-full text-slate-100 flex flex-col font-sans bg-slate-950 antialiased">
 
-  <h1>📋 Portal de Demandas e Avisos</h1>
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-6">
+        <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-indigo-500 inline-block"></span>
+          Portal
+        </h1>
+        <nav class="flex space-x-1 bg-slate-950 p-1 rounded-lg border border-slate-800">
+          <button id="tab-btn-avisos" onclick="switchMainTab('avisos')" class="px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow">
+            Avisos
+          </button>
+          <button id="tab-btn-demandas" onclick="switchMainTab('demandas')" class="px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white">
+            Demandas
+          </button>
+        </nav>
+      </div>
+      <div id="sync-status" class="text-xs text-slate-400">Conectando ao GitHub...</div>
+    </div>
+  </header>
 
-  <div class="box-form">
-    <form id="form-demanda">
-      <input type="text" id="input-texto" placeholder="Digite um aviso ou demanda..." required>
-      <button type="submit" id="btn-salvar">Adicionar</button>
-    </form>
+  <!-- Main Content -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ABA 1: AVISOS -->
+    <section id="tab-content-avisos" class="space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
+        <div class="flex items-center gap-2">
+          <button id="subtab-btn-ativos" onclick="switchAvisosSubtab('ativos')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30">
+            Ativos (<span id="count-avisos-ativos">0</span>)
+          </button>
+          <button id="subtab-btn-lidos" onclick="switchAvisosSubtab('lidos')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50">
+            Lidos / Arquivados (<span id="count-avisos-lidos">0</span>)
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="openModalPessoas()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-lg flex items-center gap-1">
+            👥 Pessoas (<span id="count-pessoas">0</span>)
+          </button>
+          <button onclick="openModalAviso()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
+            + Novo Aviso
+          </button>
+        </div>
+      </div>
+
+      <div id="subtab-content-ativos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      <div id="subtab-content-lidos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 hidden"></div>
+    </section>
+
+    <!-- ABA 2: DEMANDAS -->
+    <section id="tab-content-demandas" class="space-y-6 hidden">
+      <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
+        <div class="flex items-center gap-3">
+          <select id="filter-demandas-status" onchange="renderDemandas()" class="bg-slate-950 text-slate-200 text-xs border border-slate-800 rounded-lg px-3 py-2">
+            <option value="todos">Todos Status</option>
+            <option value="pendente">Pendente</option>
+            <option value="em_andamento">Em Andamento</option>
+            <option value="concluido">Concluído</option>
+          </select>
+          <select id="filter-demandas-categoria" onchange="renderDemandas()" class="bg-slate-950 text-slate-200 text-xs border border-slate-800 rounded-lg px-3 py-2">
+            <option value="todas">Todas Categorias</option>
+          </select>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="openModalCategorias()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-lg">
+            🏷️ Categorias
+          </button>
+          <button onclick="openModalDemanda()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
+            + Nova Demanda
+          </button>
+        </div>
+      </div>
+
+      <div id="container-demandas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+  </main>
+
+  <!-- MODAIS -->
+
+  <!-- Modal Pessoas -->
+  <div id="modal-pessoas" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-md p-5 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="text-base font-semibold text-white">Gerenciar Pessoas</h3>
+        <button onclick="closeModal('modal-pessoas')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <div class="flex gap-2">
+        <input type="text" id="input-nova-pessoa" placeholder="Nome da pessoa" class="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        <button onclick="addPessoa()" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Adicionar</button>
+      </div>
+      <ul id="lista-pessoas" class="divide-y divide-slate-800 max-h-60 overflow-y-auto"></ul>
+    </div>
   </div>
 
-  <div id="status-msg">Carregando dados...</div>
-  <div id="lista-demandas"></div>
+  <!-- Modal Categorias -->
+  <div id="modal-categorias" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-md p-5 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="text-base font-semibold text-white">Gerenciar Categorias</h3>
+        <button onclick="closeModal('modal-categorias')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <div class="flex gap-2">
+        <input type="text" id="input-nova-categoria" placeholder="Ex: Chamados, Projetos" class="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        <button onclick="addCategoria()" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Adicionar</button>
+      </div>
+      <ul id="lista-categorias" class="divide-y divide-slate-800 max-h-60 overflow-y-auto"></ul>
+    </div>
+  </div>
 
+  <!-- Modal Criar/Editar Aviso -->
+  <div id="modal-aviso" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="modal-aviso-title" class="text-base font-semibold text-white">Novo Aviso</h3>
+        <button onclick="closeModal('modal-aviso')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <form id="form-aviso-inner" onsubmit="saveAviso(event)" class="space-y-4">
+        <input type="hidden" id="aviso-id">
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Título</label>
+          <input type="text" id="aviso-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Mensagem</label>
+          <textarea id="aviso-mensagem" rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Estilo do Post-it</label>
+          <div class="grid grid-cols-6 gap-2">
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-yellow" checked class="peer sr-only">
+              <div class="w-full h-8 rounded bg-amber-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-blue" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-sky-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-green" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-emerald-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-pink" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-pink-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-purple" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-purple-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-orange" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-orange-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+          </div>
+        </div>
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="closeModal('modal-aviso')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Ler Aviso Completo -->
+  <div id="modal-view-aviso" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div id="view-aviso-card" class="rounded-xl w-full max-w-lg p-6 space-y-4 text-slate-900 shadow-2xl transition-all">
+      <div class="flex justify-between items-start">
+        <h3 id="view-aviso-titulo" class="text-xl font-bold"></h3>
+        <button onclick="closeModal('modal-view-aviso')" class="text-slate-700 hover:text-black text-lg">✕</button>
+      </div>
+      <p id="view-aviso-mensagem" class="text-sm leading-relaxed whitespace-pre-wrap"></p>
+      <div class="border-t border-black/10 pt-4 space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-slate-700">Confirmações de Leitura:</span>
+        <div id="view-aviso-leitores" class="grid grid-cols-2 gap-2 text-xs"></div>
+      </div>
+      <div class="flex justify-end gap-2 pt-2">
+        <button id="view-aviso-btn-edit" class="bg-black/10 hover:bg-black/20 text-slate-900 text-xs px-3 py-1.5 rounded font-medium">Editar</button>
+        <button onclick="closeModal('modal-view-aviso')" class="bg-slate-900 text-white text-xs px-4 py-1.5 rounded font-medium">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Criar/Editar Demanda -->
+  <div id="modal-demanda" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="modal-demanda-title" class="text-base font-semibold text-white">Nova Demanda</h3>
+        <button onclick="closeModal('modal-demanda')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <form id="form-demanda-inner" onsubmit="saveDemanda(event)" class="space-y-4">
+        <input type="hidden" id="demanda-id">
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Título</label>
+          <input type="text" id="demanda-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição</label>
+          <textarea id="demanda-descricao" rows="3" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Categoria</label>
+            <select id="demanda-categoria" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Status</label>
+            <select id="demanda-status" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+              <option value="pendente">Pendente</option>
+              <option value="em_andamento">Em Andamento</option>
+              <option value="concluido">Concluído</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Responsável</label>
+          <input type="text" id="demanda-responsavel" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="closeModal('modal-demanda')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPT LÓGICA COM GITHUB API -->
   <script>
     // =========================================================================
-    // CONFIGURAÇÕES DO SEU GITHUB (Já ajustadas com o repositório correto)
+    // CONFIGURAÇÕES DO SEU GITHUB
     // =========================================================================
     const GITHUB_USERNAME = 'joalefe';
-    const REPO_NAME       = 'portal-demandas'; // Corrigido com hífen
+    const REPO_NAME       = 'portal-demandas';
     const JSON_PATH       = 'dados.json';
     const GITHUB_TOKEN    = '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';
     // =========================================================================
@@ -48,7 +278,13 @@
     const API_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${JSON_PATH}`;
     let currentSha = '';
 
-    // Função para tratar texto UTF-8 em Base64 sem quebrar acentos
+    let state = {
+      pessoas: ['Ana', 'Carlos', 'Mariana'],
+      categorias: ['Chamados', 'Projetos', 'Manutenção'],
+      avisos: [],
+      demandas: []
+    };
+
     function base64ToUtf8(str) {
       return decodeURIComponent(escape(atob(str)));
     }
@@ -57,10 +293,10 @@
       return btoa(unescape(encodeURIComponent(str)));
     }
 
-    // 1. CARREGAR DADOS DO GITHUB
-    async function carregarDados() {
-      const statusEl = document.getElementById('status-msg');
-      statusEl.innerText = 'Buscando avisos atualizados...';
+    // Carregar dados diretamente da API do GitHub
+    async function loadStorage() {
+      const statusEl = document.getElementById('sync-status');
+      statusEl.innerText = 'Sincronizando com GitHub...';
 
       try {
         const res = await fetch(API_URL, {
@@ -77,54 +313,32 @@
         currentSha = data.sha;
 
         const jsonTexto = base64ToUtf8(data.content.replace(/\n/g, ''));
-        const dados = JSON.parse(jsonTexto);
+        const cloudData = JSON.parse(jsonTexto);
 
-        exibirDemandas(dados.demandas || []);
-        statusEl.innerText = '';
+        if (cloudData) {
+          state = { ...state, ...cloudData };
+        }
+
+        statusEl.innerText = '☁️ Sincronizado com GitHub';
+        statusEl.className = 'text-xs text-emerald-400';
+
+        updateCategoriaOptions();
+        renderAvisos();
+        renderDemandas();
       } catch (err) {
         console.error(err);
-        statusEl.innerText = '⚠️ Falha ao carregar. Verifique o usuário, nome do repositório ou token.';
+        statusEl.innerText = '⚠️ Erro de sincronização';
+        statusEl.className = 'text-xs text-rose-400';
       }
     }
 
-    // 2. EXIBIR LISTA NO HTML
-    function exibirDemandas(lista) {
-      const container = document.getElementById('lista-demandas');
-      container.innerHTML = '';
-
-      if (lista.length === 0) {
-        container.innerHTML = '<div style="text-align:center; color:#6c757d;">Nenhum aviso ou demanda cadastrada.</div>';
-        return;
-      }
-
-      // Exibe os itens mais recentes primeiro
-      lista.slice().reverse().forEach((item, index) => {
-        const div = document.createElement('div');
-        div.className = 'card';
-        div.innerHTML = `
-          <div class="card-texto">
-            <span class="card-num">#${lista.length - index}</span> ${item}
-          </div>
-        `;
-        container.appendChild(div);
-      });
-    }
-
-    // 3. SALVAR NOVA DEMANDA NO GITHUB
-    async function salvarDemanda(e) {
-      e.preventDefault();
-
-      const input = document.getElementById('input-texto');
-      const btn = document.getElementById('btn-salvar');
-      const novaDemanda = input.value.trim();
-
-      if (!novaDemanda) return;
-
-      btn.disabled = true;
-      btn.innerText = 'Salvando...';
+    // Salvar dados na API do GitHub
+    async function saveStorage() {
+      const statusEl = document.getElementById('sync-status');
+      statusEl.innerText = 'Salvando...';
 
       try {
-        // Busca a versão mais atual do arquivo para sincronizar
+        // Pega o SHA mais atual para evitar conflitos
         const resGet = await fetch(API_URL, {
           headers: { 
             'Authorization': `token ${GITHUB_TOKEN}`,
@@ -136,18 +350,11 @@
         const dataGet = await resGet.json();
         currentSha = dataGet.sha;
 
-        const jsonTexto = base64ToUtf8(dataGet.content.replace(/\n/g, ''));
-        const dadosAtuais = JSON.parse(jsonTexto);
-
-        // Adiciona a nova demanda
-        dadosAtuais.demandas = dadosAtuais.demandas || [];
-        dadosAtuais.demandas.push(novaDemanda);
-
-        const novoConteudoJson = JSON.stringify(dadosAtuais, null, 2);
+        const novoConteudoJson = JSON.stringify(state, null, 2);
         const conteudoBase64 = utf8ToBase64(novoConteudoJson);
 
         const payload = {
-          message: 'Novo aviso/demanda adicionado via portal',
+          message: 'Atualização automática do Portal via Web',
           content: conteudoBase64,
           sha: currentSha
         };
@@ -162,24 +369,420 @@
         });
 
         if (resPut.ok) {
-          input.value = '';
-          await carregarDados();
+          const dataPut = await resPut.json();
+          currentSha = dataPut.content.sha;
+          statusEl.innerText = '☁️ Sincronizado com GitHub';
+          statusEl.className = 'text-xs text-emerald-400';
         } else {
-          alert('Erro ao salvar no GitHub. Verifique as permissões do token.');
+          statusEl.innerText = '⚠️ Erro ao salvar';
+          statusEl.className = 'text-xs text-rose-400';
         }
       } catch (err) {
         console.error(err);
-        alert('Ocorreu um erro de conexão ao tentar salvar.');
-      } finally {
-        btn.disabled = false;
-        btn.innerText = 'Adicionar';
+        statusEl.innerText = '⚠️ Erro de conexão';
+        statusEl.className = 'text-xs text-rose-400';
       }
     }
 
-    document.getElementById('form-demanda').addEventListener('submit', salvarDemanda);
+    function switchMainTab(tab) {
+      document.getElementById('tab-content-avisos').classList.toggle('hidden', tab !== 'avisos');
+      document.getElementById('tab-content-demandas').classList.toggle('hidden', tab !== 'demandas');
 
-    // Carrega os dados assim que abre a página
-    carregarDados();
+      const btnA = document.getElementById('tab-btn-avisos');
+      const btnD = document.getElementById('tab-btn-demandas');
+
+      if (tab === 'avisos') {
+        btnA.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow";
+        btnD.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
+      } else {
+        btnD.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow";
+        btnA.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
+      }
+    }
+
+    function switchAvisosSubtab(sub) {
+      document.getElementById('subtab-content-ativos').classList.toggle('hidden', sub !== 'ativos');
+      document.getElementById('subtab-content-lidos').classList.toggle('hidden', sub !== 'lidos');
+
+      const btnA = document.getElementById('subtab-btn-ativos');
+      const btnL = document.getElementById('subtab-btn-lidos');
+
+      if (sub === 'ativos') {
+        btnA.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
+        btnL.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50";
+      } else {
+        btnL.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
+        btnA.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50";
+      }
+    }
+
+    function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+    function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+
+    function renderAvisos() {
+      document.getElementById('count-pessoas').innerText = state.pessoas.length;
+
+      const ativos = (state.avisos || []).filter(a => !a.arquivado);
+      const lidos = (state.avisos || []).filter(a => a.arquivado);
+
+      document.getElementById('count-avisos-ativos').innerText = ativos.length;
+      document.getElementById('count-avisos-lidos').innerText = lidos.length;
+
+      const bgColors = {
+        'postit-yellow': 'bg-amber-200 text-amber-950 border-amber-300',
+        'postit-blue': 'bg-sky-200 text-sky-950 border-sky-300',
+        'postit-green': 'bg-emerald-200 text-emerald-950 border-emerald-300',
+        'postit-pink': 'bg-pink-200 text-pink-950 border-pink-300',
+        'postit-purple': 'bg-purple-200 text-purple-950 border-purple-300',
+        'postit-orange': 'bg-orange-200 text-orange-950 border-orange-300'
+      };
+
+      const renderCard = (a) => {
+        const totalReq = Math.min(3, state.pessoas.length || 1);
+        const lidosCount = (a.lidosPor || []).length;
+
+        return `
+          <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between transition hover:-translate-y-1">
+            <div>
+              <div class="flex justify-between items-start gap-2 mb-2">
+                <h4 class="font-bold text-base leading-snug">${escapeHtml(a.titulo)}</h4>
+                <div class="flex gap-1">
+                  <button onclick="openModalAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Editar">✏️</button>
+                  <button onclick="deleteAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Excluir">🗑️</button>
+                </div>
+              </div>
+              <p class="text-xs opacity-90 line-clamp-3 mb-4 cursor-pointer" onclick="viewAviso('${a.id}')">
+                ${escapeHtml(a.mensagem)}
+              </p>
+            </div>
+
+            <div class="border-t border-black/10 pt-3 mt-2 space-y-2">
+              <div class="flex justify-between items-center text-[10px] font-bold uppercase tracking-wider opacity-75">
+                <span>Leitura (${lidosCount}/${totalReq})</span>
+                <span>${a.arquivado ? 'Lido/Arquivado' : 'Pendente'}</span>
+              </div>
+              <div class="space-y-1">
+                ${(state.pessoas || []).map(p => {
+                  const checked = (a.lidosPor || []).includes(p);
+                  return `
+                    <label class="flex items-center text-xs gap-2 cursor-pointer select-none">
+                      <input type="checkbox" ${checked ? 'checked' : ''} onchange="toggleLeitura('${a.id}', '${escapeHtml(p)}')" class="rounded border-slate-400">
+                      <span class="${checked ? 'line-through opacity-60' : 'font-medium'}">${escapeHtml(p)}</span>
+                    </label>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      };
+
+      document.getElementById('subtab-content-ativos').innerHTML = ativos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso ativo.</p>`;
+      document.getElementById('subtab-content-lidos').innerHTML = lidos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso no histórico.</p>`;
+    }
+
+    function toggleLeitura(avisoId, pessoa) {
+      const aviso = state.avisos.find(a => a.id === avisoId);
+      if (!aviso) return;
+
+      aviso.lidosPor = aviso.lidosPor || [];
+      if (aviso.lidosPor.includes(pessoa)) {
+        aviso.lidosPor = aviso.lidosPor.filter(p => p !== pessoa);
+      } else {
+        aviso.lidosPor.push(pessoa);
+      }
+
+      const totalReq = Math.min(3, state.pessoas.length || 1);
+      aviso.arquivado = aviso.lidosPor.length >= totalReq;
+
+      saveStorage();
+      renderAvisos();
+    }
+
+    function viewAviso(id) {
+      const a = state.avisos.find(x => x.id === id);
+      if (!a) return;
+
+      const modalCard = document.getElementById('view-aviso-card');
+      const bgColors = {
+        'postit-yellow': 'bg-amber-200 text-amber-950',
+        'postit-blue': 'bg-sky-200 text-sky-950',
+        'postit-green': 'bg-emerald-200 text-emerald-950',
+        'postit-pink': 'bg-pink-200 text-pink-950',
+        'postit-purple': 'bg-purple-200 text-purple-950',
+        'postit-orange': 'bg-orange-200 text-orange-950'
+      };
+
+      modalCard.className = `rounded-xl w-full max-w-lg p-6 space-y-4 shadow-2xl transition-all ${bgColors[a.cor]}`;
+      document.getElementById('view-aviso-titulo').innerText = a.titulo;
+      document.getElementById('view-aviso-mensagem').innerText = a.mensagem;
+
+      document.getElementById('view-aviso-leitores').innerHTML = (state.pessoas || []).map(p => `
+        <div class="flex items-center gap-1.5">
+          <span>${(a.lidosPor || []).includes(p) ? '✅' : '⏳'}</span>
+          <span>${escapeHtml(p)}</span>
+        </div>
+      `).join('');
+
+      document.getElementById('view-aviso-btn-edit').onclick = () => {
+        closeModal('modal-view-aviso');
+        openModalAviso(a.id);
+      };
+
+      openModal('modal-view-aviso');
+    }
+
+    function openModalAviso(id = null) {
+      document.getElementById('form-aviso-inner').reset();
+      if (id) {
+        const a = state.avisos.find(x => x.id === id);
+        if (a) {
+          document.getElementById('aviso-id').value = a.id;
+          document.getElementById('aviso-titulo').value = a.titulo;
+          document.getElementById('aviso-mensagem').value = a.mensagem;
+          document.getElementById('modal-aviso-title').innerText = 'Editar Aviso';
+        }
+      } else {
+        document.getElementById('aviso-id').value = '';
+        document.getElementById('modal-aviso-title').innerText = 'Novo Aviso';
+      }
+      openModal('modal-aviso');
+    }
+
+    function saveAviso(e) {
+      e.preventDefault();
+      const id = document.getElementById('aviso-id').value;
+      const titulo = document.getElementById('aviso-titulo').value;
+      const mensagem = document.getElementById('aviso-mensagem').value;
+      const cor = document.querySelector('input[name="aviso-cor"]:checked').value;
+
+      state.avisos = state.avisos || [];
+      if (id) {
+        const a = state.avisos.find(x => x.id === id);
+        if (a) { a.titulo = titulo; a.mensagem = mensagem; a.cor = cor; }
+      } else {
+        state.avisos.unshift({
+          id: Date.now().toString(),
+          titulo, mensagem, cor,
+          lidosPor: [],
+          arquivado: false
+        });
+      }
+
+      saveStorage();
+      renderAvisos();
+      closeModal('modal-aviso');
+    }
+
+    function deleteAviso(id) {
+      if (confirm('Excluir aviso?')) {
+        state.avisos = state.avisos.filter(a => a.id !== id);
+        saveStorage();
+        renderAvisos();
+      }
+    }
+
+    function renderDemandas() {
+      const filterStatus = document.getElementById('filter-demandas-status').value;
+      const filterCat = document.getElementById('filter-demandas-categoria').value;
+
+      let list = state.demandas || [];
+      if (filterStatus !== 'todos') list = list.filter(d => d.status === filterStatus);
+      if (filterCat !== 'todas') list = list.filter(d => d.categoria === filterCat);
+
+      const statusBadges = {
+        'pendente': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
+        'em_andamento': 'bg-sky-500/10 text-sky-400 border-sky-500/20',
+        'concluido': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+      };
+
+      document.getElementById('container-demandas').innerHTML = list.map(d => `
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3 flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                ${escapeHtml(d.categoria)}
+              </span>
+              <div class="flex gap-1">
+                <button onclick="openModalDemanda('${d.id}')" class="text-xs text-slate-400 hover:text-white p-1">✏️</button>
+                <button onclick="deleteDemanda('${d.id}')" class="text-xs text-slate-400 hover:text-white p-1">🗑️</button>
+              </div>
+            </div>
+            <h4 class="font-bold text-white text-base">${escapeHtml(d.titulo)}</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-3">${escapeHtml(d.descricao)}</p>
+          </div>
+
+          <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs">
+            <span class="text-slate-500">👤 ${escapeHtml(d.responsavel || 'Sem dono')}</span>
+            <select onchange="updateDemandaStatus('${d.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[d.status]} bg-slate-950">
+              <option value="pendente" ${d.status === 'pendente' ? 'selected' : ''}>Pendente</option>
+              <option value="em_andamento" ${d.status === 'em_andamento' ? 'selected' : ''}>Em Andamento</option>
+              <option value="concluido" ${d.status === 'concluido' ? 'selected' : ''}>Concluído</option>
+            </select>
+          </div>
+        </div>
+      `).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda encontrada.</p>`;
+    }
+
+    function updateDemandaStatus(id, newStatus) {
+      const d = state.demandas.find(x => x.id === id);
+      if (d) {
+        d.status = newStatus;
+        saveStorage();
+        renderDemandas();
+      }
+    }
+
+    function openModalDemanda(id = null) {
+      document.getElementById('form-demanda-inner').reset();
+      updateCategoriaOptions();
+
+      if (id) {
+        const d = state.demandas.find(x => x.id === id);
+        if (d) {
+          document.getElementById('demanda-id').value = d.id;
+          document.getElementById('demanda-titulo').value = d.titulo;
+          document.getElementById('demanda-descricao').value = d.descricao;
+          document.getElementById('demanda-categoria').value = d.categoria;
+          document.getElementById('demanda-status').value = d.status;
+          document.getElementById('demanda-responsavel').value = d.responsavel;
+          document.getElementById('modal-demanda-title').innerText = 'Editar Demanda';
+        }
+      } else {
+        document.getElementById('demanda-id').value = '';
+        document.getElementById('modal-demanda-title').innerText = 'Nova Demanda';
+      }
+      openModal('modal-demanda');
+    }
+
+    function saveDemanda(e) {
+      e.preventDefault();
+      const id = document.getElementById('demanda-id').value;
+      const titulo = document.getElementById('demanda-titulo').value;
+      const descricao = document.getElementById('demanda-descricao').value;
+      const categoria = document.getElementById('demanda-categoria').value;
+      const status = document.getElementById('demanda-status').value;
+      const responsavel = document.getElementById('demanda-responsavel').value;
+
+      state.demandas = state.demandas || [];
+      if (id) {
+        const d = state.demandas.find(x => x.id === id);
+        if (d) {
+          d.titulo = titulo; d.descricao = descricao;
+          d.categoria = categoria; d.status = status;
+          d.responsavel = responsavel;
+        }
+      } else {
+        state.demandas.unshift({
+          id: Date.now().toString(),
+          titulo, descricao, categoria, status, responsavel
+        });
+      }
+
+      saveStorage();
+      renderDemandas();
+      closeModal('modal-demanda');
+    }
+
+    function deleteDemanda(id) {
+      if (confirm('Excluir demanda?')) {
+        state.demandas = state.demandas.filter(d => d.id !== id);
+        saveStorage();
+        renderDemandas();
+      }
+    }
+
+    function openModalPessoas() {
+      renderListaPessoas();
+      openModal('modal-pessoas');
+    }
+
+    function renderListaPessoas() {
+      document.getElementById('lista-pessoas').innerHTML = (state.pessoas || []).map(p => `
+        <li class="py-2 flex justify-between items-center text-sm text-slate-200">
+          <span>${escapeHtml(p)}</span>
+          <button onclick="removePessoa('${escapeHtml(p)}')" class="text-xs text-rose-400 hover:text-rose-300">Remover</button>
+        </li>
+      `).join('');
+    }
+
+    function addPessoa() {
+      const input = document.getElementById('input-nova-pessoa');
+      const val = input.value.trim();
+      state.pessoas = state.pessoas || [];
+      if (val && !state.pessoas.includes(val)) {
+        state.pessoas.push(val);
+        input.value = '';
+        saveStorage();
+        renderListaPessoas();
+        renderAvisos();
+      }
+    }
+
+    function removePessoa(p) {
+      state.pessoas = (state.pessoas || []).filter(x => x !== p);
+      saveStorage();
+      renderListaPessoas();
+      renderAvisos();
+    }
+
+    function openModalCategorias() {
+      renderListaCategorias();
+      openModal('modal-categorias');
+    }
+
+    function renderListaCategorias() {
+      document.getElementById('lista-categorias').innerHTML = (state.categorias || []).map(c => `
+        <li class="py-2 flex justify-between items-center text-sm text-slate-200">
+          <span>${escapeHtml(c)}</span>
+          <button onclick="removeCategoria('${escapeHtml(c)}')" class="text-xs text-rose-400 hover:text-rose-300">Remover</button>
+        </li>
+      `).join('');
+    }
+
+    function addCategoria() {
+      const input = document.getElementById('input-nova-categoria');
+      const val = input.value.trim();
+      state.categorias = state.categorias || [];
+      if (val && !state.categorias.includes(val)) {
+        state.categorias.push(val);
+        input.value = '';
+        saveStorage();
+        renderListaCategorias();
+        updateCategoriaOptions();
+        renderDemandas();
+      }
+    }
+
+    function removeCategoria(c) {
+      state.categorias = (state.categorias || []).filter(x => x !== c);
+      saveStorage();
+      renderListaCategorias();
+      updateCategoriaOptions();
+      renderDemandas();
+    }
+
+    function updateCategoriaOptions() {
+      const selForm = document.getElementById('demanda-categoria');
+      const selFilter = document.getElementById('filter-demandas-categoria');
+      const cats = state.categorias || ['Chamados', 'Projetos', 'Manutenção'];
+
+      selForm.innerHTML = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+
+      const currFilter = selFilter.value;
+      selFilter.innerHTML = `<option value="todas">Todas Categorias</option>` +
+        cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+      selFilter.value = currFilter;
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadStorage();
+    });
   </script>
 </body>
 </html>
