@@ -85,6 +85,14 @@
   ],
   "demandas": [
     {
+      "id": "1792493737390",
+      "titulo": "caboa adaptador pdv",
+      "descricao1": "cabo do pdv self com problema, necessario procurar fornecedor ",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente"
+    },
+    {
       "id": "1792493644878",
       "titulo": "Victor sem acessos",
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026101685006686",
