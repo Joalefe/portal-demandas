@@ -20,7 +20,8 @@
         "João Infomático"
       ],
       "arquivado": false,
-      "criadoEm": 1792505930497
+      "criadoEm": 1792505930497,
+      "respostas": []
     },
     {
       "id": "1792493478934",
@@ -33,7 +34,8 @@
         "Kaell Pragmático"
       ],
       "arquivado": true,
-      "criadoEm": 1792493478934
+      "criadoEm": 1792493478934,
+      "respostas": []
     },
     {
       "id": "1792489324284",
@@ -46,7 +48,8 @@
         "Kaell Pragmático"
       ],
       "arquivado": true,
-      "criadoEm": 1792489324284
+      "criadoEm": 1792489324284,
+      "respostas": []
     },
     {
       "id": "1792487016024",
@@ -59,7 +62,8 @@
         "Kaell Pragmático"
       ],
       "arquivado": true,
-      "criadoEm": 1792487016024
+      "criadoEm": 1792487016024,
+      "respostas": []
     },
     {
       "id": "1792486798459",
@@ -72,7 +76,8 @@
         "Kaell Pragmático"
       ],
       "arquivado": true,
-      "criadoEm": 1792486798459
+      "criadoEm": 1792486798459,
+      "respostas": []
     },
     {
       "id": "1792486689678",
@@ -85,7 +90,8 @@
         "Kaell Pragmático"
       ],
       "arquivado": true,
-      "criadoEm": 1792486689678
+      "criadoEm": 1792486689678,
+      "respostas": []
     },
     {
       "id": "1792456848305",
@@ -97,7 +103,8 @@
         "Joalefe Performático"
       ],
       "arquivado": false,
-      "criadoEm": 1792456848305
+      "criadoEm": 1792456848305,
+      "respostas": []
     },
     {
       "id": "1792455979533",
@@ -110,7 +117,8 @@
         "Kaell Pragmático"
       ],
       "arquivado": true,
-      "criadoEm": 1792455979533
+      "criadoEm": 1792455979533,
+      "respostas": []
     }
   ],
   "demandas": [
@@ -120,7 +128,8 @@
       "descricao1": "solicitei toner azul e preto pois estão abaixo de 50%",
       "descricao2": "",
       "categoria": "Chamados",
-      "status": "em_andamento"
+      "status": "em_andamento",
+      "respostas": []
     },
     {
       "id": "1792500901709",
@@ -128,7 +137,8 @@
       "descricao1": "Contato feito com Vtech, enviado para cadastrar ",
       "descricao2": "Whatsapp: (11) 99558-5051\n\nhttps://mail.google.com/mail/u/0/?ogbl#sent/KtbxLvGzbqCmQdSpGZTtMRlbFpkBmbdFlB",
       "categoria": "DEMANDA",
-      "status": "pendente"
+      "status": "pendente",
+      "respostas": []
     },
     {
       "id": "1792500716798",
@@ -136,7 +146,8 @@
       "descricao1": "Solicitado o cadastro das telas 070 e 072 do cofre para a mesma!",
       "descricao2": "",
       "categoria": "Chamados",
-      "status": "em_andamento"
+      "status": "em_andamento",
+      "respostas": []
     },
     {
       "id": "1792500630190",
@@ -144,7 +155,8 @@
       "descricao1": "Conserto do rub, aguardando yeep trocar o CNPJ para continuarmos com o procedimento (mandar msg para 1196857-8264)",
       "descricao2": "",
       "categoria": "Chamados",
-      "status": "pendente"
+      "status": "pendente",
+      "respostas": []
     },
     {
       "id": "1792498605552",
@@ -152,7 +164,8 @@
       "descricao1": "caixa empresa segue com problema no sitef",
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102085002421",
       "categoria": "Chamados",
-      "status": "em_andamento"
+      "status": "em_andamento",
+      "respostas": []
     },
     {
       "id": "1792493802528",
@@ -160,7 +173,8 @@
       "descricao1": "uma maquina esta em manutenção, a outra temos que solicitar a devolução. ",
       "descricao2": "precisamos verficar com empresas alternativas para consert da maquina",
       "categoria": "DEMANDA",
-      "status": "pendente"
+      "status": "pendente",
+      "respostas": []
     },
     {
       "id": "1792493737390",
@@ -168,7 +182,8 @@
       "descricao1": "cabo do pdv self com problema, necessario procurar fornecedor ",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente"
+      "status": "pendente",
+      "respostas": []
     },
     {
       "id": "1792493644878",
@@ -176,7 +191,8 @@
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026101685006686",
       "descricao2": "",
       "categoria": "Chamados",
-      "status": "em_andamento"
+      "status": "em_andamento",
+      "respostas": []
     },
     {
       "id": "1792487832768",
@@ -190,14 +206,9 @@
           "autor": "João Infomático",
           "texto": "confirmar com ele se o email esta abrindo",
           "data": 1792524263436
-        },
-        {
-          "autor": "João Infomático",
-          "texto": "teste",
-          "data": 1792524281620
         }
       ],
-      "modificadoEm": 1792524281620
+      "modificadoEm": 1792526138519
     },
     {
       "id": "1792487633752",
@@ -205,7 +216,8 @@
       "descricao1": "62605\n\n101\t19/10/2026\t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n675\t\nATACADAO\n\n62660\n\n101\t19/10/2026\t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n675\t\nATACADAO\n\n62704\n\n101\t19/10/2026\t109 - SERVICO PARALISADO SEM PREVISAO",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "concluido"
+      "status": "concluido",
+      "respostas": []
     },
     {
       "id": "1792486904226",
@@ -213,7 +225,8 @@
       "descricao1": "liga e desliga",
       "descricao2": "confirmar problema, e chamar assistencia ",
       "categoria": "Chamados",
-      "status": "pendente"
+      "status": "pendente",
+      "respostas": []
     },
     {
       "id": "1792448661840",
@@ -221,7 +234,8 @@
       "descricao1": "Problema em reconhecer papel a4, aguardando troca de peça.",
       "descricao2": "",
       "categoria": "Chamados",
-      "status": "concluido"
+      "status": "concluido",
+      "respostas": []
     }
   ],
   "plantao": [
