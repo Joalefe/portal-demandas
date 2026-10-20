@@ -184,7 +184,15 @@
       "descricao1": "configurar",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento"
+      "status": "em_andamento",
+      "respostas": [
+        {
+          "autor": "João Infomático",
+          "texto": "confirmar com ele se o email esta abrindo",
+          "data": 1792524263436
+        }
+      ],
+      "modificadoEm": 1792524263436
     },
     {
       "id": "1792487633752",
