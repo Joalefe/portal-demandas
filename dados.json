@@ -12,6 +12,15 @@
   ],
   "avisos": [
     {
+      "id": "1792456848305",
+      "titulo": "login Rosângela",
+      "mensagem": "verificar se login está operante no cx empresa ",
+      "cor": "postit-blue",
+      "lidosPor": [],
+      "arquivado": false,
+      "criadoEm": 1792456848305
+    },
+    {
       "id": "1792455979533",
       "titulo": "Frente caixa colando produtos no caderno",
       "mensagem": "FCX ainda está colando produtos no caderno, verificar possivel falha no portal\n",
