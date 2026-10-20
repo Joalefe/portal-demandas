@@ -86,6 +86,14 @@
   ],
   "demandas": [
     {
+      "id": "1792487832768",
+      "titulo": "Email Sergio",
+      "descricao1": "configurar",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "em_andamento"
+    },
+    {
       "id": "1792487633752",
       "titulo": "notas NFE com erro",
       "descricao1": "62605\n\n101\t19/10/2026\t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n675\t\nATACADAO\n\n62660\n\n101\t19/10/2026\t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n675\t\nATACADAO\n\n62704\n\n101\t19/10/2026\t109 - SERVICO PARALISADO SEM PREVISAO",
