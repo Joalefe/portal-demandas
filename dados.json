@@ -12,6 +12,15 @@
   ],
   "avisos": [
     {
+      "id": "1792486689678",
+      "titulo": "Classe",
+      "mensagem": "Victor quer classe impressa diariamente ",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "arquivado": false,
+      "criadoEm": 1792486689678
+    },
+    {
       "id": "1792456848305",
       "titulo": "login Rosângela",
       "mensagem": "verificar se login está operante no cx empresa ",
