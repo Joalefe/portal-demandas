@@ -192,9 +192,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "0072 - 78451245",
+          "data": 1792537623676
+        }
+      ],
       "criadoEm": 1792527065985,
-      "modificadoEm": 1792527065985
+      "modificadoEm": 1792537623676
     },
     {
       "id": "1792519447275",
