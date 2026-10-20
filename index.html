@@ -144,6 +144,10 @@
     #tab-btn-avisos, #tab-btn-demandas, #tab-btn-plantao { font-size: 1rem !important; padding: 0.55rem 1.1rem !important; }
     #sync-status { font-size: 0.9rem !important; }
 
+    /* Botão pequeno de excluir resposta */
+    .btn-del-resp { min-height: 0 !important; font-size: 0.75rem !important; line-height: 1 !important; padding: 0.2rem 0.3rem !important; color: #0f172a; }
+    .btn-del-resp:hover { color: #b91c1c; }
+
     /* Barra de alerta de plantão mais visível */
     #container-alerta-plantao { font-size: 0.95rem !important; padding: 0.8rem 1rem !important; }
   </style>
@@ -716,6 +720,19 @@
     let salvando = false;
     let salvarPendente = false;
     const idsExcluidos = new Set();
+    const respostasExcluidas = new Set();
+
+    function excluirResposta(tipo, itemId, indice) {
+      const lista = tipo === 'aviso' ? state.avisos : state.demandas;
+      const item = (lista || []).find(x => x.id === itemId);
+      if (!item || !item.respostas || !item.respostas[indice]) return;
+      if (!confirm('Excluir esta resposta?')) return;
+      const removida = item.respostas.splice(indice, 1)[0];
+      respostasExcluidas.add(`${removida.data}|${removida.texto}`);
+      item.modificadoEm = new Date().getTime();
+      saveStorage();
+      if (tipo === 'aviso') renderAvisos(); else renderDemandas();
+    }
 
     function dataDoItem(i) { return i.criadoEm || parseInt(i.id, 10) || 0; }
 
@@ -723,6 +740,7 @@
       const mapa = new Map();
       [...(a || []), ...(b || [])].forEach(r => {
         const chave = `${r.data}|${r.texto}`;
+        if (respostasExcluidas.has(chave)) return;
         if (!mapa.has(chave)) mapa.set(chave, r);
       });
       return [...mapa.values()].sort((x, y) => (x.data || 0) - (y.data || 0));
@@ -877,10 +895,11 @@
               <div class="space-y-1.5 pt-2 border-t border-black/15">
                 <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-900">Respostas / Continuidade:</span>
                 <div class="space-y-1 max-h-28 overflow-y-auto">
-                  ${respostas.map(r => `
-                    <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950">
+                  ${respostas.map((r, i) => `
+                    <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950 relative" style="padding-right:1.8rem !important;">
                       ${escapeHtml(r.texto)}
                       <div class="text-[10px] opacity-70 mt-0.5">${formatarDataHoraCurta(r.data)}</div>
+                      <button type="button" onclick="excluirResposta('aviso', '${a.id}', ${i})" title="Excluir resposta" class="btn-del-resp absolute top-1 right-1 opacity-60 hover:opacity-100">✕</button>
                     </div>
                   `).join('')}
                 </div>
@@ -1082,10 +1101,11 @@
               <div class="space-y-1.5 pt-2 border-t border-black/15">
                 <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-900">Respostas / Continuidade:</span>
                 <div class="space-y-1 max-h-24 overflow-y-auto">
-                  ${respostas.map(r => `
-                    <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950">
+                  ${respostas.map((r, i) => `
+                    <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950 relative" style="padding-right:1.8rem !important;">
                       ${escapeHtml(r.texto)}
                       <div class="text-[10px] opacity-70 mt-0.5">${formatarDataHoraCurta(r.data)}</div>
+                      <button type="button" onclick="excluirResposta('demanda', '${d.id}', ${i})" title="Excluir resposta" class="btn-del-resp absolute top-1 right-1 opacity-60 hover:opacity-100">✕</button>
                     </div>
                   `).join('')}
                 </div>
