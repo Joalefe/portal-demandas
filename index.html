@@ -487,13 +487,6 @@
         <input type="hidden" name="_subject" id="email-subject" value="📋 Relatório de Passagem de Plantão">
         <input type="hidden" name="_template" value="box">
 
-        <input type="hidden" id="email-titulo" name="titulo_plantao">
-        <input type="hidden" id="email-resumo-auto" name="resumo_automatico_dia">
-        <input type="hidden" id="email-comentario" name="comentario_adicional">
-        <input type="hidden" id="email-descricao" name="descricao_geral">
-        <input type="hidden" id="email-rubs-desv" name="rubs_desvinculados">
-        <input type="hidden" id="email-rubs-bloq" name="rubs_bloqueados">
-        <input type="hidden" id="email-etiquetas" name="etiquetas_ribbon">
 
         <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-300">
           Você registrou o plantão <strong id="email-periodo-txt"></strong>. Confirme seu nome para disparar o e-mail para <strong>cpd_675@atacadao.com.br</strong>:
@@ -501,8 +494,16 @@
 
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Identificação / Responsável</label>
-          <input type="text" id="email-responsavel" name="responsavel" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" id="email-responsavel" name="Responsável" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
+
+        <input type="hidden" id="email-titulo" name="Plantão (Data e Turno)">
+        <input type="hidden" id="email-resumo-auto" name="Resumo do Dia">
+        <input type="hidden" id="email-comentario" name="Comentário Adicional">
+        <input type="hidden" id="email-descricao" name="Descrição Geral do Plantão">
+        <input type="hidden" id="email-rubs-desv" name="Rubs Desvinculados">
+        <input type="hidden" id="email-rubs-bloq" name="Rubs Bloqueados">
+        <input type="hidden" id="email-etiquetas" name="Etiquetas e Ribbon Abastecidas">
 
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
           <button type="button" onclick="voltarParaPlantao()" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Voltar e Editar</button>
@@ -1389,6 +1390,11 @@
         document.getElementById('email-etiquetas').value = dadosPlantao.etiquetasRibbon;
         document.getElementById('email-subject').value = `📋 Relatório de Passagem de Plantão - ${dadosPlantao.titulo}`;
         document.getElementById('email-periodo-txt').innerText = dadosPlantao.titulo;
+        // Campos vazios / não aplicáveis não vão no e-mail (evita linhas "N/A" e em branco)
+        ['email-comentario','email-rubs-desv','email-rubs-bloq','email-etiquetas'].forEach(idc => {
+          const el = document.getElementById(idc);
+          el.disabled = !el.value || el.value.trim() === '' || el.value === 'N/A';
+        });
         document.getElementById('email-responsavel').value = localStorage.getItem('portal_ultimo_responsavel') || '';
 
         closeModal('modal-plantao');
