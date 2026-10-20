@@ -102,9 +102,15 @@
         "João Infomático",
         "Joalefe Performático"
       ],
-      "arquivado": false,
+      "arquivado": true,
       "criadoEm": 1792456848305,
-      "respostas": []
+      "respostas": [
+        {
+          "texto": "📋 Transformado em demanda",
+          "data": 1792527065990
+        }
+      ],
+      "modificadoEm": 1792527065990
     },
     {
       "id": "1792455979533",
@@ -122,6 +128,17 @@
     }
   ],
   "demandas": [
+    {
+      "id": "1792527065985",
+      "titulo": "login Rosângela",
+      "descricao1": "verificar se login está operante no cx empresa ",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1792527065985,
+      "modificadoEm": 1792527065985
+    },
     {
       "id": "1792519447275",
       "titulo": "requerimento de toner",
