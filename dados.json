@@ -224,9 +224,13 @@
           "autor": "João Infomático",
           "texto": "confirmar com ele se o email esta abrindo",
           "data": 1792524263436
+        },
+        {
+          "texto": "email operante!",
+          "data": 1792527873610
         }
       ],
-      "modificadoEm": 1792527856218
+      "modificadoEm": 1792527873610
     },
     {
       "id": "1792487633752",
