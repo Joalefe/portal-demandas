@@ -16,7 +16,9 @@
       "titulo": "planilhas e portais",
       "mensagem": "por enquanto, nao atualizar \"planilha estoque\", \"portal de mais barato\"",
       "cor": "postit-green",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "arquivado": false,
       "criadoEm": 1792493478934
     },
