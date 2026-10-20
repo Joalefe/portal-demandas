@@ -16,7 +16,9 @@
       "titulo": "Geencial ",
       "mensagem": "funcionando na data de hoje",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "arquivado": false,
       "criadoEm": 1792489324284
     },
