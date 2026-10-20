@@ -106,7 +106,7 @@
 
     /* Cards: texto grande, sem altura fixa cortando conteúdo */
     #subtab-content-ativos > div, #subtab-content-lidos > div,
-    #container-demandas > div, #container-demandas-concluidas > div {
+    .lista-cards-demanda > div {
       min-height: 21rem !important;
       padding: 1.5rem !important;
     }
@@ -1132,8 +1132,26 @@
         `;
       };
 
-      document.getElementById('container-demandas').innerHTML = ativas.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda ativa.</p>`;
-      document.getElementById('container-demandas-concluidas').innerHTML = concluidas.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda concluída.</p>`;
+      // Chamados de um lado, demais demandas do outro
+      const ehChamado = d => (d.categoria || '').toLowerCase().includes('chamado');
+      const montarColunas = (lista) => {
+        const coluna = (titulo, icone, itens, cor, msgVazia) => `
+          <div class="space-y-4 min-w-0">
+            <div class="flex items-center justify-between px-4 py-2.5 rounded-lg border ${cor}">
+              <span class="text-sm font-bold uppercase tracking-wider">${icone} ${titulo}</span>
+              <span class="text-sm font-bold">${itens.length}</span>
+            </div>
+            <div class="lista-cards-demanda grid grid-cols-1 2xl:grid-cols-2 gap-5">
+              ${itens.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">${msgVazia}</p>`}
+            </div>
+          </div>`;
+        return `<div class="col-span-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">`
+          + coluna('Chamados', '📞', lista.filter(ehChamado), 'bg-emerald-950/50 text-emerald-300 border-emerald-800/70', 'Nenhum chamado.')
+          + coluna('Demandas', '📋', lista.filter(d => !ehChamado(d)), 'bg-sky-950/50 text-sky-300 border-sky-800/70', 'Nenhuma demanda.')
+          + `</div>`;
+      };
+      document.getElementById('container-demandas').innerHTML = montarColunas(ativas);
+      document.getElementById('container-demandas-concluidas').innerHTML = montarColunas(concluidas);
     }
 
     function enviarRespostaDemanda(demandaId) {
