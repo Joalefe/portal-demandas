@@ -336,7 +336,7 @@
           <textarea id="plantao-descricao" rows="6" required placeholder="Escreva aqui detalhadamente todos os acontecimentos e ocorrências..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
         </div>
 
-        <!-- GRUPO DE CAMPOS TÉCNICOS EXCLUSIVOS DA TARDE -->
+        <!-- CONTAINER DOS CAMPOS EXCLUSIVOS DA TARDE (INICIALMENTE OCULTO) -->
         <div id="container-campos-tarde" class="space-y-4 border-t border-slate-800 pt-4 hidden">
           <div class="text-xs font-bold text-indigo-400 uppercase tracking-wider">🔒 Informações Técnicas Exclusivas (Turno da Tarde)</div>
           <div>
@@ -1147,7 +1147,6 @@
         horaRegistro: document.getElementById('plantao-horario-registro').value
       };
 
-      // Se for Tarde, exige preenchimento do formulário de responsável
       if (isTarde) {
         tempPlantaoBuffer = dadosPlantao;
 
@@ -1164,7 +1163,6 @@
         return;
       }
 
-      // Demais turnos enviam automaticamente o e-mail em segundo plano e salvam
       executarSalvarPlantaoFinal(dadosPlantao);
       dispararEmailAutomatico(dadosPlantao);
     }
