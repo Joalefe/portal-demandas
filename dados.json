@@ -240,6 +240,20 @@
   ],
   "plantao": [
     {
+      "id": "1792526165409",
+      "titulo": "20/10/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (20/10/2026) ===\n\n📌 Avisos Criados (6):\n- [Rub do Ruan sumido ]: Procurar, mantê-lo bloqueado ...\n- [planilhas e portais]: por enquanto, nao atualizar \"planilha estoque\", \"portal de mais barato\"...\n- [Gerencial ]: funcionando na data de hoje...\n- [shell top.sh]: shell operante e chegando ao destino...\n- [sas22]: sas22 chegando ao destino...\n- [Classe]: Victor quer classe impressa diariamente ...\n\n📋 Demandas Modificadas/Concluídas (11):\n- [Chamados] requerimento de toner (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Chamado Julia Ellen (Status: em_andamento)\n- [Chamados] Rub 29 (Status: pendente)\n- [Chamados] caixa empresa (Status: em_andamento)\n- [DEMANDA] zhaz maquinas quimadas (Status: pendente)\n- [DEMANDA] cabo adaptador pdv (Status: pendente)\n- [Chamados] Victor sem acessos (Status: em_andamento)\n- [DEMANDA] Email Sergio (Status: em_andamento)\n- [DEMANDA] notas NFE com erro (Status: concluido)\n- [Chamados] Balança piso com problema (Status: pendente)\n",
+      "comentarioExtra": "",
+      "descricao": "resumo da manha",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1792526165409,
+      "horaRegistro": "16:55",
+      "criadoEm": 1792526165409
+    },
+    {
       "id": "auto_1792524095676_Intermediário",
       "titulo": "20/10/2026 - Intermediário",
       "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
