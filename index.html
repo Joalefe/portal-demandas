@@ -146,6 +146,14 @@
     #tab-btn-avisos, #tab-btn-demandas, #tab-btn-plantao { font-size: 1rem !important; padding: 0.55rem 1.1rem !important; }
     #sync-status { font-size: 0.9rem !important; }
 
+    /* Modo lista: linhas compactas (sem a altura/padding dos cards) */
+    .item-lista,
+    #subtab-content-ativos > .item-lista, #subtab-content-lidos > .item-lista,
+    .lista-cards-demanda > .item-lista, #container-plantao > .item-lista {
+      min-height: 0 !important; height: auto !important; padding: 0 !important;
+    }
+    .item-lista-corpo > div { min-height: 0 !important; }
+
     /* Botão pequeno de excluir resposta */
     .btn-del-resp { min-height: 0 !important; font-size: 0.75rem !important; line-height: 1 !important; padding: 0.2rem 0.3rem !important; color: #0f172a; }
     .btn-del-resp:hover { color: #b91c1c; }
@@ -177,6 +185,7 @@
         </nav>
       </div>
       <div class="flex items-center gap-3">
+        <button id="btn-modo-view" onclick="alternarModoVisualizacao()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-2.5 py-1 rounded transition" title="Alternar visualização">▦ Ver em Cards</button>
         <button onclick="promptForToken()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-2.5 py-1 rounded transition" title="Configurar Token">
           🔑 Token
         </button>
@@ -795,6 +804,96 @@
       return `${p(d.getDate())}/${p(d.getMonth() + 1)} ${p(d.getHours())}:${p(d.getMinutes())}`;
     }
 
+    // ===== MODO DE VISUALIZAÇÃO: LISTA (padrão) ou CARDS =====
+    let modoVisualizacao = 'lista';
+    try { modoVisualizacao = localStorage.getItem('portal_modo_visualizacao') || 'lista'; } catch (e) {}
+    const itensAbertos = new Set();
+
+    function atualizarBotaoModo() {
+      const b = document.getElementById('btn-modo-view');
+      if (b) b.innerText = modoVisualizacao === 'lista' ? '▦ Ver em Cards' : '☰ Ver em Lista';
+    }
+
+    function alternarModoVisualizacao() {
+      modoVisualizacao = modoVisualizacao === 'lista' ? 'cards' : 'lista';
+      try { localStorage.setItem('portal_modo_visualizacao', modoVisualizacao); } catch (e) {}
+      atualizarBotaoModo();
+      renderTudo();
+    }
+
+    function toggleItemLista(chave) {
+      if (itensAbertos.has(chave)) itensAbertos.delete(chave); else itensAbertos.add(chave);
+      renderTudo();
+    }
+
+    function linhaLista(chave, cabecalhoHtml, corpoHtml) {
+      const aberto = itensAbertos.has(chave);
+      return `
+        <div class="item-lista col-span-full rounded-xl border ${aberto ? 'border-indigo-500/60' : 'border-slate-800'} bg-slate-900 overflow-hidden">
+          <button type="button" onclick="toggleItemLista('${chave}')" class="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-slate-800/60 transition">
+            ${cabecalhoHtml}
+            <span class="text-slate-400 shrink-0">${aberto ? '▲' : '▼'}</span>
+          </button>
+          ${aberto ? `<div class="item-lista-corpo p-4 border-t border-slate-800">${corpoHtml}</div>` : ''}
+        </div>`;
+    }
+
+    function itemAviso(a, renderCard) {
+      if (modoVisualizacao !== 'lista') return renderCard(a);
+      const pontos = { 'postit-yellow': 'bg-amber-300', 'postit-blue': 'bg-sky-300', 'postit-green': 'bg-emerald-300', 'postit-pink': 'bg-pink-300', 'postit-purple': 'bg-purple-300', 'postit-orange': 'bg-orange-300' };
+      const totalReq = Math.min(3, (state.pessoas || []).length || 1);
+      const lidosCount = (a.lidosPor || []).length;
+      const nResp = (a.respostas || []).length;
+      const preview = escapeHtml((a.mensagem || '').replace(/\s+/g, ' '));
+      const cab = `
+        <span class="w-3.5 h-3.5 rounded-full shrink-0 ${pontos[a.cor] || 'bg-amber-300'}"></span>
+        <span class="font-bold text-white shrink-0 max-w-[45%] truncate">${escapeHtml(a.titulo)}</span>
+        <span class="text-slate-400 truncate flex-1 min-w-0 hidden md:block">${preview}</span>
+        <span class="flex-1 md:hidden"></span>
+        <span class="text-xs text-slate-300 shrink-0">💬 ${nResp}</span>
+        <span class="text-xs text-slate-300 shrink-0">👁 ${lidosCount}/${totalReq}</span>
+        <span class="text-xs text-slate-400 shrink-0 hidden sm:inline">${formatarDataHoraCurta(a.criadoEm || parseInt(a.id, 10))}</span>`;
+      return linhaLista('a_' + a.id, cab, renderCard(a));
+    }
+
+    function itemDemanda(d, renderCardDemanda) {
+      if (modoVisualizacao !== 'lista') return renderCardDemanda(d);
+      const badges = {
+        pendente: ['Pendente', 'bg-amber-500/20 text-amber-300 border-amber-500/40'],
+        em_andamento: ['Em Andamento', 'bg-sky-500/20 text-sky-300 border-sky-500/40'],
+        concluido: ['Concluído', 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40']
+      };
+      const b = badges[d.status] || badges.pendente;
+      const nResp = (d.respostas || []).length;
+      const preview = escapeHtml((d.descricao1 || d.descricao || '').replace(/\s+/g, ' '));
+      const cab = `
+        <span class="font-bold text-white shrink-0 max-w-[45%] truncate">${escapeHtml(d.titulo)}</span>
+        <span class="text-slate-400 truncate flex-1 min-w-0 hidden md:block">${preview}</span>
+        <span class="flex-1 md:hidden"></span>
+        <span class="text-xs text-slate-400 shrink-0 hidden lg:inline">${escapeHtml(d.categoria || '')}</span>
+        <span class="text-xs text-slate-300 shrink-0">💬 ${nResp}</span>
+        <span class="text-xs font-bold px-2 py-0.5 rounded border shrink-0 ${b[1]}">${b[0]}</span>`;
+      return linhaLista('d_' + d.id, cab, renderCardDemanda(d));
+    }
+
+    function itemPlantao(p, isSistema, textoCompleto) {
+      const cab = `
+        <span class="font-bold ${isSistema ? 'text-rose-300' : 'text-white'} shrink-0 max-w-[45%] truncate">${escapeHtml(p.titulo)}</span>
+        <span class="text-slate-400 truncate flex-1 min-w-0 hidden md:block">${escapeHtml((p.descricao || '').replace(/\s+/g, ' '))}</span>
+        <span class="flex-1 md:hidden"></span>
+        ${isSistema
+          ? '<span class="text-xs font-bold text-rose-300 shrink-0">⚠️ Automático</span>'
+          : (p.responsavel ? `<span class="text-xs text-slate-300 shrink-0">👤 ${escapeHtml(p.responsavel)}</span>` : '')}
+        <span class="text-xs text-slate-400 shrink-0">${p.horaRegistro || 'N/D'}</span>`;
+      const acoes = isSistema ? '' : `
+        <div class="flex gap-2 justify-end mb-3">
+          <button type="button" onclick="openModalPlantao('${p.id}')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded text-slate-200">✏️ Editar</button>
+          <button type="button" onclick="deletePlantao('${p.id}')" class="text-xs bg-slate-800 hover:bg-rose-900 px-3 py-1.5 rounded text-slate-200">🗑️ Excluir</button>
+        </div>`;
+      const corpo = acoes + `<div class="text-sm text-slate-200 whitespace-pre-wrap leading-relaxed">${escapeHtml(textoCompleto)}</div>`;
+      return linhaLista('p_' + p.id, cab, corpo);
+    }
+
     function switchMainTab(tab) {
       document.getElementById('tab-content-avisos').classList.toggle('hidden', tab !== 'avisos');
       document.getElementById('tab-content-demandas').classList.toggle('hidden', tab !== 'demandas');
@@ -935,8 +1034,8 @@
         `;
       };
 
-      document.getElementById('subtab-content-ativos').innerHTML = ativos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso ativo.</p>`;
-      document.getElementById('subtab-content-lidos').innerHTML = lidos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso no histórico.</p>`;
+      document.getElementById('subtab-content-ativos').innerHTML = ativos.map(a => itemAviso(a, renderCard)).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso ativo.</p>`;
+      document.getElementById('subtab-content-lidos').innerHTML = lidos.map(a => itemAviso(a, renderCard)).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso no histórico.</p>`;
       checarAlertasItensAntigos();
     }
 
@@ -1142,7 +1241,7 @@
               <span class="text-sm font-bold">${itens.length}</span>
             </div>
             <div class="lista-cards-demanda grid grid-cols-1 2xl:grid-cols-2 gap-5">
-              ${itens.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">${msgVazia}</p>`}
+              ${itens.map(d => itemDemanda(d, renderCardDemanda)).join('') || `<p class="text-xs text-slate-500 col-span-full">${msgVazia}</p>`}
             </div>
           </div>`;
         return `<div class="col-span-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">`
@@ -1330,6 +1429,8 @@
         const isSistema = p.sistemaGerou === true;
         const textoCompletoPlantao = `Resumo Automático:\n${p.resumoAutomatico || 'N/A'}\n\nComentário Adicional:\n${p.comentarioExtra || 'N/A'}\n\nDescrição Geral:\n${p.descricao || 'N/A'}` +
           (p.rubsDesvinculados && p.rubsDesvinculados !== 'N/A' ? `\n\nRubs Desvinculados:\n${p.rubsDesvinculados}\n\nRubs Bloqueados:\n${p.rubsBloqueados}\n\nEtiquetas/Ribbon:\n${p.etiquetasRibbon}` : '');
+
+        if (modoVisualizacao === 'lista') return itemPlantao(p, isSistema, textoCompletoPlantao);
 
         return `
           <div class="${isSistema ? 'bg-rose-950/40 border-rose-900/60' : 'bg-slate-900 border-slate-800'} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-72 shadow-md">
@@ -1858,7 +1959,7 @@
       return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
     }
 
-    window.addEventListener('DOMContentLoaded', () => { loadStorage(); });
+    window.addEventListener('DOMContentLoaded', () => { atualizarBotaoModo(); loadStorage(); });
   </script>
 </body>
 </html>
