@@ -12,6 +12,15 @@
   ],
   "avisos": [
     {
+      "id": "1792487016024",
+      "titulo": "shell top.sh",
+      "mensagem": "deve ser rodada todo dia na abertura, depois da abertura.sh (confirmar se email esta chegando para o victor)",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "arquivado": false,
+      "criadoEm": 1792487016024
+    },
+    {
       "id": "1792486798459",
       "titulo": "sas22",
       "mensagem": "confirmar se sas22 chegou para cadastro 675 e gerencia",
