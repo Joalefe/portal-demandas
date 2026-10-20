@@ -11,6 +11,15 @@
   ],
   "avisos": [
     {
+      "id": "1792505930497",
+      "titulo": "Rub do Ruan sumido ",
+      "mensagem": "Procurar, mantê-lo bloqueado ",
+      "cor": "postit-green",
+      "lidosPor": [],
+      "arquivado": false,
+      "criadoEm": 1792505930497
+    },
+    {
       "id": "1792493478934",
       "titulo": "planilhas e portais",
       "mensagem": "por enquanto, nao atualizar \"planilha estoque\", \"portal de mais barato\"",
