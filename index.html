@@ -118,12 +118,12 @@
     <section id="tab-content-demandas" class="space-y-6 hidden">
       <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
         <div class="flex items-center gap-3">
-          <select id="filter-demandas-status" onchange="renderDemandas()" class="bg-slate-950 text-slate-200 text-xs border border-slate-800 rounded-lg px-3 py-2">
-            <option value="todos">Todos Status</option>
-            <option value="pendente">Pendente</option>
-            <option value="em_andamento">Em Andamento</option>
-            <option value="concluido">Concluído</option>
-          </select>
+          <button id="demanda-subtab-ativas" onclick="switchDemandasSubtab('ativas')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30">
+            Demandas Ativas (<span id="count-demandas-ativas">0</span>)
+          </button>
+          <button id="demanda-subtab-concluidas" onclick="switchDemandasSubtab('concluidas')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50">
+            Concluídas / Arquivadas (<span id="count-demandas-concluidas">0</span>)
+          </button>
           <select id="filter-demandas-categoria" onchange="renderDemandas()" class="bg-slate-950 text-slate-200 text-xs border border-slate-800 rounded-lg px-3 py-2">
             <option value="todas">Todas Categorias</option>
           </select>
@@ -140,6 +140,7 @@
       </div>
 
       <div id="container-demandas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      <div id="container-demandas-concluidas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 hidden"></div>
     </section>
 
     <!-- ABA 3: PASSAGEM DE PLANTÃO -->
@@ -199,7 +200,7 @@
   </div>
 
   <div id="modal-aviso" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
-    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
         <h3 id="modal-aviso-title" class="text-base font-semibold text-white">Novo Aviso</h3>
         <button onclick="closeModal('modal-aviso')" class="text-slate-400 hover:text-white">✕</button>
@@ -208,11 +209,11 @@
         <input type="hidden" id="aviso-id">
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Título</label>
-          <input type="text" id="aviso-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" id="aviso-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Mensagem</label>
-          <textarea id="aviso-mensagem" rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <textarea id="aviso-mensagem" rows="6" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
         </div>
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Estilo do Post-it</label>
@@ -251,27 +252,9 @@
     </div>
   </div>
 
-  <div id="modal-view-aviso" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
-    <div id="view-aviso-card" class="rounded-xl w-full max-w-lg p-6 space-y-4 text-slate-900 shadow-2xl transition-all">
-      <div class="flex justify-between items-start">
-        <h3 id="view-aviso-titulo" class="text-xl font-bold"></h3>
-        <button onclick="closeModal('modal-view-aviso')" class="text-slate-700 hover:text-black text-lg">✕</button>
-      </div>
-      <p id="view-aviso-mensagem" class="text-sm leading-relaxed whitespace-pre-wrap"></p>
-      <div class="border-t border-black/10 pt-4 space-y-2">
-        <span class="text-xs font-semibold uppercase tracking-wider text-slate-700">Confirmações de Leitura:</span>
-        <div id="view-aviso-leitores" class="grid grid-cols-2 gap-2 text-xs"></div>
-      </div>
-      <div class="flex justify-end gap-2 pt-2">
-        <button id="view-aviso-btn-edit" class="bg-black/10 hover:bg-black/20 text-slate-900 text-xs px-3 py-1.5 rounded font-medium">Editar</button>
-        <button onclick="closeModal('modal-view-aviso')" class="bg-slate-900 text-white text-xs px-4 py-1.5 rounded font-medium">Fechar</button>
-      </div>
-    </div>
-  </div>
-
   <!-- Modal Demanda -->
   <div id="modal-demanda" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
-    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg p-5 space-y-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
         <h3 id="modal-demanda-title" class="text-base font-semibold text-white">Nova Demanda</h3>
         <button onclick="closeModal('modal-demanda')" class="text-slate-400 hover:text-white">✕</button>
@@ -280,24 +263,24 @@
         <input type="hidden" id="demanda-id">
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Título</label>
-          <input type="text" id="demanda-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" id="demanda-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Descrição 1</label>
-          <textarea id="demanda-descricao1" rows="2" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <textarea id="demanda-descricao1" rows="5" required placeholder="Insira detalhes ou links (ex: https://...)" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
         </div>
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Descrição 2</label>
-          <textarea id="demanda-descricao2" rows="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <textarea id="demanda-descricao2" rows="4" placeholder="Informações adicionais ou links complementares..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-medium text-slate-400 mb-1">Categoria</label>
-            <select id="demanda-categoria" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></select>
+            <select id="demanda-categoria" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500"></select>
           </div>
           <div>
             <label class="block text-xs font-medium text-slate-400 mb-1">Status</label>
-            <select id="demanda-status" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+            <select id="demanda-status" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
               <option value="pendente">Pendente</option>
               <option value="em_andamento">Em Andamento</option>
               <option value="concluido">Concluído</option>
@@ -335,30 +318,37 @@
             <button type="button" onclick="preencherPeriodo('Tarde')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌙 Tarde</button>
             <button type="button" onclick="preencherPeriodo('Madrugada')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">✨ Madruga</button>
           </div>
-          <input type="text" id="plantao-titulo" required placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" id="plantao-titulo" required placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
 
         <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição Geral do Plantão (Área Ampliada)</label>
-          <textarea id="plantao-descricao" rows="10" required placeholder="Escreva aqui detalhadamente todos os acontecimentos, ocorrências e repasses do plantão..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Resumo Automático do Dia (Avisos e Demandas Modificadas)</label>
+          <textarea id="plantao-resumo-automatico" rows="5" readonly class="w-full bg-slate-950/80 border border-slate-800 rounded-lg px-3 py-2.5 text-xs text-slate-300 focus:outline-none leading-relaxed"></textarea>
         </div>
 
-        <!-- 1. Rubs Desvinculados (Obrigatório) -->
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Comentário Adicional para a Passagem</label>
+          <textarea id="plantao-comentario-extra" rows="3" placeholder="Adicione observações adicionais para este plantão..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição Geral do Plantão</label>
+          <textarea id="plantao-descricao" rows="6" required placeholder="Escreva aqui detalhadamente todos os acontecimentos e ocorrências..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+        </div>
+
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Desvinculados *</label>
-          <textarea id="plantao-rubs-desvinculados" rows="2" required placeholder="Informe os detalhes sobre rubs desvinculados..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <textarea id="plantao-rubs-desvinculados" rows="3" required placeholder="Informe os detalhes sobre rubs desvinculados..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
         </div>
 
-        <!-- 2. Rubs Bloqueados e quem foi bloqueado (Obrigatório) -->
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Bloqueados (Informar quem foi bloqueado) *</label>
-          <textarea id="plantao-rubs-bloqueados" rows="2" required placeholder="Informe os rubs bloqueados e especifique quem foi o responsável/envolvido..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <textarea id="plantao-rubs-bloqueados" rows="3" required placeholder="Informe os rubs bloqueados e especifique o responsável..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
         </div>
 
-        <!-- 3. Etiquetas e Ribbon Abastecidas (Obrigatório) -->
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Etiquetas e Ribbon Abastecidas *</label>
-          <textarea id="plantao-etiquetas" rows="2" required placeholder="Informe a situação das etiquetas e ribbons abastecidas..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          <textarea id="plantao-etiquetas" rows="3" required placeholder="Informe a situação das etiquetas e ribbons abastecidas..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
         </div>
 
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
@@ -369,7 +359,7 @@
     </div>
   </div>
 
-  <!-- MODAL: Formulário de Envio por E-mail EXCLUSIVO para a Tarde (FormSubmit com e-mail fixo oculto) -->
+  <!-- MODAL: Formulário de Envio por E-mail EXCLUSIVO para a Tarde -->
   <div id="modal-plantao-email" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -378,13 +368,13 @@
       </div>
 
       <form action="https://formsubmit.co/cpd_675@atacadao.com.br" method="POST" onsubmit="savePlantaoEmailSubmit(event)" class="space-y-4">
-        <!-- CONFIGURAÇÕES FORMSUBMIT -->
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="📋 Relatório de Passagem de Plantão - Tarde">
         <input type="hidden" name="_template" value="box">
 
-        <!-- Campos espelho ocultos para o FormSubmit -->
         <input type="hidden" id="email-titulo" name="titulo_plantao">
+        <input type="hidden" id="email-resumo-auto" name="resumo_automatico_dia">
+        <input type="hidden" id="email-comentario" name="comentario_adicional">
         <input type="hidden" id="email-descricao" name="descricao_geral">
         <input type="hidden" id="email-rubs-desv" name="rubs_desvinculados">
         <input type="hidden" id="email-rubs-bloq" name="rubs_bloqueados">
@@ -396,7 +386,7 @@
 
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Identificação / Responsável</label>
-          <input type="text" name="responsavel" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" name="responsavel" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
 
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
@@ -414,6 +404,8 @@
     <input type="hidden" name="_template" value="box">
     <input type="hidden" name="responsavel" value="Automático / Sistema">
     <input type="hidden" name="titulo_plantao" id="auto-email-titulo">
+    <input type="hidden" name="resumo_automatico_dia" id="auto-email-resumo">
+    <input type="hidden" name="comentario_adicional" id="auto-email-comentario">
     <input type="hidden" name="descricao_geral" id="auto-email-desc">
     <input type="hidden" name="rubs_desvinculados" id="auto-email-rubs-desv">
     <input type="hidden" name="rubs_bloqueados" id="auto-email-rubs-bloq">
@@ -618,6 +610,20 @@
       }
     }
 
+    function switchDemandasSubtab(sub) {
+      document.getElementById('container-demandas').classList.toggle('hidden', sub !== 'ativas');
+      document.getElementById('container-demandas-concluidas').classList.toggle('hidden', sub !== 'concluidas');
+      const btnA = document.getElementById('demanda-subtab-ativas');
+      const btnC = document.getElementById('demanda-subtab-concluidas');
+      if (sub === 'ativas') {
+        btnA.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
+        btnC.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50";
+      } else {
+        btnC.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
+        btnA.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50";
+      }
+    }
+
     function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
     function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
@@ -625,6 +631,12 @@
       document.getElementById('fs-title').innerText = titulo;
       document.getElementById('fs-content').innerHTML = htmlConteudo;
       openModal('modal-fullscreen');
+    }
+
+    function formatarLinks(texto) {
+      if (!texto) return '';
+      const expReg = /(https?:\/\/[^\s]+)/g;
+      return escapeHtml(texto).replace(expReg, '<a href="$1" target="_blank" class="text-indigo-400 underline hover:text-indigo-300 break-all">$1</a>');
     }
 
     function renderAvisos() {
@@ -646,10 +658,12 @@
       const renderCard = (a) => {
         const totalReq = Math.min(3, (state.pessoas || []).length || 1);
         const lidosCount = (a.lidosPor || []).length;
+        const respostas = a.respostas || [];
+
         return `
-          <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between h-72 transition hover:-translate-y-1">
-            <div class="overflow-hidden">
-              <div class="flex justify-between items-start gap-2 mb-2">
+          <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between h-auto min-h-[320px] transition">
+            <div class="overflow-hidden space-y-2">
+              <div class="flex justify-between items-start gap-2">
                 <h4 class="font-bold text-base leading-snug truncate">${escapeHtml(a.titulo)}</h4>
                 <div class="flex gap-1 shrink-0">
                   <button onclick="abrirFullscreen('${escapeHtml(a.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(a.mensagem).replace(/`/g, '\\`')}\`)" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Tela Cheia">🔍</button>
@@ -657,11 +671,26 @@
                   <button onclick="deleteAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Excluir">🗑️</button>
                 </div>
               </div>
-              <p class="text-xs opacity-90 line-clamp-3 mb-4">
-                ${escapeHtml(a.mensagem)}
-              </p>
+              <p class="text-xs opacity-90 whitespace-pre-wrap leading-relaxed">${formatarLinks(a.mensagem)}</p>
+
+              <!-- Respostas/Continuidade -->
+              <div class="space-y-1.5 pt-2 border-t border-black/10">
+                <span class="text-[10px] font-bold uppercase tracking-wider opacity-75">Respostas / Continuidade:</span>
+                <div class="space-y-1 max-h-28 overflow-y-auto">
+                  ${respostas.map(r => `
+                    <div class="bg-black/5 p-1.5 rounded text-[11px] leading-tight">
+                      <span class="font-semibold">${escapeHtml(r.autor)}:</span> ${escapeHtml(r.texto)}
+                    </div>
+                  `).join('')}
+                </div>
+                <div class="flex gap-1 pt-1">
+                  <input type="text" id="resp-aviso-${a.id}" placeholder="Responder..." class="flex-1 bg-white/60 border border-black/20 rounded px-2 py-1 text-[11px] text-black focus:outline-none">
+                  <button onclick="enviarRespostaAviso('${a.id}')" class="bg-black/15 hover:bg-black/25 text-black text-[10px] px-2 py-1 rounded font-medium">Enviar</button>
+                </div>
+              </div>
             </div>
-            <div class="border-t border-black/10 pt-3 mt-2 space-y-2 shrink-0">
+
+            <div class="border-t border-black/10 pt-3 mt-3 space-y-2 shrink-0">
               <div class="flex justify-between items-center text-[10px] font-bold uppercase tracking-wider opacity-75">
                 <span>Leitura (${lidosCount}/${totalReq})</span>
                 <span>${a.arquivado ? 'Lido/Arquivado' : 'Pendente'}</span>
@@ -685,6 +714,22 @@
       document.getElementById('subtab-content-ativos').innerHTML = ativos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso ativo.</p>`;
       document.getElementById('subtab-content-lidos').innerHTML = lidos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso no histórico.</p>`;
       checarAlertasItensAntigos();
+    }
+
+    function enviarRespostaAviso(avisoId) {
+      const input = document.getElementById(`resp-aviso-${avisoId}`);
+      if (!input || !input.value.trim()) return;
+      const aviso = (state.avisos || []).find(a => a.id === avisoId);
+      if (!aviso) return;
+
+      aviso.respostas = aviso.respostas || [];
+      aviso.respostas.push({
+        autor: state.pessoas[0] || 'Usuário',
+        texto: input.value.trim(),
+        data: new Date().getTime()
+      });
+      saveStorage();
+      renderAvisos();
     }
 
     function toggleLeitura(avisoId, pessoa) {
@@ -728,14 +773,16 @@
       state.avisos = state.avisos || [];
       if (id) {
         const a = state.avisos.find(x => x.id === id);
-        if (a) { a.titulo = titulo; a.mensagem = mensagem; a.cor = cor; }
+        if (a) { a.titulo = titulo; a.mensagem = mensagem; a.cor = cor; a.modificadoEm = new Date().getTime(); }
       } else {
         state.avisos.unshift({
           id: Date.now().toString(),
           titulo, mensagem, cor,
           lidosPor: [],
+          respostas: [],
           arquivado: false,
-          criadoEm: new Date().getTime()
+          criadoEm: new Date().getTime(),
+          modificadoEm: new Date().getTime()
         });
       }
       saveStorage();
@@ -776,37 +823,66 @@
 
     // --- DEMANDAS ---
     function renderDemandas() {
-      const filterStatus = document.getElementById('filter-demandas-status').value;
       const filterCat = document.getElementById('filter-demandas-categoria').value;
       let list = state.demandas || [];
-      if (filterStatus !== 'todos') list = list.filter(d => d.status === filterStatus);
       if (filterCat !== 'todas') list = list.filter(d => d.categoria === filterCat);
+
+      const ativas = list.filter(d => d.status !== 'concluido');
+      const concluidas = list.filter(d => d.status === 'concluido');
+
+      document.getElementById('count-demandas-ativas').innerText = ativas.length;
+      document.getElementById('count-demandas-concluidas').innerText = concluidas.length;
+
       const statusBadges = {
         'pendente': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
         'em_andamento': 'bg-sky-500/10 text-sky-400 border-sky-500/20',
         'concluido': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
       };
-      document.getElementById('container-demandas').innerHTML = list.map(d => {
-        const conteudoDetalhado = `**Categoria:** ${d.categoria}\n**Status:** ${d.status}\n\n**Descrição 1:**\n${d.descricao1 || ''}\n\n${d.descricao2 ? '**Descrição 2:**\n' + d.descricao2 : ''}`;
+
+      const renderCardDemanda = (d) => {
+        const isChamado = (d.categoria || '').toLowerCase().includes('chamado');
+        const cardCor = isChamado 
+          ? 'bg-slate-900 border-blue-500/40 shadow-blue-950/20' 
+          : 'bg-slate-900 border-purple-500/40 shadow-purple-950/20';
+
+        const respostas = d.respostas || [];
+
         return `
-          <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3 flex flex-col justify-between h-72">
-            <div class="overflow-hidden">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 truncate max-w-[150px]">
-                  ${escapeHtml(d.categoria)}
+          <div class="${cardCor} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-auto min-h-[320px] shadow-md">
+            <div class="overflow-hidden space-y-2">
+              <div class="flex items-start justify-between gap-2">
+                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded ${isChamado ? 'bg-blue-950 text-blue-300 border border-blue-800' : 'bg-purple-950 text-purple-300 border border-purple-800'} truncate max-w-[150px]">
+                  ${escapeHtml(d.categoria)} ${isChamado ? '📞' : '📋'}
                 </span>
                 <div class="flex gap-1 shrink-0">
-                  <button onclick="abrirFullscreen('${escapeHtml(d.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(conteudoDetalhado).replace(/`/g, '\\`')}\`)" class="text-xs bg-slate-800 hover:bg-slate-700 p-1.5 rounded text-slate-300" title="Tela Cheia">🔍</button>
                   <button onclick="openModalDemanda('${d.id}')" class="text-xs text-slate-400 hover:text-white p-1">✏️</button>
                   <button onclick="deleteDemanda('${d.id}')" class="text-xs text-slate-400 hover:text-white p-1">🗑️</button>
                 </div>
               </div>
               <h4 class="font-bold text-white text-base truncate">${escapeHtml(d.titulo)}</h4>
-              <div class="mt-2 space-y-1 text-xs overflow-hidden">
-                <p class="text-slate-300 line-clamp-3">${escapeHtml(d.descricao1 || '')}</p>
+              <div class="space-y-1 text-xs text-slate-300">
+                <p class="whitespace-pre-wrap leading-relaxed">${formatarLinks(d.descricao1 || '')}</p>
+                ${d.descricao2 ? `<p class="whitespace-pre-wrap leading-relaxed pt-1 text-slate-400">${formatarLinks(d.descricao2)}</p>` : ''}
+              </div>
+
+              <!-- Respostas/Continuidade Demanda -->
+              <div class="space-y-1.5 pt-2 border-t border-slate-800">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Respostas / Continuidade:</span>
+                <div class="space-y-1 max-h-24 overflow-y-auto">
+                  ${respostas.map(r => `
+                    <div class="bg-slate-950 p-1.5 rounded text-[11px] leading-tight border border-slate-800">
+                      <span class="font-semibold text-indigo-300">${escapeHtml(r.autor)}:</span> ${escapeHtml(r.texto)}
+                    </div>
+                  `).join('')}
+                </div>
+                <div class="flex gap-1 pt-1">
+                  <input type="text" id="resp-demanda-${d.id}" placeholder="Responder..." class="flex-1 bg-slate-950 border border-slate-800 rounded px-2 py-1 text-[11px] text-white focus:outline-none focus:border-indigo-500">
+                  <button onclick="enviarRespostaDemanda('${d.id}')" class="bg-indigo-600 hover:bg-indigo-500 text-white text-[10px] px-2 py-1 rounded font-medium">Enviar</button>
+                </div>
               </div>
             </div>
-            <div class="border-t border-slate-800/80 pt-3 flex items-center justify-between text-xs shrink-0">
+
+            <div class="border-t border-slate-800 pt-3 flex items-center justify-between text-xs shrink-0">
               <span class="text-[10px] text-slate-500">ID: ${d.id.slice(-4)}</span>
               <select onchange="updateDemandaStatus('${d.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[d.status]} bg-slate-950">
                 <option value="pendente" ${d.status === 'pendente' ? 'selected' : ''}>Pendente</option>
@@ -816,13 +892,34 @@
             </div>
           </div>
         `;
-      }).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda encontrada.</p>`;
+      };
+
+      document.getElementById('container-demandas').innerHTML = ativas.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda ativa.</p>`;
+      document.getElementById('container-demandas-concluidas').innerHTML = concluidas.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhuma demanda concluída.</p>`;
+    }
+
+    function enviarRespostaDemanda(demandaId) {
+      const input = document.getElementById(`resp-demanda-${demandaId}`);
+      if (!input || !input.value.trim()) return;
+      const d = (state.demandas || []).find(x => x.id === demandaId);
+      if (!d) return;
+
+      d.respostas = d.respostas || [];
+      d.respostas.push({
+        autor: state.pessoas[0] || 'Usuário',
+        texto: input.value.trim(),
+        data: new Date().getTime()
+      });
+      d.modificadoEm = new Date().getTime();
+      saveStorage();
+      renderDemandas();
     }
 
     function updateDemandaStatus(id, newStatus) {
       const d = (state.demandas || []).find(x => x.id === id);
       if (d) {
         d.status = newStatus;
+        d.modificadoEm = new Date().getTime();
         saveStorage();
         renderDemandas();
       }
@@ -867,12 +964,16 @@
           d.descricao2 = descricao2;
           d.categoria = categoria; 
           d.status = status;
+          d.modificadoEm = new Date().getTime();
           delete d.descricao;
         }
       } else {
         state.demandas.unshift({
           id: Date.now().toString(),
-          titulo, descricao1, descricao2, categoria, status
+          titulo, descricao1, descricao2, categoria, status,
+          respostas: [],
+          criadoEm: new Date().getTime(),
+          modificadoEm: new Date().getTime()
         });
       }
       saveStorage();
@@ -889,11 +990,51 @@
     }
 
     // --- PASSAGEM DE PLANTÃO ---
+    function gerarResumoAutomaticoDia() {
+      const dataHojeStr = getDataAtualFormatada();
+      const [dia, mes, ano] = dataHojeStr.split('/').map(Number);
+      const inicioDoDia = new Date(ano, mes - 1, dia, 0, 0, 0).getTime();
+
+      // Avisos feitos no dia atual
+      const avisosHoje = (state.avisos || []).filter(a => {
+        const t = a.criadoEm || parseInt(a.id, 10);
+        return t >= inicioDoDia;
+      });
+
+      // Demandas modificadas ou concluídas no dia atual
+      const demandasModificadasHoje = (state.demandas || []).filter(d => {
+        const mod = d.modificadoEm || d.criadoEm || parseInt(d.id, 10);
+        return mod >= inicioDoDia;
+      });
+
+      let resumo = `=== RESUMO AUTOMÁTICO (${dataHojeStr}) ===\n\n`;
+      
+      resumo += `📌 Avisos Criados (${avisosHoje.length}):\n`;
+      if (avisosHoje.length > 0) {
+        avisosHoje.forEach(a => {
+          resumo += `- [${a.titulo}]: ${a.mensagem.slice(0, 80)}...\n`;
+        });
+      } else {
+        resumo += `- Nenhum aviso registrado hoje.\n`;
+      }
+
+      resumo += `\n📋 Demandas Modificadas/Concluídas (${demandasModificadasHoje.length}):\n`;
+      if (demandasModificadasHoje.length > 0) {
+        demandasModificadasHoje.forEach(d => {
+          resumo += `- [${d.categoria}] ${d.titulo} (Status: ${d.status})\n`;
+        });
+      } else {
+        resumo += `- Nenhuma demanda modificada hoje.\n`;
+      }
+
+      return resumo;
+    }
+
     function renderPlantao() {
       let list = state.plantao || [];
       document.getElementById('container-plantao').innerHTML = list.map(p => {
         const isSistema = p.sistemaGerou === true;
-        const textoCompletoPlantao = `Descrição Geral:\n${p.descricao || 'N/A'}\n\nRubs Desvinculados:\n${p.rubsDesvinculados || 'N/A'}\n\nRubs Bloqueados:\n${p.rubsBloqueados || 'N/A'}\n\nEtiquetas/Ribbon:\n${p.etiquetasRibbon || 'N/A'}`;
+        const textoCompletoPlantao = `Resumo Automático:\n${p.resumoAutomatico || 'N/A'}\n\nComentário Adicional:\n${p.comentarioExtra || 'N/A'}\n\nDescrição Geral:\n${p.descricao || 'N/A'}\n\nRubs Desvinculados:\n${p.rubsDesvinculados || 'N/A'}\n\nRubs Bloqueados:\n${p.rubsBloqueados || 'N/A'}\n\nEtiquetas/Ribbon:\n${p.etiquetasRibbon || 'N/A'}`;
 
         return `
           <div class="${isSistema ? 'bg-rose-950/40 border-rose-900/60' : 'bg-slate-900 border-slate-800'} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-72 shadow-md">
@@ -941,6 +1082,7 @@
       document.getElementById('form-plantao-inner').reset();
       document.getElementById('plantao-id').value = '';
       document.getElementById('plantao-titulo').value = `${getDataAtualFormatada()} - Manhã`;
+      document.getElementById('plantao-resumo-automatico').value = gerarResumoAutomaticoDia();
 
       if (id) {
         const p = (state.plantao || []).find(x => x.id === id);
@@ -951,6 +1093,8 @@
           }
           document.getElementById('plantao-id').value = p.id;
           document.getElementById('plantao-titulo').value = p.titulo;
+          document.getElementById('plantao-resumo-automatico').value = p.resumoAutomatico || gerarResumoAutomaticoDia();
+          document.getElementById('plantao-comentario-extra').value = p.comentarioExtra || '';
           document.getElementById('plantao-descricao').value = p.descricao || '';
           document.getElementById('plantao-rubs-desvinculados').value = p.rubsDesvinculados || '';
           document.getElementById('plantao-rubs-bloqueados').value = p.rubsBloqueados || '';
@@ -971,38 +1115,38 @@
       e.preventDefault();
       const titulo = document.getElementById('plantao-titulo').value;
 
-      // Se for Tarde, abrimos o mini modal para confirmar o responsável antes de disparar o e-mail
-      if (titulo.toLowerCase().includes('tarde')) {
-        tempPlantaoBuffer = {
-          id: document.getElementById('plantao-id').value,
-          titulo: titulo,
-          descricao: document.getElementById('plantao-descricao').value,
-          rubsDesvinculados: document.getElementById('plantao-rubs-desvinculados').value,
-          rubsBloqueados: document.getElementById('plantao-rubs-bloqueados').value,
-          etiquetasRibbon: document.getElementById('plantao-etiquetas').value,
-          horaRegistro: document.getElementById('plantao-horario-registro').value
-        };
+      const dadosPlantao = {
+        id: document.getElementById('plantao-id').value,
+        titulo: titulo,
+        resumoAutomatico: document.getElementById('plantao-resumo-automatico').value,
+        comentarioExtra: document.getElementById('plantao-comentario-extra').value,
+        descricao: document.getElementById('plantao-descricao').value,
+        rubsDesvinculados: document.getElementById('plantao-rubs-desvinculados').value,
+        rubsBloqueados: document.getElementById('plantao-rubs-bloqueados').value,
+        etiquetasRibbon: document.getElementById('plantao-etiquetas').value,
+        horaRegistro: document.getElementById('plantao-horario-registro').value
+      };
 
-        document.getElementById('email-titulo').value = tempPlantaoBuffer.titulo;
-        document.getElementById('email-descricao').value = tempPlantaoBuffer.descricao;
-        document.getElementById('email-rubs-desv').value = tempPlantaoBuffer.rubsDesvinculados;
-        document.getElementById('email-rubs-bloq').value = tempPlantaoBuffer.rubsBloqueados;
-        document.getElementById('email-etiquetas').value = tempPlantaoBuffer.etiquetasRibbon;
+      // Se for Tarde, exige preenchimento do formulário de responsável
+      if (titulo.toLowerCase().includes('tarde')) {
+        tempPlantaoBuffer = dadosPlantao;
+
+        document.getElementById('email-titulo').value = dadosPlantao.titulo;
+        document.getElementById('email-resumo-auto').value = dadosPlantao.resumoAutomatico;
+        document.getElementById('email-comentario').value = dadosPlantao.comentarioExtra;
+        document.getElementById('email-descricao').value = dadosPlantao.descricao;
+        document.getElementById('email-rubs-desv').value = dadosPlantao.rubsDesvinculados;
+        document.getElementById('email-rubs-bloq').value = dadosPlantao.rubsBloqueados;
+        document.getElementById('email-etiquetas').value = dadosPlantao.etiquetasRibbon;
 
         closeModal('modal-plantao');
         openModal('modal-plantao-email');
         return;
       }
 
-      // Demais turnos (Manhã, Intermediário, Madrugada) salvam e disparam o e-mail automaticamente em segundo plano
-      executarSalvarPlantaoFinal(null);
-      dispararEmailAutomatico({
-        titulo: titulo,
-        descricao: document.getElementById('plantao-descricao').value,
-        rubsDesv: document.getElementById('plantao-rubs-desvinculados').value,
-        rubsBloq: document.getElementById('plantao-rubs-bloqueados').value,
-        etiquetas: document.getElementById('plantao-etiquetas').value
-      });
+      // Demais turnos enviam automaticamente o e-mail em segundo plano e salvam
+      executarSalvarPlantaoFinal(dadosPlantao);
+      dispararEmailAutomatico(dadosPlantao);
     }
 
     function savePlantaoEmailSubmit(e) {
@@ -1012,23 +1156,27 @@
     function dispararEmailAutomatico(dados) {
       document.getElementById('auto-email-subject').value = `📋 Relatório de Passagem de Plantão - ${dados.titulo}`;
       document.getElementById('auto-email-titulo').value = dados.titulo;
+      document.getElementById('auto-email-resumo').value = dados.resumoAutomatico;
+      document.getElementById('auto-email-comentario').value = dados.comentarioExtra;
       document.getElementById('auto-email-desc').value = dados.descricao;
-      document.getElementById('auto-email-rubs-desv').value = dados.rubsDesv;
-      document.getElementById('auto-email-rubs-bloq').value = dados.rubsBloq;
-      document.getElementById('auto-email-etiquetas').value = dados.etiquetas;
+      document.getElementById('auto-email-rubs-desv').value = dados.rubsDesvinculados;
+      document.getElementById('auto-email-rubs-bloq').value = dados.rubsBloqueados;
+      document.getElementById('auto-email-etiquetas').value = dados.etiquetasRibbon;
 
       document.getElementById('hidden-formsubmit-auto').submit();
     }
 
     function executarSalvarPlantaoFinal(dadosBuffer) {
-      const id = dadosBuffer ? dadosBuffer.id : document.getElementById('plantao-id').value;
-      const titulo = dadosBuffer ? dadosBuffer.titulo : document.getElementById('plantao-titulo').value;
-      const descricao = dadosBuffer ? dadosBuffer.descricao : document.getElementById('plantao-descricao').value;
-      const rubsDesvinculados = dadosBuffer ? dadosBuffer.rubsDesvinculados : document.getElementById('plantao-rubs-desvinculados').value;
-      const rubsBloqueados = dadosBuffer ? dadosBuffer.rubsBloqueados : document.getElementById('plantao-rubs-bloqueados').value;
-      const etiquetasRibbon = dadosBuffer ? dadosBuffer.etiquetasRibbon : document.getElementById('plantao-etiquetas').value;
+      const id = dadosBuffer.id;
+      const titulo = dadosBuffer.titulo;
+      const resumoAutomatico = dadosBuffer.resumoAutomatico;
+      const comentarioExtra = dadosBuffer.comentarioExtra;
+      const descricao = dadosBuffer.descricao;
+      const rubsDesvinculados = dadosBuffer.rubsDesvinculados;
+      const rubsBloqueados = dadosBuffer.rubsBloqueados;
+      const etiquetasRibbon = dadosBuffer.etiquetasRibbon;
       
-      let horaRegistro = dadosBuffer ? dadosBuffer.horaRegistro : document.getElementById('plantao-horario-registro').value;
+      let horaRegistro = dadosBuffer.horaRegistro;
       if (!horaRegistro) {
         const now = new Date();
         horaRegistro = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
@@ -1039,6 +1187,8 @@
         const p = state.plantao.find(x => x.id === id);
         if (p) {
           p.titulo = titulo; 
+          p.resumoAutomatico = resumoAutomatico;
+          p.comentarioExtra = comentarioExtra;
           p.descricao = descricao;
           p.rubsDesvinculados = rubsDesvinculados;
           p.rubsBloqueados = rubsBloqueados;
@@ -1049,6 +1199,8 @@
         state.plantao.unshift({
           id: Date.now().toString(),
           titulo,
+          resumoAutomatico,
+          comentarioExtra,
           descricao,
           rubsDesvinculados,
           rubsBloqueados,
@@ -1163,6 +1315,8 @@
           state.plantao.unshift({
             id: 'auto_' + Date.now() + '_' + val.termo,
             titulo: tituloEsperado,
+            resumoAutomatico: 'N/A',
+            comentarioExtra: 'Gerado automaticamente por falta de entrega.',
             descricao: val.textoGerado,
             rubsDesvinculados: 'N/A',
             rubsBloqueados: 'N/A',
