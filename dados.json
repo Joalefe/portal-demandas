@@ -12,6 +12,15 @@
   ],
   "avisos": [
     {
+      "id": "1792455979533",
+      "titulo": "Frente caixa colando produtos no caderno",
+      "mensagem": "FCX ainda está colando produtos no caderno, verificar possivel falha no portal\n",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "arquivado": false,
+      "criadoEm": 1792455979533
+    },
+    {
       "id": "1792448751896",
       "titulo": "Sérgio ",
       "mensagem": "Sérgio ainda não tem acessos",
