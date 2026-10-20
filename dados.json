@@ -141,9 +141,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "Rub bloqueado até o dia 25/10",
+          "data": 1792531130477
+        }
+      ],
       "criadoEm": 1792528385042,
-      "modificadoEm": 1792528385042
+      "modificadoEm": 1792531130477
     },
     {
       "id": "1792527065985",
