@@ -474,7 +474,7 @@
   <div id="modal-plantao-email" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-        <h3 class="text-base font-semibold text-white">✉️ Passagem de Plantão da Tarde (Confirmação de Responsável)</h3>
+        <h3 class="text-base font-semibold text-white">✉️ Enviar Passagem de Plantão por E-mail</h3>
         <button onclick="closeModal('modal-plantao-email')" class="text-slate-400 hover:text-white">✕</button>
       </div>
 
@@ -577,8 +577,8 @@
     function base64ToUtf8(str) { return decodeURIComponent(escape(atob(str))); }
     function utf8ToBase64(str) { return btoa(unescape(encodeURIComponent(str))); }
 
-    async function loadStorage() {
-      const token = getToken();
+    async function loadStorage(silent = false) {
+      const token = silent ? localStorage.getItem('portal_github_token') : getToken();
       const statusEl = document.getElementById('sync-status');
       
       if (!token) {
@@ -587,7 +587,7 @@
         return;
       }
 
-      statusEl.innerText = 'Sincronizando...';
+      if (!silent) statusEl.innerText = 'Sincronizando...';
 
       try {
         const res = await fetch(API_URL + '?t=' + new Date().getTime(), {
@@ -599,6 +599,7 @@
         });
 
         if (res.status === 401) {
+          if (silent) return;
           alert('Token do GitHub inválido ou expirado. Por favor insira um token válido.');
           localStorage.removeItem('portal_github_token');
           promptForToken();
@@ -608,6 +609,7 @@
         if (!res.ok) throw new Error('Erro ao conectar com o GitHub.');
 
         const data = await res.json();
+        if (silent && (salvando || salvarPendente || data.sha === currentSha)) return;
         currentSha = data.sha;
 
         const jsonTexto = base64ToUtf8(data.content.replace(/\n/g, ''));
@@ -632,7 +634,21 @@
       }
     }
 
+    // Fila de salvamento: evita dois PUTs ao mesmo tempo (conflito de sha)
     async function saveStorage() {
+      if (salvando) { salvarPendente = true; return; }
+      salvando = true;
+      try {
+        do {
+          salvarPendente = false;
+          await saveStorageInterno();
+        } while (salvarPendente);
+      } finally {
+        salvando = false;
+      }
+    }
+
+    async function saveStorageInterno() {
       const token = getToken();
       const statusEl = document.getElementById('sync-status');
       if (!token) return;
@@ -649,7 +665,17 @@
         });
 
         const dataGet = await resGet.json();
+        if (!resGet.ok || !dataGet.sha) throw new Error('Falha ao ler os dados atuais da nuvem.');
         currentSha = dataGet.sha;
+
+        // Mescla o que outras pessoas salvaram antes de gravar (evita sobrescrever)
+        let remotoMudou = false;
+        try {
+          const remoto = JSON.parse(base64ToUtf8((dataGet.content || '').replace(/\n/g, '')));
+          remotoMudou = mesclarComNuvem(remoto);
+        } catch (errMerge) {
+          console.warn('Não foi possível mesclar com a nuvem:', errMerge);
+        }
 
         const novoConteudoJson = JSON.stringify(state, null, 2);
         const conteudoBase64 = utf8ToBase64(novoConteudoJson);
@@ -672,6 +698,7 @@
         if (resPut.ok) {
           const dataPut = await resPut.json();
           currentSha = dataPut.content.sha;
+          if (remotoMudou && !usuarioEstaEditando()) renderTudo();
           statusEl.innerText = '☁️ Sincronizado';
           statusEl.className = 'text-xs text-emerald-400';
         } else {
@@ -683,6 +710,68 @@
         statusEl.innerText = '⚠️ Erro de conexão';
         statusEl.className = 'text-xs text-rose-400';
       }
+    }
+
+    // ===== SINCRONIZAÇÃO ENTRE VÁRIOS USUÁRIOS =====
+    let salvando = false;
+    let salvarPendente = false;
+    const idsExcluidos = new Set();
+
+    function dataDoItem(i) { return i.criadoEm || parseInt(i.id, 10) || 0; }
+
+    function mesclarRespostas(a, b) {
+      const mapa = new Map();
+      [...(a || []), ...(b || [])].forEach(r => {
+        const chave = `${r.data}|${r.texto}`;
+        if (!mapa.has(chave)) mapa.set(chave, r);
+      });
+      return [...mapa.values()].sort((x, y) => (x.data || 0) - (y.data || 0));
+    }
+
+    function mesclarComNuvem(remoto) {
+      let mudou = false;
+      ['avisos', 'demandas', 'plantao'].forEach(chave => {
+        const locais = state[chave] = state[chave] || [];
+        const remotos = Array.isArray(remoto && remoto[chave]) ? remoto[chave] : [];
+        const mapa = new Map(locais.map(i => [i.id, i]));
+        remotos.forEach(r => {
+          if (!r || idsExcluidos.has(r.id)) return;
+          const l = mapa.get(r.id);
+          if (!l) { locais.push(r); mapa.set(r.id, r); mudou = true; return; }
+          const antes = (l.respostas || []).length;
+          const respostas = mesclarRespostas(l.respostas, r.respostas);
+          if ((r.modificadoEm || 0) > (l.modificadoEm || 0)) {
+            Object.assign(l, r);
+            mudou = true;
+          }
+          if (chave !== 'plantao') {
+            l.respostas = respostas;
+            if (respostas.length !== antes) mudou = true;
+          }
+        });
+        locais.sort((a, b) => dataDoItem(b) - dataDoItem(a));
+      });
+      return mudou;
+    }
+
+    function renderTudo() {
+      renderAvisos();
+      renderDemandas();
+      renderPlantao();
+    }
+
+    function usuarioEstaEditando() {
+      const ae = document.activeElement;
+      const digitando = ae && (ae.tagName === 'TEXTAREA' || (ae.tagName === 'INPUT' && ae.type === 'text'));
+      const modalAberto = Array.from(document.querySelectorAll('.fixed')).some(m => m.id && m.id.startsWith('modal-') && !m.classList.contains('hidden'));
+      return !!(digitando || modalAberto);
+    }
+
+    function formatarDataHoraCurta(ts) {
+      if (!ts) return '';
+      const d = new Date(ts);
+      const p = n => String(n).padStart(2, '0');
+      return `${p(d.getDate())}/${p(d.getMonth() + 1)} ${p(d.getHours())}:${p(d.getMinutes())}`;
     }
 
     function switchMainTab(tab) {
@@ -790,7 +879,8 @@
                 <div class="space-y-1 max-h-28 overflow-y-auto">
                   ${respostas.map(r => `
                     <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950">
-                      <span class="font-bold">${escapeHtml(r.autor)}:</span> ${escapeHtml(r.texto)}
+                      ${escapeHtml(r.texto)}
+                      <div class="text-[10px] opacity-70 mt-0.5">${formatarDataHoraCurta(r.data)}</div>
                     </div>
                   `).join('')}
                 </div>
@@ -834,8 +924,8 @@
       if (!aviso) return;
 
       aviso.respostas = aviso.respostas || [];
+      aviso.modificadoEm = new Date().getTime();
       aviso.respostas.push({
-        autor: state.pessoas[0] || 'Usuário',
         texto: input.value.trim(),
         data: new Date().getTime()
       });
@@ -854,6 +944,7 @@
       }
       const totalReq = Math.min(3, (state.pessoas || []).length || 1);
       aviso.arquivado = aviso.lidosPor.length >= totalReq;
+      aviso.modificadoEm = new Date().getTime();
       saveStorage();
       renderAvisos();
     }
@@ -866,6 +957,8 @@
           document.getElementById('aviso-id').value = a.id;
           document.getElementById('aviso-titulo').value = a.titulo;
           document.getElementById('aviso-mensagem').value = a.mensagem;
+          const radioCor = document.querySelector(`input[name="aviso-cor"][value="${a.cor}"]`);
+          if (radioCor) radioCor.checked = true;
           document.getElementById('modal-aviso-title').innerText = 'Editar Aviso';
         }
       } else {
@@ -903,6 +996,7 @@
 
     function deleteAviso(id) {
       if (confirm('Excluir aviso?')) {
+        idsExcluidos.add(id);
         state.avisos = state.avisos.filter(a => a.id !== id);
         saveStorage();
         renderAvisos();
@@ -923,7 +1017,9 @@
 
       state.avisos = (state.avisos || []).filter(a => {
         const dataItem = a.criadoEm || parseInt(a.id, 10);
-        return (agora - dataItem) <= limiteMs;
+        const manter = (agora - dataItem) <= limiteMs;
+        if (!manter) idsExcluidos.add(a.id);
+        return manter;
       });
 
       const removidos = antes - state.avisos.length;
@@ -988,7 +1084,8 @@
                 <div class="space-y-1 max-h-24 overflow-y-auto">
                   ${respostas.map(r => `
                     <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950">
-                      <span class="font-bold">${escapeHtml(r.autor)}:</span> ${escapeHtml(r.texto)}
+                      ${escapeHtml(r.texto)}
+                      <div class="text-[10px] opacity-70 mt-0.5">${formatarDataHoraCurta(r.data)}</div>
                     </div>
                   `).join('')}
                 </div>
@@ -1023,7 +1120,6 @@
 
       d.respostas = d.respostas || [];
       d.respostas.push({
-        autor: state.pessoas[0] || 'Usuário',
         texto: input.value.trim(),
         data: new Date().getTime()
       });
@@ -1100,6 +1196,7 @@
 
     function deleteDemanda(id) {
       if (confirm('Excluir demanda?')) {
+        idsExcluidos.add(id);
         state.demandas = state.demandas.filter(d => d.id !== id);
         saveStorage();
         renderDemandas();
@@ -1354,6 +1451,7 @@
         return;
       }
       if (confirm('Excluir passagem de plantão?')) {
+        idsExcluidos.add(id);
         state.plantao = state.plantao.filter(x => x.id !== id);
         saveStorage();
         renderPlantao();
@@ -1378,7 +1476,9 @@
         if (!matchData) return true;
         const dataPlantao = new Date(parseInt(matchData[3], 10), parseInt(matchData[2], 10) - 1, parseInt(matchData[1], 10));
         dataPlantao.setHours(0, 0, 0, 0);
-        return (hoje - dataPlantao) / (1000 * 60 * 60 * 24) <= 10;
+        const manter = (hoje - dataPlantao) / (1000 * 60 * 60 * 24) <= 10;
+        if (!manter) idsExcluidos.add(p.id);
+        return manter;
       });
 
       const removidos = antes - state.plantao.length;
@@ -1443,7 +1543,7 @@
 
         if (jaPassouDoLimite && !entregueNoPrazo && !jaGerouAutomatico) {
           state.plantao.unshift({
-            id: 'auto_' + Date.now() + '_' + val.termo,
+            id: 'auto_' + dataHojeStr.replace(/\//g, '') + '_' + val.termo,
             titulo: tituloEsperado,
             resumoAutomatico: 'N/A',
             comentarioExtra: 'Gerado automaticamente por falta de entrega.',
