@@ -952,6 +952,7 @@
         texto: input.value.trim(),
         data: new Date().getTime()
       });
+      input.value = '';
       saveStorage();
       renderAvisos();
     }
@@ -1166,6 +1167,7 @@
         data: new Date().getTime()
       });
       d.modificadoEm = new Date().getTime();
+      input.value = '';
       saveStorage();
       renderDemandas();
     }
@@ -1857,6 +1859,37 @@
       if (!str) return '';
       return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
     }
+
+    // Preserva o texto que está sendo digitado nas caixas de resposta quando a tela é redesenhada
+    function preservarCamposDigitados(fnRender) {
+      const salvos = {};
+      document.querySelectorAll('input[id^="resp-"]').forEach(el => { if (el.value) salvos[el.id] = el.value; });
+      const ae = document.activeElement;
+      const foco = (ae && ae.id && ae.id.indexOf('resp-') === 0)
+        ? { id: ae.id, ini: ae.selectionStart, fim: ae.selectionEnd } : null;
+
+      const retorno = fnRender();
+
+      Object.keys(salvos).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = salvos[id];
+      });
+      if (foco) {
+        const el = document.getElementById(foco.id);
+        if (el) {
+          el.focus();
+          try { el.setSelectionRange(foco.ini, foco.fim); } catch (err) {}
+        }
+      }
+      return retorno;
+    }
+
+    ['renderAvisos', 'renderDemandas', 'renderPlantao'].forEach(nome => {
+      const original = window[nome];
+      window[nome] = function () {
+        return preservarCamposDigitados(() => original.apply(this, arguments));
+      };
+    });
 
     window.addEventListener('DOMContentLoaded', () => { loadStorage(); });
   </script>
