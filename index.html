@@ -6,6 +6,8 @@
   <title>Portal de Demandas e Avisos</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- EmailJS (envio de e-mail com layout próprio) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -125,7 +127,7 @@
     }
     /* Botões de ação (lupa, editar, excluir) maiores */
     #subtab-content-ativos .bg-black\/10 button, [class*="bg-black/10"][title] { }
-    button[title="Tela Cheia"], button[title="Editar"], button[title="Excluir"] {
+    button[title="Tela Cheia"], button[title="Editar"], button[title="Excluir"], button[title="Transformar em demanda"] {
       font-size: 1.1rem !important; padding: 0.35rem 0.55rem !important; min-height: 2.2rem;
     }
     /* Checkboxes de leitura */
@@ -886,6 +888,7 @@
                 <h4 class="font-bold text-base leading-snug truncate text-slate-950">${escapeHtml(a.titulo)}</h4>
                 <div class="flex gap-1 shrink-0">
                   <button onclick="abrirFullscreen('${escapeHtml(a.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(a.mensagem).replace(/`/g, '\\`')}\`)" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Tela Cheia">🔍</button>
+                  <button onclick="avisoParaDemanda('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Transformar em demanda">📋</button>
                   <button onclick="openModalAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Editar">✏️</button>
                   <button onclick="deleteAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Excluir">🗑️</button>
                 </div>
@@ -1159,7 +1162,22 @@
       }
     }
 
+    let avisoOrigemId = null;
+
+    function avisoParaDemanda(id) {
+      const a = (state.avisos || []).find(x => x.id === id);
+      if (!a) return;
+      openModalDemanda();
+      document.getElementById('demanda-titulo').value = a.titulo;
+      document.getElementById('demanda-descricao1').value = a.mensagem;
+      const resp = (a.respostas || []).map(r => '- ' + r.texto).join('\n');
+      document.getElementById('demanda-descricao2').value = resp ? 'Respostas do aviso:\n' + resp : '';
+      document.getElementById('modal-demanda-title').innerText = 'Nova Demanda (a partir de um aviso)';
+      avisoOrigemId = id;
+    }
+
     function openModalDemanda(id = null) {
+      avisoOrigemId = null;
       document.getElementById('form-demanda-inner').reset();
       updateCategoriaOptions();
       if (id) {
@@ -1212,6 +1230,19 @@
       }
       saveStorage();
       renderDemandas();
+      if (!id && avisoOrigemId) {
+        // Aviso de origem vai para Lidos/Arquivados (não é apagado)
+        const av = (state.avisos || []).find(x => x.id === avisoOrigemId);
+        if (av) {
+          av.arquivado = true;
+          av.respostas = av.respostas || [];
+          av.respostas.push({ texto: '📋 Transformado em demanda', data: new Date().getTime() });
+          av.modificadoEm = new Date().getTime();
+          saveStorage();
+          renderAvisos();
+        }
+        avisoOrigemId = null;
+      }
       closeModal('modal-demanda');
     }
 
@@ -1404,6 +1435,35 @@
 
     }
 
+    // ===== ENVIO DE E-MAIL VIA EMAILJS =====
+    // Cole aqui os 3 códigos do painel do EmailJS. Enquanto estiverem vazios, o portal usa o envio antigo (FormSubmit).
+    const EMAILJS_SERVICE_ID  = '';   // ex: service_abc123
+    const EMAILJS_TEMPLATE_ID = '';   // ex: template_xyz789
+    const EMAILJS_PUBLIC_KEY  = '';   // ex: AbCdEf123456
+
+    function emailJsConfigurado() {
+      return !!(EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY && window.emailjs);
+    }
+
+    function blocoEmailHtml(titulo, texto) {
+      return `<tr><td style="padding:16px 28px 0 28px;"><div style="font-size:12px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">${escapeHtml(titulo)}</div><div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;font-size:14px;line-height:1.6;color:#0f172a;white-space:pre-wrap;">${escapeHtml(texto)}</div></td></tr>`;
+    }
+
+    function enviarEmailViaEmailJS(d) {
+      const temTarde = d.rubsDesvinculados && d.rubsDesvinculados !== 'N/A';
+      const params = {
+        titulo: d.titulo,
+        responsavel: d.responsavel || '-',
+        descricao: d.descricao || '-',
+        resumo: d.resumoAutomatico || '-',
+        secao_comentario: (d.comentarioExtra && d.comentarioExtra.trim()) ? blocoEmailHtml('Comentário Adicional', d.comentarioExtra) : '',
+        secao_tarde: temTarde
+          ? blocoEmailHtml('Rubs Desvinculados', d.rubsDesvinculados) + blocoEmailHtml('Rubs Bloqueados', d.rubsBloqueados) + blocoEmailHtml('Etiquetas e Ribbon Abastecidas', d.etiquetasRibbon)
+          : ''
+      };
+      return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params, { publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
     function voltarParaPlantao() {
       closeModal('modal-plantao-email');
       openModal('modal-plantao');
@@ -1414,6 +1474,22 @@
       const nomeResp = (document.getElementById('email-responsavel').value || '').trim();
       try { localStorage.setItem('portal_ultimo_responsavel', nomeResp); } catch (err) {}
       tempPlantaoBuffer.responsavel = nomeResp;
+      if (emailJsConfigurado()) {
+        e.preventDefault();
+        const dados = tempPlantaoBuffer;
+        const btn = e.target.querySelector('button[type="submit"]');
+        if (btn) { btn.disabled = true; btn.innerText = 'Enviando...'; }
+        enviarEmailViaEmailJS(dados)
+          .catch(err => {
+            console.error(err);
+            alert('O plantão foi salvo, mas o e-mail NÃO foi enviado.\nVerifique a configuração do EmailJS.\n' + ((err && err.text) ? err.text : ''));
+          })
+          .finally(() => {
+            if (btn) { btn.disabled = false; btn.innerText = 'Disparar E-mail e Salvar'; }
+            executarSalvarPlantaoFinal(dados);
+          });
+        return;
+      }
       executarSalvarPlantaoFinal(tempPlantaoBuffer);
     }
 
