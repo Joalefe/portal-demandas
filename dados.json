@@ -12,6 +12,15 @@
   ],
   "avisos": [
     {
+      "id": "1792493478934",
+      "titulo": "planilhas e portais",
+      "mensagem": "por enquanto, nao atualizar \"planilha estoque\", \"portal de mais barato\"",
+      "cor": "postit-green",
+      "lidosPor": [],
+      "arquivado": false,
+      "criadoEm": 1792493478934
+    },
+    {
       "id": "1792489324284",
       "titulo": "Gerencial ",
       "mensagem": "funcionando na data de hoje",
