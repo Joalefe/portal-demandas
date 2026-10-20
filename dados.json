@@ -85,6 +85,14 @@
   ],
   "demandas": [
     {
+      "id": "1792493802528",
+      "titulo": "zhaz maquinas quimadas",
+      "descricao1": "uma maquina esta em manutenção, a outra temos que solicitar a devolução. ",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente"
+    },
+    {
       "id": "1792493737390",
       "titulo": "caboa adaptador pdv",
       "descricao1": "cabo do pdv self com problema, necessario procurar fornecedor ",
