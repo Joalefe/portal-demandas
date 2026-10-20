@@ -39,6 +39,113 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+
+    /* ===== AJUSTES VISUAIS (somente estética – não altera a lógica) ===== */
+
+    /* Escala geral: tudo em rem fica ~12% maior */
+    html { font-size: 18px; }
+    body { font-size: 1rem; line-height: 1.6; }
+
+    /* Textos minúsculos (arbitrários em px) passam a ser legíveis */
+    .text-\[10px\] { font-size: 0.78rem !important; line-height: 1.2 !important; }
+    .text-\[11px\] { font-size: 0.85rem !important; line-height: 1.35 !important; }
+
+    /* Textos pequenos do Tailwind um pouco maiores */
+    .text-xs  { font-size: 0.9rem !important;  line-height: 1.4 !important; }
+    .text-sm  { font-size: 1rem !important;    line-height: 1.55 !important; }
+
+    /* Rótulos e textos secundários com mais contraste */
+    .text-slate-400 { color: #cbd5e1 !important; }
+    .text-slate-500 { color: #a8b5c7 !important; }
+    .text-slate-300 { color: #e2e8f0 !important; }
+    label.block { font-size: 0.95rem !important; font-weight: 600 !important; margin-bottom: 0.4rem !important; }
+
+    /* Campos de escrita maiores e mais visíveis */
+    input[type="text"], select, textarea {
+      font-size: 1.05rem !important;
+      padding: 0.8rem 1rem !important;
+      line-height: 1.55 !important;
+      background-color: #0b1220 !important;
+      border: 2px solid #475569 !important;
+      border-radius: 0.6rem !important;
+    }
+    input[type="text"]:focus, select:focus, textarea:focus {
+      border-color: #818cf8 !important;
+      box-shadow: 0 0 0 3px rgba(129,140,248,0.30) !important;
+      outline: none !important;
+    }
+    textarea { min-height: 9rem; resize: vertical; }
+    #aviso-mensagem { min-height: 14rem; }
+    #demanda-descricao1 { min-height: 12rem; }
+    #demanda-descricao2 { min-height: 9rem; }
+    #plantao-descricao { min-height: 14rem; }
+    #plantao-resumo-automatico { min-height: 10rem; font-size: 0.95rem !important; }
+
+    /* Campos das respostas dentro dos cards (fundo claro, texto escuro) */
+    .bg-white.border input, input[id^="resp-"] {
+      font-size: 1rem !important;
+      padding: 0.6rem 0.75rem !important;
+      background-color: #ffffff !important;
+      color: #000 !important;
+      border: 2px solid rgba(0,0,0,0.45) !important;
+    }
+    input[id^="resp-"]::placeholder { color: #475569; }
+
+    /* Botões maiores e fáceis de clicar */
+    button { font-size: 0.95rem; }
+    header button, section button, .fixed button { min-height: 2.5rem; }
+    .fixed form button[type="submit"],
+    .fixed form button[type="button"] { padding: 0.7rem 1.4rem !important; font-size: 1rem !important; }
+
+    /* Conteúdo mais largo e com respiro entre os cards */
+    .max-w-7xl { max-width: 1680px !important; }
+    #subtab-content-ativos, #subtab-content-lidos,
+    #container-demandas, #container-demandas-concluidas, #container-plantao { gap: 1.75rem !important; }
+
+    /* Cards: texto grande, sem altura fixa cortando conteúdo */
+    #subtab-content-ativos > div, #subtab-content-lidos > div,
+    #container-demandas > div, #container-demandas-concluidas > div {
+      min-height: 24rem !important;
+      padding: 1.5rem !important;
+    }
+    #container-plantao > div { height: auto !important; min-height: 20rem; padding: 1.5rem !important; }
+    #container-plantao .line-clamp-3 { -webkit-line-clamp: 5; font-size: 1rem !important; }
+
+    /* Título e mensagem dos post-its */
+    #subtab-content-ativos h4, #subtab-content-lidos h4,
+    #container-demandas h4, #container-demandas-concluidas h4,
+    #container-plantao h4 { font-size: 1.25rem !important; line-height: 1.35 !important; white-space: normal !important; }
+    #subtab-content-ativos p, #subtab-content-lidos p,
+    #container-demandas p, #container-demandas-concluidas p { font-size: 1.02rem !important; line-height: 1.6 !important; }
+
+    /* Respostas dentro do card */
+    #subtab-content-ativos .bg-black\/10, #subtab-content-lidos .bg-black\/10,
+    #container-demandas .bg-black\/10, #container-demandas-concluidas .bg-black\/10 {
+      font-size: 0.95rem !important; padding: 0.5rem 0.65rem !important; background: rgba(0,0,0,0.12) !important;
+    }
+    /* Botões de ação (lupa, editar, excluir) maiores */
+    #subtab-content-ativos .bg-black\/10 button, [class*="bg-black/10"][title] { }
+    button[title="Tela Cheia"], button[title="Editar"], button[title="Excluir"] {
+      font-size: 1.1rem !important; padding: 0.35rem 0.55rem !important; min-height: 2.2rem;
+    }
+    /* Checkboxes de leitura */
+    input[type="checkbox"] { width: 1.15rem; height: 1.15rem; }
+
+    /* Modais mais amplos e com texto confortável */
+    .fixed .max-w-md { max-width: 34rem !important; }
+    .fixed .max-w-xl { max-width: 52rem !important; }
+    .fixed .max-w-3xl { max-width: 64rem !important; }
+    .fixed > div { padding: 1.75rem !important; }
+    .fixed h3 { font-size: 1.35rem !important; }
+    #fs-content { font-size: 1.15rem !important; line-height: 1.8 !important; }
+
+    /* Cabeçalho */
+    header h1 { font-size: 1.6rem !important; }
+    #tab-btn-avisos, #tab-btn-demandas, #tab-btn-plantao { font-size: 1rem !important; padding: 0.55rem 1.1rem !important; }
+    #sync-status { font-size: 0.9rem !important; }
+
+    /* Barra de alerta de plantão mais visível */
+    #container-alerta-plantao { font-size: 1.05rem !important; padding: 0.8rem 1rem !important; }
   </style>
 </head>
 <body class="h-full text-slate-100 flex flex-col font-sans bg-slate-950 antialiased">
