@@ -640,7 +640,7 @@
     function formatarLinks(texto) {
       if (!texto) return '';
       const expReg = /(https?:\/\/[^\s]+)/g;
-      return escapeHtml(texto).replace(expReg, '<a href="$1" target="_blank" class="text-indigo-400 underline hover:text-indigo-300 break-all">$1</a>');
+      return escapeHtml(texto).replace(expReg, '<a href="$1" target="_blank" class="text-blue-900 underline font-semibold hover:text-black break-all">$1</a>');
     }
 
     function renderAvisos() {
@@ -651,12 +651,12 @@
       document.getElementById('count-avisos-lidos').innerText = lidos.length;
 
       const bgColors = {
-        'postit-yellow': 'bg-amber-200 text-amber-950 border-amber-300',
-        'postit-blue': 'bg-sky-200 text-sky-950 border-sky-300',
-        'postit-green': 'bg-emerald-200 text-emerald-950 border-emerald-300',
-        'postit-pink': 'bg-pink-200 text-pink-950 border-pink-300',
-        'postit-purple': 'bg-purple-200 text-purple-950 border-purple-300',
-        'postit-orange': 'bg-orange-200 text-orange-950 border-orange-300'
+        'postit-yellow': 'bg-amber-200 text-slate-950 border-amber-400',
+        'postit-blue': 'bg-sky-200 text-slate-950 border-sky-400',
+        'postit-green': 'bg-emerald-200 text-slate-950 border-emerald-400',
+        'postit-pink': 'bg-pink-200 text-slate-950 border-pink-400',
+        'postit-purple': 'bg-purple-200 text-slate-950 border-purple-400',
+        'postit-orange': 'bg-orange-200 text-slate-950 border-orange-400'
       };
 
       const renderCard = (a) => {
@@ -668,34 +668,34 @@
           <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between h-auto min-h-[320px] transition">
             <div class="overflow-hidden space-y-2">
               <div class="flex justify-between items-start gap-2">
-                <h4 class="font-bold text-base leading-snug truncate">${escapeHtml(a.titulo)}</h4>
+                <h4 class="font-bold text-base leading-snug truncate text-slate-950">${escapeHtml(a.titulo)}</h4>
                 <div class="flex gap-1 shrink-0">
-                  <button onclick="abrirFullscreen('${escapeHtml(a.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(a.mensagem).replace(/`/g, '\\`')}\`)" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Tela Cheia">🔍</button>
-                  <button onclick="openModalAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Editar">✏️</button>
-                  <button onclick="deleteAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Excluir">🗑️</button>
+                  <button onclick="abrirFullscreen('${escapeHtml(a.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(a.mensagem).replace(/`/g, '\\`')}\`)" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Tela Cheia">🔍</button>
+                  <button onclick="openModalAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Editar">✏️</button>
+                  <button onclick="deleteAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Excluir">🗑️</button>
                 </div>
               </div>
-              <p class="text-xs opacity-90 whitespace-pre-wrap leading-relaxed">${formatarLinks(a.mensagem)}</p>
+              <p class="text-xs font-medium text-slate-950 whitespace-pre-wrap leading-relaxed">${formatarLinks(a.mensagem)}</p>
 
               <!-- Respostas/Continuidade -->
-              <div class="space-y-1.5 pt-2 border-t border-black/10">
-                <span class="text-[10px] font-bold uppercase tracking-wider opacity-75">Respostas / Continuidade:</span>
+              <div class="space-y-1.5 pt-2 border-t border-black/15">
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-900">Respostas / Continuidade:</span>
                 <div class="space-y-1 max-h-28 overflow-y-auto">
                   ${respostas.map(r => `
-                    <div class="bg-black/5 p-1.5 rounded text-[11px] leading-tight">
-                      <span class="font-semibold">${escapeHtml(r.autor)}:</span> ${escapeHtml(r.texto)}
+                    <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950">
+                      <span class="font-bold">${escapeHtml(r.autor)}:</span> ${escapeHtml(r.texto)}
                     </div>
                   `).join('')}
                 </div>
                 <div class="flex gap-1 pt-1">
-                  <input type="text" id="resp-aviso-${a.id}" placeholder="Responder..." class="flex-1 bg-white/60 border border-black/20 rounded px-2 py-1 text-[11px] text-black focus:outline-none">
-                  <button onclick="enviarRespostaAviso('${a.id}')" class="bg-black/15 hover:bg-black/25 text-black text-[10px] px-2 py-1 rounded font-medium">Enviar</button>
+                  <input type="text" id="resp-aviso-${a.id}" placeholder="Responder..." class="flex-1 bg-white border border-black/30 rounded px-2 py-1 text-[11px] text-black font-medium focus:outline-none">
+                  <button onclick="enviarRespostaAviso('${a.id}')" class="bg-black/20 hover:bg-black/30 text-slate-950 text-[10px] px-2 py-1 rounded font-bold">Enviar</button>
                 </div>
               </div>
             </div>
 
-            <div class="border-t border-black/10 pt-3 mt-3 space-y-2 shrink-0">
-              <div class="flex justify-between items-center text-[10px] font-bold uppercase tracking-wider opacity-75">
+            <div class="border-t border-black/15 pt-3 mt-3 space-y-2 shrink-0">
+              <div class="flex justify-between items-center text-[10px] font-extrabold uppercase tracking-wider text-slate-900">
                 <span>Leitura (${lidosCount}/${totalReq})</span>
                 <span>${a.arquivado ? 'Lido/Arquivado' : 'Pendente'}</span>
               </div>
@@ -703,9 +703,9 @@
                 ${(state.pessoas || []).map(p => {
                   const checked = (a.lidosPor || []).includes(p);
                   return `
-                    <label class="flex items-center text-xs gap-2 cursor-pointer select-none">
-                      <input type="checkbox" ${checked ? 'checked' : ''} onchange="toggleLeitura('${a.id}', '${escapeHtml(p)}')" class="rounded border-slate-400">
-                      <span class="${checked ? 'line-through opacity-60' : 'font-medium'}">${escapeHtml(p)}</span>
+                    <label class="flex items-center text-xs gap-2 cursor-pointer select-none text-slate-950 font-semibold">
+                      <input type="checkbox" ${checked ? 'checked' : ''} onchange="toggleLeitura('${a.id}', '${escapeHtml(p)}')" class="rounded border-slate-900">
+                      <span class="${checked ? 'line-through opacity-70' : 'font-bold'}">${escapeHtml(p)}</span>
                     </label>
                   `;
                 }).join('')}
@@ -838,22 +838,22 @@
       document.getElementById('count-demandas-concluidas').innerText = concluidas.length;
 
       const statusBadges = {
-        'pendente': 'bg-amber-500/10 text-amber-900 border-amber-500/20',
-        'em_andamento': 'bg-sky-500/10 text-sky-900 border-sky-500/20',
-        'concluido': 'bg-emerald-500/10 text-emerald-900 border-emerald-500/20'
+        'pendente': 'bg-amber-500/20 text-amber-950 font-bold border-amber-500/30',
+        'em_andamento': 'bg-sky-500/20 text-sky-950 font-bold border-sky-500/30',
+        'concluido': 'bg-emerald-500/20 text-emerald-950 font-bold border-emerald-500/30'
       };
 
       const renderCardDemanda = (d) => {
         const isChamado = (d.categoria || '').toLowerCase().includes('chamado');
         
-        // Cores diferenciadas baseadas em post-it antigo: Chamados = Verde / Demandas Gerais = Azul
+        // Cores diferenciadas post-it: Chamados = Verde / Demandas Gerais = Azul com letras pretas nítidas
         const cardCor = isChamado 
-          ? 'bg-emerald-200 text-emerald-950 border-emerald-300 shadow-emerald-950/20' 
-          : 'bg-sky-200 text-sky-950 border-sky-300 shadow-sky-950/20';
+          ? 'bg-emerald-200 text-slate-950 border-emerald-400 shadow-emerald-950/20' 
+          : 'bg-sky-200 text-slate-950 border-sky-400 shadow-sky-950/20';
 
         const badgeCor = isChamado 
-          ? 'bg-emerald-300 text-emerald-950 border border-emerald-400' 
-          : 'bg-sky-300 text-sky-950 border border-sky-400';
+          ? 'bg-emerald-300 text-emerald-950 border border-emerald-500' 
+          : 'bg-sky-300 text-sky-950 border border-sky-500';
 
         const respostas = d.respostas || [];
 
@@ -861,40 +861,40 @@
           <div class="${cardCor} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-auto min-h-[320px] shadow-md">
             <div class="overflow-hidden space-y-2">
               <div class="flex items-start justify-between gap-2">
-                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded ${badgeCor} truncate max-w-[150px]">
+                <span class="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded ${badgeCor} truncate max-w-[150px]">
                   ${escapeHtml(d.categoria)} ${isChamado ? '📞' : '📋'}
                 </span>
                 <div class="flex gap-1 shrink-0">
-                  <button onclick="openModalDemanda('${d.id}')" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Editar">✏️</button>
-                  <button onclick="deleteDemanda('${d.id}')" class="text-xs bg-black/10 hover:bg-black/20 p-1 rounded" title="Excluir">🗑️</button>
+                  <button onclick="openModalDemanda('${d.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Editar">✏️</button>
+                  <button onclick="deleteDemanda('${d.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Excluir">🗑️</button>
                 </div>
               </div>
-              <h4 class="font-bold text-base truncate">${escapeHtml(d.titulo)}</h4>
-              <div class="space-y-1 text-xs opacity-90">
+              <h4 class="font-bold text-base truncate text-slate-950">${escapeHtml(d.titulo)}</h4>
+              <div class="space-y-1 text-xs font-medium text-slate-950">
                 <p class="whitespace-pre-wrap leading-relaxed">${formatarLinks(d.descricao1 || '')}</p>
-                ${d.descricao2 ? `<p class="whitespace-pre-wrap leading-relaxed pt-1 opacity-80">${formatarLinks(d.descricao2)}</p>` : ''}
+                ${d.descricao2 ? `<p class="whitespace-pre-wrap leading-relaxed pt-1 font-normal opacity-90">${formatarLinks(d.descricao2)}</p>` : ''}
               </div>
 
               <!-- Respostas/Continuidade Demanda -->
-              <div class="space-y-1.5 pt-2 border-t border-black/10">
-                <span class="text-[10px] font-bold uppercase tracking-wider opacity-75">Respostas / Continuidade:</span>
+              <div class="space-y-1.5 pt-2 border-t border-black/15">
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-900">Respostas / Continuidade:</span>
                 <div class="space-y-1 max-h-24 overflow-y-auto">
                   ${respostas.map(r => `
-                    <div class="bg-black/5 p-1.5 rounded text-[11px] leading-tight">
-                      <span class="font-semibold">${escapeHtml(r.autor)}:</span> ${escapeHtml(r.texto)}
+                    <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950">
+                      <span class="font-bold">${escapeHtml(r.autor)}:</span> ${escapeHtml(r.texto)}
                     </div>
                   `).join('')}
                 </div>
                 <div class="flex gap-1 pt-1">
-                  <input type="text" id="resp-demanda-${d.id}" placeholder="Responder..." class="flex-1 bg-white/60 border border-black/20 rounded px-2 py-1 text-[11px] text-black focus:outline-none">
-                  <button onclick="enviarRespostaDemanda('${d.id}')" class="bg-black/15 hover:bg-black/25 text-black text-[10px] px-2 py-1 rounded font-medium">Enviar</button>
+                  <input type="text" id="resp-demanda-${d.id}" placeholder="Responder..." class="flex-1 bg-white border border-black/30 rounded px-2 py-1 text-[11px] text-black font-medium focus:outline-none">
+                  <button onclick="enviarRespostaDemanda('${d.id}')" class="bg-black/20 hover:bg-black/30 text-slate-950 text-[10px] px-2 py-1 rounded font-bold">Enviar</button>
                 </div>
               </div>
             </div>
 
-            <div class="border-t border-black/10 pt-3 flex items-center justify-between text-xs shrink-0">
-              <span class="text-[10px] opacity-75">ID: ${d.id.slice(-4)}</span>
-              <select onchange="updateDemandaStatus('${d.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[d.status]} bg-white/70">
+            <div class="border-t border-black/15 pt-3 flex items-center justify-between text-xs shrink-0">
+              <span class="text-[10px] font-bold text-slate-900">ID: ${d.id.slice(-4)}</span>
+              <select onchange="updateDemandaStatus('${d.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[d.status]} bg-white font-bold cursor-pointer">
                 <option value="pendente" ${d.status === 'pendente' ? 'selected' : ''}>Pendente</option>
                 <option value="em_andamento" ${d.status === 'em_andamento' ? 'selected' : ''}>Em Andamento</option>
                 <option value="concluido" ${d.status === 'concluido' ? 'selected' : ''}>Concluído</option>
