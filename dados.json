@@ -163,16 +163,6 @@
   ],
   "plantao": [
     {
-      "id": "1792499699951",
-      "titulo": "20/10/2026 - Manhã",
-      "descricao": "ddfsdf",
-      "rubsDesvinculados": "sadsad",
-      "rubsBloqueados": "dsad",
-      "etiquetasRibbon": "sadsad",
-      "horaRegistro": "09:34",
-      "criadoEm": 1792499699951
-    },
-    {
       "id": "1792455820596",
       "titulo": "19/10/2026 - Tarde",
       "descricao": "Procedimento via meet feito pela produção em relação ao erro do sitef dos PDV's empresa. Finalizado após geração e aprovação dos tokens.\n\nToner amarelo da Konica trocado por falta de tinta.",
