@@ -191,7 +191,7 @@
       "descricao1": "verificar se login está operante no cx empresa ",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "0072 - 78451245",
@@ -199,7 +199,7 @@
         }
       ],
       "criadoEm": 1792527065985,
-      "modificadoEm": 1792537623676
+      "modificadoEm": 1792537625844
     },
     {
       "id": "1792519447275",
