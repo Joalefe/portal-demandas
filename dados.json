@@ -64,7 +64,9 @@
       "titulo": "Classe",
       "mensagem": "Victor quer classe impressa diariamente ",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "arquivado": false,
       "criadoEm": 1792486689678
     },
