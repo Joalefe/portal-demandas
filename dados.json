@@ -36,7 +36,9 @@
       "titulo": "sas22",
       "mensagem": "sas22 chegando ao destino",
       "cor": "postit-green",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "arquivado": false,
       "criadoEm": 1792486798459
     },
