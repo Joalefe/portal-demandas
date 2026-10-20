@@ -318,7 +318,7 @@
             <button type="button" onclick="preencherPeriodo('Tarde')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌙 Tarde</button>
             <button type="button" onclick="preencherPeriodo('Madrugada')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">✨ Madruga</button>
           </div>
-          <input type="text" id="plantao-titulo" required placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" id="plantao-titulo" required oninput="verificarExibicaoCamposTarde()" placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
 
         <div>
@@ -336,19 +336,23 @@
           <textarea id="plantao-descricao" rows="6" required placeholder="Escreva aqui detalhadamente todos os acontecimentos e ocorrências..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
         </div>
 
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Desvinculados *</label>
-          <textarea id="plantao-rubs-desvinculados" rows="3" required placeholder="Informe os detalhes sobre rubs desvinculados..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
-        </div>
+        <!-- GRUPO DE CAMPOS TÉCNICOS EXCLUSIVOS DA TARDE -->
+        <div id="container-campos-tarde" class="space-y-4 border-t border-slate-800 pt-4 hidden">
+          <div class="text-xs font-bold text-indigo-400 uppercase tracking-wider">🔒 Informações Técnicas Exclusivas (Turno da Tarde)</div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Desvinculados *</label>
+            <textarea id="plantao-rubs-desvinculados" rows="3" placeholder="Informe os detalhes sobre rubs desvinculados..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+          </div>
 
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Bloqueados (Informar quem foi bloqueado) *</label>
-          <textarea id="plantao-rubs-bloqueados" rows="3" required placeholder="Informe os rubs bloqueados e especifique o responsável..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
-        </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Bloqueados (Informar quem foi bloqueado) *</label>
+            <textarea id="plantao-rubs-bloqueados" rows="3" placeholder="Informe os rubs bloqueados e especifique o responsável..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+          </div>
 
-        <div>
-          <label class="block text-xs font-medium text-slate-400 mb-1">Etiquetas e Ribbon Abastecidas *</label>
-          <textarea id="plantao-etiquetas" rows="3" required placeholder="Informe a situação das etiquetas e ribbons abastecidas..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Etiquetas e Ribbon Abastecidas *</label>
+            <textarea id="plantao-etiquetas" rows="3" placeholder="Informe a situação das etiquetas e ribbons abastecidas..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+          </div>
         </div>
 
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
@@ -995,13 +999,11 @@
       const [dia, mes, ano] = dataHojeStr.split('/').map(Number);
       const inicioDoDia = new Date(ano, mes - 1, dia, 0, 0, 0).getTime();
 
-      // Avisos feitos no dia atual
       const avisosHoje = (state.avisos || []).filter(a => {
         const t = a.criadoEm || parseInt(a.id, 10);
         return t >= inicioDoDia;
       });
 
-      // Demandas modificadas ou concluídas no dia atual
       const demandasModificadasHoje = (state.demandas || []).filter(d => {
         const mod = d.modificadoEm || d.criadoEm || parseInt(d.id, 10);
         return mod >= inicioDoDia;
@@ -1030,11 +1032,25 @@
       return resumo;
     }
 
+    function verificarExibicaoCamposTarde() {
+      const tituloVal = document.getElementById('plantao-titulo').value.toLowerCase();
+      const containerCamposTarde = document.getElementById('container-campos-tarde');
+      const isTarde = tituloVal.includes('tarde');
+
+      containerCamposTarde.classList.toggle('hidden', !isTarde);
+
+      // Torna os campos obrigatórios apenas se for a Tarde
+      document.getElementById('plantao-rubs-desvinculados').required = isTarde;
+      document.getElementById('plantao-rubs-bloqueados').required = isTarde;
+      document.getElementById('plantao-etiquetas').required = isTarde;
+    }
+
     function renderPlantao() {
       let list = state.plantao || [];
       document.getElementById('container-plantao').innerHTML = list.map(p => {
         const isSistema = p.sistemaGerou === true;
-        const textoCompletoPlantao = `Resumo Automático:\n${p.resumoAutomatico || 'N/A'}\n\nComentário Adicional:\n${p.comentarioExtra || 'N/A'}\n\nDescrição Geral:\n${p.descricao || 'N/A'}\n\nRubs Desvinculados:\n${p.rubsDesvinculados || 'N/A'}\n\nRubs Bloqueados:\n${p.rubsBloqueados || 'N/A'}\n\nEtiquetas/Ribbon:\n${p.etiquetasRibbon || 'N/A'}`;
+        const textoCompletoPlantao = `Resumo Automático:\n${p.resumoAutomatico || 'N/A'}\n\nComentário Adicional:\n${p.comentarioExtra || 'N/A'}\n\nDescrição Geral:\n${p.descricao || 'N/A'}` +
+          (p.rubsDesvinculados && p.rubsDesvinculados !== 'N/A' ? `\n\nRubs Desvinculados:\n${p.rubsDesvinculados}\n\nRubs Bloqueados:\n${p.rubsBloqueados}\n\nEtiquetas/Ribbon:\n${p.etiquetasRibbon}` : '');
 
         return `
           <div class="${isSistema ? 'bg-rose-950/40 border-rose-900/60' : 'bg-slate-900 border-slate-800'} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-72 shadow-md">
@@ -1076,6 +1092,7 @@
     function preencherPeriodo(periodo) {
       const dataHoje = getDataAtualFormatada();
       document.getElementById('plantao-titulo').value = `${dataHoje} - ${periodo}`;
+      verificarExibicaoCamposTarde();
     }
 
     function openModalPlantao(id = null) {
@@ -1083,6 +1100,7 @@
       document.getElementById('plantao-id').value = '';
       document.getElementById('plantao-titulo').value = `${getDataAtualFormatada()} - Manhã`;
       document.getElementById('plantao-resumo-automatico').value = gerarResumoAutomaticoDia();
+      verificarExibicaoCamposTarde();
 
       if (id) {
         const p = (state.plantao || []).find(x => x.id === id);
@@ -1096,11 +1114,12 @@
           document.getElementById('plantao-resumo-automatico').value = p.resumoAutomatico || gerarResumoAutomaticoDia();
           document.getElementById('plantao-comentario-extra').value = p.comentarioExtra || '';
           document.getElementById('plantao-descricao').value = p.descricao || '';
-          document.getElementById('plantao-rubs-desvinculados').value = p.rubsDesvinculados || '';
-          document.getElementById('plantao-rubs-bloqueados').value = p.rubsBloqueados || '';
-          document.getElementById('plantao-etiquetas').value = p.etiquetasRibbon || '';
+          document.getElementById('plantao-rubs-desvinculados').value = p.rubsDesvinculados !== 'N/A' ? (p.rubsDesvinculados || '') : '';
+          document.getElementById('plantao-rubs-bloqueados').value = p.rubsBloqueados !== 'N/A' ? (p.rubsBloqueados || '') : '';
+          document.getElementById('plantao-etiquetas').value = p.etiquetasRibbon !== 'N/A' ? (p.etiquetasRibbon || '') : '';
           document.getElementById('plantao-horario-registro').value = p.horaRegistro || '';
           document.getElementById('modal-plantao-title').innerText = 'Editar Passagem de Plantão';
+          verificarExibicaoCamposTarde();
         }
       } else {
         const now = new Date();
@@ -1114,6 +1133,7 @@
     function savePlantao(e) {
       e.preventDefault();
       const titulo = document.getElementById('plantao-titulo').value;
+      const isTarde = titulo.toLowerCase().includes('tarde');
 
       const dadosPlantao = {
         id: document.getElementById('plantao-id').value,
@@ -1121,14 +1141,14 @@
         resumoAutomatico: document.getElementById('plantao-resumo-automatico').value,
         comentarioExtra: document.getElementById('plantao-comentario-extra').value,
         descricao: document.getElementById('plantao-descricao').value,
-        rubsDesvinculados: document.getElementById('plantao-rubs-desvinculados').value,
-        rubsBloqueados: document.getElementById('plantao-rubs-bloqueados').value,
-        etiquetasRibbon: document.getElementById('plantao-etiquetas').value,
+        rubsDesvinculados: isTarde ? document.getElementById('plantao-rubs-desvinculados').value : 'N/A',
+        rubsBloqueados: isTarde ? document.getElementById('plantao-rubs-bloqueados').value : 'N/A',
+        etiquetasRibbon: isTarde ? document.getElementById('plantao-etiquetas').value : 'N/A',
         horaRegistro: document.getElementById('plantao-horario-registro').value
       };
 
       // Se for Tarde, exige preenchimento do formulário de responsável
-      if (titulo.toLowerCase().includes('tarde')) {
+      if (isTarde) {
         tempPlantaoBuffer = dadosPlantao;
 
         document.getElementById('email-titulo').value = dadosPlantao.titulo;
