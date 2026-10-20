@@ -65,7 +65,8 @@
       "mensagem": "Victor quer classe impressa diariamente ",
       "cor": "postit-yellow",
       "lidosPor": [
-        "João Infomático"
+        "João Infomático",
+        "Joalefe Performático"
       ],
       "arquivado": false,
       "criadoEm": 1792486689678
@@ -75,7 +76,9 @@
       "titulo": "login Rosângela",
       "mensagem": "verificar se login está operante no cx empresa ",
       "cor": "postit-blue",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "arquivado": false,
       "criadoEm": 1792456848305
     },
