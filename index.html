@@ -43,7 +43,7 @@
     /* ===== AJUSTES VISUAIS (somente estética – não altera a lógica) ===== */
 
     /* Escala geral: tudo em rem fica ~12% maior */
-    html { font-size: 18px; }
+    html { font-size: 16px; }
     body { font-size: 1rem; line-height: 1.6; }
 
     /* Textos minúsculos (arbitrários em px) passam a ser legíveis */
@@ -62,8 +62,8 @@
 
     /* Campos de escrita maiores e mais visíveis */
     input[type="text"], select, textarea {
-      font-size: 1.05rem !important;
-      padding: 0.8rem 1rem !important;
+      font-size: 1rem !important;
+      padding: 0.7rem 0.9rem !important;
       line-height: 1.55 !important;
       background-color: #0b1220 !important;
       border: 2px solid #475569 !important;
@@ -105,18 +105,18 @@
     /* Cards: texto grande, sem altura fixa cortando conteúdo */
     #subtab-content-ativos > div, #subtab-content-lidos > div,
     #container-demandas > div, #container-demandas-concluidas > div {
-      min-height: 24rem !important;
+      min-height: 21rem !important;
       padding: 1.5rem !important;
     }
     #container-plantao > div { height: auto !important; min-height: 20rem; padding: 1.5rem !important; }
-    #container-plantao .line-clamp-3 { -webkit-line-clamp: 5; font-size: 1rem !important; }
+    #container-plantao .line-clamp-3 { -webkit-line-clamp: 5; font-size: 0.95rem !important; }
 
     /* Título e mensagem dos post-its */
     #subtab-content-ativos h4, #subtab-content-lidos h4,
     #container-demandas h4, #container-demandas-concluidas h4,
-    #container-plantao h4 { font-size: 1.25rem !important; line-height: 1.35 !important; white-space: normal !important; }
+    #container-plantao h4 { font-size: 1.12rem !important; line-height: 1.35 !important; white-space: normal !important; }
     #subtab-content-ativos p, #subtab-content-lidos p,
-    #container-demandas p, #container-demandas-concluidas p { font-size: 1.02rem !important; line-height: 1.6 !important; }
+    #container-demandas p, #container-demandas-concluidas p { font-size: 0.98rem !important; line-height: 1.55 !important; }
 
     /* Respostas dentro do card */
     #subtab-content-ativos .bg-black\/10, #subtab-content-lidos .bg-black\/10,
@@ -136,16 +136,16 @@
     .fixed .max-w-xl { max-width: 52rem !important; }
     .fixed .max-w-3xl { max-width: 64rem !important; }
     .fixed > div { padding: 1.75rem !important; }
-    .fixed h3 { font-size: 1.35rem !important; }
-    #fs-content { font-size: 1.15rem !important; line-height: 1.8 !important; }
+    .fixed h3 { font-size: 1.2rem !important; }
+    #fs-content { font-size: 1.05rem !important; line-height: 1.8 !important; }
 
     /* Cabeçalho */
-    header h1 { font-size: 1.6rem !important; }
+    header h1 { font-size: 1.35rem !important; }
     #tab-btn-avisos, #tab-btn-demandas, #tab-btn-plantao { font-size: 1rem !important; padding: 0.55rem 1.1rem !important; }
     #sync-status { font-size: 0.9rem !important; }
 
     /* Barra de alerta de plantão mais visível */
-    #container-alerta-plantao { font-size: 1.05rem !important; padding: 0.8rem 1rem !important; }
+    #container-alerta-plantao { font-size: 0.95rem !important; padding: 0.8rem 1rem !important; }
   </style>
 </head>
 <body class="h-full text-slate-100 flex flex-col font-sans bg-slate-950 antialiased">
@@ -478,9 +478,9 @@
         <button onclick="closeModal('modal-plantao-email')" class="text-slate-400 hover:text-white">✕</button>
       </div>
 
-      <form action="https://formsubmit.co/cpd_675@atacadao.com.br" method="POST" onsubmit="savePlantaoEmailSubmit(event)" class="space-y-4">
+      <form action="https://formsubmit.co/cpd_675@atacadao.com.br" method="POST" target="hidden-iframe" onsubmit="savePlantaoEmailSubmit(event)" class="space-y-4">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="📋 Relatório de Passagem de Plantão - Tarde">
+        <input type="hidden" name="_subject" id="email-subject" value="📋 Relatório de Passagem de Plantão">
         <input type="hidden" name="_template" value="box">
 
         <input type="hidden" id="email-titulo" name="titulo_plantao">
@@ -492,16 +492,16 @@
         <input type="hidden" id="email-etiquetas" name="etiquetas_ribbon">
 
         <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-300">
-          Você registrou um plantão da **Tarde**. Confirme seu nome para disparar o e-mail automaticamente para <strong>cpd_675@atacadao.com.br</strong>:
+          Você registrou o plantão <strong id="email-periodo-txt"></strong>. Confirme seu nome para disparar o e-mail para <strong>cpd_675@atacadao.com.br</strong>:
         </div>
 
         <div>
           <label class="block text-xs font-medium text-slate-400 mb-1">Identificação / Responsável</label>
-          <input type="text" name="responsavel" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+          <input type="text" id="email-responsavel" name="responsavel" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
         </div>
 
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
-          <button type="button" onclick="closeModal('modal-plantao-email')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="button" onclick="voltarParaPlantao()" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Voltar e Editar</button>
           <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-5 py-2 rounded-lg font-medium shadow">Disparar E-mail e Salvar</button>
         </div>
       </form>
@@ -1282,7 +1282,7 @@
             </div>
             <div class="border-t ${isSistema ? 'border-rose-900/40' : 'border-slate-800/80'} pt-2 text-[10px] text-slate-500 flex justify-between shrink-0">
               <span>Registrado às: ${p.horaRegistro || 'N/D'}</span>
-              <span>${isSistema ? 'Sistema' : 'Plantão'}</span>
+              <span>${isSistema ? 'Sistema' : (p.responsavel ? '👤 ' + escapeHtml(p.responsavel) : 'Plantão')}</span>
             </div>
           </div>
         `;
@@ -1356,7 +1356,8 @@
         horaRegistro: document.getElementById('plantao-horario-registro').value
       };
 
-      if (isTarde) {
+      // Todo turno (Manhã, Intermediário, Tarde, Madrugada) é enviado por e-mail
+      {
         tempPlantaoBuffer = dadosPlantao;
 
         document.getElementById('email-titulo').value = dadosPlantao.titulo;
@@ -1366,17 +1367,27 @@
         document.getElementById('email-rubs-desv').value = dadosPlantao.rubsDesvinculados;
         document.getElementById('email-rubs-bloq').value = dadosPlantao.rubsBloqueados;
         document.getElementById('email-etiquetas').value = dadosPlantao.etiquetasRibbon;
+        document.getElementById('email-subject').value = `📋 Relatório de Passagem de Plantão - ${dadosPlantao.titulo}`;
+        document.getElementById('email-periodo-txt').innerText = dadosPlantao.titulo;
+        document.getElementById('email-responsavel').value = localStorage.getItem('portal_ultimo_responsavel') || '';
 
         closeModal('modal-plantao');
         openModal('modal-plantao-email');
         return;
       }
 
-      executarSalvarPlantaoFinal(dadosPlantao);
-      dispararEmailAutomatico(dadosPlantao);
+    }
+
+    function voltarParaPlantao() {
+      closeModal('modal-plantao-email');
+      openModal('modal-plantao');
     }
 
     function savePlantaoEmailSubmit(e) {
+      if (!tempPlantaoBuffer) return;
+      const nomeResp = (document.getElementById('email-responsavel').value || '').trim();
+      try { localStorage.setItem('portal_ultimo_responsavel', nomeResp); } catch (err) {}
+      tempPlantaoBuffer.responsavel = nomeResp;
       executarSalvarPlantaoFinal(tempPlantaoBuffer);
     }
 
@@ -1402,6 +1413,7 @@
       const rubsDesvinculados = dadosBuffer.rubsDesvinculados;
       const rubsBloqueados = dadosBuffer.rubsBloqueados;
       const etiquetasRibbon = dadosBuffer.etiquetasRibbon;
+      const responsavel = dadosBuffer.responsavel || '';
       
       let horaRegistro = dadosBuffer.horaRegistro;
       if (!horaRegistro) {
@@ -1420,6 +1432,8 @@
           p.rubsDesvinculados = rubsDesvinculados;
           p.rubsBloqueados = rubsBloqueados;
           p.etiquetasRibbon = etiquetasRibbon;
+          p.responsavel = responsavel;
+          p.modificadoEm = new Date().getTime();
           if (!p.horaRegistro) p.horaRegistro = horaRegistro;
         }
       } else {
@@ -1432,6 +1446,8 @@
           rubsDesvinculados,
           rubsBloqueados,
           etiquetasRibbon,
+          responsavel,
+          modificadoEm: new Date().getTime(),
           horaRegistro,
           criadoEm: new Date().getTime()
         });
@@ -1632,6 +1648,13 @@
     }
 
     setInterval(verificarAlertasPlantao, 30000);
+
+    // Atualiza sozinho a cada 45s quando ninguém está digitando (vê o que os outros fizeram)
+    setInterval(() => {
+      if (document.visibilityState !== 'visible') return;
+      if (salvando || salvarPendente || usuarioEstaEditando()) return;
+      loadStorage(true);
+    }, 45000);
 
     function openModalPessoas() { renderListaPessoas(); openModal('modal-pessoas'); }
     function renderListaPessoas() {
