@@ -221,9 +221,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "conversado via chat, encontramos um contorno para a situação.,",
+          "data": 1792591286689
+        }
+      ],
       "criadoEm": 1792589143072,
-      "modificadoEm": 1792589143072
+      "modificadoEm": 1792591286689
     },
     {
       "id": "1792584913711",
