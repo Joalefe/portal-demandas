@@ -196,10 +196,14 @@
         {
           "texto": "0072 - 78451245",
           "data": 1792537623676
+        },
+        {
+          "texto": "login dando operadora não cadastrada no pdv empresa. \"operadora nã cadastrada\"",
+          "data": 1792543924350
         }
       ],
       "criadoEm": 1792527065985,
-      "modificadoEm": 1792543748028
+      "modificadoEm": 1792543924350
     },
     {
       "id": "1792519447275",
