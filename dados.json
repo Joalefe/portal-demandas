@@ -10,6 +10,17 @@
   ],
   "avisos": [
     {
+      "id": "1792590866769",
+      "titulo": "Devolução de toner",
+      "mensagem": "necessario fazer uma nota para cada suprimento devolvido. (orientação da matriz) ",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1792590866769,
+      "modificadoEm": 1792590866769
+    },
+    {
       "id": "1792575886977",
       "titulo": "SNFBI002",
       "mensagem": "SNFBI002: responsável pela emissão das NF’s Manuais (SRMOU022 e SASOU045)",
