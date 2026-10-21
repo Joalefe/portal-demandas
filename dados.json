@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1792617170560",
+      "titulo": "Email Cartao pedindo codigo de confirmação de 2 fatores",
+      "mensagem": "ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codigo\n",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1792617170560,
+      "modificadoEm": 1792617170560
+    },
+    {
       "id": "1792590866769",
       "titulo": "Devolução de toner",
       "mensagem": "necessario fazer uma nota para cada suprimento devolvido. (orientação da matriz) ",
