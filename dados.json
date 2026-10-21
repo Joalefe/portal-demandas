@@ -316,9 +316,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "Ambas notas com status 100",
+          "data": 1792624687005
+        }
+      ],
       "criadoEm": 1792573383172,
-      "modificadoEm": 1792573383172
+      "modificadoEm": 1792624687005
     },
     {
       "id": "1792527065985",
