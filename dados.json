@@ -385,8 +385,13 @@
       "descricao2": "",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
-      "modificadoEm": 1792527915619
+      "respostas": [
+        {
+          "texto": "Att: Chamado atendido. Testar amanha se as telas ja foram liberadas",
+          "data": 1792624364278
+        }
+      ],
+      "modificadoEm": 1792624364278
     },
     {
       "id": "1792500630190",
