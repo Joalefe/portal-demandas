@@ -318,9 +318,13 @@
         {
           "texto": "caixa empresa nao apresentou problema.",
           "data": 1792584102353
+        },
+        {
+          "texto": "apenas o caixa empresa 13 esta funcionando",
+          "data": 1792587117342
         }
       ],
-      "modificadoEm": 1792584102353
+      "modificadoEm": 1792587117342
     },
     {
       "id": "1792493802528",
