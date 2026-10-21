@@ -14,11 +14,13 @@
       "titulo": "SNFBI002",
       "mensagem": "SNFBI002: responsável pela emissão das NF’s Manuais (SRMOU022 e SASOU045)",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1792575886977,
-      "modificadoEm": 1792575886977
+      "modificadoEm": 1792584467232
     },
     {
       "id": "1792573319270",
