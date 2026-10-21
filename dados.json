@@ -466,6 +466,20 @@
   ],
   "plantao": [
     {
+      "id": "1792607132302",
+      "titulo": "21/10/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (21/10/2026) ===\n\n📌 Avisos Criados (3):\n- [Devolução de toner]: necessario fazer uma nota para cada suprimento devolvido. (orientação da matriz)...\n- [SNFBI002]: SNFBI002: responsável pela emissão das NF’s Manuais (SRMOU022 e SASOU045)...\n- [Matriz rodando bal20]: sempre conferir, porque matriz pode ter rodado ao bal20, subido as notas e sinte...\n\n📋 Demandas Modificadas/Concluídas (11):\n- [DEMANDA] RUB Empacotador Lucas (Status: em_andamento)\n- [DEMANDA] gerencial nao funciona  (Status: pendente)\n- [DEMANDA] encontrar foto condutor (desaparecido) (Status: pendente)\n- [Chamados] Rub 13 quebrado (Status: em_andamento)\n- [DEMANDA] notas NFE com erro (Status: pendente)\n- [DEMANDA] login Rosângela (Status: em_andamento)\n- [Chamados] requerimento de toner (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] caixa empresa (Status: em_andamento)\n- [Chamados] Victor sem acessos (Status: em_andamento)\n- [Chamados] Balança piso com problema (Status: pendente)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1792607132302,
+      "horaRegistro": "15:25",
+      "criadoEm": 1792607132302
+    },
+    {
       "id": "auto_21102026_Manhã",
       "titulo": "21/10/2026 - Manhã",
       "resumoAutomatico": "N/A",
