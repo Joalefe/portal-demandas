@@ -269,22 +269,6 @@
       "modificadoEm": 1792573383172
     },
     {
-      "id": "1792528385042",
-      "titulo": "Rub do Ruan sumido ",
-      "descricao1": "Procurar, mantê-lo bloqueado ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": [
-        {
-          "texto": "Rub bloqueado até o dia 25/10",
-          "data": 1792531130477
-        }
-      ],
-      "criadoEm": 1792528385042,
-      "modificadoEm": 1792531130477
-    },
-    {
       "id": "1792527065985",
       "titulo": "login Rosângela",
       "descricao1": "verificar se login está operante no cx empresa ",
