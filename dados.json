@@ -313,11 +313,12 @@
     {
       "id": "1792493644878",
       "titulo": "Victor sem acessos",
-      "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026101685006686",
+      "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102185001957",
       "descricao2": "",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": []
+      "respostas": [],
+      "modificadoEm": 1792581795023
     },
     {
       "id": "1792487832768",
