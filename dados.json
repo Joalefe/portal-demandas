@@ -40,11 +40,13 @@
       "titulo": "Loja vai abrir 06:00 na quinta ",
       "mensagem": ".",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1792534421417,
-      "modificadoEm": 1792534431426
+      "modificadoEm": 1792584469528
     },
     {
       "id": "1792534319595",
