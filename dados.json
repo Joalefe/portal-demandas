@@ -58,7 +58,9 @@
       "titulo": "Rub Ruan",
       "mensagem": "Não devolvido/ perdido \n",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [
         {
           "texto": "Rub encontrado",
@@ -67,7 +69,7 @@
       ],
       "arquivado": false,
       "criadoEm": 1792531157719,
-      "modificadoEm": 1792578751513
+      "modificadoEm": 1792584461586
     },
     {
       "id": "1792505930497",
