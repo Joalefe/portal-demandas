@@ -314,8 +314,13 @@
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102085002421",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
-      "modificadoEm": 1792587125947
+      "respostas": [
+        {
+          "texto": "apenas o 13 esta funcionando corretamente",
+          "data": 1792587138203
+        }
+      ],
+      "modificadoEm": 1792587138203
     },
     {
       "id": "1792493802528",
