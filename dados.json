@@ -62,10 +62,15 @@
       "lidosPor": [
         "Kaell Pragmático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "Rub encontrado",
+          "data": 1792578742706
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1792531157719,
-      "modificadoEm": 1792531161598
+      "modificadoEm": 1792578742705
     },
     {
       "id": "1792505930497",
