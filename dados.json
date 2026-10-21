@@ -27,11 +27,13 @@
       "titulo": "Matriz rodando bal20",
       "mensagem": "sempre conferir, porque matriz pode ter rodado ao bal20, subido as notas e sintetizado as biblias. ",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1792573319270,
-      "modificadoEm": 1792573319270
+      "modificadoEm": 1792584468376
     },
     {
       "id": "1792534421417",
