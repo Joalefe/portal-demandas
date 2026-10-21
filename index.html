@@ -240,6 +240,11 @@
           <select id="filter-demandas-categoria" onchange="renderDemandas()" class="bg-slate-950 text-slate-200 text-xs border border-slate-800 rounded-lg px-3 py-2">
             <option value="todas">Todas Categorias</option>
           </select>
+          <div class="flex items-center gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800">
+            <button id="filtro-tipo-todos" type="button" onclick="setFiltroTipo('todos')" class="text-sm font-medium px-3 py-1.5 rounded-md transition">Todos</button>
+            <button id="filtro-tipo-chamado" type="button" onclick="setFiltroTipo('chamado')" class="text-sm font-medium px-3 py-1.5 rounded-md transition">📞 Só Chamados</button>
+            <button id="filtro-tipo-demanda" type="button" onclick="setFiltroTipo('demanda')" class="text-sm font-medium px-3 py-1.5 rounded-md transition">📋 Só Demandas</button>
+          </div>
         </div>
 
         <div class="flex items-center gap-2">
@@ -1055,11 +1060,21 @@
     // --- DEMANDAS ---
     let filtroTipo = 'todos';
     function setFiltroTipo(tipo) {
-      filtroTipo = (filtroTipo === tipo) ? 'todos' : tipo;
+      filtroTipo = tipo;
       renderDemandas();
     }
 
+    function atualizarBotoesFiltroTipo() {
+      const ativo = 'text-white bg-indigo-600 shadow';
+      const inativo = 'text-slate-400 hover:text-white';
+      ['todos', 'chamado', 'demanda'].forEach(t => {
+        const el = document.getElementById('filtro-tipo-' + t);
+        if (el) el.className = 'text-sm font-medium px-3 py-1.5 rounded-md transition ' + (filtroTipo === t ? ativo : inativo);
+      });
+    }
+
     function renderDemandas() {
+      atualizarBotoesFiltroTipo();
       const filterCat = document.getElementById('filter-demandas-categoria').value;
       let list = state.demandas || [];
       if (filterCat !== 'todas') list = list.filter(d => d.categoria === filterCat);
@@ -1146,7 +1161,6 @@
           <div class="space-y-4 min-w-0">
             <div class="flex items-center justify-between gap-2 px-4 py-2.5 rounded-lg border ${cor}">
               <span class="text-sm font-bold uppercase tracking-wider">${icone} ${titulo} <span class="opacity-80">(${itens.length})</span></span>
-              <button type="button" onclick="setFiltroTipo('${tipo}')" class="text-xs font-bold bg-black/30 hover:bg-black/50 border border-white/20 text-white px-3 py-1.5 rounded-lg shadow transition" title="${filtroTipo === tipo ? 'Voltar a mostrar tudo' : 'Mostrar somente ' + (tipo === 'chamado' ? 'chamados' : 'demandas')}">${filtroTipo === tipo ? '↩ Ver todos' : (tipo === 'chamado' ? '🔎 Só Chamados' : '🔎 Só Demandas')}</button>
             </div>
             <div class="lista-cards-demanda grid grid-cols-1 2xl:grid-cols-2 gap-5">
               ${itens.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">${msgVazia}</p>`}
