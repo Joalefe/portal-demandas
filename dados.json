@@ -339,6 +339,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_20102026_Tarde",
+      "titulo": "20/10/2026 - Tarde",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Tarde (Prazo limite das 22:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "22:00",
+      "sistemaGerou": true,
+      "criadoEm": 1792544448265
+    },
+    {
       "id": "auto_1792524095676_Intermediário",
       "titulo": "20/10/2026 - Intermediário",
       "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
