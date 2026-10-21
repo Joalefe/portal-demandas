@@ -59,9 +59,7 @@
       "titulo": "Rub Ruan",
       "mensagem": "Não devolvido/ perdido \n",
       "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático"
-      ],
+      "lidosPor": [],
       "respostas": [
         {
           "texto": "Rub encontrado",
@@ -70,7 +68,7 @@
       ],
       "arquivado": false,
       "criadoEm": 1792531157719,
-      "modificadoEm": 1792578750946
+      "modificadoEm": 1792578751513
     },
     {
       "id": "1792505930497",
