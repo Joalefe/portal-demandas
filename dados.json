@@ -384,7 +384,7 @@
       "descricao1": "caixa empresa segue com problema no sitef",
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102085002421",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "apenas o 13 esta funcionando corretamente",
@@ -395,7 +395,7 @@
           "data": 1792606278831
         }
       ],
-      "modificadoEm": 1792606278831
+      "modificadoEm": 1792615329099
     },
     {
       "id": "1792493802528",
