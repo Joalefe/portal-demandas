@@ -236,10 +236,14 @@
         {
           "texto": "conversado via chat, encontramos um contorno para a situação.,",
           "data": 1792591286689
+        },
+        {
+          "texto": "mandar msg para o tecnico perguntando se quando ele faz uma manutenção de fotocondutor se ele leva embora.",
+          "data": 1792598251970
         }
       ],
       "criadoEm": 1792589143072,
-      "modificadoEm": 1792591286689
+      "modificadoEm": 1792598251970
     },
     {
       "id": "1792584913711",
