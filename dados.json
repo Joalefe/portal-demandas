@@ -215,6 +215,17 @@
   ],
   "demandas": [
     {
+      "id": "1792591349730",
+      "titulo": "gerencial nao funciona ",
+      "descricao1": "precisamos encontrar uma maneira de consertar ou criar outra nova, ou implantar o portal ",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1792591349730,
+      "modificadoEm": 1792591349730
+    },
+    {
       "id": "1792589143072",
       "titulo": "encontrar foto condutor (desaparecido)",
       "descricao1": "2253705\n\nAT 675 DIADEMA SERRA - 003133/HC\n\nMS812\n\nDrum/Photoconductor\n\nCAD232831C74\n\n4063369906Y9F\n\n10.122.248.24\n\n29\n\n28\n\n17/06/2026",
