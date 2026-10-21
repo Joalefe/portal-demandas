@@ -460,7 +460,7 @@
       "descricao1": "liga e desliga",
       "descricao2": "confirmar problema, e chamar assistencia ",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "chamar assistencia",
@@ -471,7 +471,7 @@
           "data": 1792582610666
         }
       ],
-      "modificadoEm": 1792582610666
+      "modificadoEm": 1792615335798
     },
     {
       "id": "1792448661840",
