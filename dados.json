@@ -181,6 +181,17 @@
   ],
   "demandas": [
     {
+      "id": "1792573383172",
+      "titulo": "notas NFE com erro",
+      "descricao1": "62605        6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n\n62660     \t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1792573383172,
+      "modificadoEm": 1792573383172
+    },
+    {
       "id": "1792528385042",
       "titulo": "Rub do Ruan sumido ",
       "descricao1": "Procurar, mantê-lo bloqueado ",
