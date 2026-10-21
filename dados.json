@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1792575886977",
+      "titulo": "SNFBI002",
+      "mensagem": "SNFBI002: responsável pela emissão das NF’s Manuais (SRMOU022 e SASOU045)",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1792575886977,
+      "modificadoEm": 1792575886977
+    },
+    {
       "id": "1792573319270",
       "titulo": "Matriz rodando bal20",
       "mensagem": "sempre conferir, porque matriz pode ter rodado ao bal20, subido as notas e sintetizado as biblias. ",
