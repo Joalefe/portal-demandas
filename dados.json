@@ -314,13 +314,8 @@
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102085002421",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [
-        {
-          "texto": "apenas o caixa empresa 13 esta funcionando",
-          "data": 1792587117342
-        }
-      ],
-      "modificadoEm": 1792587123477
+      "respostas": [],
+      "modificadoEm": 1792587125947
     },
     {
       "id": "1792493802528",
