@@ -289,7 +289,13 @@
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102085002421",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": []
+      "respostas": [
+        {
+          "texto": "caixa empresa nao apresentou problema.",
+          "data": 1792584102353
+        }
+      ],
+      "modificadoEm": 1792584102353
     },
     {
       "id": "1792493802528",
