@@ -15,11 +15,13 @@
       "titulo": "Email Cartao pedindo codigo de confirmação de 2 fatores",
       "mensagem": "ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codigo\n",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1792617170560,
-      "modificadoEm": 1792617170560
+      "modificadoEm": 1792617174519
     },
     {
       "id": "1792590866769",
