@@ -15,11 +15,13 @@
       "titulo": "Devolução de toner",
       "mensagem": "necessario fazer uma nota para cada suprimento devolvido. (orientação da matriz) ",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1792590866769,
-      "modificadoEm": 1792590866769
+      "modificadoEm": 1792608717655
     },
     {
       "id": "1792575886977",
