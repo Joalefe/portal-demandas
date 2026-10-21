@@ -315,7 +315,7 @@
       "descricao1": "62605        6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n\n62660     \t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "Ambas notas com status 100",
@@ -323,7 +323,7 @@
         }
       ],
       "criadoEm": 1792573383172,
-      "modificadoEm": 1792624687005
+      "modificadoEm": 1792624688881
     },
     {
       "id": "1792527065985",
