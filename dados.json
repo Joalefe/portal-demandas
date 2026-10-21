@@ -446,8 +446,13 @@
       "descricao2": "",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
-      "modificadoEm": 1792581795023
+      "respostas": [
+        {
+          "texto": "Resposta do chamado: \"Transferimos o usuário informado para a filial correta e adicionamos ele como gerente comercial da filial em nosso sistema. \"",
+          "data": 1792624415159
+        }
+      ],
+      "modificadoEm": 1792624415159
     },
     {
       "id": "1792487832768",
