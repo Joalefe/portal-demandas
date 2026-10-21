@@ -1053,6 +1053,12 @@
     }
 
     // --- DEMANDAS ---
+    let filtroTipo = 'todos';
+    function setFiltroTipo(tipo) {
+      filtroTipo = (filtroTipo === tipo) ? 'todos' : tipo;
+      renderDemandas();
+    }
+
     function renderDemandas() {
       const filterCat = document.getElementById('filter-demandas-categoria').value;
       let list = state.demandas || [];
@@ -1140,19 +1146,17 @@
           <div class="space-y-4 min-w-0">
             <div class="flex items-center justify-between gap-2 px-4 py-2.5 rounded-lg border ${cor}">
               <span class="text-sm font-bold uppercase tracking-wider">${icone} ${titulo} <span class="opacity-80">(${itens.length})</span></span>
-              <div class="flex items-center gap-2">
-                <button type="button" onclick="openModalDemanda(null, '${tipo}')" class="text-xs font-bold bg-black/30 hover:bg-black/50 border border-white/20 text-white px-3 py-1.5 rounded-lg shadow transition" title="Criar ${tipo === 'chamado' ? 'chamado' : 'demanda'} rapidamente">+ ${tipo === 'chamado' ? 'Novo Chamado' : 'Nova Demanda'}</button>
-                <button type="button" onclick="openModalCategorias()" class="text-xs font-bold bg-black/30 hover:bg-black/50 border border-white/20 text-white px-2.5 py-1.5 rounded-lg transition" title="Gerenciar categorias">🏷️</button>
-              </div>
+              <button type="button" onclick="setFiltroTipo('${tipo}')" class="text-xs font-bold bg-black/30 hover:bg-black/50 border border-white/20 text-white px-3 py-1.5 rounded-lg shadow transition" title="${filtroTipo === tipo ? 'Voltar a mostrar tudo' : 'Mostrar somente ' + (tipo === 'chamado' ? 'chamados' : 'demandas')}">${filtroTipo === tipo ? '↩ Ver todos' : (tipo === 'chamado' ? '🔎 Só Chamados' : '🔎 Só Demandas')}</button>
             </div>
             <div class="lista-cards-demanda grid grid-cols-1 2xl:grid-cols-2 gap-5">
               ${itens.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">${msgVazia}</p>`}
             </div>
           </div>`;
-        return `<div class="col-span-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">`
-          + coluna('Chamados', '📞', lista.filter(ehChamado), 'bg-emerald-950/50 text-emerald-300 border-emerald-800/70', 'Nenhum chamado.', 'chamado')
-          + coluna('Demandas', '📋', lista.filter(d => !ehChamado(d)), 'bg-sky-950/50 text-sky-300 border-sky-800/70', 'Nenhuma demanda.', 'demanda')
-          + `</div>`;
+        const colChamados = coluna('Chamados', '📞', lista.filter(ehChamado), 'bg-emerald-950/50 text-emerald-300 border-emerald-800/70', 'Nenhum chamado.', 'chamado');
+        const colDemandas = coluna('Demandas', '📋', lista.filter(d => !ehChamado(d)), 'bg-sky-950/50 text-sky-300 border-sky-800/70', 'Nenhuma demanda.', 'demanda');
+        const cols = filtroTipo === 'chamado' ? colChamados : filtroTipo === 'demanda' ? colDemandas : colChamados + colDemandas;
+        const gridCls = filtroTipo === 'todos' ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
+        return `<div class="col-span-full grid grid-cols-1 ${gridCls} gap-8 items-start">` + cols + `</div>`;
       };
       document.getElementById('container-demandas').innerHTML = montarColunas(ativas);
       document.getElementById('container-demandas-concluidas').innerHTML = montarColunas(concluidas);
