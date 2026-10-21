@@ -18,10 +18,15 @@
       "lidosPor": [
         "João Infomático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "necessario abrir chamado para resetar o autenticador",
+          "data": 1792623219568
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1792617170560,
-      "modificadoEm": 1792617174519
+      "modificadoEm": 1792623219568
     },
     {
       "id": "1792590866769",
