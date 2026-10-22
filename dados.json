@@ -303,8 +303,8 @@
     {
       "id": "1792700990877",
       "titulo": "Email Cartao pedindo codigo de confirmação de 2 fatores",
-      "descricao1": "ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codigo, Lucas avisou que o suporte orientou abrir chamado\n",
-      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285007842",
+      "descricao1": "Chamado re-aberto para reset da autenticação de 2 fatores\n",
+      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285008949",
       "categoria": "Chamados",
       "status": "pendente",
       "respostas": [
@@ -314,7 +314,7 @@
         }
       ],
       "criadoEm": 1792700990877,
-      "modificadoEm": 1792709277136
+      "modificadoEm": 1792709802746
     },
     {
       "id": "1792686083624",
