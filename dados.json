@@ -307,9 +307,14 @@
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285007842",
       "categoria": "Chamados",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "avisar o lucas que é necessário acionar o suporte do cartão",
+          "data": 1792709277136
+        }
+      ],
       "criadoEm": 1792700990877,
-      "modificadoEm": 1792701247131
+      "modificadoEm": 1792709277136
     },
     {
       "id": "1792686083624",
