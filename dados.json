@@ -262,9 +262,14 @@
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285003453",
       "categoria": "Chamados",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "Email enviado para tributario: https://mail.google.com/mail/u/0/?ogbl#sent/QgrcJHrtsvFfhjfFGDNCPmKqjRRtjvfBSsL",
+          "data": 1792677953846
+        }
+      ],
       "criadoEm": 1792675710470,
-      "modificadoEm": 1792675710470
+      "modificadoEm": 1792677953846
     },
     {
       "id": "1792663178491",
