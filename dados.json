@@ -21,11 +21,15 @@
         {
           "texto": "necessario abrir chamado para resetar o autenticador",
           "data": 1792623219568
+        },
+        {
+          "texto": "email entrando normalmente, passado para o Lucas para testes, aguradando retorno",
+          "data": 1792675007166
         }
       ],
       "arquivado": false,
       "criadoEm": 1792617170560,
-      "modificadoEm": 1792623219568
+      "modificadoEm": 1792675007166
     },
     {
       "id": "1792590866769",
