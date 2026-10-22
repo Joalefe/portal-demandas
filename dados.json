@@ -273,9 +273,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "chamdo aberto",
+          "data": 1792675744594
+        }
+      ],
       "criadoEm": 1792656126132,
-      "modificadoEm": 1792656126132
+      "modificadoEm": 1792675744594
     },
     {
       "id": "1792607555380",
