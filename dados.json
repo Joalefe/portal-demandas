@@ -21,6 +21,28 @@
       "modificadoEm": 1792677297284
     },
     {
+      "id": "1792617170560",
+      "titulo": "Email Cartao pedindo codigo de confirmação de 2 fatores",
+      "mensagem": "ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codigo\n",
+      "cor": "postit-yellow",
+      "lidosPor": [
+        "João Infomático"
+      ],
+      "respostas": [
+        {
+          "texto": "necessario abrir chamado para resetar o autenticador",
+          "data": 1792623219568
+        },
+        {
+          "texto": "email entrando normalmente, passado para o Lucas para testes, aguradando retorno",
+          "data": 1792675007166
+        }
+      ],
+      "arquivado": false,
+      "criadoEm": 1792617170560,
+      "modificadoEm": 1792675007166
+    },
+    {
       "id": "1792590866769",
       "titulo": "Devolução de toner",
       "mensagem": "necessario fazer uma nota para cada suprimento devolvido. (orientação da matriz) ",
@@ -266,10 +288,14 @@
         {
           "texto": "chamdo aberto",
           "data": 1792675744594
+        },
+        {
+          "texto": "Email enviado para tributario para sanar problema das nf",
+          "data": 1792677902494
         }
       ],
       "criadoEm": 1792656126132,
-      "modificadoEm": 1792675744594
+      "modificadoEm": 1792677902494
     },
     {
       "id": "1792607555380",
