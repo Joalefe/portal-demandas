@@ -524,6 +524,20 @@
   ],
   "plantao": [
     {
+      "id": "1792628491181",
+      "titulo": "21/10/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (21/10/2026) ===\n\n📌 Avisos Criados (4):\n- [Email Cartao pedindo codigo de confirmação de 2 fatores]: ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codig...\n- [Devolução de toner]: necessario fazer uma nota para cada suprimento devolvido. (orientação da matriz)...\n- [SNFBI002]: SNFBI002: responsável pela emissão das NF’s Manuais (SRMOU022 e SASOU045)...\n- [Matriz rodando bal20]: sempre conferir, porque matriz pode ter rodado ao bal20, subido as notas e sinte...\n\n📋 Demandas Modificadas/Concluídas (13):\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [DEMANDA] RUB Empacotador Lucas (Status: em_andamento)\n- [DEMANDA] gerencial nao funciona  (Status: pendente)\n- [DEMANDA] encontrar foto condutor (desaparecido) (Status: concluido)\n- [Chamados] Rub 13 quebrado (Status: em_andamento)\n- [DEMANDA] notas NFE com erro (Status: concluido)\n- [DEMANDA] login Rosângela (Status: em_andamento)\n- [Chamados] requerimento de toner (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Chamado Julia Ellen (Status: em_andamento)\n- [Chamados] caixa empresa (Status: concluido)\n- [Chamados] Victor sem acessos (Status: em_andamento)\n- [Chamados] Balança piso com problema (Status: concluido)\n",
+      "comentarioExtra": "Missões diarias concluidas, rub 13 no nome do Jô *desaparecido*",
+      "descricao": "Acima de tudo, um plantao tranquilo",
+      "rubsDesvinculados": "YES",
+      "rubsBloqueados": "Por hora nenhum bloqueado, somente um RUB desaparecido RUB 13 - Joalefe Ferraz Ferreira ",
+      "etiquetasRibbon": "YES",
+      "responsavel": "Joao Pedro",
+      "modificadoEm": 1792628491181,
+      "horaRegistro": "21:17",
+      "criadoEm": 1792628491181
+    },
+    {
       "id": "1792623150633",
       "titulo": "21/10/2026 - Manhã",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (21/10/2026) ===\n\n📌 Avisos Criados (4):\n- [Email Cartao pedindo codigo de confirmação de 2 fatores]: ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codigo\n\n- [Devolução de toner]: necessario fazer uma nota para cada suprimento devolvido. (orientação da matriz) \n- [SNFBI002]: SNFBI002: responsável pela emissão das NF’s Manuais (SRMOU022 e SASOU045)\n- [Matriz rodando bal20]: sempre conferir, porque matriz pode ter rodado ao bal20, subido as notas e sintetizado as biblias. \n\n📋 Demandas Modificadas/Concluídas (12):\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [DEMANDA] RUB Empacotador Lucas (Status: em_andamento)\n- [DEMANDA] gerencial nao funciona  (Status: pendente)\n- [DEMANDA] encontrar foto condutor (desaparecido) (Status: concluido)\n- [Chamados] Rub 13 quebrado (Status: em_andamento)\n- [DEMANDA] notas NFE com erro (Status: pendente)\n- [DEMANDA] login Rosângela (Status: em_andamento)\n- [Chamados] requerimento de toner (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] caixa empresa (Status: concluido)\n- [Chamados] Victor sem acessos (Status: em_andamento)\n- [Chamados] Balança piso com problema (Status: concluido)\n",
