@@ -49,11 +49,15 @@
         {
           "texto": "email entrando normalmente, passado para o Lucas para testes, aguradando retorno",
           "data": 1792675007166
+        },
+        {
+          "texto": "problema interno.",
+          "data": 1792685937330
         }
       ],
       "arquivado": false,
       "criadoEm": 1792617170560,
-      "modificadoEm": 1792675007166
+      "modificadoEm": 1792685937330
     },
     {
       "id": "1792590866769",
