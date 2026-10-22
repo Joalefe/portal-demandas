@@ -245,6 +245,17 @@
   ],
   "demandas": [
     {
+      "id": "1792675710470",
+      "titulo": "NFEs constando status 6009 e status 100",
+      "descricao1": "NFEs 62605 e 62660 constam no relatorio com erro 6009, porem as mesmas estao com status 100 no triangulos",
+      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285003453",
+      "categoria": "Chamados",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1792675710470,
+      "modificadoEm": 1792675710470
+    },
+    {
       "id": "1792663178491",
       "titulo": "calendario cafeteria",
       "descricao1": "mes que vem",
