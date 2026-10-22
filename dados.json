@@ -57,11 +57,15 @@
         {
           "texto": "problema interno.",
           "data": 1792685937330
+        },
+        {
+          "texto": "📋 Transformado em demanda",
+          "data": 1792700990880
         }
       ],
-      "arquivado": false,
+      "arquivado": true,
       "criadoEm": 1792617170560,
-      "modificadoEm": 1792685947866
+      "modificadoEm": 1792700990880
     },
     {
       "id": "1792590866769",
@@ -285,6 +289,17 @@
     }
   ],
   "demandas": [
+    {
+      "id": "1792700990877",
+      "titulo": "Email Cartao pedindo codigo de confirmação de 2 fatores",
+      "descricao1": "ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codigo\n",
+      "descricao2": "Respostas do aviso:\n- necessario abrir chamado para resetar o autenticador\n- email entrando normalmente, passado para o Lucas para testes, aguradando retorno\n- problema interno.",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1792700990877,
+      "modificadoEm": 1792700990877
+    },
     {
       "id": "1792686083624",
       "titulo": " férias",
