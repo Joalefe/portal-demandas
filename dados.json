@@ -292,13 +292,13 @@
     {
       "id": "1792700990877",
       "titulo": "Email Cartao pedindo codigo de confirmação de 2 fatores",
-      "descricao1": "ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codigo\n",
-      "descricao2": "Respostas do aviso:\n- necessario abrir chamado para resetar o autenticador\n- email entrando normalmente, passado para o Lucas para testes, aguradando retorno\n- problema interno.",
-      "categoria": "DEMANDA",
+      "descricao1": "ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codigo, Lucas avisou que o suporte orientou abrir chamado\n",
+      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285007842",
+      "categoria": "Chamados",
       "status": "pendente",
       "respostas": [],
       "criadoEm": 1792700990877,
-      "modificadoEm": 1792700990877
+      "modificadoEm": 1792701247131
     },
     {
       "id": "1792686083624",
