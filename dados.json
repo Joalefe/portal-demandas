@@ -11,17 +11,6 @@
   ],
   "avisos": [
     {
-      "id": "1792656586012",
-      "titulo": "Gabriel desbloqueado",
-      "mensagem": ".",
-      "cor": "postit-yellow",
-      "lidosPor": [],
-      "respostas": [],
-      "arquivado": false,
-      "criadoEm": 1792656586012,
-      "modificadoEm": 1792656586012
-    },
-    {
       "id": "1792617170560",
       "titulo": "Email Cartao pedindo codigo de confirmação de 2 fatores",
       "mensagem": "ao entrar no email, Lucas foi realizar o login e ao entrar esta pedindo um codigo\n",
