@@ -684,6 +684,20 @@
   ],
   "plantao": [
     {
+      "id": "1792686122447",
+      "titulo": "22/10/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (22/10/2026) ===\n\n📌 Avisos Criados (2):\n- [radio (anuncios que ainda nao foram)]: 26287 RF.LINGUICA TOSC.NABRASA PERDIGAO 78,90\n51010 RF.BATATA PRE FRITA MAIS BATATA 19,80\n17406 RF.PIZZA 4 QUEIJOS SADIA 19,47\n37752 RF.BOV.CONTRA FILE FRIBOI RESF. 57,90\n22113 RF.LINGUICA TOSCANA SADIA CONG. 69,50 \n\n\n13589 LIMP.UAU PERF.BRISA FRES,L1,8P1,44L 12,90 \n52203 VINAGRE VITALIA ALCOOL 1,39\n17893 CEREAL MAT.NESTLE SNOW L800G P700G 12,98\n48105 GOMA MANDIOCA DA TERRINHA 3,99\n92518 SALG.LUCKY FOFURA CEBOLA 1,59\n66830 AGUA M.CLARISSIMA PET 0,89\n3077 SUCO MAGUARY SELECAO UVA E MAC PET 9,90 \n66455 REF.COCA COLA S/ACUCAR PET 9,90\n7526 VINHO CHALISE BCO SECO 13,90 \n86733 CERVEJA HEINEKEN SLEEK LATA 4,79 \n83285 PAPEL HIG.DAMA FDAQ 30M L12P11 13,89 \n40711 DET.LIQ.LIMPOL COCO 1,89 \n38604 AGUA SANITARIA SUPREMA 3,59 \n- [Gerabole Descontinuado]: Novo programa GERABOLETO\nEMAIL: https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWxbwwMHzPDFZnwrwHmxBXjWT?compose=GTvVlcSBnptrMZbggQGXqMCtSsrVVwqXjMFlQdjHLhntwSjRcxJSwbcCWmfvsFHclVMPGShstVTTq\n\n📋 Demandas Modificadas/Concluídas (12):\n- [DEMANDA]  férias (Status: pendente)\n- [DEMANDA] NOVA PASTA CLIEN (Status: pendente)\n- [DEMANDA] Usuário janara  (Status: pendente)\n- [DEMANDA] Tv frios  (Status: pendente)\n- [Chamados] NFEs constando status 6009 e status 100 (Status: pendente)\n- [DEMANDA] calendario cafeteria (Status: pendente)\n- [DEMANDA] notas NFE com erro (Status: pendente)\n- [DEMANDA] notas NFE com erro (Status: concluido)\n- [DEMANDA] Rub do Ruan sumido  (Status: concluido)\n- [DEMANDA] login Rosângela (Status: em_andamento)\n- [Chamados] Chamado Julia Ellen (Status: concluido)\n- [Chamados] Rub 29 (Status: pendente)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "joalis",
+      "modificadoEm": 1792686122447,
+      "horaRegistro": "13:21",
+      "criadoEm": 1792686122447
+    },
+    {
       "id": "auto_21102026_Tarde",
       "titulo": "21/10/2026 - Tarde",
       "resumoAutomatico": "N/A",
