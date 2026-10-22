@@ -242,6 +242,17 @@
   ],
   "demandas": [
     {
+      "id": "1792656126132",
+      "titulo": "notas NFE com erro",
+      "descricao1": "62605 \t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n\n62660 6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1792656126132,
+      "modificadoEm": 1792656126132
+    },
+    {
       "id": "1792607555380",
       "titulo": "Att planilha Dani ",
       "descricao1": "Relatorio > Portal ADM> Razão Despesas\nFOCO PRINCIPAL: ROR\nIDEIAS: Portal (+1)\nLink portal em teste: https://srvsave675.br-atacadao.corp/ROR/\n",
