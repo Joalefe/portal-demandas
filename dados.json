@@ -339,10 +339,10 @@
       "descricao1": "NFEs 62605 e 62660 constam no relatorio com erro 6009, porem as mesmas estao com status 100 no triangulos",
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285003453",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [],
       "criadoEm": 1792675710470,
-      "modificadoEm": 1792684595983
+      "modificadoEm": 1792686175740
     },
     {
       "id": "1792663178491",
