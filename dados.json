@@ -806,6 +806,20 @@
   ],
   "plantao": [
     {
+      "id": "1792777089353",
+      "titulo": "23/10/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (23/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Email ativação por script excel]: cyber security \nhttps://mail.google.com/mail/u/0/#inbox/FMfcgzQhWxbxZPHLJVQCWgJZKxQsWZML\n\n📋 Demandas Modificadas/Concluídas (6):\n- [DEMANDA] verificar peso da balança 17  (Status: pendente)\n- [DEMANDA] Email cartão (Status: concluido)\n- [Chamados] Email Cartao pedindo codigo de confirmação de 2 fatores (Status: concluido)\n- [Chamados] Usuário janara  (Status: pendente)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [Chamados] Victor sem acessos (Status: concluido)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1792777089353,
+      "horaRegistro": "14:37",
+      "criadoEm": 1792777089353
+    },
+    {
       "id": "auto_23102026_Manhã",
       "titulo": "23/10/2026 - Manhã",
       "resumoAutomatico": "N/A",
