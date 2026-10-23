@@ -18,10 +18,15 @@
         "Joalefe Performático",
         "João Infomático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "Segurança da informação ressaltou para que nao ocorra mais, assunto encerrado.",
+          "data": 1792768933460
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1792754450343,
-      "modificadoEm": 1792754473902
+      "modificadoEm": 1792768933460
     },
     {
       "id": "1792717610445",
