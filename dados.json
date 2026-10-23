@@ -386,7 +386,7 @@
       "descricao1": "Chamado re-aberto para reset da autenticação de 2 fatores\n",
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285008949",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "avisar o lucas que é necessário acionar o suporte do cartão",
@@ -398,7 +398,7 @@
         }
       ],
       "criadoEm": 1792700990877,
-      "modificadoEm": 1792712884773
+      "modificadoEm": 1792769170239
     },
     {
       "id": "1792686083624",
