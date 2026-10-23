@@ -46,11 +46,13 @@
       "titulo": "Email sobre ecommerce",
       "mensagem": "Procedimento encaminhado para o ecommerce\n\nhttps://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWxbxZJcztBWkHZmFLWxHqjWR",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1792701844184,
-      "modificadoEm": 1792701844184
+      "modificadoEm": 1792748550480
     },
     {
       "id": "1792685418658",
