@@ -733,14 +733,14 @@
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102185001957",
       "descricao2": "",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "Resposta do chamado: \"Transferimos o usuário informado para a filial correta e adicionamos ele como gerente comercial da filial em nosso sistema. \"",
           "data": 1792624415159
         }
       ],
-      "modificadoEm": 1792624415159
+      "modificadoEm": 1792769429847
     },
     {
       "id": "1792487832768",
