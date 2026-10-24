@@ -918,6 +918,20 @@
   ],
   "plantao": [
     {
+      "id": "1792867685453",
+      "titulo": "24/10/2026 - Intermediário",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Tagsell automatico (3 preço) (Status: pendente)\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: pendente)\n",
+      "comentarioExtra": "portal da Dani, indo de vento em poupa. Planilha enviada ajudou bastante, mas calculos do portal ainda estao fora do desejado. Em breve mais progressos.",
+      "descricao": "Tranquilo no mamilo 🤙",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joao Pedro 🤙",
+      "modificadoEm": 1792867685453,
+      "horaRegistro": "15:45",
+      "criadoEm": 1792867685453
+    },
+    {
       "id": "1792855050444",
       "titulo": "24/10/2026 - Manhã",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: pendente)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: pendente)\n",
