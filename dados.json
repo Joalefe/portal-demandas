@@ -14,11 +14,13 @@
       "titulo": "Planilha de operadoras",
       "mensagem": "Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1792834223495,
-      "modificadoEm": 1792834223495
+      "modificadoEm": 1792839191802
     },
     {
       "id": "1792796799292",
