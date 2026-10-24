@@ -897,6 +897,20 @@
   ],
   "plantao": [
     {
+      "id": "1792855050444",
+      "titulo": "24/10/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: pendente)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: pendente)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1792855050444,
+      "horaRegistro": "12:17",
+      "criadoEm": 1792855050444
+    },
+    {
       "id": "auto_23102026_Tarde",
       "titulo": "23/10/2026 - Tarde",
       "resumoAutomatico": "N/A",
