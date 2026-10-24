@@ -840,6 +840,20 @@
   ],
   "plantao": [
     {
+      "id": "1792801989805",
+      "titulo": "23/10/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (23/10/2026) ===\n\n📌 Avisos Criados (2):\n- [Tagseel]: https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWxdHlFNgRgNgNtbnCfwVbJvf\n- [Email ativação por script excel]: cyber security \nhttps://mail.google.com/mail/u/0/#inbox/FMfcgzQhWxbxZPHLJVQCWgJZKxQsWZML\n\n📋 Demandas Modificadas/Concluídas (8):\n- [DEMANDA] pc no almox (Status: pendente)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA] verificar peso da balança 17  (Status: pendente)\n- [DEMANDA] Email cartão (Status: concluido)\n- [Chamados] Email Cartao pedindo codigo de confirmação de 2 fatores (Status: concluido)\n- [Chamados] Usuário janara  (Status: pendente)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [Chamados] Victor sem acessos (Status: concluido)\n",
+      "comentarioExtra": "só a planilha da dani mesmo pra passar pra ela",
+      "descricao": "boa abertura!",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "nenhum até o momento",
+      "etiquetasRibbon": "ok",
+      "responsavel": "joalis",
+      "modificadoEm": 1792801989805,
+      "horaRegistro": "21:32",
+      "criadoEm": 1792801989805
+    },
+    {
       "id": "1792782056273",
       "titulo": "23/10/2026 - Intermediário",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (23/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Email ativação por script excel]: cyber security \nhttps://mail.google.com/mail/u/0/#inbox/FMfcgzQhWxbxZPHLJVQCWgJZKxQsWZML\n\n📋 Demandas Modificadas/Concluídas (6):\n- [DEMANDA] verificar peso da balança 17  (Status: pendente)\n- [DEMANDA] Email cartão (Status: concluido)\n- [Chamados] Email Cartao pedindo codigo de confirmação de 2 fatores (Status: concluido)\n- [Chamados] Usuário janara  (Status: pendente)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [Chamados] Victor sem acessos (Status: concluido)\n",
