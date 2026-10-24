@@ -840,6 +840,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_23102026_Tarde",
+      "titulo": "23/10/2026 - Tarde",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Tarde (Prazo limite das 22:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "22:00",
+      "sistemaGerou": true,
+      "criadoEm": 1792803611252
+    },
+    {
       "id": "1792801989805",
       "titulo": "23/10/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (23/10/2026) ===\n\n📌 Avisos Criados (2):\n- [Tagseel]: https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWxdHlFNgRgNgNtbnCfwVbJvf\n- [Email ativação por script excel]: cyber security \nhttps://mail.google.com/mail/u/0/#inbox/FMfcgzQhWxbxZPHLJVQCWgJZKxQsWZML\n\n📋 Demandas Modificadas/Concluídas (8):\n- [DEMANDA] pc no almox (Status: pendente)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA] verificar peso da balança 17  (Status: pendente)\n- [DEMANDA] Email cartão (Status: concluido)\n- [Chamados] Email Cartao pedindo codigo de confirmação de 2 fatores (Status: concluido)\n- [Chamados] Usuário janara  (Status: pendente)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [Chamados] Victor sem acessos (Status: concluido)\n",
@@ -878,7 +891,7 @@
       "etiquetasRibbon": "N/A",
       "horaRegistro": "16:00",
       "sistemaGerou": true,
-      "criadoEm": 1792782008278
+      "criadoEm": 1792782015244
     },
     {
       "id": "1792777089353",
@@ -905,7 +918,7 @@
       "etiquetasRibbon": "N/A",
       "horaRegistro": "14:00",
       "sistemaGerou": true,
-      "criadoEm": 1792775197930
+      "criadoEm": 1792774870489
     },
     {
       "id": "1792716331870",
