@@ -27,11 +27,13 @@
       "titulo": "Tagseel",
       "mensagem": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWxdHlFNgRgNgNtbnCfwVbJvf",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1792796799292,
-      "modificadoEm": 1792796799292
+      "modificadoEm": 1792861577436
     },
     {
       "id": "1792754450343",
