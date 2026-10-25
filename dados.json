@@ -15,10 +15,15 @@
       "mensagem": "Verificar com o victor pra ele dar uma olhada no usuário do fabio pelo IAM dele\n",
       "cor": "postit-yellow",
       "lidosPor": [],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "caso não esteja, abrir chamado",
+          "data": 1792935525575
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1792935476879,
-      "modificadoEm": 1792935476879
+      "modificadoEm": 1792935525575
     },
     {
       "id": "1792834223495",
