@@ -940,6 +940,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_25102026_Manhã",
+      "titulo": "25/10/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1792953891534
+    },
+    {
       "id": "1792888327461",
       "titulo": "24/10/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Tagsell automatico (3 preço) (Status: pendente)\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: em_andamento)\n",
