@@ -922,6 +922,20 @@
   ],
   "plantao": [
     {
+      "id": "1792888327461",
+      "titulo": "24/10/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Tagsell automatico (3 preço) (Status: pendente)\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: em_andamento)\n",
+      "comentarioExtra": "o teclado do pc do rm ta estranho, arrumei duas vezes e na terceira não parou mais. \n",
+      "descricao": "no mais é isso",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "nenhum",
+      "etiquetasRibbon": "ok!",
+      "responsavel": "joalis",
+      "modificadoEm": 1792888327461,
+      "horaRegistro": "21:27",
+      "criadoEm": 1792888327461
+    },
+    {
       "id": "1792867685453",
       "titulo": "24/10/2026 - Intermediário",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Tagsell automatico (3 preço) (Status: pendente)\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: pendente)\n",
