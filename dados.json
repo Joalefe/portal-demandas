@@ -415,9 +415,14 @@
       "descricao2": "toners requeridos: konica - preto, ciano, magenta e amarelo",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "rapazes, não consigo achar a possilga do link no portal tagsell",
+          "data": 1792954768099
+        }
+      ],
       "criadoEm": 1792954373537,
-      "modificadoEm": 1792954373537
+      "modificadoEm": 1792954768099
     },
     {
       "id": "1792861569075",
