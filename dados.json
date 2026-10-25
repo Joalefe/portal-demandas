@@ -970,6 +970,20 @@
   ],
   "plantao": [
     {
+      "id": "1792962708586",
+      "titulo": "25/10/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (25/10/2026) ===\n\n📌 Avisos Criados (2):\n- [Testar portal tagsell]: deixo no drive o portal com instruções, favor testar com arquivo do dia atual, se estiver funcionando, infromar por aqui mesmo\n\nhttps://drive.google.com/drive/folders/1IneNEppE3xCfh54ApT2DSgtwkI9idmBY\n\n\n- [Usuário fabio IAM]: Verificar com o victor pra ele dar uma olhada no usuário do fabio pelo IAM dele\n\n\n📋 Demandas Modificadas/Concluídas (4):\n- [Chamados] Requerimento toner MS812 (Status: pendente)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Limpeza PCs (Status: concluido)\n- [DEMANDA] verificar peso da balança 17  (Status: concluido)\n",
+      "comentarioExtra": "opa! não precisa se preocupar com checklist por hoje. ",
+      "descricao": "ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ",
+      "rubsDesvinculados": "OK ATUALIZAR O CLIENT NFE ",
+      "rubsBloqueados": "NENHUM ATUALIZAR O CLIENT NFE ",
+      "etiquetasRibbon": "OK ATUALIZAR O CLIENT NFE ",
+      "responsavel": "joalis",
+      "modificadoEm": 1792962708586,
+      "horaRegistro": "18:10",
+      "criadoEm": 1792962708586
+    },
+    {
       "id": "auto_25102026_Intermediário",
       "titulo": "25/10/2026 - Intermediário",
       "resumoAutomatico": "N/A",
