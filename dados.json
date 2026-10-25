@@ -10,6 +10,17 @@
   ],
   "avisos": [
     {
+      "id": "1792935476879",
+      "titulo": "Usuário fabio IAM",
+      "mensagem": "Verificar com o victor pra ele dar uma olhada no usuário do fabio pelo IAM dele\n",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1792935476879,
+      "modificadoEm": 1792935476879
+    },
+    {
       "id": "1792834223495",
       "titulo": "Planilha de operadoras",
       "mensagem": "Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.",
