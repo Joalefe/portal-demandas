@@ -918,7 +918,13 @@
       "descricao2": "precisamos verficar com empresas alternativas para consert da maquina",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": []
+      "respostas": [
+        {
+          "texto": "Enviado 2º email para zhaz solicitando o reenvio da maquina com dfeito q nao foi aprovado",
+          "data": 1793032305434
+        }
+      ],
+      "modificadoEm": 1793032305434
     },
     {
       "id": "1792493737390",
