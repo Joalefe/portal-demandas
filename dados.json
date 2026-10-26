@@ -461,7 +461,7 @@
       "descricao1": "Protocolo 20261025-7429663",
       "descricao2": "Não consigo ahcar a disgraça do link",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [
         {
           "texto": "261025-000009 dá pra olhar por esse numero de incidente aqui :D",
@@ -469,7 +469,7 @@
         }
       ],
       "criadoEm": 1792955465524,
-      "modificadoEm": 1792955635643
+      "modificadoEm": 1793032387219
     },
     {
       "id": "1792954373537",
