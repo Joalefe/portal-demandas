@@ -14,7 +14,9 @@
       "titulo": "RUB 13 PENDENTE DE DEVOLUÇÃO",
       "mensagem": "Usuario Silvio Cesar\n",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [
         {
           "texto": "BLOQUEADO, 7 dias",
@@ -23,7 +25,7 @@
       ],
       "arquivado": false,
       "criadoEm": 1793006031853,
-      "modificadoEm": 1793012218269
+      "modificadoEm": 1793012470660
     },
     {
       "id": "1792956147765",
