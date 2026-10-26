@@ -1021,6 +1021,20 @@
   ],
   "plantao": [
     {
+      "id": "1793034193363",
+      "titulo": "26/10/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (26/10/2026) ===\n\n📌 Avisos Criados (1):\n- [RUB 13 PENDENTE DE DEVOLUÇÃO]: Usuario Silvio Cesar\n\n\n📋 Demandas Modificadas/Concluídas (8):\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento toner MS812 (Status: em_andamento)\n- [DEMANDA] Email Prevenção (Status: concluido)\n- [DEMANDA] NOVA PASTA CLIEN (Status: concluido)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [Chamados] Rub 13 quebrado (Status: concluido)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquinas quimadas (Status: pendente)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "joao pedro",
+      "modificadoEm": 1793034193363,
+      "horaRegistro": "14:02",
+      "criadoEm": 1793034193363
+    },
+    {
       "id": "auto_26102026_Manhã",
       "titulo": "26/10/2026 - Manhã",
       "resumoAutomatico": "N/A",
