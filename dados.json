@@ -596,7 +596,7 @@
       "descricao1": "Na SEGUNDA-FEIRA, realizar troca da pasta client NFE, conforme email Clayton",
       "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWxbxGVMNdBTMhXBRbzHWkPTk",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "feito",
@@ -604,7 +604,7 @@
         }
       ],
       "criadoEm": 1792683509883,
-      "modificadoEm": 1793005204116
+      "modificadoEm": 1793005206589
     },
     {
       "id": "1792681698786",
