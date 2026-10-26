@@ -28,10 +28,15 @@
       "lidosPor": [
         "João Infomático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "portal funcionando, porém alguns pontos a serem observados e arrumados:  ABA OFERTAO: Pdf saindo ainda com as infos \"MARCA, DESCRIÇÃO Secundaria e descrição secundaria 2\" a mostra.  ABA TERCEIRO PREÇO: o preço de \"ACIMA DE 3 UNIDADES\" esta igual o preço do \"VAREJO\"",
+          "data": 1793008076369
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1792956147765,
-      "modificadoEm": 1793007921493
+      "modificadoEm": 1793008076369
     },
     {
       "id": "1792935476879",
