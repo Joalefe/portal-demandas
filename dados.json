@@ -1021,6 +1021,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_26102026_Manhã",
+      "titulo": "26/10/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793034021617
+    },
+    {
       "id": "1792962708586",
       "titulo": "25/10/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (25/10/2026) ===\n\n📌 Avisos Criados (2):\n- [Testar portal tagsell]: deixo no drive o portal com instruções, favor testar com arquivo do dia atual, se estiver funcionando, infromar por aqui mesmo\n\nhttps://drive.google.com/drive/folders/1IneNEppE3xCfh54ApT2DSgtwkI9idmBY\n\n\n- [Usuário fabio IAM]: Verificar com o victor pra ele dar uma olhada no usuário do fabio pelo IAM dele\n\n\n📋 Demandas Modificadas/Concluídas (4):\n- [Chamados] Requerimento toner MS812 (Status: pendente)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Limpeza PCs (Status: concluido)\n- [DEMANDA] verificar peso da balança 17  (Status: concluido)\n",
