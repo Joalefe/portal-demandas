@@ -1056,6 +1056,20 @@
   ],
   "plantao": [
     {
+      "id": "1793062446271",
+      "titulo": "26/10/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (26/10/2026) ===\n\n📌 Avisos Criados (1):\n- [RUB 13 PENDENTE DE DEVOLUÇÃO]: Usuario Silvio Cesar\n\n\n📋 Demandas Modificadas/Concluídas (12):\n- [Chamados] Email suspeito da daniela (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: em_andamento)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento toner MS812 (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Email Prevenção (Status: concluido)\n- [DEMANDA] NOVA PASTA CLIEN (Status: concluido)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [Chamados] Rub 13 quebrado (Status: concluido)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquinas quimadas (Status: pendente)\n",
+      "comentarioExtra": "Bom dia Joalis!\nHoje não tivemos nada de novidade!",
+      "descricao": "ok!",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "ok",
+      "etiquetasRibbon": "ok!",
+      "responsavel": "joalis",
+      "modificadoEm": 1793062446271,
+      "horaRegistro": "21:52",
+      "criadoEm": 1793062446271
+    },
+    {
       "id": "auto_26102026_Intermediário",
       "titulo": "26/10/2026 - Intermediário",
       "resumoAutomatico": "N/A",
