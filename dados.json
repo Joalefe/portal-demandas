@@ -10,6 +10,17 @@
   ],
   "avisos": [
     {
+      "id": "1793094763661",
+      "titulo": "Portais",
+      "mensagem": "Vamos mandar para a pasta \"morto\" os portais que nao estao sendo usados, vamos excluir os que são testes.",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1793094763661,
+      "modificadoEm": 1793094763661
+    },
+    {
       "id": "1793094508457",
       "titulo": "Portal Recargas",
       "mensagem": "A forma de contagem da meta esta errada. ",
