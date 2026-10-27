@@ -14,7 +14,9 @@
       "titulo": "Rub 28 - richard não apareceu",
       "mensagem": "acho q é bloq",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [
         {
           "texto": "localizei no setor quando cheguei, nao irei bloq.",
@@ -23,7 +25,7 @@
       ],
       "arquivado": false,
       "criadoEm": 1793063078457,
-      "modificadoEm": 1793094305763
+      "modificadoEm": 1793094306899
     },
     {
       "id": "1793006031853",
