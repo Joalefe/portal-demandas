@@ -1107,6 +1107,20 @@
   ],
   "plantao": [
     {
+      "id": "1793123379187",
+      "titulo": "27/10/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (27/10/2026) ===\n\n📌 Avisos Criados (3):\n- [Portais]: Vamos mandar para a pasta \"morto\" os portais que nao estao sendo usados, vamos excluir os que são testes.\n- [Portal Recargas]: A forma de contagem da meta esta errada. \n- [rub samantha bloq. ]: manter bloq até dia 14/11 (10 dias)\n\n📋 Demandas Modificadas/Concluídas (0):\n- Nenhuma demanda modificada hoje.\n",
+      "comentarioExtra": "ok",
+      "descricao": "ok",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "joalis",
+      "modificadoEm": 1793123379187,
+      "horaRegistro": "14:49",
+      "criadoEm": 1793123379187
+    },
+    {
       "id": "auto_27102026_Manhã",
       "titulo": "27/10/2026 - Manhã",
       "resumoAutomatico": "N/A",
