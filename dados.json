@@ -14,11 +14,13 @@
       "titulo": "Portais",
       "mensagem": "Vamos mandar para a pasta \"morto\" os portais que nao estao sendo usados, vamos excluir os que são testes.",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Kaell Pragmático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1793094763661,
-      "modificadoEm": 1793094763661
+      "modificadoEm": 1793123120290
     },
     {
       "id": "1793094508457",
