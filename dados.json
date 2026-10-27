@@ -1105,6 +1105,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_27102026_Manhã",
+      "titulo": "27/10/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793120425527
+    },
+    {
       "id": "1793062446271",
       "titulo": "26/10/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (26/10/2026) ===\n\n📌 Avisos Criados (1):\n- [RUB 13 PENDENTE DE DEVOLUÇÃO]: Usuario Silvio Cesar\n\n\n📋 Demandas Modificadas/Concluídas (12):\n- [Chamados] Email suspeito da daniela (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: em_andamento)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento toner MS812 (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Email Prevenção (Status: concluido)\n- [DEMANDA] NOVA PASTA CLIEN (Status: concluido)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [Chamados] Rub 13 quebrado (Status: concluido)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquinas quimadas (Status: pendente)\n",
