@@ -497,6 +497,17 @@
   ],
   "demandas": [
     {
+      "id": "1793135450549",
+      "titulo": "Pre vendas (para kaell)",
+      "descricao1": "refazer pre-vendas formato portal \n",
+      "descricao2": " criar interface igual da planilha igual a da planilha. \n- colocar smg11 para puxar informações \n- colocar opção de cadastrar empresa e código de barra \n- colocar opção de não deixar que seja sobrescrito alguma informação, como quando duas pessoas estiverem cadastrando o código. \n- deixar em PHP  \n- colocar alguma forma de identificar quem esta usando a planilha \n- deixar um histórico de arquivos feitos e deixar opção na aba ADM de apagar os arquivos. \n- testar no caixa se os códigos e as contagens estão corretas. ",
+      "categoria": "DEMANDA",
+      "status": "em_andamento",
+      "respostas": [],
+      "criadoEm": 1793135450549,
+      "modificadoEm": 1793135450549
+    },
+    {
       "id": "1793048100590",
       "titulo": "Email suspeito da daniela",
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102685008772",
