@@ -560,9 +560,14 @@
       "descricao2": "ela recebeu um email dizendo que houve uma troca de senhas, mas a mesma desconhece",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "chamado dado como aceito",
+          "data": 1793225681971
+        }
+      ],
       "criadoEm": 1793048100590,
-      "modificadoEm": 1793048100590
+      "modificadoEm": 1793225681971
     },
     {
       "id": "1793042013038",
