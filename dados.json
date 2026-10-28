@@ -27,7 +27,9 @@
       "titulo": "Portal Recargas",
       "mensagem": "A forma de contagem da meta esta errada. ",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [
         {
           "texto": "feito",
@@ -36,7 +38,7 @@
       ],
       "arquivado": false,
       "criadoEm": 1793094508457,
-      "modificadoEm": 1793182847208
+      "modificadoEm": 1793182849806
     },
     {
       "id": "1793094335197",
