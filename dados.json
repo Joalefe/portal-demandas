@@ -822,7 +822,7 @@
       "descricao1": "62605 \t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n\n62660 6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)",
       "descricao2": "https://mail.google.com/mail/u/0/?ogbl#sent/QgrcJHrtsvFfhjfFGDNCPmKqjRRtjvfBSsL",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "chamdo aberto",
@@ -834,7 +834,7 @@
         }
       ],
       "criadoEm": 1792656126132,
-      "modificadoEm": 1792683611849
+      "modificadoEm": 1793189187156
     },
     {
       "id": "1792607555380",
