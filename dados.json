@@ -503,9 +503,14 @@
       "descricao2": "- criar interface igual a da planilha. \n- colocar smg11 para puxar informações \n- colocar opção de cadastrar empresa e código de barra \n- colocar opção de não deixar que seja sobrescrito alguma informação, como quando duas pessoas estiverem cadastrando o código. \n- deixar em PHP  \n- colocar alguma forma de identificar quem esta usando a planilha \n- deixar um histórico de arquivos feitos e deixar opção na aba ADM de apagar os arquivos. \n- testar no caixa se os códigos e as contagens estão corretas. ",
       "categoria": "DEMANDA",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "portal em andamento.",
+          "data": 1793147447737
+        }
+      ],
       "criadoEm": 1793135450549,
-      "modificadoEm": 1793135483149
+      "modificadoEm": 1793147447737
     },
     {
       "id": "1793048100590",
