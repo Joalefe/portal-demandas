@@ -672,9 +672,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "chamado aberto, ainda como novo",
+          "data": 1793210184442
+        }
+      ],
       "criadoEm": 1792854473977,
-      "modificadoEm": 1792855297029
+      "modificadoEm": 1793210184442
     },
     {
       "id": "1792854191618",
