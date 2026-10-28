@@ -581,9 +581,14 @@
       "descricao2": "chamado pra colocarem o Victor como SUP novo do Sérgio, assim conseguimos colocar o Sérgio no IAM",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "Chamado dado como novo",
+          "data": 1793225703019
+        }
+      ],
       "criadoEm": 1793042013038,
-      "modificadoEm": 1793042013038
+      "modificadoEm": 1793225703019
     },
     {
       "id": "1793032383123",
