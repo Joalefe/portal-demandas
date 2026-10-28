@@ -825,10 +825,14 @@
         {
           "texto": "Chamado aberto para inclusão da mesma no IAM da dani",
           "data": 1792702624510
+        },
+        {
+          "texto": "chamado dado como novo",
+          "data": 1793225728090
         }
       ],
       "criadoEm": 1792681698786,
-      "modificadoEm": 1793032399691
+      "modificadoEm": 1793225728090
     },
     {
       "id": "1792681577860",
