@@ -507,6 +507,17 @@
   ],
   "demandas": [
     {
+      "id": "1793189169709",
+      "titulo": "nfe com erros",
+      "descricao1": "aberto chamado",
+      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102885001846",
+      "categoria": "Chamados",
+      "status": "em_andamento",
+      "respostas": [],
+      "criadoEm": 1793189169709,
+      "modificadoEm": 1793189169709
+    },
+    {
       "id": "1793135450549",
       "titulo": "Pre vendas (para kaell)",
       "descricao1": "refazer pre-vendas formato portal \n",
