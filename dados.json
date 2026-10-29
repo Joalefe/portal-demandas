@@ -1197,6 +1197,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_29102026_Manhã",
+      "titulo": "29/10/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793293243001
+    },
+    {
       "id": "1793233060727",
       "titulo": "28/10/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (28/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (9):\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Email suspeito da daniela (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: em_andamento)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [DEMANDA] notas NFE com erro (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n",
