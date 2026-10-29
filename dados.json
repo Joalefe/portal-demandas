@@ -1197,6 +1197,20 @@
   ],
   "plantao": [
     {
+      "id": "1793233060727",
+      "titulo": "28/10/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (28/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (9):\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Email suspeito da daniela (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: em_andamento)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [DEMANDA] notas NFE com erro (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n",
+      "comentarioExtra": "eu e o portal da dani estamos ficando loucos juntos 😔✊",
+      "descricao": ".",
+      "rubsDesvinculados": "sim",
+      "rubsBloqueados": "samantha 27/10 ",
+      "etiquetasRibbon": "abastecidas",
+      "responsavel": "Joao Pedro 🤙",
+      "modificadoEm": 1793233060727,
+      "horaRegistro": "21:15",
+      "criadoEm": 1793233060727
+    },
+    {
       "id": "auto_28102026_Intermediário",
       "titulo": "28/10/2026 - Intermediário",
       "resumoAutomatico": "N/A",
