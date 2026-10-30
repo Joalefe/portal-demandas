@@ -55,11 +55,13 @@
       "titulo": "manoela bloq no rub",
       "mensagem": "devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10",
       "cor": "postit-blue",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1793353464365,
-      "modificadoEm": 1793353464365
+      "modificadoEm": 1793357925989
     },
     {
       "id": "1793353381997",
