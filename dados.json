@@ -757,7 +757,7 @@
       "descricao1": "inserir chave office no pc que esta no almox",
       "descricao2": ".",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [
         {
           "texto": "Chave: 8TDBX-FNXQ8-79GD3-KW6RF-K4TFP. Ainda nao colocada, pois Luara esta usando la desde cedo",
@@ -765,7 +765,7 @@
         }
       ],
       "criadoEm": 1792791010367,
-      "modificadoEm": 1793384411948
+      "modificadoEm": 1793384413870
     },
     {
       "id": "1792787963981",
