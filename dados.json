@@ -461,25 +461,6 @@
       "arquivado": true,
       "criadoEm": 1792531157719,
       "modificadoEm": 1792616102257
-    },
-    {
-      "id": "1792505930497",
-      "titulo": "Rub do Ruan sumido ",
-      "mensagem": "Procurar, mantê-lo bloqueado ",
-      "cor": "postit-green",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático"
-      ],
-      "arquivado": true,
-      "criadoEm": 1792505930497,
-      "respostas": [
-        {
-          "texto": "📋 Transformado em demanda",
-          "data": 1792528385048
-        }
-      ],
-      "modificadoEm": 1792528385048
     }
   ],
   "demandas": [
