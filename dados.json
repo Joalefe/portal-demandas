@@ -532,10 +532,14 @@
         {
           "texto": "Chamado dado como NOVO",
           "data": 1793225693058
+        },
+        {
+          "texto": "att: EM ANDAMENTO",
+          "data": 1793368571994
         }
       ],
       "criadoEm": 1793189169709,
-      "modificadoEm": 1793225693058
+      "modificadoEm": 1793368571994
     },
     {
       "id": "1793135450549",
