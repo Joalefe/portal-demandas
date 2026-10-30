@@ -14,11 +14,13 @@
       "titulo": "NF 62660  | 62605 ",
       "mensagem": "observar relatorio de nf amanha para ver se vao continuar chegando as nfs, pois o chamado foi solucionado e elas tao constando com status 155",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1793384837980,
-      "modificadoEm": 1793384837980
+      "modificadoEm": 1793384841316
     },
     {
       "id": "1793357596487",
