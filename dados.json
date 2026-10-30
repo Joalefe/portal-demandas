@@ -764,7 +764,7 @@
       "descricao1": "500800080\n\nNao consta no IDM, mas usuario ja existe",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "chamado aberto, ainda como novo",
@@ -772,7 +772,7 @@
         }
       ],
       "criadoEm": 1792854473977,
-      "modificadoEm": 1793210184442
+      "modificadoEm": 1793357180976
     },
     {
       "id": "1792854191618",
