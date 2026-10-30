@@ -534,7 +534,7 @@
       "descricao1": "PC ESQUERDO DO CADASTRO \nlogin: janara340987 \nsenha: ABC@@2026",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "email estoque configurado, na barra de favoritos tem tudo q ela vai usar, tagsell, rub, save.... so passar para a mesma",
@@ -542,7 +542,7 @@
         }
       ],
       "criadoEm": 1793356947735,
-      "modificadoEm": 1793395664873
+      "modificadoEm": 1793395857279
     },
     {
       "id": "1793189565019",
