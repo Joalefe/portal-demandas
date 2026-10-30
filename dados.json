@@ -1794,30 +1794,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1792515604148
-    },
-    {
-      "id": "1792455820596",
-      "titulo": "19/10/2026 - Tarde",
-      "descricao": "Procedimento via meet feito pela produção em relação ao erro do sitef dos PDV's empresa. Finalizado após geração e aprovação dos tokens.\n\nToner amarelo da Konica trocado por falta de tinta.",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "nenhum",
-      "etiquetasRibbon": "yes ",
-      "horaRegistro": "21:21",
-      "criadoEm": 1792455820596
-    },
-    {
-      "id": "auto_1792444313653_Intermediário",
-      "titulo": "19/10/2026 - Intermediário",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true
-    },
-    {
-      "id": "auto_1792444313653_Manhã",
-      "titulo": "19/10/2026 - Manhã",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true
     }
   ]
 }
