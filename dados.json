@@ -531,7 +531,7 @@
     {
       "id": "1793356947735",
       "titulo": "CONFIG PC PARA USO DA COLAB JANARA",
-      "descricao1": "PC ESQUERDO DO CADASTRO \njanara340987 \nABC@@2026",
+      "descricao1": "PC ESQUERDO DO CADASTRO \nlogin: janara340987 \nsenha: ABC@@2026",
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "em_andamento",
@@ -542,7 +542,7 @@
         }
       ],
       "criadoEm": 1793356947735,
-      "modificadoEm": 1793371610644
+      "modificadoEm": 1793395664873
     },
     {
       "id": "1793189565019",
