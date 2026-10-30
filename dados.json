@@ -447,7 +447,9 @@
       "mensagem": "Preencher programação de férias",
       "cor": "postit-yellow",
       "lidosPor": [
-        "João Infomático"
+        "João Infomático",
+        "Joalefe Performático",
+        "Kaell Pragmático"
       ],
       "respostas": [
         {
@@ -455,9 +457,9 @@
           "data": 1792686083629
         }
       ],
-      "arquivado": false,
+      "arquivado": true,
       "criadoEm": 1792534319595,
-      "modificadoEm": 1793395993732
+      "modificadoEm": 1793396029347
     }
   ],
   "demandas": [
