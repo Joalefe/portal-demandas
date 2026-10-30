@@ -1151,13 +1151,8 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [
-        {
-          "texto": "Enviado 2º email para zhaz solicitando o reenvio da maquina com dfeito q nao foi aprovado",
-          "data": 1793032305434
-        }
-      ],
-      "modificadoEm": 1793357339680
+      "respostas": [],
+      "modificadoEm": 1793384012552
     },
     {
       "id": "1792493737390",
