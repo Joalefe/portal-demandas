@@ -1178,8 +1178,8 @@
     {
       "id": "1792493802528",
       "titulo": "zhaz maquinas quimadas",
-      "descricao1": "uma maquina esta em manutenção, a outra temos que solicitar a devolução. ",
-      "descricao2": "precisamos verficar com empresas alternativas para consert da maquina",
+      "descricao1": "Situação: Aguardando importação das peças",
+      "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
       "respostas": [
@@ -1188,7 +1188,7 @@
           "data": 1793032305434
         }
       ],
-      "modificadoEm": 1793032305434
+      "modificadoEm": 1793357327288
     },
     {
       "id": "1792493737390",
