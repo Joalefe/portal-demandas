@@ -461,6 +461,25 @@
       "arquivado": true,
       "criadoEm": 1792531157719,
       "modificadoEm": 1792616102257
+    },
+    {
+      "id": "1792505930497",
+      "titulo": "Rub do Ruan sumido ",
+      "mensagem": "Procurar, mantê-lo bloqueado ",
+      "cor": "postit-green",
+      "lidosPor": [
+        "Kaell Pragmático",
+        "João Infomático"
+      ],
+      "arquivado": true,
+      "criadoEm": 1792505930497,
+      "respostas": [
+        {
+          "texto": "📋 Transformado em demanda",
+          "data": 1792528385048
+        }
+      ],
+      "modificadoEm": 1792528385048
     }
   ],
   "demandas": [
@@ -1210,6 +1229,19 @@
     }
   ],
   "plantao": [
+    {
+      "id": "auto_30102026_Manhã",
+      "titulo": "30/10/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793379654779
+    },
     {
       "id": "1793377359311",
       "titulo": "30/10/2026 - Manhã",
