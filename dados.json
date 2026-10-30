@@ -14,11 +14,13 @@
       "titulo": "SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)",
       "mensagem": "SENHA: CPD_675",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1793357596487,
-      "modificadoEm": 1793357596487
+      "modificadoEm": 1793357748289
     },
     {
       "id": "1793356547230",
