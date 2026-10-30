@@ -459,45 +459,6 @@
       "arquivado": true,
       "criadoEm": 1792534319595,
       "modificadoEm": 1792686083629
-    },
-    {
-      "id": "1792531157719",
-      "titulo": "Rub Ruan",
-      "mensagem": "Não devolvido/ perdido \n",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [
-        {
-          "texto": "Rub encontrado",
-          "data": 1792578742706
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1792531157719,
-      "modificadoEm": 1792616102257
-    },
-    {
-      "id": "1792505930497",
-      "titulo": "Rub do Ruan sumido ",
-      "mensagem": "Procurar, mantê-lo bloqueado ",
-      "cor": "postit-green",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático"
-      ],
-      "arquivado": true,
-      "criadoEm": 1792505930497,
-      "respostas": [
-        {
-          "texto": "📋 Transformado em demanda",
-          "data": 1792528385048
-        }
-      ],
-      "modificadoEm": 1792528385048
     }
   ],
   "demandas": [
