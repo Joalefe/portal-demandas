@@ -561,10 +561,14 @@
         {
           "texto": "att: EM ANDAMENTO",
           "data": 1793368571994
+        },
+        {
+          "texto": "chamado dado como \"solucionado\" NFs constando status 155 - cancelamento homologado fora de prazo",
+          "data": 1793384729163
         }
       ],
       "criadoEm": 1793189169709,
-      "modificadoEm": 1793368571994
+      "modificadoEm": 1793384729163
     },
     {
       "id": "1793135450549",
