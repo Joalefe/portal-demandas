@@ -967,7 +967,7 @@
       "descricao1": "precisamos encontrar uma maneira de consertar ou criar outra nova, ou implantar o portal ",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "Claude GOD! Gerencial operente, observar pelos proximos dias!",
@@ -975,7 +975,7 @@
         }
       ],
       "criadoEm": 1792591349730,
-      "modificadoEm": 1793383971534
+      "modificadoEm": 1793383973191
     },
     {
       "id": "1792589143072",
