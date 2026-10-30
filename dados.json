@@ -1202,6 +1202,20 @@
   ],
   "plantao": [
     {
+      "id": "1793320980108",
+      "titulo": "29/10/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (29/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (1):\n- [Chamados] maquina devolução (Status: em_andamento)\n",
+      "comentarioExtra": "portal pré venda 80% feito.\ncaixas de ribbon no cpd para decidirmos amanhã.",
+      "descricao": "caixinhas e webcam no pc do estoque por conta de meet.",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "nenhum",
+      "etiquetasRibbon": "ok!",
+      "responsavel": "joalis",
+      "modificadoEm": 1793320980108,
+      "horaRegistro": "21:42",
+      "criadoEm": 1793320980108
+    },
+    {
       "id": "auto_29102026_Intermediário",
       "titulo": "29/10/2026 - Intermediário",
       "resumoAutomatico": "N/A",
