@@ -492,11 +492,11 @@
       "titulo": "ABRIR CHAMADO PARA O BOTAO DO SELF",
       "descricao1": "https://stac.telematica.com.br/chamado/chamado-status?id=S9bmRWJuawFYSAQMnVuDww%3D%3D",
       "descricao2": "chamado aberto\n",
-      "categoria": "DEMANDA",
+      "categoria": "Chamados",
       "status": "pendente",
       "respostas": [],
       "criadoEm": 1793379184141,
-      "modificadoEm": 1793382409512
+      "modificadoEm": 1793383917096
     },
     {
       "id": "1793357302855",
