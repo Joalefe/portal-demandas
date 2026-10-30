@@ -506,9 +506,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "email estoque configurado, na barra de favoritos tem tudo q ela vai usar, tagsell, rub, save.... so passar para a mesma",
+          "data": 1793371610644
+        }
+      ],
       "criadoEm": 1793356947735,
-      "modificadoEm": 1793370702526
+      "modificadoEm": 1793371610644
     },
     {
       "id": "1793189565019",
