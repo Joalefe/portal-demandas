@@ -403,12 +403,13 @@
       "cor": "postit-yellow",
       "lidosPor": [
         "Joalefe Performático",
-        "Kaell Pragmático"
+        "Kaell Pragmático",
+        "João Infomático"
       ],
       "respostas": [],
-      "arquivado": false,
+      "arquivado": true,
       "criadoEm": 1792575886977,
-      "modificadoEm": 1793395994227
+      "modificadoEm": 1793396007267
     },
     {
       "id": "1792573319270",
