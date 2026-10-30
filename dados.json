@@ -871,7 +871,7 @@
       "descricao1": "Confirmar se está tudo ok (ad) \n\nhttps://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285007995",
       "descricao2": "",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "criado no portal adm. dar sequencia",
@@ -887,7 +887,7 @@
         }
       ],
       "criadoEm": 1792681698786,
-      "modificadoEm": 1793225728090
+      "modificadoEm": 1793356870842
     },
     {
       "id": "1792681577860",
