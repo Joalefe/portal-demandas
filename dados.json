@@ -621,10 +621,14 @@
         {
           "texto": "Chamado dado como novo",
           "data": 1793225703019
+        },
+        {
+          "texto": "500800080 - ABC@2026",
+          "data": 1793356408108
         }
       ],
       "criadoEm": 1793042013038,
-      "modificadoEm": 1793225703019
+      "modificadoEm": 1793356408108
     },
     {
       "id": "1793032383123",
