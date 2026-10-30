@@ -490,9 +490,14 @@
       "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQjgghBzcfRDQnKqbSMSZzPTTdM",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "Devolução aprovada, estamos a mercer da zhaz agora!",
+          "data": 1793368616290
+        }
+      ],
       "criadoEm": 1793357302855,
-      "modificadoEm": 1793357302855
+      "modificadoEm": 1793368616290
     },
     {
       "id": "1793356947735",
