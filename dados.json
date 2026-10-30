@@ -1151,8 +1151,13 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
-      "modificadoEm": 1793384012552
+      "respostas": [
+        {
+          "texto": "ainda aguardando peças para concluir o reparo. OS Nº132425",
+          "data": 1793384058970
+        }
+      ],
+      "modificadoEm": 1793384058970
     },
     {
       "id": "1792493737390",
