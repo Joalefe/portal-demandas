@@ -616,7 +616,7 @@
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102685007942",
       "descricao2": "chamado pra colocarem o Victor como SUP novo do Sérgio, assim conseguimos colocar o Sérgio no IAM",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "Chamado dado como novo",
@@ -628,7 +628,7 @@
         }
       ],
       "criadoEm": 1793042013038,
-      "modificadoEm": 1793356408108
+      "modificadoEm": 1793356534454
     },
     {
       "id": "1793032383123",
