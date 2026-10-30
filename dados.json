@@ -512,9 +512,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "Entrada: cabo ruim, so por um fio",
+          "data": 1793360248196
+        }
+      ],
       "criadoEm": 1793189565019,
-      "modificadoEm": 1793218163574
+      "modificadoEm": 1793360248196
     },
     {
       "id": "1793189169709",
