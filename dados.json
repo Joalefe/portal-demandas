@@ -463,7 +463,7 @@
       "descricao1": "aberto chamado",
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102885001846",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "Chamado dado como NOVO",
@@ -479,7 +479,7 @@
         }
       ],
       "criadoEm": 1793189169709,
-      "modificadoEm": 1793384729163
+      "modificadoEm": 1793453339735
     },
     {
       "id": "1793135450549",
