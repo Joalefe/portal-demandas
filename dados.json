@@ -425,41 +425,6 @@
       "arquivado": true,
       "criadoEm": 1792573319270,
       "modificadoEm": 1792686028656
-    },
-    {
-      "id": "1792534421417",
-      "titulo": "Loja vai abrir 06:00 na quinta ",
-      "mensagem": ".",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1792534421417,
-      "modificadoEm": 1792686020776
-    },
-    {
-      "id": "1792534319595",
-      "titulo": " férias",
-      "mensagem": "Preencher programação de férias",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Joalefe Performático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [
-        {
-          "texto": "📋 Transformado em demanda",
-          "data": 1792686083629
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1792534319595,
-      "modificadoEm": 1793396029347
     }
   ],
   "demandas": [
