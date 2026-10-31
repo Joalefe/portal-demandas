@@ -1155,6 +1155,20 @@
   ],
   "plantao": [
     {
+      "id": "1793465139116",
+      "titulo": "31/10/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (31/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [DEMANDA] Devolução da maquina (Status: concluido)\n- [Chamados] nfe com erros (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n",
+      "comentarioExtra": "",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1793465139116,
+      "horaRegistro": "13:45",
+      "criadoEm": 1793465139116
+    },
+    {
       "id": "1793406915387",
       "titulo": "30/10/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (30/10/2026) ===\n\n📌 Avisos Criados (6):\n- [NF 62660  | 62605 ]: observar relatorio de nf amanha para ver se vao continuar chegando as nfs, pois o chamado foi solucionado e elas tao constando com status 155\n- [SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)]: SENHA: CPD_675\n- [ACESSOS SERGIO]: 500800080 - ABC@2026\n- [manter os avisos dos bloq dos rub por aqui]: as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)\n- [manoela bloq no rub]: devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10\n- [samantha bloq.  no rub]: até 10/11\n\n📋 Demandas Modificadas/Concluídas (15):\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: em_andamento)\n- [DEMANDA] CONFIG PC PARA USO DA COLAB JANARA (Status: concluido)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: concluido)\n- [Chamados] Requerimento toner MS812 (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: concluido)\n- [DEMANDA] pc no almox (Status: em_andamento)\n- [DEMANDA]  férias (Status: pendente)\n- [Chamados] Usuário janara  (Status: concluido)\n- [DEMANDA] Tv frios  (Status: concluido)\n- [DEMANDA] gerencial nao funciona  (Status: concluido)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
