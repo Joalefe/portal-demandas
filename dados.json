@@ -870,10 +870,6 @@
       "status": "em_andamento",
       "respostas": [
         {
-          "texto": "atualização dia 26/10: com auxílio da planilha com os resultados reais, estou tentando junto ao chat achar a maneira certa de calcular cada coisa na aba geral, toda a parte da estrutura pronta, busca, abas, soma total de cada aba (exceto algumas q eu esqueci de adicionar), upar relatórios dos meses anteriores, sobrepondo o mês atual ou criando uma aba especial para aquele certo mês, só falta mesmo a aba GERAL",
-          "data": 1793059771754
-        },
-        {
           "texto": "guerra constante",
           "data": 1793210197618
         },
@@ -883,7 +879,7 @@
         }
       ],
       "criadoEm": 1792607555380,
-      "modificadoEm": 1793445552342
+      "modificadoEm": 1793445562311
     },
     {
       "id": "1792606521640",
