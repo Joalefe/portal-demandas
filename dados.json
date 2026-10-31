@@ -77,10 +77,15 @@
         "João Infomático",
         "Kaell Pragmático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "a mesma disse que pegou quebrada",
+          "data": 1793467265052
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1793353464365,
-      "modificadoEm": 1793381848554
+      "modificadoEm": 1793467265052
     },
     {
       "id": "1793353381997",
