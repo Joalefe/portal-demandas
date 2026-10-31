@@ -884,10 +884,14 @@
         {
           "texto": "guerra constante",
           "data": 1793210197618
+        },
+        {
+          "texto": "TESTAR COM A DANI A QUESTAO DA %",
+          "data": 1793445533799
         }
       ],
       "criadoEm": 1792607555380,
-      "modificadoEm": 1793445524487
+      "modificadoEm": 1793445533799
     },
     {
       "id": "1792606521640",
