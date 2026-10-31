@@ -867,7 +867,7 @@
       "descricao1": "Relatorio > Portal ADM> Razão Despesas\nFOCO PRINCIPAL: ROR\nIDEIAS: Portal (+1)\n*amanhã envio o email um arquivo .zip da versão 90% do portal*\nLink portal em teste: https://srvsave675.br-atacadao.corp/ROR3/\n",
       "descricao2": ".",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [
         {
           "texto": "Portal Criado à base da planilha \"6.Planilha ADM\", portal cru ainda, dar uma estudada junto das partes",
@@ -887,7 +887,7 @@
         }
       ],
       "criadoEm": 1792607555380,
-      "modificadoEm": 1793210197618
+      "modificadoEm": 1793445524487
     },
     {
       "id": "1792606521640",
