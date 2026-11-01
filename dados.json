@@ -1208,6 +1208,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_01112026_Manhã",
+      "titulo": "01/11/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793552443789
+    },
+    {
       "id": "1793495955591",
       "titulo": "31/10/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (31/10/2026) ===\n\n📌 Avisos Criados (1):\n- [colocar link do portal novo email ifood]: https://srvsave675.br-atacadao.corp/ETIQUETAS/etiquetaxx.php\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Fazer arte dos aniversariantes  (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: concluido)\n- [Chamados] nfe com erros (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n",
