@@ -1208,6 +1208,20 @@
   ],
   "plantao": [
     {
+      "id": "1793556030614",
+      "titulo": "01/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (01/11/2026) ===\n\n📌 Avisos Criados (2):\n- [senhas colaboradores]: Atentar-se sempre ao trocar senhas de colaboradores, principalmente operadores de caixa e apoios, pois a senha tem que ser padrao (ABC ou def) pois os mesmos operam empresa e so tem essas letras la\n\nOP estava com senha \"Serraria@675'\n- [GERENCIAL BAMBA]: analisar se a planilha gerencial ira funcionar normalmente amanha \n\n📋 Demandas Modificadas/Concluídas (1):\n- [DEMANDA] Fazer arte dos aniversariantes  (Status: concluido)\n",
+      "comentarioExtra": "domingo paz, fitas trocadas, rubs desvinculados e portal do ifood operando!",
+      "descricao": "😎",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "joao pedro 🫡",
+      "modificadoEm": 1793556030614,
+      "horaRegistro": "14:59",
+      "criadoEm": 1793556030614
+    },
+    {
       "id": "auto_01112026_Manhã",
       "titulo": "01/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
