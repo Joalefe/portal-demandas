@@ -1184,6 +1184,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_31102026_Tarde",
+      "titulo": "31/10/2026 - Tarde",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Tarde (Prazo limite das 22:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "22:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793495918481
+    },
+    {
       "id": "auto_31102026_Manhã",
       "titulo": "31/10/2026 - Manhã",
       "resumoAutomatico": "N/A",
