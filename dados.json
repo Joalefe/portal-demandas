@@ -10,6 +10,17 @@
   ],
   "avisos": [
     {
+      "id": "1793537361392",
+      "titulo": "GERENCIAL BAMBA",
+      "mensagem": "analisar se a planilha gerencial ira funcionar normalmente amanha ",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1793537361392,
+      "modificadoEm": 1793537361392
+    },
+    {
       "id": "1793474036197",
       "titulo": "colocar link do portal novo email ifood",
       "mensagem": "https://srvsave675.br-atacadao.corp/ETIQUETAS/etiquetaxx.php",
