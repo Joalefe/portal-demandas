@@ -31,10 +31,15 @@
         "João Infomático",
         "Joalefe Performático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "02/11: Gerencial atualizando normalmente!",
+          "data": 1793611288348
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1793537361392,
-      "modificadoEm": 1793566664633
+      "modificadoEm": 1793611288348
     },
     {
       "id": "1793474036197",
