@@ -1259,6 +1259,20 @@
   ],
   "plantao": [
     {
+      "id": "1793663751703",
+      "titulo": "02/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (02/11/2026) ===\n\n📌 Avisos Criados (1):\n- [Bloqueio Líder Rodrigo]: Bloqueio por 1 dia. Devolução de rub sem corda\n\n📋 Demandas Modificadas/Concluídas (2):\n- [DEMANDA] numerar rubs (Status: pendente)\n- [DEMANDA] Pre vendas (para kaell) (Status: em_andamento)\n",
+      "comentarioExtra": "Samantha pediu pra imprimir umas coisas do canva, deixei salva pra entregar amanhã",
+      "descricao": "ok",
+      "rubsDesvinculados": "ok!",
+      "rubsBloqueados": "Rub 10 - maycon não foi entregue",
+      "etiquetasRibbon": "ok!",
+      "responsavel": "joalis",
+      "modificadoEm": 1793663751703,
+      "horaRegistro": "20:54",
+      "criadoEm": 1793663751703
+    },
+    {
       "id": "auto_02112026_Intermediário",
       "titulo": "02/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
