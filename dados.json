@@ -46,11 +46,13 @@
       "titulo": "colocar link do portal novo email ifood",
       "mensagem": "https://srvsave675.br-atacadao.corp/ETIQUETAS/etiquetaxx.php",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1793474036197,
-      "modificadoEm": 1793474036197
+      "modificadoEm": 1793611308348
     },
     {
       "id": "1793384837980",
