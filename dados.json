@@ -592,10 +592,14 @@
         {
           "texto": "concluído para análise do assistente",
           "data": 1793660794280
+        },
+        {
+          "texto": "caso esteja faltando algo, listar para correção :)",
+          "data": 1793660813192
         }
       ],
       "criadoEm": 1793135450549,
-      "modificadoEm": 1793660794280
+      "modificadoEm": 1793660813192
     },
     {
       "id": "1793048100590",
