@@ -1760,6 +1760,14 @@
   ],
   "rubs": [
     {
+      "id": "1793739408210",
+      "nome": "Samantha",
+      "motivo": "perda",
+      "dataDesbloqueio": "2026-11-10",
+      "criadoEm": 1793739408210,
+      "modificadoEm": 1793739408210
+    },
+    {
       "id": "1793739386265",
       "nome": "Rodrigo Frios",
       "motivo": "perda",
