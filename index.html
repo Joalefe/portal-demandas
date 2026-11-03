@@ -816,9 +816,15 @@
           if (!l) { locais.push(r); mapa.set(r.id, r); mudou = true; return; }
           const antes = (l.respostas || []).length;
           const respostas = mesclarRespostas(l.respostas, r.respostas);
+          const visLocal = l.visualizadoEm || 0;
+          const visMax = Math.max(visLocal, r.visualizadoEm || 0);
           if ((r.modificadoEm || 0) > (l.modificadoEm || 0)) {
             Object.assign(l, r);
             mudou = true;
+          }
+          if (visMax) {
+            l.visualizadoEm = visMax;
+            if (visMax !== visLocal) mudou = true;
           }
           if (chave === 'avisos' || chave === 'demandas') {
             l.respostas = respostas;
@@ -938,12 +944,13 @@
         const respostas = a.respostas || [];
 
         return `
-          <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between h-auto min-h-[320px] transition">
+          <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between h-auto min-h-[320px] transition${classeParado(a, !a.arquivado)}">
             <div class="overflow-hidden space-y-2">
+              ${badgeParado(a, !a.arquivado)}
               <div class="flex justify-between items-start gap-2">
                 <h4 class="font-bold text-base leading-snug truncate text-slate-950">${escapeHtml(a.titulo)}</h4>
                 <div class="flex gap-1 shrink-0">
-                  <button onclick="abrirFullscreen('${escapeHtml(a.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(a.mensagem).replace(/`/g, '\\`')}\`)" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Tela Cheia">🔍</button>
+                  <button onclick="registrarVisualizacao('aviso','${a.id}');abrirFullscreen('${escapeHtml(a.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(a.mensagem).replace(/`/g, '\\`')}\`)" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Tela Cheia">🔍</button>
                   <button onclick="avisoParaDemanda('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Transformar em demanda">📋</button>
                   <button onclick="openModalAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Editar">✏️</button>
                   <button onclick="deleteAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Excluir">🗑️</button>
@@ -1157,13 +1164,15 @@
         const respostas = d.respostas || [];
 
         return `
-          <div class="${cardCor} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-auto min-h-[320px] shadow-md">
+          <div class="${cardCor} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-auto min-h-[320px] shadow-md${classeParado(d, d.status !== 'concluido')}">
             <div class="overflow-hidden space-y-2">
+              ${badgeParado(d, d.status !== 'concluido')}
               <div class="flex items-start justify-between gap-2">
                 <span class="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded ${badgeCor} truncate max-w-[150px]">
                   ${escapeHtml(d.categoria)} ${isChamado ? '📞' : '📋'}
                 </span>
                 <div class="flex gap-1 shrink-0">
+                  <button onclick="abrirFullscreenItem('demanda','${d.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Tela Cheia">🔍</button>
                   <button onclick="openModalDemanda('${d.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Editar">✏️</button>
                   <button onclick="deleteDemanda('${d.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Excluir">🗑️</button>
                 </div>
@@ -1861,7 +1870,54 @@
     }
 
     setInterval(verificarAlertasPlantao, 30000);
-    setInterval(() => { renderRubs(); }, 60000); // atualiza contagem e pisca na virada do dia
+    setInterval(() => {
+      renderRubs(); // atualiza contagem e pisca na virada do dia
+      if (!usuarioEstaEditando()) { renderAvisos(); renderDemandas(); } // alerta de cards parados
+    }, 60000);
+
+    // --- ALERTA DE CARD SEM INTERAÇÃO (2 dias) ---
+    const LIMITE_SEM_INTERACAO_MS = 2 * 24 * 60 * 60 * 1000;
+
+    function ultimaInteracaoTs(item) {
+      const respostas = (item.respostas || []).map(r => r.data || 0);
+      return Math.max(
+        item.visualizadoEm || 0,
+        item.modificadoEm || 0,
+        item.criadoEm || 0,
+        parseInt(item.id, 10) || 0,
+        ...respostas
+      );
+    }
+    function itemParado(item, ativo) {
+      return !!ativo && (Date.now() - ultimaInteracaoTs(item)) >= LIMITE_SEM_INTERACAO_MS;
+    }
+    function classeParado(item, ativo) {
+      return itemParado(item, ativo) ? ' animate-piscar ring-4 ring-rose-600' : '';
+    }
+    function badgeParado(item, ativo) {
+      if (!itemParado(item, ativo)) return '';
+      const dias = Math.floor((Date.now() - ultimaInteracaoTs(item)) / 86400000);
+      return `<div class="inline-block text-[11px] font-extrabold uppercase tracking-wide bg-rose-700 text-white rounded px-2 py-0.5">⏰ Sem interação há ${dias} dias</div>`;
+    }
+
+    // Abrir a lupa conta como interação
+    function registrarVisualizacao(tipo, id) {
+      const lista = tipo === 'aviso' ? state.avisos : state.demandas;
+      const item = (lista || []).find(x => x.id === id);
+      if (!item) return;
+      item.visualizadoEm = new Date().getTime();
+      saveStorage();
+      if (tipo === 'aviso') renderAvisos(); else renderDemandas();
+    }
+
+    function abrirFullscreenItem(tipo, id) {
+      const lista = tipo === 'aviso' ? state.avisos : state.demandas;
+      const item = (lista || []).find(x => x.id === id);
+      if (!item) return;
+      registrarVisualizacao(tipo, id);
+      const texto = [item.descricao1 || item.descricao || '', item.descricao2 || ''].filter(Boolean).join('\n\n');
+      abrirFullscreen(item.titulo, escapeHtml(texto));
+    }
 
     // --- RUBS BLOQUEADOS (não arquivam ao serem lidos; só saem ao excluir) ---
     function rubDataLocal(iso) {
