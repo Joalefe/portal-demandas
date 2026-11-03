@@ -1168,6 +1168,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_03112026_Manhã",
+      "titulo": "03/11/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793725225066
+    },
+    {
       "id": "1793663751703",
       "titulo": "02/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (02/11/2026) ===\n\n📌 Avisos Criados (1):\n- [Bloqueio Líder Rodrigo]: Bloqueio por 1 dia. Devolução de rub sem corda\n\n📋 Demandas Modificadas/Concluídas (2):\n- [DEMANDA] numerar rubs (Status: pendente)\n- [DEMANDA] Pre vendas (para kaell) (Status: em_andamento)\n",
