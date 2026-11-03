@@ -210,9 +210,6 @@
         </div>
 
         <div class="flex items-center gap-2">
-          <button onclick="apagarAvisosAntigos()" class="text-xs bg-amber-950/60 hover:bg-amber-900 text-amber-300 border border-amber-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar avisos com mais de 10 dias">
-            🗑️ Limpar Antigos (+10d)
-          </button>
           <button onclick="openModalPessoas()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-lg flex items-center gap-1">
             👥 Pessoas (<span id="count-pessoas">0</span>)
           </button>
@@ -224,7 +221,7 @@
 
       <!-- Alerta visual de avisos antigos -->
       <div id="alerta-avisos-antigos" class="hidden bg-amber-950/40 border border-amber-800/50 text-amber-200 px-4 py-2 rounded-lg text-xs flex items-center justify-between">
-        <span>⚠️ Existem avisos com mais de 10 dias acumulados. Utilize o botão "Limpar Antigos (+10d)" para higienizar o painel.</span>
+        <span>⚠️ Existem avisos lidos com mais de 10 dias acumulados. Utilize o botão "🧹 Limpeza Geral" (no topo) para higienizar o painel.</span>
       </div>
 
       <div id="subtab-content-ativos" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5"></div>
@@ -282,9 +279,6 @@
           📋 Histórico de Passagens de Plantão
         </div>
         <div class="flex items-center gap-2">
-          <button onclick="apagarPlantoesAntigos()" class="text-xs bg-rose-950/60 hover:bg-rose-900 text-rose-300 border border-rose-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar registros com mais de 10 dias">
-            🗑️ Limpar Antigos (+10d)
-          </button>
           <button onclick="openModalPlantao()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
             + Nova Passagem de Plantão
           </button>
@@ -293,7 +287,7 @@
 
       <!-- Alerta visual de plantões antigos -->
       <div id="alerta-plantoes-antigos" class="hidden bg-rose-950/40 border border-rose-800/50 text-rose-200 px-4 py-2 rounded-lg text-xs flex items-center justify-between">
-        <span>⚠️ Existem registros de plantão com mais de 10 dias acumulados. Utilize o botão "Limpar Antigos (+10d)" para higienizar o painel.</span>
+        <span>⚠️ Existem registros de plantão com mais de 10 dias acumulados. Utilize o botão "🧹 Limpeza Geral" (no topo) para higienizar o painel.</span>
       </div>
 
       <div id="container-plantao" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-start"></div>
