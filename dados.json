@@ -30,11 +30,13 @@
       "titulo": "Office",
       "mensagem": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWTnkwFsVSsWCnBPvWprHJcpn",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Kaell Pragmático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1793720418216,
-      "modificadoEm": 1793720418216
+      "modificadoEm": 1793728790207
     },
     {
       "id": "1793644607710",
