@@ -1,1732 +1,2191 @@
-{
-  "pessoas": [
-    "João Infomático",
-    "Joalefe Performático",
-    "Kaell Pragmático"
-  ],
-  "categorias": [
-    "Chamados",
-    "DEMANDA"
-  ],
-  "avisos": [
-    {
-      "id": "1793723793879",
-      "titulo": "Colaboradores Novos ",
-      "mensagem": "Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  ",
-      "cor": "postit-yellow",
-      "lidosPor": [],
-      "respostas": [
-        {
-          "texto": "📋 Transformado em demanda",
-          "data": 1793724225760
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark h-full bg-slate-950">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Demandas e Avisos</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- EmailJS (envio de e-mail com layout próprio) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            postit: {
+              yellow: '#fef08a',
+              blue: '#bae6fd',
+              green: '#bbf7d0',
+              pink: '#fbcfe8',
+              purple: '#e9d5ff',
+              orange: '#fed7aa'
+            }
+          }
         }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793723793879,
-      "modificadoEm": 1793724225760
-    },
-    {
-      "id": "1793720418216",
-      "titulo": "Office",
-      "mensagem": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWTnkwFsVSsWCnBPvWprHJcpn",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": false,
-      "criadoEm": 1793720418216,
-      "modificadoEm": 1793728790207
-    },
-    {
-      "id": "1793541807087",
-      "titulo": "senhas colaboradores",
-      "mensagem": "Atentar-se sempre ao trocar senhas de colaboradores, principalmente operadores de caixa e apoios, pois a senha tem que ser padrao (ABC ou def) pois os mesmos operam empresa e so tem essas letras la\n\nOP estava com senha \"Serraria@675'",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": false,
-      "criadoEm": 1793541807087,
-      "modificadoEm": 1793644629709
-    },
-    {
-      "id": "1793537361392",
-      "titulo": "GERENCIAL BAMBA",
-      "mensagem": "analisar se a planilha gerencial ira funcionar normalmente amanha ",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Joalefe Performático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [
-        {
-          "texto": "02/11: Gerencial atualizando normalmente!",
-          "data": 1793611288348
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793537361392,
-      "modificadoEm": 1793644633429
-    },
-    {
-      "id": "1793474036197",
-      "titulo": "colocar link do portal novo email ifood",
-      "mensagem": "https://srvsave675.br-atacadao.corp/ETIQUETAS/etiquetaxx.php",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793474036197,
-      "modificadoEm": 1793611316668
-    },
-    {
-      "id": "1793384837980",
-      "titulo": "NF 62660  | 62605 ",
-      "mensagem": "observar relatorio de nf amanha para ver se vao continuar chegando as nfs, pois o chamado foi solucionado e elas tao constando com status 155",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": false,
-      "criadoEm": 1793384837980,
-      "modificadoEm": 1793465615998
-    },
-    {
-      "id": "1793357596487",
-      "titulo": "SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)",
-      "mensagem": "SENHA: CPD_675",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793357596487,
-      "modificadoEm": 1793381791154
-    },
-    {
-      "id": "1793356547230",
-      "titulo": "ACESSOS SERGIO",
-      "mensagem": "500800080 - ABC@2026",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793356547230,
-      "modificadoEm": 1793465612398
-    },
-    {
-      "id": "1793353502052",
-      "titulo": "manter os avisos dos bloq dos rub por aqui",
-      "mensagem": "as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793353502052,
-      "modificadoEm": 1793395607919
-    },
-    {
-      "id": "1793353464364",
-      "titulo": "manoela bloq no rub",
-      "mensagem": "devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10",
-      "cor": "postit-blue",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "a mesma disse que pegou quebrada",
-          "data": 1793467265052
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793353464365,
-      "modificadoEm": 1793566682731
-    },
-    {
-      "id": "1793094763661",
-      "titulo": "Portais",
-      "mensagem": "Vamos mandar para a pasta \"morto\" os portais que nao estao sendo usados, vamos excluir os que são testes.",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "na pasta somente os utilizados!",
-          "data": 1793217902100
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793094763661,
-      "modificadoEm": 1793353113924
-    },
-    {
-      "id": "1793094508457",
-      "titulo": "Portal Recargas",
-      "mensagem": "A forma de contagem da meta esta errada. ",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [
-        {
-          "texto": "feito",
-          "data": 1793182847208
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793094508457,
-      "modificadoEm": 1793293406152
-    },
-    {
-      "id": "1793094335197",
-      "titulo": "rub samantha bloq. ",
-      "mensagem": "manter bloq até dia 14/11 (10 dias)",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793094335197,
-      "modificadoEm": 1793353217436
-    },
-    {
-      "id": "1793063078457",
-      "titulo": "Rub 28 - richard não apareceu",
-      "mensagem": "acho q é bloq",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "Kaell Pragmático",
-        "João Infomático"
-      ],
-      "respostas": [
-        {
-          "texto": "localizei no setor quando cheguei, nao irei bloq.",
-          "data": 1793094305763
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793063078457,
-      "modificadoEm": 1793182603774
-    },
-    {
-      "id": "1793006031853",
-      "titulo": "silvio bloq no rub",
-      "mensagem": "até 01.11\n",
-      "cor": "postit-blue",
-      "lidosPor": [
-        "Joalefe Performático",
-        "Kaell Pragmático",
-        "João Infomático"
-      ],
-      "respostas": [
-        {
-          "texto": "BLOQUEADO, 7 dias",
-          "data": 1793012218269
-        },
-        {
-          "texto": "desbloqueado!",
-          "data": 1793611340916
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793006031853,
-      "modificadoEm": 1793644674973
-    },
-    {
-      "id": "1792956147765",
-      "titulo": "Testar portal tagsell",
-      "mensagem": "Portal finalizado, favor da uma olhada para conhecimento. (esta no portal dos portais)",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Joalefe Performático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1792956147765,
-      "modificadoEm": 1793182608837
-    },
-    {
-      "id": "1792935476879",
-      "titulo": "Usuário fabio IAM",
-      "mensagem": "Verificar com o victor pra ele dar uma olhada no usuário do fabio pelo IAM dele\n",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "caso não esteja, abrir chamado",
-          "data": 1792935525575
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1792935476879,
-      "modificadoEm": 1793357770576
+      }
     }
-  ],
-  "demandas": [
-    {
-      "id": "1793724225750",
-      "titulo": "Colaboradores Novos ",
-      "descricao1": "Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": [
-        {
-          "texto": "job aplicado para todos",
-          "data": 1793731709129
-        },
-        {
-          "texto": "perfis: ad, save, rub aplicados, aguardar subir amanhã",
-          "data": 1793731729313
-        }
-      ],
-      "criadoEm": 1793724225750,
-      "modificadoEm": 1793731729313
-    },
-    {
-      "id": "1793721069121",
-      "titulo": "Salva mensal ",
-      "descricao1": "Salva mensal ",
-      "descricao2": "Mandr evidência por email ",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": [
-        {
-          "texto": "verificar no sudo a salva mensal",
-          "data": 1793726410938
-        },
-        {
-          "texto": "enviar via email",
-          "data": 1793726424762
-        }
-      ],
-      "criadoEm": 1793721069121,
-      "modificadoEm": 1793726424762
-    },
-    {
-      "id": "1793720954626",
-      "titulo": "Pegar nota para denize ",
-      "descricao1": "Nota: 62378",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "enviada",
-          "data": 1793731049667
-        }
-      ],
-      "criadoEm": 1793720954626,
-      "modificadoEm": 1793731051284
-    },
-    {
-      "id": "1793700027083",
-      "titulo": "Portal de Etiquetas (para João)",
-      "descricao1": "- acompanhar o setor do eccomerce e verificar se esta dando certo. \n",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "em_andamento",
-      "respostas": [],
-      "criadoEm": 1793700027083,
-      "modificadoEm": 1793720833651
-    },
-    {
-      "id": "1793635385661",
-      "titulo": "numerar rubs",
-      "descricao1": "imprimir novos numeros para os rubs, pois os antigos tao ficando ilegiveis ja",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": [
-        {
-          "texto": "foram adesivados a maioria, só completar",
-          "data": 1793736027783
-        }
-      ],
-      "criadoEm": 1793635385661,
-      "modificadoEm": 1793736027783
-    },
-    {
-      "id": "1793473737185",
-      "titulo": "Fazer arte dos aniversariantes ",
-      "descricao1": "‘",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1793473737185,
-      "modificadoEm": 1793555122072
-    },
-    {
-      "id": "1793379184141",
-      "titulo": "ABRIR CHAMADO PARA O BOTAO DO SELF",
-      "descricao1": "https://stac.telematica.com.br/chamado/chamado-status?id=S9bmRWJuawFYSAQMnVuDww%3D%3D",
-      "descricao2": "chamado aberto\n",
-      "categoria": "Chamados",
-      "status": "pendente",
-      "respostas": [
-        {
-          "texto": "direcionado para o técnico",
-          "data": 1793728859294
-        }
-      ],
-      "criadoEm": 1793379184141,
-      "modificadoEm": 1793739590144
-    },
-    {
-      "id": "1793357302855",
-      "titulo": "Devolução da maquina",
-      "descricao1": "Luara ficou de aprovar o orçamento para a devolução. ",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQjgghBzcfRDQnKqbSMSZzPTTdM",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Devolução aprovada, estamos a mercer da zhaz agora!",
-          "data": 1793368616290
-        }
-      ],
-      "criadoEm": 1793357302855,
-      "modificadoEm": 1793453389095
-    },
-    {
-      "id": "1793356947735",
-      "titulo": "CONFIG PC PARA USO DA COLAB JANARA",
-      "descricao1": "PC ESQUERDO DO CADASTRO \nlogin: janara340987 \nsenha: ABC@@2026",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "email estoque configurado, na barra de favoritos tem tudo q ela vai usar, tagsell, rub, save.... so passar para a mesma",
-          "data": 1793371610644
-        }
-      ],
-      "criadoEm": 1793356947735,
-      "modificadoEm": 1793395857279
-    },
-    {
-      "id": "1793189565019",
-      "titulo": "Tv",
-      "descricao1": "Olhar tv da entrada \nOlhar tv da gerência \n\nDescobrir o problema e deixar aqui. ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "em_andamento",
-      "respostas": [
-        {
-          "texto": "Entrada: cabo ruim, so por um fio",
-          "data": 1793360248196
-        }
-      ],
-      "criadoEm": 1793189565019,
-      "modificadoEm": 1793360248196
-    },
-    {
-      "id": "1793189169709",
-      "titulo": "nfe com erros",
-      "descricao1": "aberto chamado",
-      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102885001846",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Chamado dado como NOVO",
-          "data": 1793225693058
-        },
-        {
-          "texto": "att: EM ANDAMENTO",
-          "data": 1793368571994
-        },
-        {
-          "texto": "chamado dado como \"solucionado\" NFs constando status 155 - cancelamento homologado fora de prazo",
-          "data": 1793384729163
-        }
-      ],
-      "criadoEm": 1793189169709,
-      "modificadoEm": 1793453339735
-    },
-    {
-      "id": "1793135450549",
-      "titulo": "Pre vendas (para kaell)",
-      "descricao1": "refazer pre-vendas formato portal \n",
-      "descricao2": "- add função para não ter conflito quando duas pessoas cadastrar um código de barras. \n- add função de: se o sistema não gerar o codigo de barras (devido não estar cadastrado) abrir janela para realizar o cadastro. \n- retirar botão de \"atualizar base\" ou deixar em outra aba. para tela inical ficar o mais limpo possivel.\n- deixar opção de cadastrar codigo de barras na tela inicial. \n- add função de procurar a empresa usando o CNPJ/ CPF \n- ao ser impresso precisa sair com as linhas, entre uma infromação  e outra. ]\n- usar a mesma base de dados do portal da fcx para um alimentar o outro. ",
-      "categoria": "DEMANDA",
-      "status": "em_andamento",
-      "respostas": [
-        {
-          "texto": "novas inf.",
-          "data": 1793698920201
-        }
-      ],
-      "criadoEm": 1793135450549,
-      "modificadoEm": 1793724441963
-    },
-    {
-      "id": "1793048100590",
-      "titulo": "Email suspeito da daniela",
-      "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102685008772",
-      "descricao2": "ela recebeu um email dizendo que houve uma troca de senhas, mas a mesma desconhece",
-      "categoria": "Chamados",
-      "status": "em_andamento",
-      "respostas": [
-        {
-          "texto": "chamado dado como aceito",
-          "data": 1793225681971
-        }
-      ],
-      "criadoEm": 1793048100590,
-      "modificadoEm": 1793739598736
-    },
-    {
-      "id": "1793042013038",
-      "titulo": "Chamado IAM VICTOR",
-      "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102685007942",
-      "descricao2": "chamado pra colocarem o Victor como SUP novo do Sérgio, assim conseguimos colocar o Sérgio no IAM",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Chamado dado como novo",
-          "data": 1793225703019
-        },
-        {
-          "texto": "500800080 - ABC@2026",
-          "data": 1793356408108
-        }
-      ],
-      "criadoEm": 1793042013038,
-      "modificadoEm": 1793356534454
-    },
-    {
-      "id": "1793032383123",
-      "titulo": "maquina devolução",
-      "descricao1": "Solicitado novamente para ZHAZ a devolução da maquiina que o orçamento nao foi aprovado",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQjgghBzcfRDQnKqbSMSZzPTTdM",
-      "categoria": "Chamados",
-      "status": "em_andamento",
-      "respostas": [
-        {
-          "texto": "email enviado pela zhaz as 9h da manha pedindo taxa de 45 reais para enviar o pc de volta",
-          "data": 1793218289018
-        },
-        {
-          "texto": "orçamento aprovado. solicitado o envio",
-          "data": 1793294285228
-        }
-      ],
-      "criadoEm": 1793032383123,
-      "modificadoEm": 1793294285228
-    },
-    {
-      "id": "1792955465524",
-      "titulo": "Requerimento toner MS812",
-      "descricao1": "Protocolo 20261025-7429663",
-      "descricao2": "Não consigo ahcar a disgraça do link",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "261025-000009 dá pra olhar por esse numero de incidente aqui :D",
-          "data": 1792955635643
-        },
-        {
-          "texto": "Toner Chegou e ja esta no setor!",
-          "data": 1793384448293
-        }
-      ],
-      "criadoEm": 1792955465524,
-      "modificadoEm": 1793384451158
-    },
-    {
-      "id": "1792954373537",
-      "titulo": "Requerimento de Toner",
-      "descricao1": "Protocolo 20261025-8784957",
-      "descricao2": "toners requeridos: konica - preto, ciano, magenta e amarelo",
-      "categoria": "Chamados",
-      "status": "em_andamento",
-      "respostas": [
-        {
-          "texto": "rapazes, não consigo achar a possilga do link no portal tagsell",
-          "data": 1792954768099
-        },
-        {
-          "texto": "amarelo vai ser enviado quinzenalmente.",
-          "data": 1793034535315
-        },
-        {
-          "texto": "demais toners estão sob análise pela tecnoset",
-          "data": 1793034549771
-        }
-      ],
-      "criadoEm": 1792954373537,
-      "modificadoEm": 1793034549771
-    },
-    {
-      "id": "1792861569075",
-      "titulo": "Tagsell automatico (3 preço)",
-      "descricao1": "Chat que CPD anchieta crioou contem atualizações para script e shell, dar uma olhada e comparar se a nossa planilha esta fazendo a mesma coisa, se sim so substituir na nossa oq esta dando conflito e seguir \n\nhttps://mail.google.com/mail/u/0/?ogbl#chat/space/AAQAxJKrrcY",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792861569075,
-      "modificadoEm": 1792980482459
-    },
-    {
-      "id": "1792855037941",
-      "titulo": "Email Prevenção",
-      "descricao1": "email com erro na senha. ",
-      "descricao2": ".",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Senha alterada Arouca@675",
-          "data": 1792863236303
-        },
-        {
-          "texto": "tinha colocado no notion aliás",
-          "data": 1792884684524
-        },
-        {
-          "texto": "passado para Milene e Igor",
-          "data": 1793022674097
-        }
-      ],
-      "criadoEm": 1792855037941,
-      "modificadoEm": 1793022676009
-    },
-    {
-      "id": "1792854854630",
-      "titulo": "Usuario Flavia",
-      "descricao1": "Usuario criado, testado no save já, so passar para a mesma!!\n\n500962388  -  ABC@2026",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792854854630,
-      "modificadoEm": 1792863123925
-    },
-    {
-      "id": "1792854473977",
-      "titulo": "verificar usuario Sergio",
-      "descricao1": "500800080\n\nNao consta no IDM, mas usuario ja existe",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "chamado aberto, ainda como novo",
-          "data": 1793210184442
-        }
-      ],
-      "criadoEm": 1792854473977,
-      "modificadoEm": 1793357180976
-    },
-    {
-      "id": "1792854191618",
-      "titulo": "Limpeza PCs",
-      "descricao1": "pincel em mãos ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792854191618,
-      "modificadoEm": 1792935257795
-    },
-    {
-      "id": "1792791010367",
-      "titulo": "pc no almox",
-      "descricao1": "inserir chave office no pc que esta no almox",
-      "descricao2": ".",
-      "categoria": "DEMANDA",
-      "status": "em_andamento",
-      "respostas": [
-        {
-          "texto": "Chave: 8TDBX-FNXQ8-79GD3-KW6RF-K4TFP. Ainda nao colocada, pois Luara esta usando la desde cedo",
-          "data": 1793384411948
-        }
-      ],
-      "criadoEm": 1792791010367,
-      "modificadoEm": 1793384413870
-    },
-    {
-      "id": "1792787963981",
-      "titulo": "Limpeza Banheiro",
-      "descricao1": "Iremos organizar",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": [],
-      "criadoEm": 1792787963981,
-      "modificadoEm": 1792787963981
-    },
-    {
-      "id": "1792762795762",
-      "titulo": "verificar peso da balança 17 ",
-      "descricao1": ".",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792762795762,
-      "modificadoEm": 1792953945975
-    },
-    {
-      "id": "1792748547168",
-      "titulo": "Email cartão",
-      "descricao1": "O chamado está em atendimento aguardando a gente finalizar com uma faq o problema sobre o problema, todas as informações estão no hangout com a Ester AMANCIO CARVALHO.",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792748547168,
-      "modificadoEm": 1792748576404
-    },
-    {
-      "id": "1792700990877",
-      "titulo": "Email Cartao pedindo codigo de confirmação de 2 fatores",
-      "descricao1": "Chamado re-aberto para reset da autenticação de 2 fatores\n",
-      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285008949",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "avisar o lucas que é necessário acionar o suporte do cartão",
-          "data": 1792709277136
-        },
-        {
-          "texto": "realizar a FAQ enviada via hangout pela Ester Amancio",
-          "data": 1792712884773
-        }
-      ],
-      "criadoEm": 1792700990877,
-      "modificadoEm": 1792769170239
-    },
-    {
-      "id": "1792686083624",
-      "titulo": " férias",
-      "descricao1": "Preencher programação de férias.",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": [
-        {
-          "texto": "resta so Kaell para preencher",
-          "data": 1793363427713
-        }
-      ],
-      "criadoEm": 1792686083624,
-      "modificadoEm": 1793363427713
-    },
-    {
-      "id": "1792683509883",
-      "titulo": "NOVA PASTA CLIEN",
-      "descricao1": "Na SEGUNDA-FEIRA, realizar troca da pasta client NFE, conforme email Clayton",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWxbxGVMNdBTMhXBRbzHWkPTk",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "feito",
-          "data": 1793005204116
-        }
-      ],
-      "criadoEm": 1792683509883,
-      "modificadoEm": 1793005206589
-    },
-    {
-      "id": "1792681698786",
-      "titulo": "Usuário janara ",
-      "descricao1": "Confirmar se está tudo ok (ad) \n\nhttps://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285007995",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "criado no portal adm. dar sequencia",
-          "data": 1792683163789
-        },
-        {
-          "texto": "Chamado aberto para inclusão da mesma no IAM da dani",
-          "data": 1792702624510
-        },
-        {
-          "texto": "chamado dado como novo",
-          "data": 1793225728090
-        }
-      ],
-      "criadoEm": 1792681698786,
-      "modificadoEm": 1793356870842
-    },
-    {
-      "id": "1792681577860",
-      "titulo": "Tv frios ",
-      "descricao1": "Não funciona ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792681577860,
-      "modificadoEm": 1793357189680
-    },
-    {
-      "id": "1792663178491",
-      "titulo": "calendario cafeteria",
-      "descricao1": "mes que vem",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "está no drive",
-          "data": 1792686473889
-        },
-        {
-          "texto": "feito",
-          "data": 1792702294429
-        }
-      ],
-      "criadoEm": 1792663178491,
-      "modificadoEm": 1792702298421
-    },
-    {
-      "id": "1792656126132",
-      "titulo": "notas NFE com erro",
-      "descricao1": "62605 \t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n\n62660 6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#sent/QgrcJHrtsvFfhjfFGDNCPmKqjRRtjvfBSsL",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "chamdo aberto",
-          "data": 1792675744594
-        },
-        {
-          "texto": "Email enviado para tributario para sanar problema das nf",
-          "data": 1792677902494
-        }
-      ],
-      "criadoEm": 1792656126132,
-      "modificadoEm": 1793189187156
-    },
-    {
-      "id": "1792607555380",
-      "titulo": "Att planilha Dani ",
-      "descricao1": "Relatorio > Portal ADM> Razão Despesas\nFOCO PRINCIPAL: ROR\nIDEIAS: Portal (+1)\n*amanhã envio o email um arquivo .zip da versão 90% do portal*\nLink portal em teste: https://srvsave675.br-atacadao.corp/ROR/\n",
-      "descricao2": ".",
-      "categoria": "DEMANDA",
-      "status": "em_andamento",
-      "respostas": [
-        {
-          "texto": "TESTAR COM A DANI A QUESTAO DA %",
-          "data": 1793445533799
-        }
-      ],
-      "criadoEm": 1792607555380,
-      "modificadoEm": 1793445653454
-    },
-    {
-      "id": "1792606521640",
-      "titulo": "RUB Empacotador Lucas",
-      "descricao1": "Criado no portal ADM, Solicitado grupo PAPA-FILA, TESTAR AMANHÃ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792606521640,
-      "modificadoEm": 1792687941463
-    },
-    {
-      "id": "1792591349730",
-      "titulo": "gerencial nao funciona ",
-      "descricao1": "precisamos encontrar uma maneira de consertar ou criar outra nova, ou implantar o portal ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Claude GOD! Gerencial operente, observar pelos proximos dias!",
-          "data": 1793383971534
-        }
-      ],
-      "criadoEm": 1792591349730,
-      "modificadoEm": 1793383973191
-    },
-    {
-      "id": "1792589143072",
-      "titulo": "encontrar foto condutor (desaparecido)",
-      "descricao1": "2253705\n\nAT 675 DIADEMA SERRA - 003133/HC\n\nMS812\n\nDrum/Photoconductor\n\nCAD232831C74\n\n4063369906Y9F\n\n10.122.248.24\n\n29\n\n28\n\n17/06/2026",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "conversado via chat, encontramos um contorno para a situação.,",
-          "data": 1792591286689
-        },
-        {
-          "texto": "mandar msg para o tecnico perguntando se quando ele faz uma manutenção de fotocondutor se ele leva embora.",
-          "data": 1792598251970
-        },
-        {
-          "texto": "perguntado ao tecnico o mesmo disse que quando faz manutenção, so é levado por ele quando é fusor no caso de mx812 e ms611 e peças da konica!",
-          "data": 1792607403239
-        }
-      ],
-      "criadoEm": 1792589143072,
-      "modificadoEm": 1792615363560
-    },
-    {
-      "id": "1792584913711",
-      "titulo": "Rub 13 quebrado",
-      "descricao1": "tela não funciona ",
-      "descricao2": "https://atendimento.yepsolutions.com.br/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&criteria%5B0%5D%5Blink%5D=AND&reset=reset",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792584913711,
-      "modificadoEm": 1793012503358
-    },
-    {
-      "id": "1792573383172",
-      "titulo": "notas NFE com erro",
-      "descricao1": "62605        6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n\n62660     \t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#sent/QgrcJHrtsvFfhjfFGDNCPmKqjRRtjvfBSsL",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Ambas notas com status 100",
-          "data": 1792624687005
-        }
-      ],
-      "criadoEm": 1792573383172,
-      "modificadoEm": 1792684575278
-    },
-    {
-      "id": "1792528385042",
-      "titulo": "Rub do Ruan sumido ",
-      "descricao1": "Procurar, mantê-lo bloqueado ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Rub bloqueado até o dia 25/10",
-          "data": 1792531130477
-        }
-      ],
-      "criadoEm": 1792528385042,
-      "modificadoEm": 1792674310731
-    },
-    {
-      "id": "1792527065985",
-      "titulo": "login Rosângela",
-      "descricao1": "verificar se login está operante no cx empresa ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "0072 - 78451245",
-          "data": 1792537623676
-        },
-        {
-          "texto": "login dando operadora não cadastrada no pdv empresa. \"operadora nã cadastrada\"",
-          "data": 1792543924350
-        },
-        {
-          "texto": "subi job novamente no adm e coloquei perfil rub, ad, save",
-          "data": 1792543972520
-        },
-        {
-          "texto": "coloquei job de oper. aguardar subir amanha",
-          "data": 1792584135696
-        },
-        {
-          "texto": "testar: 500992586 def@2026",
-          "data": 1792683266452
-        }
-      ],
-      "criadoEm": 1792527065985,
-      "modificadoEm": 1792686603402
-    },
-    {
-      "id": "1792500901709",
-      "titulo": "Cadastro de Forncecedor MAQUINA QUEIMADA",
-      "descricao1": "Contato feito com Vtech, enviado para cadastrar ",
-      "descricao2": "Whatsapp: (11) 99558-5051\n\nhttps://mail.google.com/mail/u/0/?ogbl#sent/KtbxLvGzbqCmQdSpGZTtMRlbFpkBmbdFlB",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": [
-        {
-          "texto": "esperando aprovação, documentos enviados!",
-          "data": 1792604956422
-        },
-        {
-          "texto": "toda parte da filial feita, agora aguardando matriz aprovar cadastro",
-          "data": 1793383999086
-        }
-      ],
-      "modificadoEm": 1793383999086
-    },
-    {
-      "id": "1792500716798",
-      "titulo": "Chamado Julia Ellen",
-      "descricao1": "Solicitado o cadastro das telas 070 e 072 do cofre para a mesma!\n\nhttps://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026101485007661",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Att: Chamado atendido. Testar amanha se as telas ja foram liberadas",
-          "data": 1792624364278
-        }
-      ],
-      "modificadoEm": 1792683696225
-    },
-    {
-      "id": "1792500630190",
-      "titulo": "Rub 29",
-      "descricao1": "Conserto do rub, aguardando yeep trocar o CNPJ para continuarmos com o procedimento (mandar msg para 1196857-8264)",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/QgrcJHsHlmlzstzLPMRSQgzDvmvDrzZWdsV",
-      "categoria": "Chamados",
-      "status": "em_andamento",
-      "respostas": [
-        {
-          "texto": "alteração solicitada\"!",
-          "data": 1792675824811
-        }
-      ],
-      "modificadoEm": 1793032396075
-    },
-    {
-      "id": "1792498605552",
-      "titulo": "caixa empresa",
-      "descricao1": "caixa empresa segue com problema no sitef",
-      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102085002421",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "apenas o 13 esta funcionando corretamente",
-          "data": 1792587138203
-        },
-        {
-          "texto": "Caixas atualizados e operando normalmente novamente! conversa com Celso no email",
-          "data": 1792606278831
-        }
-      ],
-      "modificadoEm": 1792615329099
-    },
-    {
-      "id": "1792493802528",
-      "titulo": "zhaz maquina queimada",
-      "descricao1": "Situação: Aguardando importação das peças",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": [
-        {
-          "texto": "ainda aguardando peças para concluir o reparo. OS Nº132425",
-          "data": 1793384058970
-        }
-      ],
-      "modificadoEm": 1793384058970
-    },
-    {
-      "id": "1792493737390",
-      "titulo": "cabo adaptador pdv",
-      "descricao1": "cabo do pdv self com problema, necessario procurar fornecedor ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": []
-    },
-    {
-      "id": "1792493644878",
-      "titulo": "Victor sem acessos",
-      "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102185001957",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Resposta do chamado: \"Transferimos o usuário informado para a filial correta e adicionamos ele como gerente comercial da filial em nosso sistema. \"",
-          "data": 1792624415159
-        }
-      ],
-      "modificadoEm": 1792769429847
-    },
-    {
-      "id": "1792487832768",
-      "titulo": "Email Sergio",
-      "descricao1": "configurar",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "autor": "João Infomático",
-          "texto": "confirmar com ele se o email esta abrindo",
-          "data": 1792524263436
-        },
-        {
-          "texto": "email operante!",
-          "data": 1792527873610
-        }
-      ],
-      "modificadoEm": 1792527873610
-    },
-    {
-      "id": "1792487633752",
-      "titulo": "notas NFE com erro",
-      "descricao1": "62605\n\n101\t19/10/2026\t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n675\t\nATACADAO\n\n62660\n\n101\t19/10/2026\t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n675\t\nATACADAO\n\n62704\n\n101\t19/10/2026\t109 - SERVICO PARALISADO SEM PREVISAO",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": []
-    },
-    {
-      "id": "1792486904226",
-      "titulo": "Balança piso com problema",
-      "descricao1": "liga e desliga",
-      "descricao2": "confirmar problema, e chamar assistencia ",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "chamar assistencia",
-          "data": 1792533859776
-        },
-        {
-          "texto": "solicitado",
-          "data": 1792582610666
-        }
-      ],
-      "modificadoEm": 1792615335798
-    },
-    {
-      "id": "1792448661840",
-      "titulo": "Konica",
-      "descricao1": "Problema em reconhecer papel a4, aguardando troca de peça.",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": []
+  </script>
+  <style>
+    @keyframes piscar {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
     }
-  ],
-  "plantao": [
-    {
-      "id": "auto_03112026_Intermediário",
-      "titulo": "03/11/2026 - Intermediário",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793732410082
-    },
-    {
-      "id": "1793726379578",
-      "titulo": "03/11/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (03/11/2026) ===\n\n📌 Avisos Criados (2):\n- [Colaboradores Novos ]: Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  \n- [Office]: https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWTnkwFsVSsWCnBPvWprHJcpn\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Colaboradores Novos  (Status: pendente)\n- [DEMANDA] Salva mensal  (Status: pendente)\n- [DEMANDA] Pegar nota para denize  (Status: pendente)\n- [DEMANDA] Portal de Etiquetas (para João) (Status: em_andamento)\n- [DEMANDA] Pre vendas (para kaell) (Status: em_andamento)\n",
-      "comentarioExtra": ".",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joalis",
-      "modificadoEm": 1793726379578,
-      "horaRegistro": "14:19",
-      "criadoEm": 1793726379578
-    },
-    {
-      "id": "auto_03112026_Manhã",
-      "titulo": "03/11/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793725225066
-    },
-    {
-      "id": "1793663751703",
-      "titulo": "02/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (02/11/2026) ===\n\n📌 Avisos Criados (1):\n- [Bloqueio Líder Rodrigo]: Bloqueio por 1 dia. Devolução de rub sem corda\n\n📋 Demandas Modificadas/Concluídas (2):\n- [DEMANDA] numerar rubs (Status: pendente)\n- [DEMANDA] Pre vendas (para kaell) (Status: em_andamento)\n",
-      "comentarioExtra": "Samantha pediu pra imprimir umas coisas do canva, deixei salva pra entregar amanhã",
-      "descricao": "ok",
-      "rubsDesvinculados": "ok!",
-      "rubsBloqueados": "Rub 10 - maycon não foi entregue",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793663751703,
-      "horaRegistro": "20:54",
-      "criadoEm": 1793663751703
-    },
-    {
-      "id": "auto_02112026_Intermediário",
-      "titulo": "02/11/2026 - Intermediário",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793649794139
-    },
-    {
-      "id": "auto_02112026_Manhã",
-      "titulo": "02/11/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793644558803
-    },
-    {
-      "id": "auto_01112026_Tarde",
-      "titulo": "01/11/2026 - Tarde",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Tarde (Prazo limite das 22:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "22:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793581244197
-    },
-    {
-      "id": "auto_01112026_Intermediário",
-      "titulo": "01/11/2026 - Intermediário",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793559643898
-    },
-    {
-      "id": "1793556030614",
-      "titulo": "01/11/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (01/11/2026) ===\n\n📌 Avisos Criados (2):\n- [senhas colaboradores]: Atentar-se sempre ao trocar senhas de colaboradores, principalmente operadores de caixa e apoios, pois a senha tem que ser padrao (ABC ou def) pois os mesmos operam empresa e so tem essas letras la\n\nOP estava com senha \"Serraria@675'\n- [GERENCIAL BAMBA]: analisar se a planilha gerencial ira funcionar normalmente amanha \n\n📋 Demandas Modificadas/Concluídas (1):\n- [DEMANDA] Fazer arte dos aniversariantes  (Status: concluido)\n",
-      "comentarioExtra": "domingo paz, fitas trocadas, rubs desvinculados e portal do ifood operando!",
-      "descricao": "😎",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joao pedro 🫡",
-      "modificadoEm": 1793556030614,
-      "horaRegistro": "14:59",
-      "criadoEm": 1793556030614
-    },
-    {
-      "id": "auto_01112026_Manhã",
-      "titulo": "01/11/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793552443789
-    },
-    {
-      "id": "1793495955591",
-      "titulo": "31/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (31/10/2026) ===\n\n📌 Avisos Criados (1):\n- [colocar link do portal novo email ifood]: https://srvsave675.br-atacadao.corp/ETIQUETAS/etiquetaxx.php\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Fazer arte dos aniversariantes  (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: concluido)\n- [Chamados] nfe com erros (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n",
-      "comentarioExtra": "nadinha da silva",
-      "descricao": "ok!",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "rub mayara c - 06 não apareceu",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793496105082,
-      "horaRegistro": "22:18",
-      "criadoEm": 1793495955591
-    },
-    {
-      "id": "auto_31102026_Tarde",
-      "titulo": "31/10/2026 - Tarde",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Tarde (Prazo limite das 22:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "22:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793495918481
-    },
-    {
-      "id": "auto_31102026_Manhã",
-      "titulo": "31/10/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793474068768
-    },
-    {
-      "id": "1793474068754",
-      "titulo": "31/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (31/10/2026) ===\n\n📌 Avisos Criados (1):\n- [colocar link do portal novo email ifood]: https://srvsave675.br-atacadao.corp/ETIQUETAS/etiquetaxx.php\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Fazer arte dos aniversariantes  (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: concluido)\n- [Chamados] nfe com erros (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n",
-      "comentarioExtra": "SUABE",
-      "descricao": "paz",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joao Pedro 🤙",
-      "modificadoEm": 1793474068754,
-      "horaRegistro": "16:14",
-      "criadoEm": 1793474068754
-    },
-    {
-      "id": "auto_31102026_Intermediário",
-      "titulo": "31/10/2026 - Intermediário",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793473679352
-    },
-    {
-      "id": "1793465139116",
-      "titulo": "31/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (31/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [DEMANDA] Devolução da maquina (Status: concluido)\n- [Chamados] nfe com erros (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n",
-      "comentarioExtra": "",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1793465139116,
-      "horaRegistro": "13:45",
-      "criadoEm": 1793465139116
-    },
-    {
-      "id": "1793406915387",
-      "titulo": "30/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (30/10/2026) ===\n\n📌 Avisos Criados (6):\n- [NF 62660  | 62605 ]: observar relatorio de nf amanha para ver se vao continuar chegando as nfs, pois o chamado foi solucionado e elas tao constando com status 155\n- [SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)]: SENHA: CPD_675\n- [ACESSOS SERGIO]: 500800080 - ABC@2026\n- [manter os avisos dos bloq dos rub por aqui]: as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)\n- [manoela bloq no rub]: devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10\n- [samantha bloq.  no rub]: até 10/11\n\n📋 Demandas Modificadas/Concluídas (15):\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: em_andamento)\n- [DEMANDA] CONFIG PC PARA USO DA COLAB JANARA (Status: concluido)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: concluido)\n- [Chamados] Requerimento toner MS812 (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: concluido)\n- [DEMANDA] pc no almox (Status: em_andamento)\n- [DEMANDA]  férias (Status: pendente)\n- [Chamados] Usuário janara  (Status: concluido)\n- [DEMANDA] Tv frios  (Status: concluido)\n- [DEMANDA] gerencial nao funciona  (Status: concluido)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "tudo ok",
-      "descricao": "ok!",
-      "rubsDesvinculados": "ok!",
-      "rubsBloqueados": "nenhum",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793406915387,
-      "horaRegistro": "21:34",
-      "criadoEm": 1793406915387
-    },
-    {
-      "id": "1793386442770",
-      "titulo": "30/10/2026 - Intermediário",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (30/10/2026) ===\n\n📌 Avisos Criados (6):\n- [NF 62660  | 62605 ]: observar relatorio de nf amanha para ver se vao continuar chegando as nfs, pois o chamado foi solucionado e elas tao constando com status 155\n- [SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)]: SENHA: CPD_675\n- [ACESSOS SERGIO]: 500800080 - ABC@2026\n- [manter os avisos dos bloq dos rub por aqui]: as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)\n- [manoela bloq no rub]: devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10\n- [samantha bloq.  no rub]: até 10/11\n\n📋 Demandas Modificadas/Concluídas (15):\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: em_andamento)\n- [DEMANDA] CONFIG PC PARA USO DA COLAB JANARA (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: concluido)\n- [Chamados] Requerimento toner MS812 (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: concluido)\n- [DEMANDA] pc no almox (Status: em_andamento)\n- [DEMANDA]  férias (Status: pendente)\n- [Chamados] Usuário janara  (Status: concluido)\n- [DEMANDA] Tv frios  (Status: concluido)\n- [DEMANDA] gerencial nao funciona  (Status: concluido)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "demandas diarias finalizadas, alguns chamados finalizados e observações feitas",
-      "descricao": "👋👋",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joao pedro 🫡",
-      "modificadoEm": 1793386442770,
-      "horaRegistro": "15:51",
-      "criadoEm": 1793386442770
-    },
-    {
-      "id": "1793380157055",
-      "titulo": "30/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (30/10/2026) ===\n\n📌 Avisos Criados (5):\n- [SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)]: SENHA: CPD_675\n- [ACESSOS SERGIO]: 500800080 - ABC@2026\n- [manter os avisos dos bloq dos rub por aqui]: as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)\n- [manoela bloq no rub]: devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10\n- [samantha bloq.  no rub]: até 10/11\n\n📋 Demandas Modificadas/Concluídas (11):\n- [DEMANDA] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: em_andamento)\n- [DEMANDA] CONFIG PC PARA USO DA COLAB JANARA (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: concluido)\n- [DEMANDA]  férias (Status: pendente)\n- [Chamados] Usuário janara  (Status: concluido)\n- [DEMANDA] Tv frios  (Status: concluido)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "PLANILHA GERENCIAL RESOLVIDA, PLANILHA / PORTAL DANI EM PROCESSO",
-      "descricao": "👌",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1793380157055,
-      "horaRegistro": "14:08",
-      "criadoEm": 1793380157055
-    },
-    {
-      "id": "auto_30102026_Manhã",
-      "titulo": "30/10/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793379654779
-    },
-    {
-      "id": "1793377359311",
-      "titulo": "30/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (30/10/2026) ===\n\n📌 Avisos Criados (5):\n- [SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)]: SENHA: CPD_675\n- [ACESSOS SERGIO]: 500800080 - ABC@2026\n- [manter os avisos dos bloq dos rub por aqui]: as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)\n- [manoela bloq no rub]: devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10\n- [samantha bloq.  no rub]: até 10/11\n\n📋 Demandas Modificadas/Concluídas (10):\n- [DEMANDA] Devolução da maquina (Status: em_andamento)\n- [DEMANDA] CONFIG PC PARA USO DA COLAB JANARA (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: concluido)\n- [DEMANDA]  férias (Status: pendente)\n- [Chamados] Usuário janara  (Status: concluido)\n- [DEMANDA] Tv frios  (Status: concluido)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "",
-      "descricao": "perdão o atraso",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1793377359311,
-      "horaRegistro": "13:22",
-      "criadoEm": 1793377359311
-    },
-    {
-      "id": "1793320980108",
-      "titulo": "29/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (29/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (1):\n- [Chamados] maquina devolução (Status: em_andamento)\n",
-      "comentarioExtra": "portal pré venda 80% feito.\ncaixas de ribbon no cpd para decidirmos amanhã.",
-      "descricao": "caixinhas e webcam no pc do estoque por conta de meet.",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "nenhum",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793320980108,
-      "horaRegistro": "21:42",
-      "criadoEm": 1793320980108
-    },
-    {
-      "id": "auto_29102026_Intermediário",
-      "titulo": "29/10/2026 - Intermediário",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793301661818
-    },
-    {
-      "id": "auto_29102026_Manhã",
-      "titulo": "29/10/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793293243001
-    },
-    {
-      "id": "1793233060727",
-      "titulo": "28/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (28/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (9):\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Email suspeito da daniela (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: em_andamento)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [DEMANDA] notas NFE com erro (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n",
-      "comentarioExtra": "eu e o portal da dani estamos ficando loucos juntos 😔✊",
-      "descricao": ".",
-      "rubsDesvinculados": "sim",
-      "rubsBloqueados": "samantha 27/10 ",
-      "etiquetasRibbon": "abastecidas",
-      "responsavel": "Joao Pedro 🤙",
-      "modificadoEm": 1793233060727,
-      "horaRegistro": "21:15",
-      "criadoEm": 1793233060727
-    },
-    {
-      "id": "auto_28102026_Intermediário",
-      "titulo": "28/10/2026 - Intermediário",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793216029450
-    },
-    {
-      "id": "auto_28102026_Manhã",
-      "titulo": "28/10/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793207019446
-    },
-    {
-      "id": "1793147675600",
-      "titulo": "27/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (27/10/2026) ===\n\n📌 Avisos Criados (3):\n- [Portais]: Vamos mandar para a pasta \"morto\" os portais que nao estao sendo usados, vamos excluir os que são testes.\n- [Portal Recargas]: A forma de contagem da meta esta errada. \n- [rub samantha bloq. ]: manter bloq até dia 14/11 (10 dias)\n\n📋 Demandas Modificadas/Concluídas (1):\n- [DEMANDA] Pre vendas (para kaell) (Status: em_andamento)\n",
-      "comentarioExtra": "tudo ok!",
-      "descricao": "ok!",
-      "rubsDesvinculados": "ok!",
-      "rubsBloqueados": "Rub C- 06 SAMIRA não apareceu.",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793147675600,
-      "horaRegistro": "21:30",
-      "criadoEm": 1793147675600
-    },
-    {
-      "id": "auto_27102026_Intermediário",
-      "titulo": "27/10/2026 - Intermediário",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793135408631
-    },
-    {
-      "id": "1793123379187",
-      "titulo": "27/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (27/10/2026) ===\n\n📌 Avisos Criados (3):\n- [Portais]: Vamos mandar para a pasta \"morto\" os portais que nao estao sendo usados, vamos excluir os que são testes.\n- [Portal Recargas]: A forma de contagem da meta esta errada. \n- [rub samantha bloq. ]: manter bloq até dia 14/11 (10 dias)\n\n📋 Demandas Modificadas/Concluídas (0):\n- Nenhuma demanda modificada hoje.\n",
-      "comentarioExtra": "ok",
-      "descricao": "ok",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joalis",
-      "modificadoEm": 1793123379187,
-      "horaRegistro": "14:49",
-      "criadoEm": 1793123379187
-    },
-    {
-      "id": "auto_27102026_Manhã",
-      "titulo": "27/10/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793120425527
-    },
-    {
-      "id": "1793062446271",
-      "titulo": "26/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (26/10/2026) ===\n\n📌 Avisos Criados (1):\n- [RUB 13 PENDENTE DE DEVOLUÇÃO]: Usuario Silvio Cesar\n\n\n📋 Demandas Modificadas/Concluídas (12):\n- [Chamados] Email suspeito da daniela (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: em_andamento)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento toner MS812 (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Email Prevenção (Status: concluido)\n- [DEMANDA] NOVA PASTA CLIEN (Status: concluido)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [Chamados] Rub 13 quebrado (Status: concluido)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquinas quimadas (Status: pendente)\n",
-      "comentarioExtra": "Bom dia Joalis!\nHoje não tivemos nada de novidade!",
-      "descricao": "ok!",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "rub 28 - richard ",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793063057985,
-      "horaRegistro": "21:52",
-      "criadoEm": 1793062446271
-    },
-    {
-      "id": "auto_26102026_Intermediário",
-      "titulo": "26/10/2026 - Intermediário",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793041221736
-    },
-    {
-      "id": "1793034193363",
-      "titulo": "26/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (26/10/2026) ===\n\n📌 Avisos Criados (1):\n- [RUB 13 PENDENTE DE DEVOLUÇÃO]: Usuario Silvio Cesar\n\n\n📋 Demandas Modificadas/Concluídas (8):\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento toner MS812 (Status: em_andamento)\n- [DEMANDA] Email Prevenção (Status: concluido)\n- [DEMANDA] NOVA PASTA CLIEN (Status: concluido)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [Chamados] Rub 13 quebrado (Status: concluido)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquinas quimadas (Status: pendente)\n",
-      "comentarioExtra": ".",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joao pedro",
-      "modificadoEm": 1793034193363,
-      "horaRegistro": "14:02",
-      "criadoEm": 1793034193363
-    },
-    {
-      "id": "auto_26102026_Manhã",
-      "titulo": "26/10/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1793034028611
-    },
-    {
-      "id": "1792962708586",
-      "titulo": "25/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (25/10/2026) ===\n\n📌 Avisos Criados (2):\n- [Testar portal tagsell]: deixo no drive o portal com instruções, favor testar com arquivo do dia atual, se estiver funcionando, infromar por aqui mesmo\n\nhttps://drive.google.com/drive/folders/1IneNEppE3xCfh54ApT2DSgtwkI9idmBY\n\n\n- [Usuário fabio IAM]: Verificar com o victor pra ele dar uma olhada no usuário do fabio pelo IAM dele\n\n\n📋 Demandas Modificadas/Concluídas (4):\n- [Chamados] Requerimento toner MS812 (Status: pendente)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Limpeza PCs (Status: concluido)\n- [DEMANDA] verificar peso da balança 17  (Status: concluido)\n",
-      "comentarioExtra": "opa! não precisa se preocupar com checklist por hoje. ",
-      "descricao": "ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ",
-      "rubsDesvinculados": "OK ATUALIZAR O CLIENT NFE ",
-      "rubsBloqueados": "NENHUM ATUALIZAR O CLIENT NFE ",
-      "etiquetasRibbon": "OK ATUALIZAR O CLIENT NFE ",
-      "responsavel": "joalis",
-      "modificadoEm": 1792962708586,
-      "horaRegistro": "18:10",
-      "criadoEm": 1792962708586
-    },
-    {
-      "id": "auto_25102026_Intermediário",
-      "titulo": "25/10/2026 - Intermediário",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "16:00",
-      "sistemaGerou": true,
-      "criadoEm": 1792954821053
-    },
-    {
-      "id": "auto_25102026_Manhã",
-      "titulo": "25/10/2026 - Manhã",
-      "resumoAutomatico": "N/A",
-      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
-      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "horaRegistro": "14:00",
-      "sistemaGerou": true,
-      "criadoEm": 1792953891534
-    },
-    {
-      "id": "1792888327461",
-      "titulo": "24/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Tagsell automatico (3 preço) (Status: pendente)\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: em_andamento)\n",
-      "comentarioExtra": "o teclado do pc do rm ta estranho, arrumei duas vezes e na terceira não parou mais. \n",
-      "descricao": "no mais é isso",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "nenhum",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1792888327461,
-      "horaRegistro": "21:27",
-      "criadoEm": 1792888327461
-    },
-    {
-      "id": "1792867685453",
-      "titulo": "24/10/2026 - Intermediário",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Tagsell automatico (3 preço) (Status: pendente)\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: pendente)\n",
-      "comentarioExtra": "portal da Dani, indo de vento em poupa. Planilha enviada ajudou bastante, mas calculos do portal ainda estao fora do desejado. Em breve mais progressos.",
-      "descricao": "Tranquilo no mamilo 🤙",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joao Pedro 🤙",
-      "modificadoEm": 1792867685453,
-      "horaRegistro": "15:45",
-      "criadoEm": 1792867685453
-    },
-    {
-      "id": "1792855050444",
-      "titulo": "24/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: pendente)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: pendente)\n",
-      "comentarioExtra": ".",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1792855050444,
-      "horaRegistro": "12:17",
-      "criadoEm": 1792855050444
+    .animate-piscar {
+      animation: piscar 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
-  ],
-  "rubs": [
-    {
-      "id": "1793739408210",
-      "nome": "Samantha",
-      "motivo": "perda",
-      "dataDesbloqueio": "2026-11-10",
-      "criadoEm": 1793739408210,
-      "modificadoEm": 1793739408210
-    },
-    {
-      "id": "1793739386265",
-      "nome": "Rodrigo Frios",
-      "motivo": "perda",
-      "dataDesbloqueio": "2026-11-03",
-      "criadoEm": 1793739386265,
-      "modificadoEm": 1793739386265
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
-  ]
-}
+
+    /* ===== AJUSTES VISUAIS (somente estética – não altera a lógica) ===== */
+
+    /* Escala geral: tudo em rem fica ~12% maior */
+    html { font-size: 16px; }
+    body { font-size: 1rem; line-height: 1.6; }
+
+    /* Textos minúsculos (arbitrários em px) passam a ser legíveis */
+    .text-\[10px\] { font-size: 0.78rem !important; line-height: 1.2 !important; }
+    .text-\[11px\] { font-size: 0.85rem !important; line-height: 1.35 !important; }
+
+    /* Textos pequenos do Tailwind um pouco maiores */
+    .text-xs  { font-size: 0.9rem !important;  line-height: 1.4 !important; }
+    .text-sm  { font-size: 1rem !important;    line-height: 1.55 !important; }
+
+    /* Rótulos e textos secundários com mais contraste */
+    .text-slate-400 { color: #cbd5e1 !important; }
+    .text-slate-500 { color: #a8b5c7 !important; }
+    .text-slate-300 { color: #e2e8f0 !important; }
+    label.block { font-size: 0.95rem !important; font-weight: 600 !important; margin-bottom: 0.4rem !important; }
+
+    /* Campos de escrita maiores e mais visíveis */
+    input[type="text"], select, textarea {
+      font-size: 1rem !important;
+      padding: 0.7rem 0.9rem !important;
+      line-height: 1.55 !important;
+      background-color: #0b1220 !important;
+      border: 2px solid #475569 !important;
+      border-radius: 0.6rem !important;
+    }
+    input[type="text"]:focus, select:focus, textarea:focus {
+      border-color: #818cf8 !important;
+      box-shadow: 0 0 0 3px rgba(129,140,248,0.30) !important;
+      outline: none !important;
+    }
+    textarea { min-height: 9rem; resize: vertical; }
+    #aviso-mensagem { min-height: 14rem; }
+    #demanda-descricao1 { min-height: 12rem; }
+    #demanda-descricao2 { min-height: 9rem; }
+    #plantao-descricao { min-height: 14rem; }
+    #plantao-resumo-automatico { min-height: 10rem; font-size: 0.95rem !important; }
+
+    /* Campos das respostas dentro dos cards (fundo claro, texto escuro) */
+    .bg-white.border input, input[id^="resp-"] {
+      font-size: 1rem !important;
+      padding: 0.6rem 0.75rem !important;
+      background-color: #ffffff !important;
+      color: #000 !important;
+      border: 2px solid rgba(0,0,0,0.45) !important;
+    }
+    input[id^="resp-"]::placeholder { color: #475569; }
+
+    /* Botões maiores e fáceis de clicar */
+    button { font-size: 0.95rem; }
+    header button, section button, .fixed button { min-height: 2.5rem; }
+    .fixed form button[type="submit"],
+    .fixed form button[type="button"] { padding: 0.7rem 1.4rem !important; font-size: 1rem !important; }
+
+    /* Conteúdo mais largo e com respiro entre os cards */
+    .max-w-7xl { max-width: 1680px !important; }
+    #subtab-content-ativos, #subtab-content-lidos,
+    #container-demandas, #container-demandas-concluidas, #container-plantao { gap: 1.75rem !important; }
+
+    /* Cards: texto grande, sem altura fixa cortando conteúdo */
+    #subtab-content-ativos > div, #subtab-content-lidos > div,
+    .lista-cards-demanda > div {
+      min-height: 21rem !important;
+      padding: 1.5rem !important;
+    }
+    #container-plantao > div { height: auto !important; min-height: 20rem; padding: 1.5rem !important; }
+    #container-plantao .line-clamp-3 { -webkit-line-clamp: 5; font-size: 0.95rem !important; }
+
+    /* Título e mensagem dos post-its */
+    #subtab-content-ativos h4, #subtab-content-lidos h4,
+    #container-demandas h4, #container-demandas-concluidas h4,
+    #container-plantao h4 { font-size: 1.12rem !important; line-height: 1.35 !important; white-space: normal !important; }
+    #subtab-content-ativos p, #subtab-content-lidos p,
+    #container-demandas p, #container-demandas-concluidas p { font-size: 0.98rem !important; line-height: 1.55 !important; }
+
+    /* Respostas dentro do card */
+    #subtab-content-ativos .bg-black\/10, #subtab-content-lidos .bg-black\/10,
+    #container-demandas .bg-black\/10, #container-demandas-concluidas .bg-black\/10 {
+      font-size: 0.95rem !important; padding: 0.5rem 0.65rem !important; background: rgba(0,0,0,0.12) !important;
+    }
+    /* Botões de ação (lupa, editar, excluir) maiores */
+    #subtab-content-ativos .bg-black\/10 button, [class*="bg-black/10"][title] { }
+    button[title="Tela Cheia"], button[title="Editar"], button[title="Excluir"], button[title="Transformar em demanda"] {
+      font-size: 1.1rem !important; padding: 0.35rem 0.55rem !important; min-height: 2.2rem;
+    }
+    /* Checkboxes de leitura */
+    input[type="checkbox"] { width: 1.15rem; height: 1.15rem; }
+
+    /* Modais mais amplos e com texto confortável */
+    .fixed .max-w-md { max-width: 34rem !important; }
+    .fixed .max-w-xl { max-width: 52rem !important; }
+    .fixed .max-w-3xl { max-width: 64rem !important; }
+    .fixed > div { padding: 1.75rem !important; }
+    .fixed h3 { font-size: 1.2rem !important; }
+    #fs-content { font-size: 1.05rem !important; line-height: 1.8 !important; }
+
+    /* Cabeçalho */
+    header h1 { font-size: 1.35rem !important; }
+    #tab-btn-avisos, #tab-btn-demandas, #tab-btn-plantao { font-size: 1rem !important; padding: 0.55rem 1.1rem !important; }
+    #sync-status { font-size: 0.9rem !important; }
+
+    /* Botão pequeno de excluir resposta */
+    .btn-del-resp { min-height: 0 !important; font-size: 0.75rem !important; line-height: 1 !important; padding: 0.2rem 0.3rem !important; color: #0f172a; }
+    .btn-del-resp:hover { color: #b91c1c; }
+
+    /* Barra de alerta de plantão mais visível */
+    #container-alerta-plantao { font-size: 0.95rem !important; padding: 0.8rem 1rem !important; }
+  </style>
+</head>
+<body class="h-full text-slate-100 flex flex-col font-sans bg-slate-950 antialiased">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/85 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-6">
+        <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-indigo-500 inline-block"></span>
+          Portal
+        </h1>
+        <nav class="flex space-x-1 bg-slate-950 p-1 rounded-lg border border-slate-800">
+          <button id="tab-btn-avisos" onclick="switchMainTab('avisos')" class="px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow">
+            Avisos
+          </button>
+          <button id="tab-btn-demandas" onclick="switchMainTab('demandas')" class="px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white">
+            Demandas
+          </button>
+          <button id="tab-btn-plantao" onclick="switchMainTab('plantao')" class="px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white">
+            Passagem de Plantão
+          </button>
+        </nav>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="limpezaGeral()" class="text-xs bg-amber-950/60 hover:bg-amber-900 text-amber-300 border border-amber-800/60 px-2.5 py-1 rounded transition" title="Apagar avisos lidos, demandas concluídas e plantões com mais de 10 dias">
+          🧹 Limpeza Geral
+        </button>
+        <button onclick="promptForToken()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-2.5 py-1 rounded transition" title="Configurar Token">
+          🔑 Token
+        </button>
+        <div id="sync-status" class="text-xs text-slate-400">A conectar...</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barra de Alerta / Pisca-Pisca de Plantão -->
+  <div id="container-alerta-plantao" class="w-full hidden bg-rose-950/80 border-b border-rose-900 px-4 py-2 text-center text-xs text-rose-200 font-medium z-20">
+    <span id="texto-alerta-plantao"></span>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ABA 1: AVISOS -->
+    <section id="tab-content-avisos" class="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_21rem] gap-6 items-start">
+     <div class="space-y-6 min-w-0">
+      <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
+        <div class="flex items-center gap-2">
+          <button id="subtab-btn-ativos" onclick="switchAvisosSubtab('ativos')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30">
+            Ativos (<span id="count-avisos-ativos">0</span>)
+          </button>
+          <button id="subtab-btn-lidos" onclick="switchAvisosSubtab('lidos')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50">
+            Lidos / Arquivados (<span id="count-avisos-lidos">0</span>)
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="apagarAvisosAntigos()" class="text-xs bg-amber-950/60 hover:bg-amber-900 text-amber-300 border border-amber-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar avisos com mais de 10 dias">
+            🗑️ Limpar Antigos (+10d)
+          </button>
+          <button onclick="openModalPessoas()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-lg flex items-center gap-1">
+            👥 Pessoas (<span id="count-pessoas">0</span>)
+          </button>
+          <button onclick="openModalAviso()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
+            + Novo Aviso
+          </button>
+        </div>
+      </div>
+
+      <!-- Alerta visual de avisos antigos -->
+      <div id="alerta-avisos-antigos" class="hidden bg-amber-950/40 border border-amber-800/50 text-amber-200 px-4 py-2 rounded-lg text-xs flex items-center justify-between">
+        <span>⚠️ Existem avisos com mais de 10 dias acumulados. Utilize o botão "Limpar Antigos (+10d)" para higienizar o painel.</span>
+      </div>
+
+      <div id="subtab-content-ativos" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5"></div>
+      <div id="subtab-content-lidos" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 hidden"></div>
+     </div>
+
+     <!-- COLUNA DIREITA: RUBS BLOQUEADOS (não somem ao ler; só ao excluir) -->
+     <aside class="xl:sticky xl:top-20 space-y-3">
+      <div class="flex items-center justify-between gap-2 bg-slate-900 px-4 py-3 rounded-xl border border-slate-800">
+        <span class="text-sm font-bold text-slate-200">🔒 Rubs Bloqueados (<span id="count-rubs">0</span>)</span>
+        <button onclick="openModalRub()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg font-medium shadow">+ Bloquear</button>
+      </div>
+      <div id="container-rubs" class="space-y-2"></div>
+     </aside>
+    </section>
+
+    <!-- ABA 2: DEMANDAS -->
+    <section id="tab-content-demandas" class="space-y-6 hidden">
+      <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
+        <div class="flex items-center gap-3">
+          <button id="demanda-subtab-ativas" onclick="switchDemandasSubtab('ativas')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30">
+            Demandas Ativas (<span id="count-demandas-ativas">0</span>)
+          </button>
+          <button id="demanda-subtab-concluidas" onclick="switchDemandasSubtab('concluidas')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50">
+            Concluídas / Arquivadas (<span id="count-demandas-concluidas">0</span>)
+          </button>
+          <select id="filter-demandas-categoria" onchange="renderDemandas()" class="bg-slate-950 text-slate-200 text-xs border border-slate-800 rounded-lg px-3 py-2">
+            <option value="todas">Todas Categorias</option>
+          </select>
+          <div class="flex items-center gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800">
+            <button id="filtro-tipo-todos" type="button" onclick="setFiltroTipo('todos')" class="text-sm font-medium px-3 py-1.5 rounded-md transition">Todos</button>
+            <button id="filtro-tipo-chamado" type="button" onclick="setFiltroTipo('chamado')" class="text-sm font-medium px-3 py-1.5 rounded-md transition">📞 Só Chamados</button>
+            <button id="filtro-tipo-demanda" type="button" onclick="setFiltroTipo('demanda')" class="text-sm font-medium px-3 py-1.5 rounded-md transition">📋 Só Demandas</button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="openModalCategorias()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-lg">
+            🏷️ Categorias
+          </button>
+          <button onclick="openModalDemanda()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
+            + Nova Demanda
+          </button>
+        </div>
+      </div>
+
+      <div id="container-demandas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      <div id="container-demandas-concluidas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 hidden"></div>
+    </section>
+
+    <!-- ABA 3: PASSAGEM DE PLANTÃO -->
+    <section id="tab-content-plantao" class="space-y-6 hidden">
+      <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
+        <div class="text-sm font-medium text-slate-300">
+          📋 Histórico de Passagens de Plantão
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="apagarPlantoesAntigos()" class="text-xs bg-rose-950/60 hover:bg-rose-900 text-rose-300 border border-rose-800/60 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1" title="Apagar registros com mais de 10 dias">
+            🗑️ Limpar Antigos (+10d)
+          </button>
+          <button onclick="openModalPlantao()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-lg font-medium shadow flex items-center gap-1">
+            + Nova Passagem de Plantão
+          </button>
+        </div>
+      </div>
+
+      <!-- Alerta visual de plantões antigos -->
+      <div id="alerta-plantoes-antigos" class="hidden bg-rose-950/40 border border-rose-800/50 text-rose-200 px-4 py-2 rounded-lg text-xs flex items-center justify-between">
+        <span>⚠️ Existem registros de plantão com mais de 10 dias acumulados. Utilize o botão "Limpar Antigos (+10d)" para higienizar o painel.</span>
+      </div>
+
+      <div id="container-plantao" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-start"></div>
+    </section>
+
+  </main>
+
+  <!-- MODAIS DE LÓGICA -->
+
+  <div id="modal-pessoas" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-md p-5 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="text-base font-semibold text-white">Gerenciar Pessoas</h3>
+        <button onclick="closeModal('modal-pessoas')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <div class="flex gap-2">
+        <input type="text" id="input-nova-pessoa" placeholder="Nome da pessoa" class="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        <button onclick="addPessoa()" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Adicionar</button>
+      </div>
+      <ul id="lista-pessoas" class="divide-y divide-slate-800 max-h-60 overflow-y-auto"></ul>
+    </div>
+  </div>
+
+  <div id="modal-categorias" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-md p-5 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="text-base font-semibold text-white">Gerenciar Categorias</h3>
+        <button onclick="closeModal('modal-categorias')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <div class="flex gap-2">
+        <input type="text" id="input-nova-categoria" placeholder="Ex: Chamados, Projetos" class="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+        <button onclick="addCategoria()" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Adicionar</button>
+      </div>
+      <ul id="lista-categorias" class="divide-y divide-slate-800 max-h-60 overflow-y-auto"></ul>
+    </div>
+  </div>
+
+  <div id="modal-aviso" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="modal-aviso-title" class="text-base font-semibold text-white">Novo Aviso</h3>
+        <button onclick="closeModal('modal-aviso')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <form id="form-aviso-inner" onsubmit="saveAviso(event)" class="space-y-4">
+        <input type="hidden" id="aviso-id">
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Título</label>
+          <input type="text" id="aviso-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Mensagem</label>
+          <textarea id="aviso-mensagem" rows="6" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Estilo do Post-it</label>
+          <div class="grid grid-cols-6 gap-2">
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-yellow" checked class="peer sr-only">
+              <div class="w-full h-8 rounded bg-amber-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-blue" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-sky-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-green" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-emerald-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-pink" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-pink-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-purple" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-purple-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="aviso-cor" value="postit-orange" class="peer sr-only">
+              <div class="w-full h-8 rounded bg-orange-200 border-2 border-transparent peer-checked:border-indigo-500"></div>
+            </label>
+          </div>
+        </div>
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="closeModal('modal-aviso')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Rub Bloqueado -->
+  <div id="modal-rub" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-md p-6 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="modal-rub-title" class="text-base font-semibold text-white">Bloquear Rub</h3>
+        <button onclick="closeModal('modal-rub')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <form id="form-rub-inner" onsubmit="saveRub(event)" class="space-y-4">
+        <input type="hidden" id="rub-id">
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Rub / Nome</label>
+          <input type="text" id="rub-nome" required placeholder="Ex: 12345 - João" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Motivo (opcional)</label>
+          <input type="text" id="rub-motivo" placeholder="Ex: Divergência de caixa" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Bloqueado por quantos dias?</label>
+          <div class="grid grid-cols-5 gap-1.5 mb-2">
+            <button type="button" onclick="rubSetDias(1)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">1d</button>
+            <button type="button" onclick="rubSetDias(3)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">3d</button>
+            <button type="button" onclick="rubSetDias(7)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">7d</button>
+            <button type="button" onclick="rubSetDias(15)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">15d</button>
+            <button type="button" onclick="rubSetDias(30)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">30d</button>
+          </div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Data do desbloqueio</label>
+          <input type="date" id="rub-data" required style="color-scheme:dark;" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="closeModal('modal-rub')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Demanda -->
+  <div id="modal-demanda" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="modal-demanda-title" class="text-base font-semibold text-white">Nova Demanda</h3>
+        <button onclick="closeModal('modal-demanda')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <form id="form-demanda-inner" onsubmit="saveDemanda(event)" class="space-y-4">
+        <input type="hidden" id="demanda-id">
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Título</label>
+          <input type="text" id="demanda-titulo" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição 1</label>
+          <textarea id="demanda-descricao1" rows="5" required placeholder="Insira detalhes ou links (ex: https://...)" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição 2</label>
+          <textarea id="demanda-descricao2" rows="4" placeholder="Informações adicionais ou links complementares..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Categoria</label>
+            <select id="demanda-categoria" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Status</label>
+            <select id="demanda-status" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+              <option value="pendente">Pendente</option>
+              <option value="em_andamento">Em Andamento</option>
+              <option value="concluido">Concluído</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="closeModal('modal-demanda')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: Passagem de Plantão Padrão -->
+  <div id="modal-plantao" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="modal-plantao-title" class="text-base font-semibold text-white">Nova Passagem de Plantão</h3>
+        <button onclick="closeModal('modal-plantao')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+
+      <form id="form-plantao-inner" onsubmit="savePlantao(event)" class="space-y-4">
+        <input type="hidden" id="plantao-id">
+        <input type="hidden" id="plantao-horario-registro">
+
+        <div>
+          <div class="flex justify-between items-center mb-1">
+            <label class="block text-xs font-medium text-slate-400">Título (Data e Período)</label>
+            <span class="text-[10px] text-indigo-400">Atalho rápido:</span>
+          </div>
+          <div class="grid grid-cols-4 gap-1.5 mb-2">
+            <button type="button" onclick="preencherPeriodo('Manhã')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">☀️ Manhã</button>
+            <button type="button" onclick="preencherPeriodo('Intermediário')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌤️ Intermed.</button>
+            <button type="button" onclick="preencherPeriodo('Tarde')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">🌙 Tarde</button>
+            <button type="button" onclick="preencherPeriodo('Madrugada')" class="text-[11px] bg-slate-950 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-800 hover:border-indigo-500/40 py-1 rounded transition">✨ Madruga</button>
+          </div>
+          <input type="text" id="plantao-titulo" required oninput="verificarExibicaoCamposTarde()" placeholder="Ex: 24/10/2026 - Manhã" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Resumo Automático do Dia (Avisos e Demandas Modificadas)</label>
+          <textarea id="plantao-resumo-automatico" rows="5" readonly class="w-full bg-slate-950/80 border border-slate-800 rounded-lg px-3 py-2.5 text-xs text-slate-300 focus:outline-none leading-relaxed"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Comentário Adicional para a Passagem</label>
+          <textarea id="plantao-comentario-extra" rows="3" placeholder="Adicione observações adicionais para este plantão..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Descrição Geral do Plantão</label>
+          <textarea id="plantao-descricao" rows="6" required placeholder="Escreva aqui detalhadamente todos os acontecimentos e ocorrências..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+        </div>
+
+        <!-- CONTAINER DOS CAMPOS EXCLUSIVOS DA TARDE (INICIALMENTE OCULTO) -->
+        <div id="container-campos-tarde" class="space-y-4 border-t border-slate-800 pt-4 hidden">
+          <div class="text-xs font-bold text-indigo-400 uppercase tracking-wider">🔒 Informações Técnicas Exclusivas (Turno da Tarde)</div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Desvinculados *</label>
+            <textarea id="plantao-rubs-desvinculados" rows="3" placeholder="Informe os detalhes sobre rubs desvinculados..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Rubs Bloqueados (Informar quem foi bloqueado) *</label>
+            <textarea id="plantao-rubs-bloqueados" rows="3" placeholder="Informe os rubs bloqueados e especifique o responsável..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Etiquetas e Ribbon Abastecidas *</label>
+            <textarea id="plantao-etiquetas" rows="3" placeholder="Informe a situação das etiquetas e ribbons abastecidas..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+          </div>
+        </div>
+
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="closeModal('modal-plantao')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-5 py-2 rounded-lg font-medium shadow">Salvar Plantão</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: Formulário de Envio por E-mail EXCLUSIVO para a Tarde -->
+  <div id="modal-plantao-email" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="text-base font-semibold text-white">✉️ Enviar Passagem de Plantão por E-mail</h3>
+        <button onclick="closeModal('modal-plantao-email')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+
+      <form action="https://formsubmit.co/cpd_675@atacadao.com.br" method="POST" target="hidden-iframe" onsubmit="savePlantaoEmailSubmit(event)" class="space-y-4">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" id="email-subject" value="📋 Relatório de Passagem de Plantão">
+        <input type="hidden" name="_template" value="box">
+
+
+        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-300">
+          Você registrou o plantão <strong id="email-periodo-txt"></strong>. Confirme seu nome para disparar o e-mail para <strong>cpd_675@atacadao.com.br</strong>:
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Identificação / Responsável</label>
+          <input type="text" id="email-responsavel" name="Responsável" required placeholder="Seu nome" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <input type="hidden" id="email-titulo" name="Plantão (Data e Turno)">
+        <input type="hidden" id="email-resumo-auto" name="Resumo do Dia">
+        <input type="hidden" id="email-comentario" name="Comentário Adicional">
+        <input type="hidden" id="email-descricao" name="Descrição Geral do Plantão">
+        <input type="hidden" id="email-rubs-desv" name="Rubs Desvinculados">
+        <input type="hidden" id="email-rubs-bloq" name="Rubs Bloqueados">
+        <input type="hidden" id="email-etiquetas" name="Etiquetas e Ribbon Abastecidas">
+
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="voltarParaPlantao()" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Voltar e Editar</button>
+          <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-5 py-2 rounded-lg font-medium shadow">Disparar E-mail e Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FORMULÁRIO OCULTO PARA DISPARAR E-MAIL AUTOMÁTICO DOS OUTROS TURNOS -->
+  <form id="hidden-formsubmit-auto" action="https://formsubmit.co/cpd_675@atacadao.com.br" method="POST" target="hidden-iframe" class="hidden">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" id="auto-email-subject" value="📋 Relatório de Passagem de Plantão">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="responsavel" value="Automático / Sistema">
+    <input type="hidden" name="titulo_plantao" id="auto-email-titulo">
+    <input type="hidden" name="resumo_automatico_dia" id="auto-email-resumo">
+    <input type="hidden" name="comentario_adicional" id="auto-email-comentario">
+    <input type="hidden" name="descricao_geral" id="auto-email-desc">
+    <input type="hidden" name="rubs_desvinculados" id="auto-email-rubs-desv">
+    <input type="hidden" name="rubs_bloqueados" id="auto-email-rubs-bloq">
+    <input type="hidden" name="etiquetas_ribbon" id="auto-email-etiquetas">
+  </form>
+  <iframe name="hidden-iframe" style="display:none;"></iframe>
+
+  <!-- MODAL DE VISUALIZAÇÃO EM TELA CHEIA PARA OS CARDS -->
+  <div id="modal-fullscreen" class="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 hidden backdrop-blur-md">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-3xl p-6 space-y-4 max-h-[85vh] overflow-y-auto relative shadow-2xl">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="fs-title" class="text-lg font-bold text-white">Visualização em Tela Cheia</h3>
+        <button onclick="closeModal('modal-fullscreen')" class="text-slate-400 hover:text-white text-lg">✕</button>
+      </div>
+      <div id="fs-content" class="text-sm text-slate-200 space-y-4 whitespace-pre-wrap leading-relaxed"></div>
+      <div class="flex justify-end pt-3 border-t border-slate-800">
+        <button onclick="closeModal('modal-fullscreen')" class="bg-slate-800 hover:bg-slate-700 text-white text-xs px-4 py-2 rounded-lg">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT LÓGICA COM GITHUB API + LOCALSTORAGE TOKEN -->
+  <script>
+    const GITHUB_USERNAME = 'joalefe';
+    const REPO_NAME       = 'portal-demandas';
+    const JSON_PATH       = 'dados.json';
+    const API_URL         = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${JSON_PATH}`;
+
+    let currentSha = '';
+    let state = {
+      pessoas: ['Ana', 'Carlos', 'Mariana'],
+      categorias: ['Chamados', 'Projetos', 'Manutenção'],
+      avisos: [],
+      demandas: [],
+      plantao: [],
+      rubs: []
+    };
+
+    let tempPlantaoBuffer = null;
+
+    function getToken() {
+      let token = localStorage.getItem('portal_github_token');
+      if (!token) {
+        token = promptForToken();
+      }
+      return token;
+    }
+
+    function promptForToken() {
+      const token = prompt('Digite o seu Personal Access Token do GitHub (ghp_...):');
+      if (token && token.trim() !== '') {
+        localStorage.setItem('portal_github_token', token.trim());
+        loadStorage();
+        return token.trim();
+      }
+      return null;
+    }
+
+    function base64ToUtf8(str) { return decodeURIComponent(escape(atob(str))); }
+    function utf8ToBase64(str) { return btoa(unescape(encodeURIComponent(str))); }
+
+    async function loadStorage(silent = false) {
+      const token = silent ? localStorage.getItem('portal_github_token') : getToken();
+      const statusEl = document.getElementById('sync-status');
+      
+      if (!token) {
+        statusEl.innerText = '⚠️ Sem Token';
+        statusEl.className = 'text-xs text-amber-400';
+        return;
+      }
+
+      if (!silent) statusEl.innerText = 'Sincronizando...';
+
+      try {
+        const res = await fetch(API_URL + '?t=' + new Date().getTime(), {
+          headers: { 
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          cache: 'no-store'
+        });
+
+        if (res.status === 401) {
+          if (silent) return;
+          alert('Token do GitHub inválido ou expirado. Por favor insira um token válido.');
+          localStorage.removeItem('portal_github_token');
+          promptForToken();
+          return;
+        }
+
+        if (!res.ok) throw new Error('Erro ao conectar com o GitHub.');
+
+        const data = await res.json();
+        if (silent && (salvando || salvarPendente || data.sha === currentSha)) return;
+        currentSha = data.sha;
+
+        const jsonTexto = base64ToUtf8(data.content.replace(/\n/g, ''));
+        const cloudData = JSON.parse(jsonTexto);
+
+        if (cloudData) { state = { ...state, ...cloudData }; }
+
+        statusEl.innerText = '☁️ Sincronizado';
+        statusEl.className = 'text-xs text-emerald-400';
+
+        updateCategoriaOptions();
+        renderAvisos();
+        renderRubs();
+        renderDemandas();
+        verificarEGerarPlantoesPerdidos();
+        renderPlantao();
+        verificarAlertasPlantao();
+        checarAlertasItensAntigos();
+      } catch (err) {
+        console.error(err);
+        statusEl.innerText = '⚠️ Erro de sincronização';
+        statusEl.className = 'text-xs text-rose-400';
+      }
+    }
+
+    // Fila de salvamento: evita dois PUTs ao mesmo tempo (conflito de sha)
+    async function saveStorage() {
+      if (salvando) { salvarPendente = true; return; }
+      salvando = true;
+      try {
+        do {
+          salvarPendente = false;
+          await saveStorageInterno();
+        } while (salvarPendente);
+      } finally {
+        salvando = false;
+      }
+    }
+
+    async function saveStorageInterno() {
+      const token = getToken();
+      const statusEl = document.getElementById('sync-status');
+      if (!token) return;
+
+      statusEl.innerText = 'A salvar...';
+
+      try {
+        const resGet = await fetch(API_URL + '?t=' + new Date().getTime(), {
+          headers: { 
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          cache: 'no-store'
+        });
+
+        const dataGet = await resGet.json();
+        if (!resGet.ok || !dataGet.sha) throw new Error('Falha ao ler os dados atuais da nuvem.');
+        currentSha = dataGet.sha;
+
+        // Mescla o que outras pessoas salvaram antes de gravar (evita sobrescrever)
+        let remotoMudou = false;
+        try {
+          const remoto = JSON.parse(base64ToUtf8((dataGet.content || '').replace(/\n/g, '')));
+          remotoMudou = mesclarComNuvem(remoto);
+        } catch (errMerge) {
+          console.warn('Não foi possível mesclar com a nuvem:', errMerge);
+        }
+
+        const novoConteudoJson = JSON.stringify(state, null, 2);
+        const conteudoBase64 = utf8ToBase64(novoConteudoJson);
+
+        const payload = {
+          message: 'Atualização automática do Portal via Web',
+          content: conteudoBase64,
+          sha: currentSha
+        };
+
+        const resPut = await fetch(API_URL, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (resPut.ok) {
+          const dataPut = await resPut.json();
+          currentSha = dataPut.content.sha;
+          if (remotoMudou && !usuarioEstaEditando()) renderTudo();
+          statusEl.innerText = '☁️ Sincronizado';
+          statusEl.className = 'text-xs text-emerald-400';
+        } else {
+          statusEl.innerText = '⚠️ Erro ao salvar';
+          statusEl.className = 'text-xs text-rose-400';
+        }
+      } catch (err) {
+        console.error(err);
+        statusEl.innerText = '⚠️ Erro de conexão';
+        statusEl.className = 'text-xs text-rose-400';
+      }
+    }
+
+    // ===== SINCRONIZAÇÃO ENTRE VÁRIOS USUÁRIOS =====
+    let salvando = false;
+    let salvarPendente = false;
+    const idsExcluidos = new Set();
+    const respostasExcluidas = new Set();
+
+    function excluirResposta(tipo, itemId, indice) {
+      const lista = tipo === 'aviso' ? state.avisos : state.demandas;
+      const item = (lista || []).find(x => x.id === itemId);
+      if (!item || !item.respostas || !item.respostas[indice]) return;
+      if (!confirm('Excluir esta resposta?')) return;
+      const removida = item.respostas.splice(indice, 1)[0];
+      respostasExcluidas.add(`${removida.data}|${removida.texto}`);
+      item.modificadoEm = new Date().getTime();
+      saveStorage();
+      if (tipo === 'aviso') renderAvisos(); else renderDemandas();
+    }
+
+    function dataDoItem(i) { return i.criadoEm || parseInt(i.id, 10) || 0; }
+
+    function mesclarRespostas(a, b) {
+      const mapa = new Map();
+      [...(a || []), ...(b || [])].forEach(r => {
+        const chave = `${r.data}|${r.texto}`;
+        if (respostasExcluidas.has(chave)) return;
+        if (!mapa.has(chave)) mapa.set(chave, r);
+      });
+      return [...mapa.values()].sort((x, y) => (x.data || 0) - (y.data || 0));
+    }
+
+    function mesclarComNuvem(remoto) {
+      let mudou = false;
+      ['avisos', 'demandas', 'plantao', 'rubs'].forEach(chave => {
+        const locais = state[chave] = state[chave] || [];
+        const remotos = Array.isArray(remoto && remoto[chave]) ? remoto[chave] : [];
+        const mapa = new Map(locais.map(i => [i.id, i]));
+        remotos.forEach(r => {
+          if (!r || idsExcluidos.has(r.id)) return;
+          const l = mapa.get(r.id);
+          if (!l) { locais.push(r); mapa.set(r.id, r); mudou = true; return; }
+          const antes = (l.respostas || []).length;
+          const respostas = mesclarRespostas(l.respostas, r.respostas);
+          const visLocal = l.visualizadoEm || 0;
+          const visMax = Math.max(visLocal, r.visualizadoEm || 0);
+          if ((r.modificadoEm || 0) > (l.modificadoEm || 0)) {
+            Object.assign(l, r);
+            mudou = true;
+          }
+          if (visMax) {
+            l.visualizadoEm = visMax;
+            if (visMax !== visLocal) mudou = true;
+          }
+          if (chave === 'avisos' || chave === 'demandas') {
+            l.respostas = respostas;
+            if (respostas.length !== antes) mudou = true;
+          }
+        });
+        locais.sort((a, b) => dataDoItem(b) - dataDoItem(a));
+      });
+      return mudou;
+    }
+
+    function renderTudo() {
+      renderAvisos();
+      renderRubs();
+      renderDemandas();
+      renderPlantao();
+    }
+
+    function usuarioEstaEditando() {
+      const ae = document.activeElement;
+      const digitando = ae && (ae.tagName === 'TEXTAREA' || (ae.tagName === 'INPUT' && ae.type === 'text'));
+      const modalAberto = Array.from(document.querySelectorAll('.fixed')).some(m => m.id && m.id.startsWith('modal-') && !m.classList.contains('hidden'));
+      return !!(digitando || modalAberto);
+    }
+
+    function formatarDataHoraCurta(ts) {
+      if (!ts) return '';
+      const d = new Date(ts);
+      const p = n => String(n).padStart(2, '0');
+      return `${p(d.getDate())}/${p(d.getMonth() + 1)} ${p(d.getHours())}:${p(d.getMinutes())}`;
+    }
+
+    function switchMainTab(tab) {
+      document.getElementById('tab-content-avisos').classList.toggle('hidden', tab !== 'avisos');
+      document.getElementById('tab-content-demandas').classList.toggle('hidden', tab !== 'demandas');
+      document.getElementById('tab-content-plantao').classList.toggle('hidden', tab !== 'plantao');
+      
+      const btnA = document.getElementById('tab-btn-avisos');
+      const btnD = document.getElementById('tab-btn-demandas');
+      const btnP = document.getElementById('tab-btn-plantao');
+
+      btnA.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
+      btnD.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
+      btnP.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-slate-400 hover:text-white";
+
+      if (tab === 'avisos') {
+        btnA.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow";
+      } else if (tab === 'demandas') {
+        btnD.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow";
+      } else {
+        btnP.className = "px-4 py-1.5 text-sm font-medium rounded-md transition-all text-white bg-slate-800 shadow";
+      }
+    }
+
+    function switchAvisosSubtab(sub) {
+      document.getElementById('subtab-content-ativos').classList.toggle('hidden', sub !== 'ativos');
+      document.getElementById('subtab-content-lidos').classList.toggle('hidden', sub !== 'lidos');
+      const btnA = document.getElementById('subtab-btn-ativos');
+      const btnL = document.getElementById('subtab-btn-lidos');
+      if (sub === 'ativos') {
+        btnA.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
+        btnL.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50";
+      } else {
+        btnL.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
+        btnA.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50";
+      }
+    }
+
+    function switchDemandasSubtab(sub) {
+      document.getElementById('container-demandas').classList.toggle('hidden', sub !== 'ativas');
+      document.getElementById('container-demandas-concluidas').classList.toggle('hidden', sub !== 'concluidas');
+      const btnA = document.getElementById('demanda-subtab-ativas');
+      const btnC = document.getElementById('demanda-subtab-concluidas');
+      if (sub === 'ativas') {
+        btnA.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
+        btnC.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50";
+      } else {
+        btnC.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
+        btnA.className = "text-sm font-medium px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white border border-slate-700/50";
+      }
+    }
+
+    function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+    function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+
+    function abrirFullscreen(titulo, htmlConteudo) {
+      document.getElementById('fs-title').innerText = titulo;
+      document.getElementById('fs-content').innerHTML = htmlConteudo;
+      openModal('modal-fullscreen');
+    }
+
+    function formatarLinks(texto) {
+      if (!texto) return '';
+      const expReg = /(https?:\/\/[^\s]+)/g;
+      return escapeHtml(texto).replace(expReg, '<a href="$1" target="_blank" class="text-blue-900 underline font-semibold hover:text-black break-all">$1</a>');
+    }
+
+    function renderAvisos() {
+      document.getElementById('count-pessoas').innerText = (state.pessoas || []).length;
+      const ativos = (state.avisos || []).filter(a => !a.arquivado);
+      const lidos = (state.avisos || []).filter(a => a.arquivado);
+      document.getElementById('count-avisos-ativos').innerText = ativos.length;
+      document.getElementById('count-avisos-lidos').innerText = lidos.length;
+
+      const bgColors = {
+        'postit-yellow': 'bg-amber-200 text-slate-950 border-amber-400',
+        'postit-blue': 'bg-sky-200 text-slate-950 border-sky-400',
+        'postit-green': 'bg-emerald-200 text-slate-950 border-emerald-400',
+        'postit-pink': 'bg-pink-200 text-slate-950 border-pink-400',
+        'postit-purple': 'bg-purple-200 text-slate-950 border-purple-400',
+        'postit-orange': 'bg-orange-200 text-slate-950 border-orange-400'
+      };
+
+      const renderCard = (a) => {
+        const totalReq = Math.min(3, (state.pessoas || []).length || 1);
+        const lidosCount = (a.lidosPor || []).length;
+        const respostas = a.respostas || [];
+
+        return `
+          <div class="${bgColors[a.cor] || bgColors['postit-yellow']} rounded-xl p-5 shadow-lg border relative flex flex-col justify-between h-auto min-h-[320px] transition${classeParado(a, !a.arquivado)}">
+            <div class="overflow-hidden space-y-2">
+              ${badgeParado(a, !a.arquivado)}
+              <div class="flex justify-between items-start gap-2">
+                <h4 class="font-bold text-base leading-snug truncate text-slate-950">${escapeHtml(a.titulo)}</h4>
+                <div class="flex gap-1 shrink-0">
+                  <button onclick="registrarVisualizacao('aviso','${a.id}');abrirFullscreen('${escapeHtml(a.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(a.mensagem).replace(/`/g, '\\`')}\`)" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Tela Cheia">🔍</button>
+                  <button onclick="avisoParaDemanda('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Transformar em demanda">📋</button>
+                  <button onclick="openModalAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Editar">✏️</button>
+                  <button onclick="deleteAviso('${a.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Excluir">🗑️</button>
+                </div>
+              </div>
+              <p class="text-xs font-medium text-slate-950 whitespace-pre-wrap leading-relaxed">${formatarLinks(a.mensagem)}</p>
+
+              <!-- Respostas/Continuidade -->
+              <div class="space-y-1.5 pt-2 border-t border-black/15">
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-900">Respostas / Continuidade:</span>
+                <div class="space-y-1 max-h-28 overflow-y-auto">
+                  ${respostas.map((r, i) => ({ r, i })).reverse().map(({ r, i }) => `
+                    <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950 relative" style="padding-right:1.8rem !important;">
+                      ${escapeHtml(r.texto)}
+                      <div class="text-[10px] opacity-70 mt-0.5">${formatarDataHoraCurta(r.data)}</div>
+                      <button type="button" onclick="excluirResposta('aviso', '${a.id}', ${i})" title="Excluir resposta" class="btn-del-resp absolute top-1 right-1 opacity-60 hover:opacity-100">✕</button>
+                    </div>
+                  `).join('')}
+                </div>
+                <div class="flex gap-1 pt-1">
+                  <input type="text" id="resp-aviso-${a.id}" placeholder="Responder..." class="flex-1 bg-white border border-black/30 rounded px-2 py-1 text-[11px] text-black font-medium focus:outline-none">
+                  <button onclick="enviarRespostaAviso('${a.id}')" class="bg-black/20 hover:bg-black/30 text-slate-950 text-[10px] px-2 py-1 rounded font-bold">Enviar</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t border-black/15 pt-3 mt-3 space-y-2 shrink-0">
+              <div class="flex justify-between items-center text-[10px] font-extrabold uppercase tracking-wider text-slate-900">
+                <span>Leitura (${lidosCount}/${totalReq})</span>
+                <span>${a.arquivado ? 'Lido/Arquivado' : 'Pendente'}</span>
+              </div>
+              <div class="space-y-1 max-h-16 overflow-y-auto">
+                ${(state.pessoas || []).map(p => {
+                  const checked = (a.lidosPor || []).includes(p);
+                  return `
+                    <label class="flex items-center text-xs gap-2 cursor-pointer select-none text-slate-950 font-semibold">
+                      <input type="checkbox" ${checked ? 'checked' : ''} onchange="toggleLeitura('${a.id}', '${escapeHtml(p)}')" class="rounded border-slate-900">
+                      <span class="${checked ? 'line-through opacity-70' : 'font-bold'}">${escapeHtml(p)}</span>
+                    </label>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      };
+
+      document.getElementById('subtab-content-ativos').innerHTML = ativos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso ativo.</p>`;
+      document.getElementById('subtab-content-lidos').innerHTML = lidos.map(renderCard).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum aviso no histórico.</p>`;
+      checarAlertasItensAntigos();
+    }
+
+    function enviarRespostaAviso(avisoId) {
+      const input = document.getElementById(`resp-aviso-${avisoId}`);
+      if (!input || !input.value.trim()) return;
+      const aviso = (state.avisos || []).find(a => a.id === avisoId);
+      if (!aviso) return;
+
+      aviso.respostas = aviso.respostas || [];
+      aviso.modificadoEm = new Date().getTime();
+      aviso.respostas.push({
+        texto: input.value.trim(),
+        data: new Date().getTime()
+      });
+      input.value = '';
+      saveStorage();
+      renderAvisos();
+    }
+
+    function toggleLeitura(avisoId, pessoa) {
+      const aviso = state.avisos.find(a => a.id === avisoId);
+      if (!aviso) return;
+      aviso.lidosPor = aviso.lidosPor || [];
+      if (aviso.lidosPor.includes(pessoa)) {
+        aviso.lidosPor = aviso.lidosPor.filter(p => p !== pessoa);
+      } else {
+        aviso.lidosPor.push(pessoa);
+      }
+      const totalReq = Math.min(3, (state.pessoas || []).length || 1);
+      aviso.arquivado = aviso.lidosPor.length >= totalReq;
+      aviso.modificadoEm = new Date().getTime();
+      saveStorage();
+      renderAvisos();
+    }
+
+    function openModalAviso(id = null) {
+      document.getElementById('form-aviso-inner').reset();
+      if (id) {
+        const a = state.avisos.find(x => x.id === id);
+        if (a) {
+          document.getElementById('aviso-id').value = a.id;
+          document.getElementById('aviso-titulo').value = a.titulo;
+          document.getElementById('aviso-mensagem').value = a.mensagem;
+          const radioCor = document.querySelector(`input[name="aviso-cor"][value="${a.cor}"]`);
+          if (radioCor) radioCor.checked = true;
+          document.getElementById('modal-aviso-title').innerText = 'Editar Aviso';
+        }
+      } else {
+        document.getElementById('aviso-id').value = '';
+        document.getElementById('modal-aviso-title').innerText = 'Novo Aviso';
+      }
+      openModal('modal-aviso');
+    }
+
+    function saveAviso(e) {
+      e.preventDefault();
+      const id = document.getElementById('aviso-id').value;
+      const titulo = document.getElementById('aviso-titulo').value;
+      const mensagem = document.getElementById('aviso-mensagem').value;
+      const cor = document.querySelector('input[name="aviso-cor"]:checked').value;
+      state.avisos = state.avisos || [];
+      if (id) {
+        const a = state.avisos.find(x => x.id === id);
+        if (a) { a.titulo = titulo; a.mensagem = mensagem; a.cor = cor; a.modificadoEm = new Date().getTime(); }
+      } else {
+        state.avisos.unshift({
+          id: Date.now().toString(),
+          titulo, mensagem, cor,
+          lidosPor: [],
+          respostas: [],
+          arquivado: false,
+          criadoEm: new Date().getTime(),
+          modificadoEm: new Date().getTime()
+        });
+      }
+      saveStorage();
+      renderAvisos();
+      closeModal('modal-aviso');
+    }
+
+    function deleteAviso(id) {
+      if (confirm('Excluir aviso?')) {
+        idsExcluidos.add(id);
+        state.avisos = state.avisos.filter(a => a.id !== id);
+        saveStorage();
+        renderAvisos();
+      }
+    }
+
+    function apagarAvisosAntigos() {
+      const senhaInformada = prompt('ATENÇÃO: Você está prestes a apagar avisos com mais de 10 dias.\n\nDigite a senha de conscientização para prosseguir:');
+      if (senhaInformada === null) return;
+      if (senhaInformada.trim() !== 'CPD_675') {
+        alert('Senha incorreta!');
+        return;
+      }
+
+      const agora = new Date().getTime();
+      const limiteMs = 10 * 24 * 60 * 60 * 1000;
+      const antes = (state.avisos || []).length;
+
+      state.avisos = (state.avisos || []).filter(a => {
+        const dataItem = a.criadoEm || parseInt(a.id, 10);
+        const manter = (agora - dataItem) <= limiteMs;
+        if (!manter) idsExcluidos.add(a.id);
+        return manter;
+      });
+
+      const removidos = antes - state.avisos.length;
+      saveStorage();
+      renderAvisos();
+      alert(`Limpeza concluída! Foram removidos ${removidos} avisos com mais de 10 dias.`);
+    }
+
+    // --- DEMANDAS ---
+    let filtroTipo = 'todos';
+    function setFiltroTipo(tipo) {
+      filtroTipo = tipo;
+      renderDemandas();
+    }
+
+    function atualizarBotoesFiltroTipo() {
+      const ativo = 'text-white bg-indigo-600 shadow';
+      const inativo = 'text-slate-400 hover:text-white';
+      ['todos', 'chamado', 'demanda'].forEach(t => {
+        const el = document.getElementById('filtro-tipo-' + t);
+        if (el) el.className = 'text-sm font-medium px-3 py-1.5 rounded-md transition ' + (filtroTipo === t ? ativo : inativo);
+      });
+    }
+
+    function renderDemandas() {
+      atualizarBotoesFiltroTipo();
+      const filterCat = document.getElementById('filter-demandas-categoria').value;
+      let list = state.demandas || [];
+      if (filterCat !== 'todas') list = list.filter(d => d.categoria === filterCat);
+
+      const ativas = list.filter(d => d.status !== 'concluido');
+      const concluidas = list.filter(d => d.status === 'concluido');
+
+      document.getElementById('count-demandas-ativas').innerText = ativas.length;
+      document.getElementById('count-demandas-concluidas').innerText = concluidas.length;
+
+      const statusBadges = {
+        'pendente': 'bg-amber-500/20 text-amber-950 font-bold border-amber-500/30',
+        'em_andamento': 'bg-sky-500/20 text-sky-950 font-bold border-sky-500/30',
+        'concluido': 'bg-emerald-500/20 text-emerald-950 font-bold border-emerald-500/30'
+      };
+
+      const renderCardDemanda = (d) => {
+        const isChamado = (d.categoria || '').toLowerCase().includes('chamado');
+        
+        // Cores diferenciadas post-it: Chamados = Verde / Demandas Gerais = Azul com letras pretas nítidas
+        const cardCor = isChamado 
+          ? 'bg-emerald-200 text-slate-950 border-emerald-400 shadow-emerald-950/20' 
+          : 'bg-sky-200 text-slate-950 border-sky-400 shadow-sky-950/20';
+
+        const badgeCor = isChamado 
+          ? 'bg-emerald-300 text-emerald-950 border border-emerald-500' 
+          : 'bg-sky-300 text-sky-950 border border-sky-500';
+
+        const respostas = d.respostas || [];
+
+        return `
+          <div class="${cardCor} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-auto min-h-[320px] shadow-md${classeParado(d, d.status !== 'concluido')}">
+            <div class="overflow-hidden space-y-2">
+              ${badgeParado(d, d.status !== 'concluido')}
+              <div class="flex items-start justify-between gap-2">
+                <span class="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded ${badgeCor} truncate max-w-[150px]">
+                  ${escapeHtml(d.categoria)} ${isChamado ? '📞' : '📋'}
+                </span>
+                <div class="flex gap-1 shrink-0">
+                  <button onclick="abrirFullscreenItem('demanda','${d.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Tela Cheia">🔍</button>
+                  <button onclick="openModalDemanda('${d.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Editar">✏️</button>
+                  <button onclick="deleteDemanda('${d.id}')" class="text-xs bg-black/10 hover:bg-black/25 text-slate-950 p-1 rounded font-semibold" title="Excluir">🗑️</button>
+                </div>
+              </div>
+              <h4 class="font-bold text-base truncate text-slate-950">${escapeHtml(d.titulo)}</h4>
+              <div class="space-y-1 text-xs font-medium text-slate-950">
+                <p class="whitespace-pre-wrap leading-relaxed">${formatarLinks(d.descricao1 || '')}</p>
+                ${d.descricao2 ? `<p class="whitespace-pre-wrap leading-relaxed pt-1 font-normal opacity-90">${formatarLinks(d.descricao2)}</p>` : ''}
+              </div>
+
+              <!-- Respostas/Continuidade Demanda -->
+              <div class="space-y-1.5 pt-2 border-t border-black/15">
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-900">Respostas / Continuidade:</span>
+                <div class="space-y-1 max-h-24 overflow-y-auto">
+                  ${respostas.map((r, i) => ({ r, i })).reverse().map(({ r, i }) => `
+                    <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950 relative" style="padding-right:1.8rem !important;">
+                      ${escapeHtml(r.texto)}
+                      <div class="text-[10px] opacity-70 mt-0.5">${formatarDataHoraCurta(r.data)}</div>
+                      <button type="button" onclick="excluirResposta('demanda', '${d.id}', ${i})" title="Excluir resposta" class="btn-del-resp absolute top-1 right-1 opacity-60 hover:opacity-100">✕</button>
+                    </div>
+                  `).join('')}
+                </div>
+                <div class="flex gap-1 pt-1">
+                  <input type="text" id="resp-demanda-${d.id}" placeholder="Responder..." class="flex-1 bg-white border border-black/30 rounded px-2 py-1 text-[11px] text-black font-medium focus:outline-none">
+                  <button onclick="enviarRespostaDemanda('${d.id}')" class="bg-black/20 hover:bg-black/30 text-slate-950 text-[10px] px-2 py-1 rounded font-bold">Enviar</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t border-black/15 pt-3 flex items-center justify-between text-xs shrink-0">
+              <span class="text-[10px] font-bold text-slate-900">ID: ${d.id.slice(-4)}</span>
+              <select onchange="updateDemandaStatus('${d.id}', this.value)" class="text-xs rounded px-2 py-1 border ${statusBadges[d.status]} bg-white font-bold cursor-pointer">
+                <option value="pendente" ${d.status === 'pendente' ? 'selected' : ''}>Pendente</option>
+                <option value="em_andamento" ${d.status === 'em_andamento' ? 'selected' : ''}>Em Andamento</option>
+                <option value="concluido" ${d.status === 'concluido' ? 'selected' : ''}>Concluído</option>
+              </select>
+            </div>
+          </div>
+        `;
+      };
+
+      // Chamados de um lado, demais demandas do outro
+      const ehChamado = d => (d.categoria || '').toLowerCase().includes('chamado');
+      const montarColunas = (lista) => {
+        const coluna = (titulo, icone, itens, cor, msgVazia, tipo) => `
+          <div class="space-y-4 min-w-0">
+            <div class="flex items-center justify-between gap-2 px-4 py-2.5 rounded-lg border ${cor}">
+              <span class="text-sm font-bold uppercase tracking-wider">${icone} ${titulo} <span class="opacity-80">(${itens.length})</span></span>
+            </div>
+            <div class="lista-cards-demanda grid grid-cols-1 2xl:grid-cols-2 gap-5">
+              ${itens.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">${msgVazia}</p>`}
+            </div>
+          </div>`;
+        const colChamados = coluna('Chamados', '📞', lista.filter(ehChamado), 'bg-emerald-950/50 text-emerald-300 border-emerald-800/70', 'Nenhum chamado.', 'chamado');
+        const colDemandas = coluna('Demandas', '📋', lista.filter(d => !ehChamado(d)), 'bg-sky-950/50 text-sky-300 border-sky-800/70', 'Nenhuma demanda.', 'demanda');
+        const cols = filtroTipo === 'chamado' ? colChamados : filtroTipo === 'demanda' ? colDemandas : colChamados + colDemandas;
+        const gridCls = filtroTipo === 'todos' ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
+        return `<div class="col-span-full grid grid-cols-1 ${gridCls} gap-8 items-start">` + cols + `</div>`;
+      };
+      document.getElementById('container-demandas').innerHTML = montarColunas(ativas);
+      document.getElementById('container-demandas-concluidas').innerHTML = montarColunas(concluidas);
+    }
+
+    function enviarRespostaDemanda(demandaId) {
+      const input = document.getElementById(`resp-demanda-${demandaId}`);
+      if (!input || !input.value.trim()) return;
+      const d = (state.demandas || []).find(x => x.id === demandaId);
+      if (!d) return;
+
+      d.respostas = d.respostas || [];
+      d.respostas.push({
+        texto: input.value.trim(),
+        data: new Date().getTime()
+      });
+      d.modificadoEm = new Date().getTime();
+      input.value = '';
+      saveStorage();
+      renderDemandas();
+    }
+
+    function updateDemandaStatus(id, newStatus) {
+      const d = (state.demandas || []).find(x => x.id === id);
+      if (d) {
+        d.status = newStatus;
+        d.modificadoEm = new Date().getTime();
+        saveStorage();
+        renderDemandas();
+      }
+    }
+
+    let avisoOrigemId = null;
+
+    function avisoParaDemanda(id) {
+      const a = (state.avisos || []).find(x => x.id === id);
+      if (!a) return;
+      openModalDemanda();
+      document.getElementById('demanda-titulo').value = a.titulo;
+      document.getElementById('demanda-descricao1').value = a.mensagem;
+      const resp = (a.respostas || []).map(r => '- ' + r.texto).join('\n');
+      document.getElementById('demanda-descricao2').value = resp ? 'Respostas do aviso:\n' + resp : '';
+      document.getElementById('modal-demanda-title').innerText = 'Nova Demanda (a partir de um aviso)';
+      avisoOrigemId = id;
+    }
+
+    function openModalDemanda(id = null, tipo = null) {
+      avisoOrigemId = null;
+      document.getElementById('form-demanda-inner').reset();
+      updateCategoriaOptions();
+      if (id) {
+        const d = (state.demandas || []).find(x => x.id === id);
+        if (d) {
+          document.getElementById('demanda-id').value = d.id;
+          document.getElementById('demanda-titulo').value = d.titulo;
+          document.getElementById('demanda-descricao1').value = d.descricao1 || d.descricao || '';
+          document.getElementById('demanda-descricao2').value = d.descricao2 || '';
+          document.getElementById('demanda-categoria').value = d.categoria;
+          document.getElementById('demanda-status').value = d.status;
+          document.getElementById('modal-demanda-title').innerText = 'Editar Demanda';
+        }
+      } else {
+        document.getElementById('demanda-id').value = '';
+        document.getElementById('modal-demanda-title').innerText = tipo === 'chamado' ? 'Novo Chamado' : 'Nova Demanda';
+        if (tipo) {
+          // Pré-seleciona a categoria conforme a coluna onde o botão foi clicado
+          const selCat = document.getElementById('demanda-categoria');
+          const opcoes = Array.from(selCat.options);
+          const alvo = opcoes.find(o => o.value.toLowerCase().includes('chamado') === (tipo === 'chamado'));
+          if (alvo) selCat.value = alvo.value;
+        }
+      }
+      openModal('modal-demanda');
+    }
+
+    function saveDemanda(e) {
+      e.preventDefault();
+      const id = document.getElementById('demanda-id').value;
+      const titulo = document.getElementById('demanda-titulo').value;
+      const descricao1 = document.getElementById('demanda-descricao1').value;
+      const descricao2 = document.getElementById('demanda-descricao2').value;
+      const categoria = document.getElementById('demanda-categoria').value;
+      const status = document.getElementById('demanda-status').value;
+      
+      state.demandas = state.demandas || [];
+      if (id) {
+        const d = state.demandas.find(x => x.id === id);
+        if (d) {
+          d.titulo = titulo; 
+          d.descricao1 = descricao1; 
+          d.descricao2 = descricao2;
+          d.categoria = categoria; 
+          d.status = status;
+          d.modificadoEm = new Date().getTime();
+          delete d.descricao;
+        }
+      } else {
+        state.demandas.unshift({
+          id: Date.now().toString(),
+          titulo, descricao1, descricao2, categoria, status,
+          respostas: [],
+          criadoEm: new Date().getTime(),
+          modificadoEm: new Date().getTime()
+        });
+      }
+      saveStorage();
+      renderDemandas();
+      if (!id && avisoOrigemId) {
+        // Aviso de origem vai para Lidos/Arquivados (não é apagado)
+        const av = (state.avisos || []).find(x => x.id === avisoOrigemId);
+        if (av) {
+          av.arquivado = true;
+          av.respostas = av.respostas || [];
+          av.respostas.push({ texto: '📋 Transformado em demanda', data: new Date().getTime() });
+          av.modificadoEm = new Date().getTime();
+          saveStorage();
+          renderAvisos();
+        }
+        avisoOrigemId = null;
+      }
+      closeModal('modal-demanda');
+    }
+
+    function deleteDemanda(id) {
+      if (confirm('Excluir demanda?')) {
+        idsExcluidos.add(id);
+        state.demandas = state.demandas.filter(d => d.id !== id);
+        saveStorage();
+        renderDemandas();
+      }
+    }
+
+    // --- PASSAGEM DE PLANTÃO ---
+    function gerarResumoAutomaticoDia() {
+      const dataHojeStr = getDataAtualFormatada();
+      const [dia, mes, ano] = dataHojeStr.split('/').map(Number);
+      const inicioDoDia = new Date(ano, mes - 1, dia, 0, 0, 0).getTime();
+
+      const avisosHoje = (state.avisos || []).filter(a => {
+        const t = a.criadoEm || parseInt(a.id, 10);
+        return t >= inicioDoDia;
+      });
+
+      const demandasModificadasHoje = (state.demandas || []).filter(d => {
+        const mod = d.modificadoEm || d.criadoEm || parseInt(d.id, 10);
+        return mod >= inicioDoDia;
+      });
+
+      let resumo = `=== RESUMO AUTOMÁTICO (${dataHojeStr}) ===\n\n`;
+      
+      resumo += `📌 Avisos Criados (${avisosHoje.length}):\n`;
+      if (avisosHoje.length > 0) {
+        avisosHoje.forEach(a => {
+          resumo += `- [${a.titulo}]: ${a.mensagem}\n`;
+        });
+      } else {
+        resumo += `- Nenhum aviso registrado hoje.\n`;
+      }
+
+      resumo += `\n📋 Demandas Modificadas/Concluídas (${demandasModificadasHoje.length}):\n`;
+      if (demandasModificadasHoje.length > 0) {
+        demandasModificadasHoje.forEach(d => {
+          resumo += `- [${d.categoria}] ${d.titulo} (Status: ${d.status})\n`;
+        });
+      } else {
+        resumo += `- Nenhuma demanda modificada hoje.\n`;
+      }
+
+      return resumo;
+    }
+
+    function verificarExibicaoCamposTarde() {
+      const tituloVal = document.getElementById('plantao-titulo').value.toLowerCase();
+      const containerCamposTarde = document.getElementById('container-campos-tarde');
+      const isTarde = tituloVal.includes('tarde');
+
+      containerCamposTarde.classList.toggle('hidden', !isTarde);
+
+      document.getElementById('plantao-rubs-desvinculados').required = isTarde;
+      document.getElementById('plantao-rubs-bloqueados').required = isTarde;
+      document.getElementById('plantao-etiquetas').required = isTarde;
+    }
+
+    function renderPlantao() {
+      let list = state.plantao || [];
+      document.getElementById('container-plantao').innerHTML = list.map(p => {
+        const isSistema = p.sistemaGerou === true;
+        const textoCompletoPlantao = `Resumo Automático:\n${p.resumoAutomatico || 'N/A'}\n\nComentário Adicional:\n${p.comentarioExtra || 'N/A'}\n\nDescrição Geral:\n${p.descricao || 'N/A'}` +
+          (p.rubsDesvinculados && p.rubsDesvinculados !== 'N/A' ? `\n\nRubs Desvinculados:\n${p.rubsDesvinculados}\n\nRubs Bloqueados:\n${p.rubsBloqueados}\n\nEtiquetas/Ribbon:\n${p.etiquetasRibbon}` : '');
+
+        return `
+          <div class="${isSistema ? 'bg-rose-950/40 border-rose-900/60' : 'bg-slate-900 border-slate-800'} border rounded-xl p-5 space-y-3 flex flex-col justify-between h-auto shadow-md">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h4 class="font-bold ${isSistema ? 'text-rose-300' : 'text-white'} text-base">${escapeHtml(p.titulo)}</h4>
+                <div class="flex gap-1 items-center shrink-0">
+                  <button onclick="abrirFullscreen('${escapeHtml(p.titulo).replace(/'/g, "\\'")}', \`${escapeHtml(textoCompletoPlantao).replace(/`/g, '\\`')}\`)" class="text-xs bg-slate-800 hover:bg-slate-700 p-1 rounded text-slate-300" title="Tela Cheia">🔍</button>
+                  ${!isSistema ? `
+                    <button onclick="openModalPlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Editar">✏️</button>
+                    <button onclick="deletePlantao('${p.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Excluir">🗑️</button>
+                  ` : `
+                    <span class="text-[10px] bg-rose-500/20 text-rose-300 border border-rose-500/30 px-2 py-0.5 rounded font-semibold">⚠️ Automático</span>
+                  `}
+                </div>
+              </div>
+              <div class="mt-2 text-xs space-y-3">
+                ${(() => {
+                  const cl = isSistema ? 'text-rose-200/90 font-medium' : 'text-slate-300';
+                  const val = v => v && String(v).trim() !== '' && v !== 'N/A';
+                  const bloco = (rotulo, texto) => `<div><div class="text-[10px] font-extrabold uppercase tracking-wider text-indigo-400 mb-0.5">${rotulo}</div><p class="${cl} whitespace-pre-wrap break-words">${escapeHtml(texto)}</p></div>`;
+                  let h = '';
+                  if (!isSistema && val(p.resumoAutomatico)) h += bloco('Resumo do Dia', p.resumoAutomatico);
+                  if (val(p.comentarioExtra)) h += bloco('Comentário Adicional', p.comentarioExtra);
+                  h += bloco('Descrição Geral', p.descricao || '');
+                  if (val(p.rubsDesvinculados)) h += bloco('Rubs Desvinculados', p.rubsDesvinculados);
+                  if (val(p.rubsBloqueados)) h += bloco('Rubs Bloqueados', p.rubsBloqueados);
+                  if (val(p.etiquetasRibbon)) h += bloco('Etiquetas e Ribbon Abastecidas', p.etiquetasRibbon);
+                  return h;
+                })()}
+              </div>
+            </div>
+            <div class="border-t ${isSistema ? 'border-rose-900/40' : 'border-slate-800/80'} pt-2 text-[10px] text-slate-500 flex justify-between shrink-0">
+              <span>Registrado às: ${p.horaRegistro || 'N/D'}</span>
+              <span>${isSistema ? 'Sistema' : (p.responsavel ? '👤 ' + escapeHtml(p.responsavel) : 'Plantão')}</span>
+            </div>
+          </div>
+        `;
+      }).join('') || `<p class="text-xs text-slate-500 col-span-full">Nenhum registro de plantão encontrado.</p>`;
+      checarAlertasItensAntigos();
+    }
+
+    function getDataAtualFormatada() {
+      const hoje = new Date();
+      const dia = String(hoje.getDate()).padStart(2, '0');
+      const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+      const ano = hoje.getFullYear();
+      return `${dia}/${mes}/${ano}`;
+    }
+
+    function preencherPeriodo(periodo) {
+      const dataHoje = getDataAtualFormatada();
+      document.getElementById('plantao-titulo').value = `${dataHoje} - ${periodo}`;
+      verificarExibicaoCamposTarde();
+    }
+
+    function openModalPlantao(id = null) {
+      document.getElementById('form-plantao-inner').reset();
+      document.getElementById('plantao-id').value = '';
+      document.getElementById('plantao-titulo').value = `${getDataAtualFormatada()} - Manhã`;
+      document.getElementById('plantao-resumo-automatico').value = gerarResumoAutomaticoDia();
+      verificarExibicaoCamposTarde();
+
+      if (id) {
+        const p = (state.plantao || []).find(x => x.id === id);
+        if (p) {
+          if (p.sistemaGerou) {
+            alert('Este registro automático não pode ser editado.');
+            return;
+          }
+          document.getElementById('plantao-id').value = p.id;
+          document.getElementById('plantao-titulo').value = p.titulo;
+          document.getElementById('plantao-resumo-automatico').value = p.resumoAutomatico || gerarResumoAutomaticoDia();
+          document.getElementById('plantao-comentario-extra').value = p.comentarioExtra || '';
+          document.getElementById('plantao-descricao').value = p.descricao || '';
+          document.getElementById('plantao-rubs-desvinculados').value = p.rubsDesvinculados !== 'N/A' ? (p.rubsDesvinculados || '') : '';
+          document.getElementById('plantao-rubs-bloqueados').value = p.rubsBloqueados !== 'N/A' ? (p.rubsBloqueados || '') : '';
+          document.getElementById('plantao-etiquetas').value = p.etiquetasRibbon !== 'N/A' ? (p.etiquetasRibbon || '') : '';
+          document.getElementById('plantao-horario-registro').value = p.horaRegistro || '';
+          document.getElementById('modal-plantao-title').innerText = 'Editar Passagem de Plantão';
+          verificarExibicaoCamposTarde();
+        }
+      } else {
+        const now = new Date();
+        const horaStr = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+        document.getElementById('plantao-horario-registro').value = horaStr;
+        document.getElementById('modal-plantao-title').innerText = 'Nova Passagem de Plantão';
+      }
+      openModal('modal-plantao');
+    }
+
+    function savePlantao(e) {
+      e.preventDefault();
+      const titulo = document.getElementById('plantao-titulo').value;
+      const isTarde = titulo.toLowerCase().includes('tarde');
+
+      const dadosPlantao = {
+        id: document.getElementById('plantao-id').value,
+        titulo: titulo,
+        resumoAutomatico: document.getElementById('plantao-resumo-automatico').value,
+        comentarioExtra: document.getElementById('plantao-comentario-extra').value,
+        descricao: document.getElementById('plantao-descricao').value,
+        rubsDesvinculados: isTarde ? document.getElementById('plantao-rubs-desvinculados').value : 'N/A',
+        rubsBloqueados: isTarde ? document.getElementById('plantao-rubs-bloqueados').value : 'N/A',
+        etiquetasRibbon: isTarde ? document.getElementById('plantao-etiquetas').value : 'N/A',
+        horaRegistro: document.getElementById('plantao-horario-registro').value
+      };
+
+      // Todo turno (Manhã, Intermediário, Tarde, Madrugada) é enviado por e-mail
+      {
+        tempPlantaoBuffer = dadosPlantao;
+
+        document.getElementById('email-titulo').value = dadosPlantao.titulo;
+        document.getElementById('email-resumo-auto').value = dadosPlantao.resumoAutomatico;
+        document.getElementById('email-comentario').value = dadosPlantao.comentarioExtra;
+        document.getElementById('email-descricao').value = dadosPlantao.descricao;
+        document.getElementById('email-rubs-desv').value = dadosPlantao.rubsDesvinculados;
+        document.getElementById('email-rubs-bloq').value = dadosPlantao.rubsBloqueados;
+        document.getElementById('email-etiquetas').value = dadosPlantao.etiquetasRibbon;
+        document.getElementById('email-subject').value = `📋 Relatório de Passagem de Plantão - ${dadosPlantao.titulo}`;
+        document.getElementById('email-periodo-txt').innerText = dadosPlantao.titulo;
+        // Campos vazios / não aplicáveis não vão no e-mail (evita linhas "N/A" e em branco)
+        ['email-comentario','email-rubs-desv','email-rubs-bloq','email-etiquetas'].forEach(idc => {
+          const el = document.getElementById(idc);
+          el.disabled = !el.value || el.value.trim() === '' || el.value === 'N/A';
+        });
+        document.getElementById('email-responsavel').value = localStorage.getItem('portal_ultimo_responsavel') || '';
+
+        closeModal('modal-plantao');
+        openModal('modal-plantao-email');
+        return;
+      }
+
+    }
+
+    // ===== ENVIO DE E-MAIL VIA EMAILJS =====
+    // Cole aqui os 3 códigos do painel do EmailJS. Enquanto estiverem vazios, o portal usa o envio antigo (FormSubmit).
+    const EMAILJS_SERVICE_ID  = '';   // ex: service_abc123
+    const EMAILJS_TEMPLATE_ID = '';   // ex: template_xyz789
+    const EMAILJS_PUBLIC_KEY  = '';   // ex: AbCdEf123456
+
+    function emailJsConfigurado() {
+      return !!(EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY && window.emailjs);
+    }
+
+    function blocoEmailHtml(titulo, texto) {
+      return `<tr><td style="padding:16px 28px 0 28px;"><div style="font-size:12px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">${escapeHtml(titulo)}</div><div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;font-size:14px;line-height:1.6;color:#0f172a;white-space:pre-wrap;">${escapeHtml(texto)}</div></td></tr>`;
+    }
+
+    function enviarEmailViaEmailJS(d) {
+      const temTarde = d.rubsDesvinculados && d.rubsDesvinculados !== 'N/A';
+      const params = {
+        titulo: d.titulo,
+        responsavel: d.responsavel || '-',
+        descricao: d.descricao || '-',
+        resumo: d.resumoAutomatico || '-',
+        secao_comentario: (d.comentarioExtra && d.comentarioExtra.trim()) ? blocoEmailHtml('Comentário Adicional', d.comentarioExtra) : '',
+        secao_tarde: temTarde
+          ? blocoEmailHtml('Rubs Desvinculados', d.rubsDesvinculados) + blocoEmailHtml('Rubs Bloqueados', d.rubsBloqueados) + blocoEmailHtml('Etiquetas e Ribbon Abastecidas', d.etiquetasRibbon)
+          : ''
+      };
+      return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params, { publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
+    function voltarParaPlantao() {
+      closeModal('modal-plantao-email');
+      openModal('modal-plantao');
+    }
+
+    function savePlantaoEmailSubmit(e) {
+      if (!tempPlantaoBuffer) return;
+      const nomeResp = (document.getElementById('email-responsavel').value || '').trim();
+      try { localStorage.setItem('portal_ultimo_responsavel', nomeResp); } catch (err) {}
+      tempPlantaoBuffer.responsavel = nomeResp;
+      if (emailJsConfigurado()) {
+        e.preventDefault();
+        const dados = tempPlantaoBuffer;
+        const btn = e.target.querySelector('button[type="submit"]');
+        if (btn) { btn.disabled = true; btn.innerText = 'Enviando...'; }
+        enviarEmailViaEmailJS(dados)
+          .catch(err => {
+            console.error(err);
+            alert('O plantão foi salvo, mas o e-mail NÃO foi enviado.\nVerifique a configuração do EmailJS.\n' + ((err && err.text) ? err.text : ''));
+          })
+          .finally(() => {
+            if (btn) { btn.disabled = false; btn.innerText = 'Disparar E-mail e Salvar'; }
+            executarSalvarPlantaoFinal(dados);
+          });
+        return;
+      }
+      executarSalvarPlantaoFinal(tempPlantaoBuffer);
+    }
+
+    function dispararEmailAutomatico(dados) {
+      document.getElementById('auto-email-subject').value = `📋 Relatório de Passagem de Plantão - ${dados.titulo}`;
+      document.getElementById('auto-email-titulo').value = dados.titulo;
+      document.getElementById('auto-email-resumo').value = dados.resumoAutomatico;
+      document.getElementById('auto-email-comentario').value = dados.comentarioExtra;
+      document.getElementById('auto-email-desc').value = dados.descricao;
+      document.getElementById('auto-email-rubs-desv').value = dados.rubsDesvinculados;
+      document.getElementById('auto-email-rubs-bloq').value = dados.rubsBloqueados;
+      document.getElementById('auto-email-etiquetas').value = dados.etiquetasRibbon;
+
+      document.getElementById('hidden-formsubmit-auto').submit();
+    }
+
+    function executarSalvarPlantaoFinal(dadosBuffer) {
+      const id = dadosBuffer.id;
+      const titulo = dadosBuffer.titulo;
+      const resumoAutomatico = dadosBuffer.resumoAutomatico;
+      const comentarioExtra = dadosBuffer.comentarioExtra;
+      const descricao = dadosBuffer.descricao;
+      const rubsDesvinculados = dadosBuffer.rubsDesvinculados;
+      const rubsBloqueados = dadosBuffer.rubsBloqueados;
+      const etiquetasRibbon = dadosBuffer.etiquetasRibbon;
+      const responsavel = dadosBuffer.responsavel || '';
+      
+      let horaRegistro = dadosBuffer.horaRegistro;
+      if (!horaRegistro) {
+        const now = new Date();
+        horaRegistro = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+      }
+
+      state.plantao = state.plantao || [];
+      if (id) {
+        const p = state.plantao.find(x => x.id === id);
+        if (p) {
+          p.titulo = titulo; 
+          p.resumoAutomatico = resumoAutomatico;
+          p.comentarioExtra = comentarioExtra;
+          p.descricao = descricao;
+          p.rubsDesvinculados = rubsDesvinculados;
+          p.rubsBloqueados = rubsBloqueados;
+          p.etiquetasRibbon = etiquetasRibbon;
+          p.responsavel = responsavel;
+          p.modificadoEm = new Date().getTime();
+          if (!p.horaRegistro) p.horaRegistro = horaRegistro;
+        }
+      } else {
+        state.plantao.unshift({
+          id: Date.now().toString(),
+          titulo,
+          resumoAutomatico,
+          comentarioExtra,
+          descricao,
+          rubsDesvinculados,
+          rubsBloqueados,
+          etiquetasRibbon,
+          responsavel,
+          modificadoEm: new Date().getTime(),
+          horaRegistro,
+          criadoEm: new Date().getTime()
+        });
+      }
+      saveStorage();
+      renderPlantao();
+      verificarAlertasPlantao();
+      closeModal('modal-plantao');
+      closeModal('modal-plantao-email');
+      tempPlantaoBuffer = null;
+    }
+
+    function deletePlantao(id) {
+      const p = (state.plantao || []).find(x => x.id === id);
+      if (p && p.sistemaGerou) {
+        alert('Registros automáticos de plantão não entregue não podem ser excluídos.');
+        return;
+      }
+      if (confirm('Excluir passagem de plantão?')) {
+        idsExcluidos.add(id);
+        state.plantao = state.plantao.filter(x => x.id !== id);
+        saveStorage();
+        renderPlantao();
+        verificarAlertasPlantao();
+      }
+    }
+
+    function apagarPlantoesAntigos() {
+      const senhaInformada = prompt('ATENÇÃO: Você está prestes a apagar registros de plantão com mais de 10 dias.\n\nDigite a senha de conscientização para prosseguir:');
+      if (senhaInformada === null) return;
+      if (senhaInformada.trim() !== 'CPD_675') {
+        alert('Senha incorreta!');
+        return;
+      }
+
+      const hoje = new Date();
+      hoje.setHours(0, 0, 0, 0);
+      const antes = (state.plantao || []).length;
+
+      state.plantao = (state.plantao || []).filter(p => {
+        const matchData = p.titulo ? p.titulo.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null;
+        if (!matchData) return true;
+        const dataPlantao = new Date(parseInt(matchData[3], 10), parseInt(matchData[2], 10) - 1, parseInt(matchData[1], 10));
+        dataPlantao.setHours(0, 0, 0, 0);
+        const manter = (hoje - dataPlantao) / (1000 * 60 * 60 * 24) <= 10;
+        if (!manter) idsExcluidos.add(p.id);
+        return manter;
+      });
+
+      const removidos = antes - state.plantao.length;
+      saveStorage();
+      renderPlantao();
+      alert(`Limpeza concluída! Foram removidos ${removidos} registros com mais de 10 dias.`);
+    }
+
+    function checarAlertasItensAntigos() {
+      const agora = new Date();
+      agora.setHours(0, 0, 0, 0);
+      const limiteMs = 10 * 24 * 60 * 60 * 1000;
+
+      const temAvisosAntigos = (state.avisos || []).some(a => {
+        const t = a.criadoEm || parseInt(a.id, 10);
+        return (new Date().getTime() - t) > limiteMs;
+      });
+      document.getElementById('alerta-avisos-antigos').classList.toggle('hidden', !temAvisosAntigos);
+
+      const temPlantoesAntigos = (state.plantao || []).some(p => {
+        const matchData = p.titulo ? p.titulo.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null;
+        if (!matchData) return false;
+        const dataP = new Date(parseInt(matchData[3], 10), parseInt(matchData[2], 10) - 1, parseInt(matchData[1], 10));
+        dataP.setHours(0, 0, 0, 0);
+        return (agora - dataP) / (1000 * 60 * 60 * 24) > 10;
+      });
+      document.getElementById('alerta-plantoes-antigos').classList.toggle('hidden', !temPlantoesAntigos);
+    }
+
+    function verificarEGerarPlantoesPerdidos() {
+      const agora = new Date();
+      const horaAtual = agora.getHours();
+      const minAtual = agora.getMinutes();
+      const horaDecimal = horaAtual + minAtual / 60;
+      const dataHojeStr = getDataAtualFormatada();
+
+      state.plantao = state.plantao || [];
+      let houveMudanca = false;
+
+      const plantoesHoje = state.plantao.filter(p => p.titulo && p.titulo.includes(dataHojeStr));
+
+      const foiEntregue = (termoPeriodo, horaLimite) => {
+        const plantaoEncontrado = plantoesHoje.find(p => p.titulo.toLowerCase().includes(termoPeriodo.toLowerCase()) && !p.sistemaGerou);
+        if (!plantaoEncontrado) return false;
+        if (!plantaoEncontrado.horaRegistro) return true;
+        const [h, m] = plantaoEncontrado.horaRegistro.split(':').map(Number);
+        return (h + m/60) < horaLimite;
+      };
+
+      const validacoes = [
+        { termo: 'Manhã', limite: 14.0, textoGerado: `⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).` },
+        { termo: 'Intermediário', limite: 16.0, textoGerado: `⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).` },
+        { termo: 'Tarde', limite: 22.0, textoGerado: `⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Tarde (Prazo limite das 22:00 expirado sem registro).` }
+      ];
+
+      validacoes.forEach(val => {
+        const jaPassouDoLimite = horaDecimal >= val.limite;
+        const entregueNoPrazo = foiEntregue(val.termo, val.limite);
+        
+        const tituloEsperado = `${dataHojeStr} - ${val.termo}`;
+        const jaGerouAutomatico = state.plantao.some(p => p.titulo === tituloEsperado && p.sistemaGerou === true);
+
+        if (jaPassouDoLimite && !entregueNoPrazo && !jaGerouAutomatico) {
+          state.plantao.unshift({
+            id: 'auto_' + dataHojeStr.replace(/\//g, '') + '_' + val.termo,
+            titulo: tituloEsperado,
+            resumoAutomatico: 'N/A',
+            comentarioExtra: 'Gerado automaticamente por falta de entrega.',
+            descricao: val.textoGerado,
+            rubsDesvinculados: 'N/A',
+            rubsBloqueados: 'N/A',
+            etiquetasRibbon: 'N/A',
+            horaRegistro: String(Math.floor(val.limite)).padStart(2, '0') + ':00',
+            sistemaGerou: true,
+            criadoEm: new Date().getTime()
+          });
+          houveMudanca = true;
+        }
+      });
+
+      if (houveMudanca) {
+        saveStorage();
+      }
+    }
+
+    function verificarAlertasPlantao() {
+      verificarEGerarPlantoesPerdidos();
+
+      const containerAlerta = document.getElementById('container-alerta-plantao');
+      const textoAlerta = document.getElementById('texto-alerta-plantao');
+      
+      const agora = new Date();
+      const horaAtual = agora.getHours();
+      const minAtual = agora.getMinutes();
+      const horaDecimal = horaAtual + minAtual / 60;
+      const dataHojeStr = getDataAtualFormatada();
+
+      const plantoesHoje = (state.plantao || []).filter(p => p.titulo && p.titulo.includes(dataHojeStr) && !p.sistemaGerou);
+
+      const foiEntregueNoHorario = (termoPeriodo, horaLimite) => {
+        const plantaoEncontrado = plantoesHoje.find(p => p.titulo.toLowerCase().includes(termoPeriodo.toLowerCase()));
+        if (!plantaoEncontrado) return false;
+        if (!plantaoEncontrado.horaRegistro) return true;
+        const [h, m] = plantaoEncontrado.horaRegistro.split(':').map(Number);
+        return (h + m/60) < horaLimite;
+      };
+
+      const manhaEntregue = foiEntregueNoHorario('manhã', 14.0);
+      const intermedEntregue = foiEntregueNoHorario('intermediário', 16.0);
+      const tardeEntregue = foiEntregueNoHorario('tarde', 22.0);
+
+      let mensagemAlerta = '';
+      let devePiscar = false;
+
+      if (horaDecimal >= 13.0 && horaDecimal < 14.0 && !manhaEntregue) {
+        mensagemAlerta = '⚠️ ALERTA: Plantão da Manhã não foi entregue!';
+        devePiscar = true;
+      } else if (horaDecimal >= 14.0 && !manhaEntregue) {
+        mensagemAlerta = '🚨 ATENÇÃO: Plantão da Manhã não entregue (Prazo das 14:00 expirado)!';
+        devePiscar = false;
+      } 
+      else if (horaDecimal >= 15.0 && horaDecimal < 16.0 && !intermedEntregue) {
+        mensagemAlerta = '⚠️ ALERTA: Plantão Intermediário não foi entregue!';
+        devePiscar = true;
+      } else if (horaDecimal >= 16.0 && !intermedEntregue) {
+        mensagemAlerta = '🚨 ATENÇÃO: Plantão Intermediário não entregue (Prazo das 16:00 expirado)!';
+        devePiscar = false;
+      }
+      else if (horaDecimal >= 20.0 && horaDecimal < 22.0 && !tardeEntregue) {
+        mensagemAlerta = '⚠️ ALERTA: Plantão da Tarde não foi entregue!';
+        devePiscar = true;
+      } else if (horaDecimal >= 22.0 && !tardeEntregue) {
+        mensagemAlerta = '🚨 ATENÇÃO: Plantão da Tarde não entregue (Prazo das 22:00 expirado)!';
+        devePiscar = false;
+      }
+
+      if (mensagemAlerta) {
+        textoAlerta.innerText = mensagemAlerta;
+        containerAlerta.classList.remove('hidden');
+        if (devePiscar) {
+          containerAlerta.classList.add('animate-piscar');
+        } else {
+          containerAlerta.classList.remove('animate-piscar');
+        }
+      } else {
+        containerAlerta.classList.add('hidden');
+        containerAlerta.classList.remove('animate-piscar');
+      }
+
+      renderPlantao();
+    }
+
+    setInterval(verificarAlertasPlantao, 30000);
+    setInterval(() => {
+      renderRubs(); // atualiza contagem e pisca na virada do dia
+      if (!usuarioEstaEditando()) { renderAvisos(); renderDemandas(); } // alerta de cards parados
+    }, 60000);
+
+    // --- ALERTA DE CARD SEM INTERAÇÃO (2 dias) ---
+    const LIMITE_SEM_INTERACAO_MS = 2 * 24 * 60 * 60 * 1000;
+
+    function ultimaInteracaoTs(item) {
+      const respostas = (item.respostas || []).map(r => r.data || 0);
+      return Math.max(
+        item.visualizadoEm || 0,
+        item.modificadoEm || 0,
+        item.criadoEm || 0,
+        parseInt(item.id, 10) || 0,
+        ...respostas
+      );
+    }
+    function itemParado(item, ativo) {
+      return !!ativo && (Date.now() - ultimaInteracaoTs(item)) >= LIMITE_SEM_INTERACAO_MS;
+    }
+    function classeParado(item, ativo) {
+      return itemParado(item, ativo) ? ' animate-piscar ring-4 ring-rose-600' : '';
+    }
+    function badgeParado(item, ativo) {
+      if (!itemParado(item, ativo)) return '';
+      const dias = Math.floor((Date.now() - ultimaInteracaoTs(item)) / 86400000);
+      return `<div class="inline-block text-[11px] font-extrabold uppercase tracking-wide bg-rose-700 text-white rounded px-2 py-0.5">⏰ Sem interação há ${dias} dias</div>`;
+    }
+
+    // Abrir a lupa conta como interação
+    function registrarVisualizacao(tipo, id) {
+      const lista = tipo === 'aviso' ? state.avisos : state.demandas;
+      const item = (lista || []).find(x => x.id === id);
+      if (!item) return;
+      item.visualizadoEm = new Date().getTime();
+      saveStorage();
+      if (tipo === 'aviso') renderAvisos(); else renderDemandas();
+    }
+
+    // --- LIMPEZA GERAL: avisos lidos + demandas concluídas + plantões normais, com mais de 10 dias ---
+    function limpezaGeral() {
+      const LIMITE_MS = 10 * 24 * 60 * 60 * 1000;
+      const agora = Date.now();
+      const hoje0 = new Date(); hoje0.setHours(0, 0, 0, 0);
+
+      const avisosAlvo = (state.avisos || []).filter(a => a.arquivado && (agora - ultimaInteracaoTs(a)) > LIMITE_MS);
+      const demandasAlvo = (state.demandas || []).filter(d => d.status === 'concluido' && (agora - ultimaInteracaoTs(d)) > LIMITE_MS);
+      const plantoesAlvo = (state.plantao || []).filter(p => {
+        if (p.sistemaGerou) return false; // registros automáticos de "não entregue" não entram
+        const m = p.titulo ? p.titulo.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null;
+        if (!m) return false;
+        const dt = new Date(parseInt(m[3], 10), parseInt(m[2], 10) - 1, parseInt(m[1], 10));
+        dt.setHours(0, 0, 0, 0);
+        return (hoje0 - dt) / 86400000 > 10;
+      });
+
+      const total = avisosAlvo.length + demandasAlvo.length + plantoesAlvo.length;
+      if (total === 0) {
+        alert('Nada para limpar: não há avisos lidos, demandas concluídas ou plantões com mais de 10 dias.');
+        return;
+      }
+
+      const senha = prompt(
+        'LIMPEZA GERAL (mais de 10 dias)\n\n' +
+        `• Avisos lidos/arquivados: ${avisosAlvo.length}\n` +
+        `• Demandas concluídas: ${demandasAlvo.length}\n` +
+        `• Passagens de plantão: ${plantoesAlvo.length}\n\n` +
+        'Digite a senha de conscientização para apagar:'
+      );
+      if (senha === null) return;
+      if (senha.trim() !== 'CPD_675') { alert('Senha incorreta!'); return; }
+
+      const remover = (lista, alvo) => {
+        const ids = new Set(alvo.map(x => x.id));
+        ids.forEach(id => idsExcluidos.add(id));
+        return (lista || []).filter(x => !ids.has(x.id));
+      };
+      state.avisos = remover(state.avisos, avisosAlvo);
+      state.demandas = remover(state.demandas, demandasAlvo);
+      state.plantao = remover(state.plantao, plantoesAlvo);
+
+      saveStorage();
+      renderAvisos();
+      renderDemandas();
+      renderPlantao();
+      verificarAlertasPlantao();
+      alert(`Limpeza concluída! Removidos: ${avisosAlvo.length} avisos, ${demandasAlvo.length} demandas e ${plantoesAlvo.length} plantões.`);
+    }
+
+    function abrirFullscreenItem(tipo, id) {
+      const lista = tipo === 'aviso' ? state.avisos : state.demandas;
+      const item = (lista || []).find(x => x.id === id);
+      if (!item) return;
+      registrarVisualizacao(tipo, id);
+      const texto = [item.descricao1 || item.descricao || '', item.descricao2 || ''].filter(Boolean).join('\n\n');
+      abrirFullscreen(item.titulo, escapeHtml(texto));
+    }
+
+    // --- RUBS BLOQUEADOS (não arquivam ao serem lidos; só saem ao excluir) ---
+    function rubDataLocal(iso) {
+      const [y, m, d] = String(iso).split('-').map(Number);
+      return new Date(y, m - 1, d);
+    }
+    function rubDataIso(dt) {
+      const p = n => String(n).padStart(2, '0');
+      return `${dt.getFullYear()}-${p(dt.getMonth() + 1)}-${p(dt.getDate())}`;
+    }
+    function rubDiasRestantes(iso) {
+      const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
+      return Math.round((rubDataLocal(iso) - hoje) / 86400000);
+    }
+    function rubSetDias(n) {
+      const dt = new Date(); dt.setHours(0, 0, 0, 0);
+      dt.setDate(dt.getDate() + n);
+      document.getElementById('rub-data').value = rubDataIso(dt);
+    }
+
+    function renderRubs() {
+      const lista = (state.rubs || []).slice().sort((a, b) => (a.dataDesbloqueio || '').localeCompare(b.dataDesbloqueio || ''));
+      document.getElementById('count-rubs').innerText = lista.length;
+      document.getElementById('container-rubs').innerHTML = lista.map(r => {
+        const dias = rubDiasRestantes(r.dataDesbloqueio);
+        const vencido = dias <= 0;
+        let texto;
+        if (dias > 1) texto = `Libera em ${dias} dias`;
+        else if (dias === 1) texto = 'Libera amanhã';
+        else if (dias === 0) texto = '🔓 DESBLOQUEAR HOJE';
+        else texto = `🔓 Atrasado ${Math.abs(dias)} dia${Math.abs(dias) > 1 ? 's' : ''}`;
+        const dataBr = rubDataLocal(r.dataDesbloqueio).toLocaleDateString('pt-BR');
+        const cor = vencido ? 'bg-rose-950/60 border-rose-500 animate-piscar' : 'bg-slate-900 border-slate-800';
+        const corTxt = vencido ? 'text-rose-300 font-bold' : 'text-slate-300';
+        return `
+          <div class="${cor} border rounded-lg px-3 py-2.5 flex items-start justify-between gap-2">
+            <div class="min-w-0">
+              <div class="font-semibold text-white text-sm break-words">${escapeHtml(r.nome)}</div>
+              ${r.motivo ? `<div class="text-xs text-slate-400 break-words">${escapeHtml(r.motivo)}</div>` : ''}
+              <div class="text-xs mt-1 ${corTxt}">${texto} <span class="opacity-70 font-normal">· ${dataBr}</span></div>
+            </div>
+            <div class="flex gap-1 shrink-0">
+              <button onclick="openModalRub('${r.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Editar">✏️</button>
+              <button onclick="deleteRub('${r.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Excluir">🗑️</button>
+            </div>
+          </div>`;
+      }).join('') || `<p class="text-xs text-slate-500 px-1">Nenhum rub bloqueado.</p>`;
+    }
+
+    function openModalRub(id = null) {
+      document.getElementById('form-rub-inner').reset();
+      document.getElementById('rub-id').value = '';
+      document.getElementById('modal-rub-title').innerText = 'Bloquear Rub';
+      if (id) {
+        const r = (state.rubs || []).find(x => x.id === id);
+        if (r) {
+          document.getElementById('rub-id').value = r.id;
+          document.getElementById('rub-nome').value = r.nome;
+          document.getElementById('rub-motivo').value = r.motivo || '';
+          document.getElementById('rub-data').value = r.dataDesbloqueio;
+          document.getElementById('modal-rub-title').innerText = 'Editar Rub Bloqueado';
+        }
+      }
+      openModal('modal-rub');
+    }
+
+    function saveRub(e) {
+      e.preventDefault();
+      const id = document.getElementById('rub-id').value;
+      const nome = document.getElementById('rub-nome').value.trim();
+      const motivo = document.getElementById('rub-motivo').value.trim();
+      const dataDesbloqueio = document.getElementById('rub-data').value;
+      if (!nome || !dataDesbloqueio) return;
+      state.rubs = state.rubs || [];
+      const agora = new Date().getTime();
+      if (id) {
+        const r = state.rubs.find(x => x.id === id);
+        if (r) { r.nome = nome; r.motivo = motivo; r.dataDesbloqueio = dataDesbloqueio; r.modificadoEm = agora; }
+      } else {
+        state.rubs.unshift({ id: agora.toString(), nome, motivo, dataDesbloqueio, criadoEm: agora, modificadoEm: agora });
+      }
+      saveStorage();
+      renderRubs();
+      closeModal('modal-rub');
+    }
+
+    function deleteRub(id) {
+      if (!confirm('Excluir este rub bloqueado?')) return;
+      idsExcluidos.add(id);
+      state.rubs = (state.rubs || []).filter(r => r.id !== id);
+      saveStorage();
+      renderRubs();
+    }
+
+    // Atualiza sozinho a cada 45s quando ninguém está digitando (vê o que os outros fizeram)
+    setInterval(() => {
+      if (document.visibilityState !== 'visible') return;
+      if (salvando || salvarPendente || usuarioEstaEditando()) return;
+      loadStorage(true);
+    }, 45000);
+
+    function openModalPessoas() { renderListaPessoas(); openModal('modal-pessoas'); }
+    function renderListaPessoas() {
+      document.getElementById('lista-pessoas').innerHTML = (state.pessoas || []).map(p => `
+        <li class="py-2 flex justify-between items-center text-sm text-slate-200">
+          <span>${escapeHtml(p)}</span>
+          <button onclick="removePessoa('${escapeHtml(p)}')" class="text-xs text-rose-400 hover:text-rose-300">Remover</button>
+        </li>
+      `).join('');
+    }
+
+    function addPessoa() {
+      const input = document.getElementById('input-nova-pessoa');
+      const val = input.value.trim();
+      state.pessoas = state.pessoas || [];
+      if (val && !state.pessoas.includes(val)) {
+        state.pessoas.push(val);
+        input.value = '';
+        saveStorage();
+        renderListaPessoas();
+        renderAvisos();
+      }
+    }
+
+    function removePessoa(p) {
+      state.pessoas = (state.pessoas || []).filter(x => x !== p);
+      saveStorage();
+      renderListaPessoas();
+      renderAvisos();
+    }
+
+    function openModalCategorias() { renderListaCategorias(); openModal('modal-categorias'); }
+    function renderListaCategorias() {
+      document.getElementById('lista-categorias').innerHTML = (state.categorias || []).map(c => `
+        <li class="py-2 flex justify-between items-center text-sm text-slate-200">
+          <span>${escapeHtml(c)}</span>
+          <button onclick="removeCategoria('${escapeHtml(c)}')" class="text-xs text-rose-400 hover:text-rose-300">Remover</button>
+        </li>
+      `).join('');
+    }
+
+    function addCategoria() {
+      const input = document.getElementById('input-nova-categoria');
+      const val = input.value.trim();
+      state.categorias = state.categorias || [];
+      if (val && !state.categorias.includes(val)) {
+        state.categorias.push(val);
+        input.value = '';
+        saveStorage();
+        renderListaCategorias();
+        updateCategoriaOptions();
+        renderDemandas();
+      }
+    }
+
+    function removeCategoria(c) {
+      state.categorias = (state.categorias || []).filter(x => x !== c);
+      saveStorage();
+      renderListaCategorias();
+      updateCategoriaOptions();
+      renderDemandas();
+    }
+
+    function updateCategoriaOptions() {
+      const cats = state.categorias || ['Chamados', 'Projetos', 'Manutenção'];
+      const optionsHtml = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+
+      const selFormD = document.getElementById('demanda-categoria');
+      if (selFormD) selFormD.innerHTML = optionsHtml;
+
+      const selFormDFilter = document.getElementById('filter-demandas-categoria');
+      if (selFormDFilter) {
+        const curr = selFormDFilter.value;
+        selFormDFilter.innerHTML = `<option value="todas">Todas Categorias</option>` + optionsHtml;
+        selFormDFilter.value = curr;
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    // Preserva o texto que está sendo digitado nas caixas de resposta quando a tela é redesenhada
+    function preservarCamposDigitados(fnRender) {
+      const salvos = {};
+      document.querySelectorAll('input[id^="resp-"]').forEach(el => { if (el.value) salvos[el.id] = el.value; });
+      const ae = document.activeElement;
+      const foco = (ae && ae.id && ae.id.indexOf('resp-') === 0)
+        ? { id: ae.id, ini: ae.selectionStart, fim: ae.selectionEnd } : null;
+
+      const retorno = fnRender();
+
+      Object.keys(salvos).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = salvos[id];
+      });
+      if (foco) {
+        const el = document.getElementById(foco.id);
+        if (el) {
+          el.focus();
+          try { el.setSelectionRange(foco.ini, foco.fim); } catch (err) {}
+        }
+      }
+      return retorno;
+    }
+
+    ['renderAvisos', 'renderDemandas', 'renderPlantao'].forEach(nome => {
+      const original = window[nome];
+      window[nome] = function () {
+        return preservarCamposDigitados(() => original.apply(this, arguments));
+      };
+    });
+
+    window.addEventListener('DOMContentLoaded', () => { loadStorage(); });
+  </script>
+</body>
+</html>
