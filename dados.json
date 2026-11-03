@@ -498,7 +498,7 @@
       "id": "1793135450549",
       "titulo": "Pre vendas (para kaell)",
       "descricao1": "refazer pre-vendas formato portal \n",
-      "descricao2": "- add função para não ter conflito quando duas pessoas cadastrar um código de barras. \n- add função de: se o sistema não gerar o codigo de barras (devido não estar cadastrado) abrir janela para realizar o cadastro. \n- retirar botão de \"atualizar base\" ou deixar em outra aba. \n- deixar opção de cadastrar codigo de barras na tela inicial. \n- add função de procurar a empresa usando o CNPJ/ CPF \n- ao ser impresso precisa sair com as linhas, entre uma infromação  e outra. ]\n- usar a mesma base de dados do portal da fcx para um alimentar o outro. ",
+      "descricao2": "- add função para não ter conflito quando duas pessoas cadastrar um código de barras. \n- add função de: se o sistema não gerar o codigo de barras (devido não estar cadastrado) abrir janela para realizar o cadastro. \n- retirar botão de \"atualizar base\" ou deixar em outra aba. para tela inical ficar o mais limpo possivel.\n- deixar opção de cadastrar codigo de barras na tela inicial. \n- add função de procurar a empresa usando o CNPJ/ CPF \n- ao ser impresso precisa sair com as linhas, entre uma infromação  e outra. ]\n- usar a mesma base de dados do portal da fcx para um alimentar o outro. ",
       "categoria": "DEMANDA",
       "status": "em_andamento",
       "respostas": [
@@ -508,7 +508,7 @@
         }
       ],
       "criadoEm": 1793135450549,
-      "modificadoEm": 1793699310579
+      "modificadoEm": 1793724441963
     },
     {
       "id": "1793048100590",
