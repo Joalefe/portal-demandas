@@ -319,6 +319,17 @@
   ],
   "demandas": [
     {
+      "id": "1793700027083",
+      "titulo": "Portal de Etiquetas (para João)",
+      "descricao1": "- retirar as informações estáticas que vem ao abrir o portal. \n",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "em_andamento",
+      "respostas": [],
+      "criadoEm": 1793700027083,
+      "modificadoEm": 1793700027083
+    },
+    {
       "id": "1793635385661",
       "titulo": "numerar rubs",
       "descricao1": "imprimir novos numeros para os rubs, pois os antigos tao ficando ilegiveis ja",
