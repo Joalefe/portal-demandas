@@ -177,6 +177,9 @@
         </nav>
       </div>
       <div class="flex items-center gap-3">
+        <button onclick="limpezaGeral()" class="text-xs bg-amber-950/60 hover:bg-amber-900 text-amber-300 border border-amber-800/60 px-2.5 py-1 rounded transition" title="Apagar avisos lidos, demandas concluídas e plantões com mais de 10 dias">
+          🧹 Limpeza Geral
+        </button>
         <button onclick="promptForToken()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-2.5 py-1 rounded transition" title="Configurar Token">
           🔑 Token
         </button>
@@ -1908,6 +1911,56 @@
       item.visualizadoEm = new Date().getTime();
       saveStorage();
       if (tipo === 'aviso') renderAvisos(); else renderDemandas();
+    }
+
+    // --- LIMPEZA GERAL: avisos lidos + demandas concluídas + plantões normais, com mais de 10 dias ---
+    function limpezaGeral() {
+      const LIMITE_MS = 10 * 24 * 60 * 60 * 1000;
+      const agora = Date.now();
+      const hoje0 = new Date(); hoje0.setHours(0, 0, 0, 0);
+
+      const avisosAlvo = (state.avisos || []).filter(a => a.arquivado && (agora - ultimaInteracaoTs(a)) > LIMITE_MS);
+      const demandasAlvo = (state.demandas || []).filter(d => d.status === 'concluido' && (agora - ultimaInteracaoTs(d)) > LIMITE_MS);
+      const plantoesAlvo = (state.plantao || []).filter(p => {
+        if (p.sistemaGerou) return false; // registros automáticos de "não entregue" não entram
+        const m = p.titulo ? p.titulo.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null;
+        if (!m) return false;
+        const dt = new Date(parseInt(m[3], 10), parseInt(m[2], 10) - 1, parseInt(m[1], 10));
+        dt.setHours(0, 0, 0, 0);
+        return (hoje0 - dt) / 86400000 > 10;
+      });
+
+      const total = avisosAlvo.length + demandasAlvo.length + plantoesAlvo.length;
+      if (total === 0) {
+        alert('Nada para limpar: não há avisos lidos, demandas concluídas ou plantões com mais de 10 dias.');
+        return;
+      }
+
+      const senha = prompt(
+        'LIMPEZA GERAL (mais de 10 dias)\n\n' +
+        `• Avisos lidos/arquivados: ${avisosAlvo.length}\n` +
+        `• Demandas concluídas: ${demandasAlvo.length}\n` +
+        `• Passagens de plantão: ${plantoesAlvo.length}\n\n` +
+        'Digite a senha de conscientização para apagar:'
+      );
+      if (senha === null) return;
+      if (senha.trim() !== 'CPD_675') { alert('Senha incorreta!'); return; }
+
+      const remover = (lista, alvo) => {
+        const ids = new Set(alvo.map(x => x.id));
+        ids.forEach(id => idsExcluidos.add(id));
+        return (lista || []).filter(x => !ids.has(x.id));
+      };
+      state.avisos = remover(state.avisos, avisosAlvo);
+      state.demandas = remover(state.demandas, demandasAlvo);
+      state.plantao = remover(state.plantao, plantoesAlvo);
+
+      saveStorage();
+      renderAvisos();
+      renderDemandas();
+      renderPlantao();
+      verificarAlertasPlantao();
+      alert(`Limpeza concluída! Removidos: ${avisosAlvo.length} avisos, ${demandasAlvo.length} demandas e ${plantoesAlvo.length} plantões.`);
     }
 
     function abrirFullscreenItem(tipo, id) {
