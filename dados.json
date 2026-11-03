@@ -430,9 +430,14 @@
       "descricao2": "- add função para não ter conflito quando duas pessoas cadastrar um código de barras. \n- add função de: se o sistema não gerar o codigo de barras (devido não estar cadastrado) abrir janela para realizar o cadastro. \n- retirar botão de \"atualizar base\" ou deixar em outra aba. \n- deixar opção de cadastrar codigo de barras na tela inicial. \n- add função de procurar a empresa usando o CNPJ/ CPF \n- ao ser impresso precisa sair com as linhas, entre uma infromação  e outra. ",
       "categoria": "DEMANDA",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "novas inf.",
+          "data": 1793698920201
+        }
+      ],
       "criadoEm": 1793135450549,
-      "modificadoEm": 1793698909498
+      "modificadoEm": 1793698920201
     },
     {
       "id": "1793048100590",
