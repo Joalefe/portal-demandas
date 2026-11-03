@@ -1168,6 +1168,20 @@
   ],
   "plantao": [
     {
+      "id": "1793726379578",
+      "titulo": "03/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (03/11/2026) ===\n\n📌 Avisos Criados (2):\n- [Colaboradores Novos ]: Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  \n- [Office]: https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWTnkwFsVSsWCnBPvWprHJcpn\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Colaboradores Novos  (Status: pendente)\n- [DEMANDA] Salva mensal  (Status: pendente)\n- [DEMANDA] Pegar nota para denize  (Status: pendente)\n- [DEMANDA] Portal de Etiquetas (para João) (Status: em_andamento)\n- [DEMANDA] Pre vendas (para kaell) (Status: em_andamento)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "joalis",
+      "modificadoEm": 1793726379578,
+      "horaRegistro": "14:19",
+      "criadoEm": 1793726379578
+    },
+    {
       "id": "auto_03112026_Manhã",
       "titulo": "03/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
