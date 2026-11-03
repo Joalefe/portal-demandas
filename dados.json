@@ -431,9 +431,14 @@
       "descricao2": "chamado aberto\n",
       "categoria": "Chamados",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "direcionado para o técnico",
+          "data": 1793728859294
+        }
+      ],
       "criadoEm": 1793379184141,
-      "modificadoEm": 1793383917096
+      "modificadoEm": 1793728859294
     },
     {
       "id": "1793357302855",
