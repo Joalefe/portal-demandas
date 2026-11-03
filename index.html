@@ -955,7 +955,7 @@
               <div class="space-y-1.5 pt-2 border-t border-black/15">
                 <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-900">Respostas / Continuidade:</span>
                 <div class="space-y-1 max-h-28 overflow-y-auto">
-                  ${respostas.map((r, i) => `
+                  ${respostas.map((r, i) => ({ r, i })).reverse().map(({ r, i }) => `
                     <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950 relative" style="padding-right:1.8rem !important;">
                       ${escapeHtml(r.texto)}
                       <div class="text-[10px] opacity-70 mt-0.5">${formatarDataHoraCurta(r.data)}</div>
@@ -1178,7 +1178,7 @@
               <div class="space-y-1.5 pt-2 border-t border-black/15">
                 <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-900">Respostas / Continuidade:</span>
                 <div class="space-y-1 max-h-24 overflow-y-auto">
-                  ${respostas.map((r, i) => `
+                  ${respostas.map((r, i) => ({ r, i })).reverse().map(({ r, i }) => `
                     <div class="bg-black/10 p-1.5 rounded text-[11px] leading-tight font-medium text-slate-950 relative" style="padding-right:1.8rem !important;">
                       ${escapeHtml(r.texto)}
                       <div class="text-[10px] opacity-70 mt-0.5">${formatarDataHoraCurta(r.data)}</div>
