@@ -194,7 +194,8 @@
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
     <!-- ABA 1: AVISOS -->
-    <section id="tab-content-avisos" class="space-y-6">
+    <section id="tab-content-avisos" class="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_21rem] gap-6 items-start">
+     <div class="space-y-6 min-w-0">
       <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
         <div class="flex items-center gap-2">
           <button id="subtab-btn-ativos" onclick="switchAvisosSubtab('ativos')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30">
@@ -223,8 +224,18 @@
         <span>⚠️ Existem avisos com mais de 10 dias acumulados. Utilize o botão "Limpar Antigos (+10d)" para higienizar o painel.</span>
       </div>
 
-      <div id="subtab-content-ativos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-      <div id="subtab-content-lidos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 hidden"></div>
+      <div id="subtab-content-ativos" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5"></div>
+      <div id="subtab-content-lidos" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 hidden"></div>
+     </div>
+
+     <!-- COLUNA DIREITA: RUBS BLOQUEADOS (não somem ao ler; só ao excluir) -->
+     <aside class="xl:sticky xl:top-20 space-y-3">
+      <div class="flex items-center justify-between gap-2 bg-slate-900 px-4 py-3 rounded-xl border border-slate-800">
+        <span class="text-sm font-bold text-slate-200">🔒 Rubs Bloqueados (<span id="count-rubs">0</span>)</span>
+        <button onclick="openModalRub()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg font-medium shadow">+ Bloquear</button>
+      </div>
+      <div id="container-rubs" class="space-y-2"></div>
+     </aside>
     </section>
 
     <!-- ABA 2: DEMANDAS -->
@@ -364,6 +375,43 @@
         </div>
         <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
           <button type="button" onclick="closeModal('modal-aviso')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Rub Bloqueado -->
+  <div id="modal-rub" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-md p-6 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 id="modal-rub-title" class="text-base font-semibold text-white">Bloquear Rub</h3>
+        <button onclick="closeModal('modal-rub')" class="text-slate-400 hover:text-white">✕</button>
+      </div>
+      <form id="form-rub-inner" onsubmit="saveRub(event)" class="space-y-4">
+        <input type="hidden" id="rub-id">
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Rub / Nome</label>
+          <input type="text" id="rub-nome" required placeholder="Ex: 12345 - João" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Motivo (opcional)</label>
+          <input type="text" id="rub-motivo" placeholder="Ex: Divergência de caixa" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Bloqueado por quantos dias?</label>
+          <div class="grid grid-cols-5 gap-1.5 mb-2">
+            <button type="button" onclick="rubSetDias(1)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">1d</button>
+            <button type="button" onclick="rubSetDias(3)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">3d</button>
+            <button type="button" onclick="rubSetDias(7)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">7d</button>
+            <button type="button" onclick="rubSetDias(15)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">15d</button>
+            <button type="button" onclick="rubSetDias(30)" class="text-xs bg-slate-950 hover:bg-indigo-600/20 text-slate-300 border border-slate-800 py-1.5 rounded transition">30d</button>
+          </div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Data do desbloqueio</label>
+          <input type="date" id="rub-data" required style="color-scheme:dark;" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+        </div>
+        <div class="flex justify-end gap-2 border-t border-slate-800 pt-3">
+          <button type="button" onclick="closeModal('modal-rub')" class="px-4 py-2 text-xs text-slate-400 hover:text-white">Cancelar</button>
           <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-4 py-2 rounded-lg font-medium">Salvar</button>
         </div>
       </form>
@@ -563,7 +611,8 @@
       categorias: ['Chamados', 'Projetos', 'Manutenção'],
       avisos: [],
       demandas: [],
-      plantao: []
+      plantao: [],
+      rubs: []
     };
 
     let tempPlantaoBuffer = null;
@@ -634,6 +683,7 @@
 
         updateCategoriaOptions();
         renderAvisos();
+        renderRubs();
         renderDemandas();
         verificarEGerarPlantoesPerdidos();
         renderPlantao();
@@ -756,7 +806,7 @@
 
     function mesclarComNuvem(remoto) {
       let mudou = false;
-      ['avisos', 'demandas', 'plantao'].forEach(chave => {
+      ['avisos', 'demandas', 'plantao', 'rubs'].forEach(chave => {
         const locais = state[chave] = state[chave] || [];
         const remotos = Array.isArray(remoto && remoto[chave]) ? remoto[chave] : [];
         const mapa = new Map(locais.map(i => [i.id, i]));
@@ -770,7 +820,7 @@
             Object.assign(l, r);
             mudou = true;
           }
-          if (chave !== 'plantao') {
+          if (chave === 'avisos' || chave === 'demandas') {
             l.respostas = respostas;
             if (respostas.length !== antes) mudou = true;
           }
@@ -782,6 +832,7 @@
 
     function renderTudo() {
       renderAvisos();
+      renderRubs();
       renderDemandas();
       renderPlantao();
     }
@@ -1810,6 +1861,100 @@
     }
 
     setInterval(verificarAlertasPlantao, 30000);
+    setInterval(() => { renderRubs(); }, 60000); // atualiza contagem e pisca na virada do dia
+
+    // --- RUBS BLOQUEADOS (não arquivam ao serem lidos; só saem ao excluir) ---
+    function rubDataLocal(iso) {
+      const [y, m, d] = String(iso).split('-').map(Number);
+      return new Date(y, m - 1, d);
+    }
+    function rubDataIso(dt) {
+      const p = n => String(n).padStart(2, '0');
+      return `${dt.getFullYear()}-${p(dt.getMonth() + 1)}-${p(dt.getDate())}`;
+    }
+    function rubDiasRestantes(iso) {
+      const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
+      return Math.round((rubDataLocal(iso) - hoje) / 86400000);
+    }
+    function rubSetDias(n) {
+      const dt = new Date(); dt.setHours(0, 0, 0, 0);
+      dt.setDate(dt.getDate() + n);
+      document.getElementById('rub-data').value = rubDataIso(dt);
+    }
+
+    function renderRubs() {
+      const lista = (state.rubs || []).slice().sort((a, b) => (a.dataDesbloqueio || '').localeCompare(b.dataDesbloqueio || ''));
+      document.getElementById('count-rubs').innerText = lista.length;
+      document.getElementById('container-rubs').innerHTML = lista.map(r => {
+        const dias = rubDiasRestantes(r.dataDesbloqueio);
+        const vencido = dias <= 0;
+        let texto;
+        if (dias > 1) texto = `Libera em ${dias} dias`;
+        else if (dias === 1) texto = 'Libera amanhã';
+        else if (dias === 0) texto = '🔓 DESBLOQUEAR HOJE';
+        else texto = `🔓 Atrasado ${Math.abs(dias)} dia${Math.abs(dias) > 1 ? 's' : ''}`;
+        const dataBr = rubDataLocal(r.dataDesbloqueio).toLocaleDateString('pt-BR');
+        const cor = vencido ? 'bg-rose-950/60 border-rose-500 animate-piscar' : 'bg-slate-900 border-slate-800';
+        const corTxt = vencido ? 'text-rose-300 font-bold' : 'text-slate-300';
+        return `
+          <div class="${cor} border rounded-lg px-3 py-2.5 flex items-start justify-between gap-2">
+            <div class="min-w-0">
+              <div class="font-semibold text-white text-sm break-words">${escapeHtml(r.nome)}</div>
+              ${r.motivo ? `<div class="text-xs text-slate-400 break-words">${escapeHtml(r.motivo)}</div>` : ''}
+              <div class="text-xs mt-1 ${corTxt}">${texto} <span class="opacity-70 font-normal">· ${dataBr}</span></div>
+            </div>
+            <div class="flex gap-1 shrink-0">
+              <button onclick="openModalRub('${r.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Editar">✏️</button>
+              <button onclick="deleteRub('${r.id}')" class="text-xs text-slate-400 hover:text-white p-1" title="Excluir">🗑️</button>
+            </div>
+          </div>`;
+      }).join('') || `<p class="text-xs text-slate-500 px-1">Nenhum rub bloqueado.</p>`;
+    }
+
+    function openModalRub(id = null) {
+      document.getElementById('form-rub-inner').reset();
+      document.getElementById('rub-id').value = '';
+      document.getElementById('modal-rub-title').innerText = 'Bloquear Rub';
+      if (id) {
+        const r = (state.rubs || []).find(x => x.id === id);
+        if (r) {
+          document.getElementById('rub-id').value = r.id;
+          document.getElementById('rub-nome').value = r.nome;
+          document.getElementById('rub-motivo').value = r.motivo || '';
+          document.getElementById('rub-data').value = r.dataDesbloqueio;
+          document.getElementById('modal-rub-title').innerText = 'Editar Rub Bloqueado';
+        }
+      }
+      openModal('modal-rub');
+    }
+
+    function saveRub(e) {
+      e.preventDefault();
+      const id = document.getElementById('rub-id').value;
+      const nome = document.getElementById('rub-nome').value.trim();
+      const motivo = document.getElementById('rub-motivo').value.trim();
+      const dataDesbloqueio = document.getElementById('rub-data').value;
+      if (!nome || !dataDesbloqueio) return;
+      state.rubs = state.rubs || [];
+      const agora = new Date().getTime();
+      if (id) {
+        const r = state.rubs.find(x => x.id === id);
+        if (r) { r.nome = nome; r.motivo = motivo; r.dataDesbloqueio = dataDesbloqueio; r.modificadoEm = agora; }
+      } else {
+        state.rubs.unshift({ id: agora.toString(), nome, motivo, dataDesbloqueio, criadoEm: agora, modificadoEm: agora });
+      }
+      saveStorage();
+      renderRubs();
+      closeModal('modal-rub');
+    }
+
+    function deleteRub(id) {
+      if (!confirm('Excluir este rub bloqueado?')) return;
+      idsExcluidos.add(id);
+      state.rubs = (state.rubs || []).filter(r => r.id !== id);
+      saveStorage();
+      renderRubs();
+    }
 
     // Atualiza sozinho a cada 45s quando ninguém está digitando (vê o que os outros fizeram)
     setInterval(() => {
