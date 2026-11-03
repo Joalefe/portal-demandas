@@ -10,6 +10,17 @@
   ],
   "avisos": [
     {
+      "id": "1793741321947",
+      "titulo": "att do portal de demandas",
+      "mensagem": "- função de alerta caso uma demanda não tenha interação durante dois dias (para fazer que pare de alertar para demandas que estamos aguardando, clique no lapis)\n- o chat vai mostrar em primeiro a ultima resposta.\n- local para bloquear rub, com alerta quando for para desbloquear.",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1793741321947,
+      "modificadoEm": 1793741321947
+    },
+    {
       "id": "1793723793879",
       "titulo": "Colaboradores Novos ",
       "mensagem": "Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  ",
