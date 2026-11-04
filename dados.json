@@ -1209,6 +1209,20 @@
   ],
   "plantao": [
     {
+      "id": "1793819354315",
+      "titulo": "04/11/2026 - Intermediário",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (04/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [Chamados] criação de acesso para lideres MOB2 (Status: em_andamento)\n- [DEMANDA] mob2com - victor (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: em_andamento)\n",
+      "comentarioExtra": "Portal pre venda 90%, falta somente linkar o banco de dados para ficar parelho ao do portal da fcx",
+      "descricao": "✋😔",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joao Pedro 🤙",
+      "modificadoEm": 1793819354315,
+      "horaRegistro": "16:07",
+      "criadoEm": 1793819354315
+    },
+    {
       "id": "auto_04112026_Intermediário",
       "titulo": "04/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
