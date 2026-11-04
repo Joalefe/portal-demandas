@@ -1207,6 +1207,20 @@
   ],
   "plantao": [
     {
+      "id": "1793811500411",
+      "titulo": "04/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (04/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [Chamados] criação de acesso para lideres MOB2 (Status: em_andamento)\n- [DEMANDA] mob2com - victor (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: em_andamento)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1793811500411,
+      "horaRegistro": "13:58",
+      "criadoEm": 1793811500411
+    },
+    {
       "id": "1793754397043",
       "titulo": "03/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (03/11/2026) ===\n\n📌 Avisos Criados (3):\n- [att do portal de demandas]: - função de alerta caso uma demanda não tenha interação durante dois dias (para fazer que pare de alertar para demandas que estamos aguardando, clique na lupa e feche)\n- o chat vai mostrar em primeiro a ultima resposta.\n- local para bloquear rub, com alerta quando for para desbloquear.\n- [Colaboradores Novos ]: Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  \n- [Office]: https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWTnkwFsVSsWCnBPvWprHJcpn\n\n📋 Demandas Modificadas/Concluídas (8):\n- [DEMANDA] mob2com - victor (Status: pendente)\n- [DEMANDA] Colaboradores Novos  (Status: pendente)\n- [DEMANDA] Salva mensal  (Status: pendente)\n- [DEMANDA] Pegar nota para denize  (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: em_andamento)\n- [DEMANDA] numerar rubs (Status: pendente)\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [Projetos] Pre vendas (para kaell) (Status: em_andamento)\n",
