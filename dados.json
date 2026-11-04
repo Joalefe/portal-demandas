@@ -1207,6 +1207,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_04112026_Manhã",
+      "titulo": "04/11/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793811612885
+    },
+    {
       "id": "1793811500411",
       "titulo": "04/11/2026 - Manhã",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (04/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [Chamados] criação de acesso para lideres MOB2 (Status: em_andamento)\n- [DEMANDA] mob2com - victor (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: em_andamento)\n",
