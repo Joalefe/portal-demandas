@@ -1191,6 +1191,20 @@
   ],
   "plantao": [
     {
+      "id": "1793754397043",
+      "titulo": "03/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (03/11/2026) ===\n\n📌 Avisos Criados (3):\n- [att do portal de demandas]: - função de alerta caso uma demanda não tenha interação durante dois dias (para fazer que pare de alertar para demandas que estamos aguardando, clique na lupa e feche)\n- o chat vai mostrar em primeiro a ultima resposta.\n- local para bloquear rub, com alerta quando for para desbloquear.\n- [Colaboradores Novos ]: Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  \n- [Office]: https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWTnkwFsVSsWCnBPvWprHJcpn\n\n📋 Demandas Modificadas/Concluídas (8):\n- [DEMANDA] mob2com - victor (Status: pendente)\n- [DEMANDA] Colaboradores Novos  (Status: pendente)\n- [DEMANDA] Salva mensal  (Status: pendente)\n- [DEMANDA] Pegar nota para denize  (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: em_andamento)\n- [DEMANDA] numerar rubs (Status: pendente)\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [Projetos] Pre vendas (para kaell) (Status: em_andamento)\n",
+      "comentarioExtra": "dar continuidade no projeto do victor, agora é só aguardar pra saber oq ele vai fazer mesmo, os usuários dos lideres que ele requeriu estão funcionando conforme foi testado.",
+      "descricao": "no mais, tudo ok!\nresenhax no clubex",
+      "rubsDesvinculados": "ok!",
+      "rubsBloqueados": "ok!",
+      "etiquetasRibbon": "100%",
+      "responsavel": "joalis",
+      "modificadoEm": 1793754397043,
+      "horaRegistro": "22:05",
+      "criadoEm": 1793754397043
+    },
+    {
       "id": "auto_03112026_Tarde",
       "titulo": "03/11/2026 - Tarde",
       "resumoAutomatico": "N/A",
