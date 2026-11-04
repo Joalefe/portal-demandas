@@ -452,7 +452,7 @@
       "descricao1": "https://stac.telematica.com.br/chamado/chamado-status?id=S9bmRWJuawFYSAQMnVuDww%3D%3D",
       "descricao2": "chamado aberto\n",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "direcionado para o técnico",
@@ -464,7 +464,7 @@
         }
       ],
       "criadoEm": 1793379184141,
-      "modificadoEm": 1793822005111
+      "modificadoEm": 1793822006904
     },
     {
       "id": "1793357302855",
