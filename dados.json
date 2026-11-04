@@ -408,9 +408,14 @@
       "descricao2": "",
       "categoria": "Projetos",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "a todo vapor@",
+          "data": 1793806209531
+        }
+      ],
       "criadoEm": 1793700027083,
-      "modificadoEm": 1793741808291
+      "modificadoEm": 1793806209531
     },
     {
       "id": "1793635385661",
