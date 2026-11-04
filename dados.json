@@ -687,17 +687,6 @@
       "modificadoEm": 1793022676009
     },
     {
-      "id": "1792854854630",
-      "titulo": "Usuario Flavia",
-      "descricao1": "Usuario criado, testado no save já, so passar para a mesma!!\n\n500962388  -  ABC@2026",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792854854630,
-      "modificadoEm": 1792863123925
-    },
-    {
       "id": "1792854473977",
       "titulo": "verificar usuario Sergio",
       "descricao1": "500800080\n\nNao consta no IDM, mas usuario ja existe",
@@ -712,17 +701,6 @@
       ],
       "criadoEm": 1792854473977,
       "modificadoEm": 1793357180976
-    },
-    {
-      "id": "1792854191618",
-      "titulo": "Limpeza PCs",
-      "descricao1": "pincel em mãos ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792854191618,
-      "modificadoEm": 1792935257795
     },
     {
       "id": "1792791010367",
@@ -750,48 +728,6 @@
       "respostas": [],
       "criadoEm": 1792787963981,
       "modificadoEm": 1792787963981
-    },
-    {
-      "id": "1792762795762",
-      "titulo": "verificar peso da balança 17 ",
-      "descricao1": ".",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792762795762,
-      "modificadoEm": 1792953945975
-    },
-    {
-      "id": "1792748547168",
-      "titulo": "Email cartão",
-      "descricao1": "O chamado está em atendimento aguardando a gente finalizar com uma faq o problema sobre o problema, todas as informações estão no hangout com a Ester AMANCIO CARVALHO.",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792748547168,
-      "modificadoEm": 1792748576404
-    },
-    {
-      "id": "1792700990877",
-      "titulo": "Email Cartao pedindo codigo de confirmação de 2 fatores",
-      "descricao1": "Chamado re-aberto para reset da autenticação de 2 fatores\n",
-      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285008949",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "avisar o lucas que é necessário acionar o suporte do cartão",
-          "data": 1792709277136
-        },
-        {
-          "texto": "realizar a FAQ enviada via hangout pela Ester Amancio",
-          "data": 1792712884773
-        }
-      ],
-      "criadoEm": 1792700990877,
-      "modificadoEm": 1792769170239
     },
     {
       "id": "1792686083624",
@@ -861,26 +797,6 @@
       "modificadoEm": 1793357189680
     },
     {
-      "id": "1792663178491",
-      "titulo": "calendario cafeteria",
-      "descricao1": "mes que vem",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "está no drive",
-          "data": 1792686473889
-        },
-        {
-          "texto": "feito",
-          "data": 1792702294429
-        }
-      ],
-      "criadoEm": 1792663178491,
-      "modificadoEm": 1792702298421
-    },
-    {
       "id": "1792656126132",
       "titulo": "notas NFE com erro",
       "descricao1": "62605 \t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n\n62660 6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)",
@@ -917,17 +833,6 @@
       "modificadoEm": 1793445653454
     },
     {
-      "id": "1792606521640",
-      "titulo": "RUB Empacotador Lucas",
-      "descricao1": "Criado no portal ADM, Solicitado grupo PAPA-FILA, TESTAR AMANHÃ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792606521640,
-      "modificadoEm": 1792687941463
-    },
-    {
       "id": "1792591349730",
       "titulo": "gerencial nao funciona ",
       "descricao1": "precisamos encontrar uma maneira de consertar ou criar outra nova, ou implantar o portal ",
@@ -944,30 +849,6 @@
       "modificadoEm": 1793383973191
     },
     {
-      "id": "1792589143072",
-      "titulo": "encontrar foto condutor (desaparecido)",
-      "descricao1": "2253705\n\nAT 675 DIADEMA SERRA - 003133/HC\n\nMS812\n\nDrum/Photoconductor\n\nCAD232831C74\n\n4063369906Y9F\n\n10.122.248.24\n\n29\n\n28\n\n17/06/2026",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "conversado via chat, encontramos um contorno para a situação.,",
-          "data": 1792591286689
-        },
-        {
-          "texto": "mandar msg para o tecnico perguntando se quando ele faz uma manutenção de fotocondutor se ele leva embora.",
-          "data": 1792598251970
-        },
-        {
-          "texto": "perguntado ao tecnico o mesmo disse que quando faz manutenção, so é levado por ele quando é fusor no caso de mx812 e ms611 e peças da konica!",
-          "data": 1792607403239
-        }
-      ],
-      "criadoEm": 1792589143072,
-      "modificadoEm": 1792615363560
-    },
-    {
       "id": "1792584913711",
       "titulo": "Rub 13 quebrado",
       "descricao1": "tela não funciona ",
@@ -977,70 +858,6 @@
       "respostas": [],
       "criadoEm": 1792584913711,
       "modificadoEm": 1793012503358
-    },
-    {
-      "id": "1792573383172",
-      "titulo": "notas NFE com erro",
-      "descricao1": "62605        6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n\n62660     \t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#sent/QgrcJHrtsvFfhjfFGDNCPmKqjRRtjvfBSsL",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Ambas notas com status 100",
-          "data": 1792624687005
-        }
-      ],
-      "criadoEm": 1792573383172,
-      "modificadoEm": 1792684575278
-    },
-    {
-      "id": "1792528385042",
-      "titulo": "Rub do Ruan sumido ",
-      "descricao1": "Procurar, mantê-lo bloqueado ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Rub bloqueado até o dia 25/10",
-          "data": 1792531130477
-        }
-      ],
-      "criadoEm": 1792528385042,
-      "modificadoEm": 1792674310731
-    },
-    {
-      "id": "1792527065985",
-      "titulo": "login Rosângela",
-      "descricao1": "verificar se login está operante no cx empresa ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "0072 - 78451245",
-          "data": 1792537623676
-        },
-        {
-          "texto": "login dando operadora não cadastrada no pdv empresa. \"operadora nã cadastrada\"",
-          "data": 1792543924350
-        },
-        {
-          "texto": "subi job novamente no adm e coloquei perfil rub, ad, save",
-          "data": 1792543972520
-        },
-        {
-          "texto": "coloquei job de oper. aguardar subir amanha",
-          "data": 1792584135696
-        },
-        {
-          "texto": "testar: 500992586 def@2026",
-          "data": 1792683266452
-        }
-      ],
-      "criadoEm": 1792527065985,
-      "modificadoEm": 1792686603402
     },
     {
       "id": "1792500901709",
@@ -1062,21 +879,6 @@
       "modificadoEm": 1793383999086
     },
     {
-      "id": "1792500716798",
-      "titulo": "Chamado Julia Ellen",
-      "descricao1": "Solicitado o cadastro das telas 070 e 072 do cofre para a mesma!\n\nhttps://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026101485007661",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Att: Chamado atendido. Testar amanha se as telas ja foram liberadas",
-          "data": 1792624364278
-        }
-      ],
-      "modificadoEm": 1792683696225
-    },
-    {
       "id": "1792500630190",
       "titulo": "Rub 29",
       "descricao1": "Conserto do rub, aguardando yeep trocar o CNPJ para continuarmos com o procedimento (mandar msg para 1196857-8264)",
@@ -1090,25 +892,6 @@
         }
       ],
       "modificadoEm": 1793032396075
-    },
-    {
-      "id": "1792498605552",
-      "titulo": "caixa empresa",
-      "descricao1": "caixa empresa segue com problema no sitef",
-      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102085002421",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "apenas o 13 esta funcionando corretamente",
-          "data": 1792587138203
-        },
-        {
-          "texto": "Caixas atualizados e operando normalmente novamente! conversa com Celso no email",
-          "data": 1792606278831
-        }
-      ],
-      "modificadoEm": 1792615329099
     },
     {
       "id": "1792493802528",
@@ -1132,78 +915,6 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": []
-    },
-    {
-      "id": "1792493644878",
-      "titulo": "Victor sem acessos",
-      "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102185001957",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Resposta do chamado: \"Transferimos o usuário informado para a filial correta e adicionamos ele como gerente comercial da filial em nosso sistema. \"",
-          "data": 1792624415159
-        }
-      ],
-      "modificadoEm": 1792769429847
-    },
-    {
-      "id": "1792487832768",
-      "titulo": "Email Sergio",
-      "descricao1": "configurar",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "autor": "João Infomático",
-          "texto": "confirmar com ele se o email esta abrindo",
-          "data": 1792524263436
-        },
-        {
-          "texto": "email operante!",
-          "data": 1792527873610
-        }
-      ],
-      "modificadoEm": 1792527873610
-    },
-    {
-      "id": "1792487633752",
-      "titulo": "notas NFE com erro",
-      "descricao1": "62605\n\n101\t19/10/2026\t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n675\t\nATACADAO\n\n62660\n\n101\t19/10/2026\t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n675\t\nATACADAO\n\n62704\n\n101\t19/10/2026\t109 - SERVICO PARALISADO SEM PREVISAO",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": []
-    },
-    {
-      "id": "1792486904226",
-      "titulo": "Balança piso com problema",
-      "descricao1": "liga e desliga",
-      "descricao2": "confirmar problema, e chamar assistencia ",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "chamar assistencia",
-          "data": 1792533859776
-        },
-        {
-          "texto": "solicitado",
-          "data": 1792582610666
-        }
-      ],
-      "modificadoEm": 1792615335798
-    },
-    {
-      "id": "1792448661840",
-      "titulo": "Konica",
-      "descricao1": "Problema em reconhecer papel a4, aguardando troca de peça.",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
       "respostas": []
     }
   ],
@@ -1799,48 +1510,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1792953891534
-    },
-    {
-      "id": "1792888327461",
-      "titulo": "24/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Tagsell automatico (3 preço) (Status: pendente)\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: em_andamento)\n",
-      "comentarioExtra": "o teclado do pc do rm ta estranho, arrumei duas vezes e na terceira não parou mais. \n",
-      "descricao": "no mais é isso",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "nenhum",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1792888327461,
-      "horaRegistro": "21:27",
-      "criadoEm": 1792888327461
-    },
-    {
-      "id": "1792867685453",
-      "titulo": "24/10/2026 - Intermediário",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Tagsell automatico (3 preço) (Status: pendente)\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: pendente)\n",
-      "comentarioExtra": "portal da Dani, indo de vento em poupa. Planilha enviada ajudou bastante, mas calculos do portal ainda estao fora do desejado. Em breve mais progressos.",
-      "descricao": "Tranquilo no mamilo 🤙",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joao Pedro 🤙",
-      "modificadoEm": 1792867685453,
-      "horaRegistro": "15:45",
-      "criadoEm": 1792867685453
-    },
-    {
-      "id": "1792855050444",
-      "titulo": "24/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/10/2026) ===\n\n📌 Avisos Criados (1):\n- [Planilha de operadoras]: Planilha das operadoras não existe mais, o modo de verificar os dados de uma operadora é pelo portal de recargas, quanto consultar ao CPF da operadora tercerizada ainda estamos desenvolvendo.\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Email Prevenção (Status: pendente)\n- [DEMANDA] Usuario Flavia (Status: pendente)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [DEMANDA] Limpeza PCs (Status: pendente)\n",
-      "comentarioExtra": ".",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1792855050444,
-      "horaRegistro": "12:17",
-      "criadoEm": 1792855050444
     }
   ],
   "rubs": [
