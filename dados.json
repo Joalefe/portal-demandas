@@ -15,11 +15,13 @@
       "titulo": "att do portal de demandas",
       "mensagem": "- função de alerta caso uma demanda não tenha interação durante dois dias (para fazer que pare de alertar para demandas que estamos aguardando, clique na lupa e feche)\n- o chat vai mostrar em primeiro a ultima resposta.\n- local para bloquear rub, com alerta quando for para desbloquear.",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Kaell Pragmático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1793741321947,
-      "modificadoEm": 1793741345404
+      "modificadoEm": 1793813431653
     },
     {
       "id": "1793723793879",
