@@ -323,9 +323,14 @@
       "descricao2": "",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "email eviado para terceiros para inclusão",
+          "data": 1793822028151
+        }
+      ],
       "criadoEm": 1793803655835,
-      "modificadoEm": 1793803655835
+      "modificadoEm": 1793822028151
     },
     {
       "id": "1793741628639",
