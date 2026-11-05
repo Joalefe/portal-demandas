@@ -940,6 +940,20 @@
   ],
   "plantao": [
     {
+      "id": "1793840336368",
+      "titulo": "04/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (04/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [Projetos] Projeto victor (Status: em_andamento)\n- [Chamados] criação de acesso para lideres MOB2 (Status: em_andamento)\n- [DEMANDA] mob2com - victor (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: concluido)\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: concluido)\n",
+      "comentarioExtra": "portal pré venda ainda em manutencion (gastei os token tudo)\natenção no projeto victor\natenção no chat com a 821, eles tem um tagsell melhorado, vamos testar pra ver se é bom mesmo!",
+      "descricao": "no mais ta tudo ok",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "rub maycon não foi encontrado",
+      "etiquetasRibbon": "ok",
+      "responsavel": "joalis",
+      "modificadoEm": 1793840336368,
+      "horaRegistro": "21:57",
+      "criadoEm": 1793840336368
+    },
+    {
       "id": "1793819354315",
       "titulo": "04/11/2026 - Intermediário",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (04/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [Chamados] criação de acesso para lideres MOB2 (Status: em_andamento)\n- [DEMANDA] mob2com - victor (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: em_andamento)\n",
