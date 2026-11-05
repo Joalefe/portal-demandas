@@ -970,6 +970,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_05112026_Manhã",
+      "titulo": "05/11/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793902896845
+    },
+    {
       "id": "1793840336368",
       "titulo": "04/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (04/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [Projetos] Projeto victor (Status: em_andamento)\n- [Chamados] criação de acesso para lideres MOB2 (Status: em_andamento)\n- [DEMANDA] mob2com - victor (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: concluido)\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: concluido)\n",
