@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1793870610639",
+      "titulo": "gerencial bamba funcionando a dois dias ",
+      "mensagem": ".",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1793870610639,
+      "modificadoEm": 1793870610639
+    },
+    {
       "id": "1793741321947",
       "titulo": "att do portal de demandas",
       "mensagem": "- função de alerta caso uma demanda não tenha interação durante dois dias (para fazer que pare de alertar para demandas que estamos aguardando, clique na lupa e feche)\n- o chat vai mostrar em primeiro a ultima resposta.\n- local para bloquear rub, com alerta quando for para desbloquear.",
