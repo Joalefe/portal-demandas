@@ -648,10 +648,14 @@
         {
           "texto": "Dia 3/11 foi nos enviado um email dizendo que estao providenciando retorno",
           "data": 1793885440419
+        },
+        {
+          "texto": "enviado email cobrando a parte do nosso envio",
+          "data": 1793885461943
         }
       ],
       "criadoEm": 1793032383123,
-      "modificadoEm": 1793885440419
+      "modificadoEm": 1793885461943
     },
     {
       "id": "1792955465524",
