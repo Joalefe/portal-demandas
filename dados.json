@@ -978,6 +978,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_06112026_Manhã",
+      "titulo": "06/11/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1793984413879
+    },
+    {
       "id": "1793924087483",
       "titulo": "05/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (05/11/2026) ===\n\n📌 Avisos Criados (1):\n- [gerencial bamba funcionando a dois dias ]: .\n\n📋 Demandas Modificadas/Concluídas (2):\n- [DEMANDA] cadastrar svd62 na abertura (Status: pendente)\n- [Chamados] maquina devolução (Status: em_andamento)\n",
