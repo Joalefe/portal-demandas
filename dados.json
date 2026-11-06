@@ -970,6 +970,20 @@
   ],
   "plantao": [
     {
+      "id": "1793924087483",
+      "titulo": "05/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (05/11/2026) ===\n\n📌 Avisos Criados (1):\n- [gerencial bamba funcionando a dois dias ]: .\n\n📋 Demandas Modificadas/Concluídas (2):\n- [DEMANDA] cadastrar svd62 na abertura (Status: pendente)\n- [Chamados] maquina devolução (Status: em_andamento)\n",
+      "comentarioExtra": "Bom dia pessoal!\nDe começo já peço perdão, não deu tempo de fazer qusse nenhuma demanda nossa de hoje, teve demasiados trabalhos a fazer (por incrível que pareça)",
+      "descricao": "o b.o todo vai se resumir no visualmix, abri uma pasta com os principais links, creio que vão explicar novamente no meet amanhã, mas caso não, no \"base de conhecimento\" tem TUDO bem explicadinho! \n\nno meet, não deixem de perguntar sobre o erro que está dando na hora de formatar o pc, quebrei a cabeça tentando dar um jeito lá e nada. \n\npeço perdão se tiver esquecido algo, boa abertura guys!",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "nenhum",
+      "etiquetasRibbon": "okok",
+      "responsavel": "joalis",
+      "modificadoEm": 1793924087483,
+      "horaRegistro": "21:09",
+      "criadoEm": 1793924087483
+    },
+    {
       "id": "auto_05112026_Intermediário",
       "titulo": "05/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
