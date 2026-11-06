@@ -16,10 +16,15 @@
       "mensagem": ".",
       "cor": "postit-yellow",
       "lidosPor": [],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "operante !!",
+          "data": 1793957304509
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1793870610639,
-      "modificadoEm": 1793870610639
+      "modificadoEm": 1793957304509
     },
     {
       "id": "1793741321947",
