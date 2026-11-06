@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1793986238243",
+      "titulo": "Buscapreço",
+      "mensagem": "Busca pintos com problema",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1793986238243,
+      "modificadoEm": 1793986238243
+    },
+    {
       "id": "1793870610639",
       "titulo": "gerencial funcionando qualquer novidade avisar aqui",
       "mensagem": ".",
