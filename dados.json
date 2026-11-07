@@ -396,6 +396,17 @@
   ],
   "demandas": [
     {
+      "id": "1794095000284",
+      "titulo": "PDV 1 com problema",
+      "descricao1": "PDV 1 não está aceitando débito nem crédito, foi trocado maquininha, pdv de lugar e nada.\n\n",
+      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026110785004096",
+      "categoria": "Chamados",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1794095000284,
+      "modificadoEm": 1794095000284
+    },
+    {
       "id": "1794066384052",
       "titulo": "RUB 35",
       "descricao1": "FORMATAR.\n\nAPP do MOB fica so aparecendo \"carregando..\" e nao sai disso. ",
