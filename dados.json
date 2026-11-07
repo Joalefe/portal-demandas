@@ -787,10 +787,14 @@
         {
           "texto": "enviado email cobrando a parte do nosso envio",
           "data": 1793885461943
+        },
+        {
+          "texto": "dia 5 falaram que seria entregue entre o dia 5 e o dia 6 mas não foram entregues",
+          "data": 1794070292442
         }
       ],
       "criadoEm": 1793032383123,
-      "modificadoEm": 1793885461943
+      "modificadoEm": 1794070292442
     },
     {
       "id": "1792955465524",
