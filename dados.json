@@ -521,7 +521,7 @@
       "descricao1": "imprimir novos numeros para os rubs, pois os antigos tao ficando ilegiveis ja",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "foram adesivados a maioria, só completar",
@@ -529,7 +529,7 @@
         }
       ],
       "criadoEm": 1793635385661,
-      "modificadoEm": 1793736027783
+      "modificadoEm": 1794048007490
     },
     {
       "id": "1793473737185",
