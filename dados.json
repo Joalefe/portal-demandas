@@ -1138,6 +1138,20 @@
   ],
   "plantao": [
     {
+      "id": "1794076993658",
+      "titulo": "07/11/2026 - Intermediário",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (07/11/2026) ===\n\n📌 Avisos Criados (2):\n- [balanca 17]: Balança dando erro de \"TECLA NAO ASSOCIADA\"\n- [Rub para o sergio]: reservar um rub ecommerce para o sergio\n\n📋 Demandas Modificadas/Concluídas (14):\n- [DEMANDA] RUB 35 (Status: concluido)\n- [Chamados] estorno com erro 1095 (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [Chamados] criação de acesso para lideres MOB2 (Status: concluido)\n- [DEMANDA] Colaboradores Novos  (Status: concluido)\n- [DEMANDA] numerar rubs (Status: concluido)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Projetos] Pre vendas (para kaell) (Status: concluido)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
+      "comentarioExtra": "portal de prevenda finalizado, relatorio ja vinculado para chegar todos os dias e atualizar a planilha.\n\nchamados abertos, ainda como novo.\n\n😊",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joao Pedro 🤙",
+      "modificadoEm": 1794076993658,
+      "horaRegistro": "15:37",
+      "criadoEm": 1794076993658
+    },
+    {
       "id": "auto_07112026_Manhã",
       "titulo": "07/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
