@@ -466,7 +466,7 @@
       "descricao1": "solicitado via email\n\nhttps://mail.google.com/mail/u/0/?ogbl#drafts/FMfcgzQjggrQGVkdXlhwKsJVKrLDQSfr",
       "descricao2": "falta: milene, alice e os dois novos lideres",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "email eviado para terceiros para inclusão",
@@ -482,7 +482,7 @@
         }
       ],
       "criadoEm": 1793803655835,
-      "modificadoEm": 1794069075138
+      "modificadoEm": 1794069079082
     },
     {
       "id": "1793741628639",
