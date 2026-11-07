@@ -382,13 +382,13 @@
     {
       "id": "1794056438684",
       "titulo": "estorno com erro 1095",
-      "descricao1": "estorno valor de 1412, erro 1095 \n\nhttps://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026110785001884",
+      "descricao1": "estorno valor de 1412, erro 1095 \n\nNF:65006\n\nhttps://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026110785001884",
       "descricao2": "",
       "categoria": "Chamados",
       "status": "pendente",
       "respostas": [],
       "criadoEm": 1794056438684,
-      "modificadoEm": 1794056438684
+      "modificadoEm": 1794065199516
     },
     {
       "id": "1794048041003",
