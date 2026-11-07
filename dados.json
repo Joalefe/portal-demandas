@@ -15,11 +15,13 @@
       "titulo": "Rub para o sergio",
       "mensagem": "reservar um rub ecommerce para o sergio",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794047061272,
-      "modificadoEm": 1794047061272
+      "modificadoEm": 1794050107533
     },
     {
       "id": "1794047013247",
