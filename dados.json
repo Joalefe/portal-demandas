@@ -1002,6 +1002,20 @@
   ],
   "plantao": [
     {
+      "id": "1794012023885",
+      "titulo": "06/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (06/11/2026) ===\n\n📌 Avisos Criados (1):\n- [Buscapreço]: Busca pintos com problema\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] cadastrar svd62 na abertura (Status: concluido)\n- [Projetos] Projeto victor (Status: concluido)\n- [DEMANDA] Salva mensal  (Status: concluido)\n- [Chamados] Email suspeito da daniela (Status: concluido)\n",
+      "comentarioExtra": "olá amigos, nada de novidade por enquanto, tenham uma ótima abertura",
+      "descricao": "Será um lugar frio, escuro e muito gentil. E um dia, será um bom lar para alguém.  \n- O Pintor",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "só sobrou o da galera da noite",
+      "etiquetasRibbon": "okok",
+      "responsavel": "joalis",
+      "modificadoEm": 1794012023885,
+      "horaRegistro": "21:37",
+      "criadoEm": 1794012023885
+    },
+    {
       "id": "auto_06112026_Intermediário",
       "titulo": "06/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
