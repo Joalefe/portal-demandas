@@ -175,10 +175,15 @@
         "João Infomático",
         "Kaell Pragmático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "62660 status 100",
+          "data": 1794068989490
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1793384837980,
-      "modificadoEm": 1793962725468
+      "modificadoEm": 1794068989490
     },
     {
       "id": "1793357596487",
