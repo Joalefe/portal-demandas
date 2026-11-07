@@ -183,11 +183,15 @@
         {
           "texto": "62605 status 100",
           "data": 1794069016745
+        },
+        {
+          "texto": "solucionado!",
+          "data": 1794069026266
         }
       ],
       "arquivado": false,
       "criadoEm": 1793384837980,
-      "modificadoEm": 1794069016745
+      "modificadoEm": 1794069026266
     },
     {
       "id": "1793357596487",
