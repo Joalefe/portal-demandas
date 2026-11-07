@@ -1129,6 +1129,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_07112026_Manhã",
+      "titulo": "07/11/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1794070806989
+    },
+    {
       "id": "1794012023885",
       "titulo": "06/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (06/11/2026) ===\n\n📌 Avisos Criados (1):\n- [Buscapreço]: Busca pintos com problema\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] cadastrar svd62 na abertura (Status: concluido)\n- [Projetos] Projeto victor (Status: concluido)\n- [DEMANDA] Salva mensal  (Status: concluido)\n- [Chamados] Email suspeito da daniela (Status: concluido)\n",
