@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1794065089359",
+      "titulo": "balanca 17",
+      "mensagem": "Balança dando erro de \"TECLA NAO ASSOCIADA\"",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1794065089359,
+      "modificadoEm": 1794065089359
+    },
+    {
       "id": "1794047061272",
       "titulo": "Rub para o sergio",
       "mensagem": "reservar um rub ecommerce para o sergio",
