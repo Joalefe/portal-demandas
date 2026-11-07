@@ -445,7 +445,7 @@
       "descricao1": "Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  ",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "job aplicado para todos",
@@ -457,7 +457,7 @@
         }
       ],
       "criadoEm": 1793724225750,
-      "modificadoEm": 1793731729313
+      "modificadoEm": 1794048004090
     },
     {
       "id": "1793721069121",
