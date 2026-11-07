@@ -28,11 +28,13 @@
       "titulo": "rub 10 perdido (não bloquear richard) ",
       "mensagem": ".",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794047013247,
-      "modificadoEm": 1794047013247
+      "modificadoEm": 1794050115412
     },
     {
       "id": "1793986238243",
