@@ -1149,6 +1149,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_07112026_Tarde",
+      "titulo": "07/11/2026 - Tarde",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Tarde (Prazo limite das 22:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "22:00",
+      "sistemaGerou": true,
+      "criadoEm": 1794100158277
+    },
+    {
       "id": "1794076993658",
       "titulo": "07/11/2026 - Intermediário",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (07/11/2026) ===\n\n📌 Avisos Criados (2):\n- [balanca 17]: Balança dando erro de \"TECLA NAO ASSOCIADA\"\n- [Rub para o sergio]: reservar um rub ecommerce para o sergio\n\n📋 Demandas Modificadas/Concluídas (14):\n- [DEMANDA] RUB 35 (Status: concluido)\n- [Chamados] estorno com erro 1095 (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [Chamados] criação de acesso para lideres MOB2 (Status: concluido)\n- [DEMANDA] Colaboradores Novos  (Status: concluido)\n- [DEMANDA] numerar rubs (Status: concluido)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Projetos] Pre vendas (para kaell) (Status: concluido)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
