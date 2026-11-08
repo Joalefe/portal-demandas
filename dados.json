@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1794134150415",
+      "titulo": "Atts da Abertura",
+      "mensagem": "Email com nova shell mostrando produtos mais vendidos, nao chegou automaticamente. \n\nabertura.sh 45 min rodando\n\nGERENCIAL sem problemas",
+      "cor": "postit-green",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1794134150415,
+      "modificadoEm": 1794134150415
+    },
+    {
       "id": "1794131245652",
       "titulo": "Senha SITEF expirando ",
       "mensagem": "Senha do sitef expira em 6 dias, trocar!",
