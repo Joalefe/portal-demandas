@@ -1149,6 +1149,20 @@
   ],
   "plantao": [
     {
+      "id": "1794100200705",
+      "titulo": "07/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (07/11/2026) ===\n\n📌 Avisos Criados (2):\n- [balanca 17]: Balança dando erro de \"TECLA NAO ASSOCIADA\"\n- [Rub para o sergio]: reservar um rub ecommerce para o sergio\n\n📋 Demandas Modificadas/Concluídas (15):\n- [Chamados] PDV 1 com problema (Status: pendente)\n- [DEMANDA] RUB 35 (Status: concluido)\n- [Chamados] estorno com erro 1095 (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [Chamados] criação de acesso para lideres MOB2 (Status: concluido)\n- [DEMANDA] Colaboradores Novos  (Status: concluido)\n- [DEMANDA] numerar rubs (Status: concluido)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Projetos] Pre vendas (para kaell) (Status: concluido)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
+      "comentarioExtra": "olá amigos! nada novo além do pdv01. ",
+      "descricao": "ok!",
+      "rubsDesvinculados": "ok!",
+      "rubsBloqueados": "ok!",
+      "etiquetasRibbon": "ok!",
+      "responsavel": "joalis",
+      "modificadoEm": 1794100200705,
+      "horaRegistro": "22:09",
+      "criadoEm": 1794100200705
+    },
+    {
       "id": "auto_07112026_Tarde",
       "titulo": "07/11/2026 - Tarde",
       "resumoAutomatico": "N/A",
