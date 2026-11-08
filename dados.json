@@ -26,11 +26,13 @@
       "titulo": "limpar pasta SHELL",
       "mensagem": "Igual fizemos com o DIR. Portal, criar uma pasta \"MORTO\" e alocar os shells que foram descontinuados, ou testes que nao sao mais uteis.",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794134406222,
-      "modificadoEm": 1794134406222
+      "modificadoEm": 1794152549934
     },
     {
       "id": "1794134150415",
