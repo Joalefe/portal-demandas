@@ -26,11 +26,13 @@
       "titulo": "balanca 17",
       "mensagem": "Balança dando erro de \"TECLA NAO ASSOCIADA\"",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794065089359,
-      "modificadoEm": 1794065089359
+      "modificadoEm": 1794131250162
     },
     {
       "id": "1794047061272",
