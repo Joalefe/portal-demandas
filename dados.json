@@ -555,14 +555,9 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [
-        {
-          "texto": "laele",
-          "data": 1794056446871
-        }
-      ],
+      "respostas": [],
       "criadoEm": 1794048041003,
-      "modificadoEm": 1794056446871
+      "modificadoEm": 1794235593163
     },
     {
       "id": "1793870100951",
