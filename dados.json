@@ -2034,6 +2034,14 @@
   ],
   "rubs": [
     {
+      "id": "1794240105125",
+      "nome": "RUB 10 - Richard",
+      "motivo": "Encontrado pela prevençao na loja",
+      "dataDesbloqueio": "2026-11-12",
+      "criadoEm": 1794240105125,
+      "modificadoEm": 1794240105125
+    },
+    {
       "id": "1793739408210",
       "nome": "Samantha",
       "motivo": "perda",
