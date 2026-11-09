@@ -83,11 +83,13 @@
       "titulo": "Senha SITEF expirando ",
       "mensagem": "Senha do sitef expira em 6 dias, trocar!",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794131245652,
-      "modificadoEm": 1794131245652
+      "modificadoEm": 1794218279505
     },
     {
       "id": "1794065089359",
