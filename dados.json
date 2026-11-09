@@ -66,10 +66,15 @@
       "lidosPor": [
         "João Infomático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "hoje ja foi mais rapido, em media 25 min, acredito que o parametro errado estava impactando bastante",
+          "data": 1794218257632
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1794134150415,
-      "modificadoEm": 1794152550804
+      "modificadoEm": 1794218257632
     },
     {
       "id": "1794131245652",
