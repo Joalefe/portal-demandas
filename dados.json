@@ -555,9 +555,14 @@
       "descricao2": "",
       "categoria": "Chamados",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "NOVO",
+          "data": 1794240501744
+        }
+      ],
       "criadoEm": 1794056438684,
-      "modificadoEm": 1794065199516
+      "modificadoEm": 1794240501744
     },
     {
       "id": "1794048041003",
