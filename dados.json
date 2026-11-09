@@ -57,12 +57,13 @@
       "mensagem": "Caso pegue uma situação parecida do erro que deu o PDV01, a minha tratativa foi: excluir e gerar um novo token pelo sitef web e logo em seguida configurar tls pelo menu tplinux e o pdv voltou a operar",
       "cor": "postit-yellow",
       "lidosPor": [
-        "João Infomático"
+        "João Infomático",
+        "Kaell Pragmático"
       ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794155756648,
-      "modificadoEm": 1794218276625
+      "modificadoEm": 1794242335766
     },
     {
       "id": "1794152490987",
