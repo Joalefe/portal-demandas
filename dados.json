@@ -1292,6 +1292,20 @@
   ],
   "plantao": [
     {
+      "id": "1794242147367",
+      "titulo": "09/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (09/11/2026) ===\n\n📌 Avisos Criados (3):\n- [login PAULO]: Login do op Paulo esta inativo. Feita as tratativas padroes, mas sem sucesso. RH verificando \n- [TONER Black CUPECE]: DEVOLVER\n- [srt35 vindo zipado]: analises\n\n📋 Demandas Modificadas/Concluídas (6):\n- [Chamados] balança 17 (Status: em_andamento)\n- [Chamados] estorno com erro 1095 (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [Chamados] Rub 29 (Status: em_andamento)\n",
+      "comentarioExtra": "balança com problema, passado para iniciar o checklist, zhaz confirmou que PC's. chegam nos proximos dias.",
+      "descricao": "🫡",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "joao pedro 🫡",
+      "modificadoEm": 1794242147367,
+      "horaRegistro": "13:34",
+      "criadoEm": 1794242147367
+    },
+    {
       "id": "auto_08112026_Manhã",
       "titulo": "08/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
