@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1794218218395",
+      "titulo": "srt35 vindo zipado",
+      "mensagem": "analises",
+      "cor": "postit-purple",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1794218218395,
+      "modificadoEm": 1794218218395
+    },
+    {
       "id": "1794155756648",
       "titulo": "situação PDV 1",
       "mensagem": "Caso pegue uma situação parecida do erro que deu o PDV01, a minha tratativa foi: excluir e gerar um novo token pelo sitef web e logo em seguida configurar tls pelo menu tplinux e o pdv voltou a operar",
