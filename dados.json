@@ -482,6 +482,17 @@
   ],
   "demandas": [
     {
+      "id": "1794231431345",
+      "titulo": "balança 17",
+      "descricao1": "balanca com teclado travado, impedindo que entre em modo menu!\n\nBAC balanca acionado.",
+      "descricao2": "",
+      "categoria": "Chamados",
+      "status": "em_andamento",
+      "respostas": [],
+      "criadoEm": 1794231431345,
+      "modificadoEm": 1794231431345
+    },
+    {
       "id": "1794095000284",
       "titulo": "PDV 1 com problema",
       "descricao1": "PDV 1 não está aceitando débito nem crédito, foi trocado maquininha, pdv de lugar e nada.\n\n",
