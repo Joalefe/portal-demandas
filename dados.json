@@ -1244,9 +1244,13 @@
         {
           "texto": "enviado email cobrando a parte !",
           "data": 1794064726713
+        },
+        {
+          "texto": "foi nos enviado um email perguntando se o orçamento foi aprovado, respondi que precisamos do orçamento com o cnpj certo primeiro para mandarmos para aprovar",
+          "data": 1794240473650
         }
       ],
-      "modificadoEm": 1794064726713
+      "modificadoEm": 1794240473650
     },
     {
       "id": "1792493802528",
