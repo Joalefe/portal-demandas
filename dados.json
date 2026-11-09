@@ -71,12 +71,13 @@
       "mensagem": "O shell que esta dentro da \"TOP.sh\" nao enviou o relatorio dos 15 mais vendidos hoje, caso problema persista, rode o shell \"joalefe.sh\", com isso o relatorio de 15 mais vendidos chegara nos emails, se acharem melhore, mesclem o shell dentro de outro shell, so dar um \"cd /fs1/save\" desce uma linha e escreve \" joalefe.sh\" escreva exatamente assim dentro da outra shel que queira fazer com que chame a \"joalefe.sh",
       "cor": "postit-yellow",
       "lidosPor": [
-        "João Infomático"
+        "João Infomático",
+        "Kaell Pragmático"
       ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794152490987,
-      "modificadoEm": 1794152551828
+      "modificadoEm": 1794242339100
     },
     {
       "id": "1794134406222",
