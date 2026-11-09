@@ -543,10 +543,10 @@
       "descricao1": "PDV 1 não está aceitando débito nem crédito, foi trocado maquininha, pdv de lugar e nada.\n\n",
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026110785004096",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [],
       "criadoEm": 1794095000284,
-      "modificadoEm": 1794095000284
+      "modificadoEm": 1794242563548
     },
     {
       "id": "1794066384052",
