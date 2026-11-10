@@ -1346,6 +1346,20 @@
   ],
   "plantao": [
     {
+      "id": "1794273579945",
+      "titulo": "09/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (09/11/2026) ===\n\n📌 Avisos Criados (3):\n- [login PAULO]: Login do op Paulo esta inativo. Feita as tratativas padroes, mas sem sucesso. RH verificando \n- [TONER Black CUPECE]: DEVOLVER\n- [srt35 vindo zipado]: analises\n\n📋 Demandas Modificadas/Concluídas (13):\n- [Chamados] Chamado 2 de requerimento de toner (Status: pendente)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: pendente)\n- [Chamados] balança 17 (Status: em_andamento)\n- [Chamados] PDV 1 com problema (Status: concluido)\n- [Chamados] estorno com erro 1095 (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] pc no almox (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
+      "comentarioExtra": "só o toner mermo",
+      "descricao": "tudo ok de resto, so acompanhar",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "nenhum",
+      "etiquetasRibbon": "ok!",
+      "responsavel": "joalis",
+      "modificadoEm": 1794273579945,
+      "horaRegistro": "22:19",
+      "criadoEm": 1794273579945
+    },
+    {
       "id": "auto_09112026_Tarde",
       "titulo": "09/11/2026 - Tarde",
       "resumoAutomatico": "N/A",
