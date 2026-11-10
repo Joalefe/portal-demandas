@@ -1078,6 +1078,20 @@
   ],
   "plantao": [
     {
+      "id": "1794351625076",
+      "titulo": "10/11/2026 - Intermediário",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (10/11/2026) ===\n\n📌 Avisos Criados (2):\n- [Busca preço (corredor de temperos)]: Problema provavelmente devido alguma coisa que foi feito no dia que estavamos testasdo. \n\ntem que subir no rack e verificar o ponto. \n- [portal dos cupons ]: Não precisa por enquanto ser att diariamente.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [Chamados] chamado luara  (Status: em_andamento)\n- [DEMANDA] TONER Black CUPECE (Status: concluido)\n- [DEMANDA] login PAULO (Status: pendente)\n",
+      "comentarioExtra": "nada de novo até então.",
+      "descricao": "ok",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "joalis",
+      "modificadoEm": 1794351625076,
+      "horaRegistro": "19:59",
+      "criadoEm": 1794351625076
+    },
+    {
       "id": "auto_10112026_Intermediário",
       "titulo": "10/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
