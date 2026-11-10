@@ -96,10 +96,15 @@
         "João Infomático",
         "Kaell Pragmático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "shell no dia de hoje funcionou.",
+          "data": 1794302139630
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1794152490987,
-      "modificadoEm": 1794242339100
+      "modificadoEm": 1794302139630
     },
     {
       "id": "1794134406222",
