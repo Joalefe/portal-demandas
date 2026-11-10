@@ -349,21 +349,6 @@
       "modificadoEm": 1794069027354
     },
     {
-      "id": "1793357596487",
-      "titulo": "SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)",
-      "mensagem": "SENHA: CPD_675",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793357596487,
-      "modificadoEm": 1793381791154
-    },
-    {
       "id": "1793356547230",
       "titulo": "ACESSOS SERGIO",
       "mensagem": "500800080 - ABC@2026",
@@ -377,21 +362,6 @@
       "arquivado": true,
       "criadoEm": 1793356547230,
       "modificadoEm": 1793465612398
-    },
-    {
-      "id": "1793353502052",
-      "titulo": "manter os avisos dos bloq dos rub por aqui",
-      "mensagem": "as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793353502052,
-      "modificadoEm": 1793395607919
     },
     {
       "id": "1793353464364",
@@ -412,81 +382,6 @@
       "arquivado": true,
       "criadoEm": 1793353464365,
       "modificadoEm": 1793566682731
-    },
-    {
-      "id": "1793094763661",
-      "titulo": "Portais",
-      "mensagem": "Vamos mandar para a pasta \"morto\" os portais que nao estao sendo usados, vamos excluir os que são testes.",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "na pasta somente os utilizados!",
-          "data": 1793217902100
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793094763661,
-      "modificadoEm": 1793353113924
-    },
-    {
-      "id": "1793094508457",
-      "titulo": "Portal Recargas",
-      "mensagem": "A forma de contagem da meta esta errada. ",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [
-        {
-          "texto": "feito",
-          "data": 1793182847208
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793094508457,
-      "modificadoEm": 1793293406152
-    },
-    {
-      "id": "1793094335197",
-      "titulo": "rub samantha bloq. ",
-      "mensagem": "manter bloq até dia 14/11 (10 dias)",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793094335197,
-      "modificadoEm": 1793353217436
-    },
-    {
-      "id": "1793063078457",
-      "titulo": "Rub 28 - richard não apareceu",
-      "mensagem": "acho q é bloq",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "Kaell Pragmático",
-        "João Infomático"
-      ],
-      "respostas": [
-        {
-          "texto": "localizei no setor quando cheguei, nao irei bloq.",
-          "data": 1793094305763
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793063078457,
-      "modificadoEm": 1793182603774
     },
     {
       "id": "1793006031853",
@@ -511,41 +406,6 @@
       "arquivado": true,
       "criadoEm": 1793006031853,
       "modificadoEm": 1793644674973
-    },
-    {
-      "id": "1792956147765",
-      "titulo": "Testar portal tagsell",
-      "mensagem": "Portal finalizado, favor da uma olhada para conhecimento. (esta no portal dos portais)",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Joalefe Performático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1792956147765,
-      "modificadoEm": 1793182608837
-    },
-    {
-      "id": "1792935476879",
-      "titulo": "Usuário fabio IAM",
-      "mensagem": "Verificar com o victor pra ele dar uma olhada no usuário do fabio pelo IAM dele\n",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "caso não esteja, abrir chamado",
-          "data": 1792935525575
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1792935476879,
-      "modificadoEm": 1793357770576
     }
   ],
   "demandas": [
@@ -879,22 +739,6 @@
       "modificadoEm": 1793453389095
     },
     {
-      "id": "1793356947735",
-      "titulo": "CONFIG PC PARA USO DA COLAB JANARA",
-      "descricao1": "PC ESQUERDO DO CADASTRO \nlogin: janara340987 \nsenha: ABC@@2026",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "email estoque configurado, na barra de favoritos tem tudo q ela vai usar, tagsell, rub, save.... so passar para a mesma",
-          "data": 1793371610644
-        }
-      ],
-      "criadoEm": 1793356947735,
-      "modificadoEm": 1793395857279
-    },
-    {
       "id": "1793189565019",
       "titulo": "Tv",
       "descricao1": "Olhar tv da entrada \nOlhar tv da gerência \n\nDescobrir o problema e deixar aqui. ",
@@ -984,26 +828,6 @@
       "visualizadoEm": 1793741329866
     },
     {
-      "id": "1793042013038",
-      "titulo": "Chamado IAM VICTOR",
-      "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102685007942",
-      "descricao2": "chamado pra colocarem o Victor como SUP novo do Sérgio, assim conseguimos colocar o Sérgio no IAM",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Chamado dado como novo",
-          "data": 1793225703019
-        },
-        {
-          "texto": "500800080 - ABC@2026",
-          "data": 1793356408108
-        }
-      ],
-      "criadoEm": 1793042013038,
-      "modificadoEm": 1793356534454
-    },
-    {
       "id": "1793032383123",
       "titulo": "maquina devolução",
       "descricao1": "Solicitado novamente para ZHAZ a devolução da maquiina que o orçamento nao foi aprovado",
@@ -1040,26 +864,6 @@
       "modificadoEm": 1794228533059
     },
     {
-      "id": "1792955465524",
-      "titulo": "Requerimento toner MS812",
-      "descricao1": "Protocolo 20261025-7429663",
-      "descricao2": "Não consigo ahcar a disgraça do link",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "261025-000009 dá pra olhar por esse numero de incidente aqui :D",
-          "data": 1792955635643
-        },
-        {
-          "texto": "Toner Chegou e ja esta no setor!",
-          "data": 1793384448293
-        }
-      ],
-      "criadoEm": 1792955465524,
-      "modificadoEm": 1793384451158
-    },
-    {
       "id": "1792954373537",
       "titulo": "Requerimento de Toner",
       "descricao1": "Protocolo 20261025-8784957",
@@ -1090,57 +894,6 @@
       ],
       "criadoEm": 1792954373537,
       "modificadoEm": 1794240495632
-    },
-    {
-      "id": "1792861569075",
-      "titulo": "Tagsell automatico (3 preço)",
-      "descricao1": "Chat que CPD anchieta crioou contem atualizações para script e shell, dar uma olhada e comparar se a nossa planilha esta fazendo a mesma coisa, se sim so substituir na nossa oq esta dando conflito e seguir \n\nhttps://mail.google.com/mail/u/0/?ogbl#chat/space/AAQAxJKrrcY",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792861569075,
-      "modificadoEm": 1792980482459
-    },
-    {
-      "id": "1792855037941",
-      "titulo": "Email Prevenção",
-      "descricao1": "email com erro na senha. ",
-      "descricao2": ".",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Senha alterada Arouca@675",
-          "data": 1792863236303
-        },
-        {
-          "texto": "tinha colocado no notion aliás",
-          "data": 1792884684524
-        },
-        {
-          "texto": "passado para Milene e Igor",
-          "data": 1793022674097
-        }
-      ],
-      "criadoEm": 1792855037941,
-      "modificadoEm": 1793022676009
-    },
-    {
-      "id": "1792854473977",
-      "titulo": "verificar usuario Sergio",
-      "descricao1": "500800080\n\nNao consta no IDM, mas usuario ja existe",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "chamado aberto, ainda como novo",
-          "data": 1793210184442
-        }
-      ],
-      "criadoEm": 1792854473977,
-      "modificadoEm": 1793357180976
     },
     {
       "id": "1792791010367",
@@ -1190,77 +943,6 @@
       "modificadoEm": 1793363427713
     },
     {
-      "id": "1792683509883",
-      "titulo": "NOVA PASTA CLIEN",
-      "descricao1": "Na SEGUNDA-FEIRA, realizar troca da pasta client NFE, conforme email Clayton",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWxbxGVMNdBTMhXBRbzHWkPTk",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "feito",
-          "data": 1793005204116
-        }
-      ],
-      "criadoEm": 1792683509883,
-      "modificadoEm": 1793005206589
-    },
-    {
-      "id": "1792681698786",
-      "titulo": "Usuário janara ",
-      "descricao1": "Confirmar se está tudo ok (ad) \n\nhttps://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102285007995",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "criado no portal adm. dar sequencia",
-          "data": 1792683163789
-        },
-        {
-          "texto": "Chamado aberto para inclusão da mesma no IAM da dani",
-          "data": 1792702624510
-        },
-        {
-          "texto": "chamado dado como novo",
-          "data": 1793225728090
-        }
-      ],
-      "criadoEm": 1792681698786,
-      "modificadoEm": 1793356870842
-    },
-    {
-      "id": "1792681577860",
-      "titulo": "Tv frios ",
-      "descricao1": "Não funciona ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792681577860,
-      "modificadoEm": 1793357189680
-    },
-    {
-      "id": "1792656126132",
-      "titulo": "notas NFE com erro",
-      "descricao1": "62605 \t6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)\n\n62660 6009 - FALHA DE COMUNICAÇÃO COM A RECEITA (DPEC)",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#sent/QgrcJHrtsvFfhjfFGDNCPmKqjRRtjvfBSsL",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "chamdo aberto",
-          "data": 1792675744594
-        },
-        {
-          "texto": "Email enviado para tributario para sanar problema das nf",
-          "data": 1792677902494
-        }
-      ],
-      "criadoEm": 1792656126132,
-      "modificadoEm": 1793189187156
-    },
-    {
       "id": "1792607555380",
       "titulo": "Att planilha Dani ",
       "descricao1": "Relatorio > Portal ADM> Razão Despesas\nFOCO PRINCIPAL: ROR\nIDEIAS: Portal (+1)\n*amanhã envio o email um arquivo .zip da versão 90% do portal*\nLink portal em teste: https://srvsave675.br-atacadao.corp/ROR/\n",
@@ -1283,33 +965,6 @@
       ],
       "criadoEm": 1792607555380,
       "modificadoEm": 1794242477064
-    },
-    {
-      "id": "1792591349730",
-      "titulo": "gerencial nao funciona ",
-      "descricao1": "precisamos encontrar uma maneira de consertar ou criar outra nova, ou implantar o portal ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Claude GOD! Gerencial operente, observar pelos proximos dias!",
-          "data": 1793383971534
-        }
-      ],
-      "criadoEm": 1792591349730,
-      "modificadoEm": 1793383973191
-    },
-    {
-      "id": "1792584913711",
-      "titulo": "Rub 13 quebrado",
-      "descricao1": "tela não funciona ",
-      "descricao2": "https://atendimento.yepsolutions.com.br/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&criteria%5B0%5D%5Blink%5D=AND&reset=reset",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1792584913711,
-      "modificadoEm": 1793012503358
     },
     {
       "id": "1792500901709",
@@ -1906,48 +1561,6 @@
       "criadoEm": 1793465139116
     },
     {
-      "id": "1793406915387",
-      "titulo": "30/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (30/10/2026) ===\n\n📌 Avisos Criados (6):\n- [NF 62660  | 62605 ]: observar relatorio de nf amanha para ver se vao continuar chegando as nfs, pois o chamado foi solucionado e elas tao constando com status 155\n- [SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)]: SENHA: CPD_675\n- [ACESSOS SERGIO]: 500800080 - ABC@2026\n- [manter os avisos dos bloq dos rub por aqui]: as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)\n- [manoela bloq no rub]: devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10\n- [samantha bloq.  no rub]: até 10/11\n\n📋 Demandas Modificadas/Concluídas (15):\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: em_andamento)\n- [DEMANDA] CONFIG PC PARA USO DA COLAB JANARA (Status: concluido)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: concluido)\n- [Chamados] Requerimento toner MS812 (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: concluido)\n- [DEMANDA] pc no almox (Status: em_andamento)\n- [DEMANDA]  férias (Status: pendente)\n- [Chamados] Usuário janara  (Status: concluido)\n- [DEMANDA] Tv frios  (Status: concluido)\n- [DEMANDA] gerencial nao funciona  (Status: concluido)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "tudo ok",
-      "descricao": "ok!",
-      "rubsDesvinculados": "ok!",
-      "rubsBloqueados": "nenhum",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793406915387,
-      "horaRegistro": "21:34",
-      "criadoEm": 1793406915387
-    },
-    {
-      "id": "1793386442770",
-      "titulo": "30/10/2026 - Intermediário",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (30/10/2026) ===\n\n📌 Avisos Criados (6):\n- [NF 62660  | 62605 ]: observar relatorio de nf amanha para ver se vao continuar chegando as nfs, pois o chamado foi solucionado e elas tao constando com status 155\n- [SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)]: SENHA: CPD_675\n- [ACESSOS SERGIO]: 500800080 - ABC@2026\n- [manter os avisos dos bloq dos rub por aqui]: as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)\n- [manoela bloq no rub]: devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10\n- [samantha bloq.  no rub]: até 10/11\n\n📋 Demandas Modificadas/Concluídas (15):\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: em_andamento)\n- [DEMANDA] CONFIG PC PARA USO DA COLAB JANARA (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: concluido)\n- [Chamados] Requerimento toner MS812 (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: concluido)\n- [DEMANDA] pc no almox (Status: em_andamento)\n- [DEMANDA]  férias (Status: pendente)\n- [Chamados] Usuário janara  (Status: concluido)\n- [DEMANDA] Tv frios  (Status: concluido)\n- [DEMANDA] gerencial nao funciona  (Status: concluido)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "demandas diarias finalizadas, alguns chamados finalizados e observações feitas",
-      "descricao": "👋👋",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joao pedro 🫡",
-      "modificadoEm": 1793386442770,
-      "horaRegistro": "15:51",
-      "criadoEm": 1793386442770
-    },
-    {
-      "id": "1793380157055",
-      "titulo": "30/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (30/10/2026) ===\n\n📌 Avisos Criados (5):\n- [SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)]: SENHA: CPD_675\n- [ACESSOS SERGIO]: 500800080 - ABC@2026\n- [manter os avisos dos bloq dos rub por aqui]: as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)\n- [manoela bloq no rub]: devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10\n- [samantha bloq.  no rub]: até 10/11\n\n📋 Demandas Modificadas/Concluídas (11):\n- [DEMANDA] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: em_andamento)\n- [DEMANDA] CONFIG PC PARA USO DA COLAB JANARA (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: concluido)\n- [DEMANDA]  férias (Status: pendente)\n- [Chamados] Usuário janara  (Status: concluido)\n- [DEMANDA] Tv frios  (Status: concluido)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "PLANILHA GERENCIAL RESOLVIDA, PLANILHA / PORTAL DANI EM PROCESSO",
-      "descricao": "👌",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1793380157055,
-      "horaRegistro": "14:08",
-      "criadoEm": 1793380157055
-    },
-    {
       "id": "auto_30102026_Manhã",
       "titulo": "30/10/2026 - Manhã",
       "resumoAutomatico": "N/A",
@@ -1959,34 +1572,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1793379654779
-    },
-    {
-      "id": "1793377359311",
-      "titulo": "30/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (30/10/2026) ===\n\n📌 Avisos Criados (5):\n- [SENHA PARA COLOCAR NO PORTAL (PADRONIZAÇÃO)]: SENHA: CPD_675\n- [ACESSOS SERGIO]: 500800080 - ABC@2026\n- [manter os avisos dos bloq dos rub por aqui]: as vezes o Joao por exemplo vai estar no outro pc e nao vera os post it (iremos focar aqui)\n- [manoela bloq no rub]: devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10\n- [samantha bloq.  no rub]: até 10/11\n\n📋 Demandas Modificadas/Concluídas (10):\n- [DEMANDA] Devolução da maquina (Status: em_andamento)\n- [DEMANDA] CONFIG PC PARA USO DA COLAB JANARA (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: concluido)\n- [DEMANDA] verificar usuario Sergio (Status: concluido)\n- [DEMANDA]  férias (Status: pendente)\n- [Chamados] Usuário janara  (Status: concluido)\n- [DEMANDA] Tv frios  (Status: concluido)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "",
-      "descricao": "perdão o atraso",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1793377359311,
-      "horaRegistro": "13:22",
-      "criadoEm": 1793377359311
-    },
-    {
-      "id": "1793320980108",
-      "titulo": "29/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (29/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (1):\n- [Chamados] maquina devolução (Status: em_andamento)\n",
-      "comentarioExtra": "portal pré venda 80% feito.\ncaixas de ribbon no cpd para decidirmos amanhã.",
-      "descricao": "caixinhas e webcam no pc do estoque por conta de meet.",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "nenhum",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793320980108,
-      "horaRegistro": "21:42",
-      "criadoEm": 1793320980108
     },
     {
       "id": "auto_29102026_Intermediário",
@@ -2015,20 +1600,6 @@
       "criadoEm": 1793293243001
     },
     {
-      "id": "1793233060727",
-      "titulo": "28/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (28/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (9):\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] nfe com erros (Status: em_andamento)\n- [Chamados] Email suspeito da daniela (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: em_andamento)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [DEMANDA] verificar usuario Sergio (Status: pendente)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [DEMANDA] notas NFE com erro (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n",
-      "comentarioExtra": "eu e o portal da dani estamos ficando loucos juntos 😔✊",
-      "descricao": ".",
-      "rubsDesvinculados": "sim",
-      "rubsBloqueados": "samantha 27/10 ",
-      "etiquetasRibbon": "abastecidas",
-      "responsavel": "Joao Pedro 🤙",
-      "modificadoEm": 1793233060727,
-      "horaRegistro": "21:15",
-      "criadoEm": 1793233060727
-    },
-    {
       "id": "auto_28102026_Intermediário",
       "titulo": "28/10/2026 - Intermediário",
       "resumoAutomatico": "N/A",
@@ -2055,20 +1626,6 @@
       "criadoEm": 1793207019446
     },
     {
-      "id": "1793147675600",
-      "titulo": "27/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (27/10/2026) ===\n\n📌 Avisos Criados (3):\n- [Portais]: Vamos mandar para a pasta \"morto\" os portais que nao estao sendo usados, vamos excluir os que são testes.\n- [Portal Recargas]: A forma de contagem da meta esta errada. \n- [rub samantha bloq. ]: manter bloq até dia 14/11 (10 dias)\n\n📋 Demandas Modificadas/Concluídas (1):\n- [DEMANDA] Pre vendas (para kaell) (Status: em_andamento)\n",
-      "comentarioExtra": "tudo ok!",
-      "descricao": "ok!",
-      "rubsDesvinculados": "ok!",
-      "rubsBloqueados": "Rub C- 06 SAMIRA não apareceu.",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793147675600,
-      "horaRegistro": "21:30",
-      "criadoEm": 1793147675600
-    },
-    {
       "id": "auto_27102026_Intermediário",
       "titulo": "27/10/2026 - Intermediário",
       "resumoAutomatico": "N/A",
@@ -2080,20 +1637,6 @@
       "horaRegistro": "16:00",
       "sistemaGerou": true,
       "criadoEm": 1793135408631
-    },
-    {
-      "id": "1793123379187",
-      "titulo": "27/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (27/10/2026) ===\n\n📌 Avisos Criados (3):\n- [Portais]: Vamos mandar para a pasta \"morto\" os portais que nao estao sendo usados, vamos excluir os que são testes.\n- [Portal Recargas]: A forma de contagem da meta esta errada. \n- [rub samantha bloq. ]: manter bloq até dia 14/11 (10 dias)\n\n📋 Demandas Modificadas/Concluídas (0):\n- Nenhuma demanda modificada hoje.\n",
-      "comentarioExtra": "ok",
-      "descricao": "ok",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joalis",
-      "modificadoEm": 1793123379187,
-      "horaRegistro": "14:49",
-      "criadoEm": 1793123379187
     },
     {
       "id": "auto_27102026_Manhã",
@@ -2109,20 +1652,6 @@
       "criadoEm": 1793120425527
     },
     {
-      "id": "1793062446271",
-      "titulo": "26/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (26/10/2026) ===\n\n📌 Avisos Criados (1):\n- [RUB 13 PENDENTE DE DEVOLUÇÃO]: Usuario Silvio Cesar\n\n\n📋 Demandas Modificadas/Concluídas (12):\n- [Chamados] Email suspeito da daniela (Status: em_andamento)\n- [Chamados] Chamado IAM VICTOR (Status: em_andamento)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento toner MS812 (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Email Prevenção (Status: concluido)\n- [DEMANDA] NOVA PASTA CLIEN (Status: concluido)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: pendente)\n- [Chamados] Rub 13 quebrado (Status: concluido)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquinas quimadas (Status: pendente)\n",
-      "comentarioExtra": "Bom dia Joalis!\nHoje não tivemos nada de novidade!",
-      "descricao": "ok!",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "rub 28 - richard ",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793063057985,
-      "horaRegistro": "21:52",
-      "criadoEm": 1793062446271
-    },
-    {
       "id": "auto_26102026_Intermediário",
       "titulo": "26/10/2026 - Intermediário",
       "resumoAutomatico": "N/A",
@@ -2136,20 +1665,6 @@
       "criadoEm": 1793041221736
     },
     {
-      "id": "1793034193363",
-      "titulo": "26/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (26/10/2026) ===\n\n📌 Avisos Criados (1):\n- [RUB 13 PENDENTE DE DEVOLUÇÃO]: Usuario Silvio Cesar\n\n\n📋 Demandas Modificadas/Concluídas (8):\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento toner MS812 (Status: em_andamento)\n- [DEMANDA] Email Prevenção (Status: concluido)\n- [DEMANDA] NOVA PASTA CLIEN (Status: concluido)\n- [Chamados] Usuário janara  (Status: em_andamento)\n- [Chamados] Rub 13 quebrado (Status: concluido)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquinas quimadas (Status: pendente)\n",
-      "comentarioExtra": ".",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joao pedro",
-      "modificadoEm": 1793034193363,
-      "horaRegistro": "14:02",
-      "criadoEm": 1793034193363
-    },
-    {
       "id": "auto_26102026_Manhã",
       "titulo": "26/10/2026 - Manhã",
       "resumoAutomatico": "N/A",
@@ -2161,20 +1676,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1793034028611
-    },
-    {
-      "id": "1792962708586",
-      "titulo": "25/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (25/10/2026) ===\n\n📌 Avisos Criados (2):\n- [Testar portal tagsell]: deixo no drive o portal com instruções, favor testar com arquivo do dia atual, se estiver funcionando, infromar por aqui mesmo\n\nhttps://drive.google.com/drive/folders/1IneNEppE3xCfh54ApT2DSgtwkI9idmBY\n\n\n- [Usuário fabio IAM]: Verificar com o victor pra ele dar uma olhada no usuário do fabio pelo IAM dele\n\n\n📋 Demandas Modificadas/Concluídas (4):\n- [Chamados] Requerimento toner MS812 (Status: pendente)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Limpeza PCs (Status: concluido)\n- [DEMANDA] verificar peso da balança 17  (Status: concluido)\n",
-      "comentarioExtra": "opa! não precisa se preocupar com checklist por hoje. ",
-      "descricao": "ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ATUALIZAR O CLIENT NFE ",
-      "rubsDesvinculados": "OK ATUALIZAR O CLIENT NFE ",
-      "rubsBloqueados": "NENHUM ATUALIZAR O CLIENT NFE ",
-      "etiquetasRibbon": "OK ATUALIZAR O CLIENT NFE ",
-      "responsavel": "joalis",
-      "modificadoEm": 1792962708586,
-      "horaRegistro": "18:10",
-      "criadoEm": 1792962708586
     },
     {
       "id": "auto_25102026_Intermediário",
