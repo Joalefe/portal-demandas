@@ -362,21 +362,6 @@
       "modificadoEm": 1794069027354
     },
     {
-      "id": "1793356547230",
-      "titulo": "ACESSOS SERGIO",
-      "mensagem": "500800080 - ABC@2026",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793356547230,
-      "modificadoEm": 1793465612398
-    },
-    {
       "id": "1793353464364",
       "titulo": "manoela bloq no rub",
       "mensagem": "devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10",
@@ -752,22 +737,6 @@
       "modificadoEm": 1793822006904
     },
     {
-      "id": "1793357302855",
-      "titulo": "Devolução da maquina",
-      "descricao1": "Luara ficou de aprovar o orçamento para a devolução. ",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQjgghBzcfRDQnKqbSMSZzPTTdM",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Devolução aprovada, estamos a mercer da zhaz agora!",
-          "data": 1793368616290
-        }
-      ],
-      "criadoEm": 1793357302855,
-      "modificadoEm": 1793453389095
-    },
-    {
       "id": "1793189565019",
       "titulo": "Tv",
       "descricao1": "Olhar tv da entrada \nOlhar tv da gerência \n\nDescobrir o problema e deixar aqui. ",
@@ -786,30 +755,6 @@
       ],
       "criadoEm": 1793189565019,
       "modificadoEm": 1794064661425
-    },
-    {
-      "id": "1793189169709",
-      "titulo": "nfe com erros",
-      "descricao1": "aberto chamado",
-      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102885001846",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Chamado dado como NOVO",
-          "data": 1793225693058
-        },
-        {
-          "texto": "att: EM ANDAMENTO",
-          "data": 1793368571994
-        },
-        {
-          "texto": "chamado dado como \"solucionado\" NFs constando status 155 - cancelamento homologado fora de prazo",
-          "data": 1793384729163
-        }
-      ],
-      "criadoEm": 1793189169709,
-      "modificadoEm": 1793453339735
     },
     {
       "id": "1793135450549",
@@ -1562,20 +1507,6 @@
       "criadoEm": 1793552443789
     },
     {
-      "id": "1793495955591",
-      "titulo": "31/10/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (31/10/2026) ===\n\n📌 Avisos Criados (1):\n- [colocar link do portal novo email ifood]: https://srvsave675.br-atacadao.corp/ETIQUETAS/etiquetaxx.php\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Fazer arte dos aniversariantes  (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: concluido)\n- [Chamados] nfe com erros (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n",
-      "comentarioExtra": "nadinha da silva",
-      "descricao": "ok!",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "rub mayara c - 06 não apareceu",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793496105082,
-      "horaRegistro": "22:18",
-      "criadoEm": 1793495955591
-    },
-    {
       "id": "auto_31102026_Tarde",
       "titulo": "31/10/2026 - Tarde",
       "resumoAutomatico": "N/A",
@@ -1602,20 +1533,6 @@
       "criadoEm": 1793474068768
     },
     {
-      "id": "1793474068754",
-      "titulo": "31/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (31/10/2026) ===\n\n📌 Avisos Criados (1):\n- [colocar link do portal novo email ifood]: https://srvsave675.br-atacadao.corp/ETIQUETAS/etiquetaxx.php\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Fazer arte dos aniversariantes  (Status: pendente)\n- [DEMANDA] Devolução da maquina (Status: concluido)\n- [Chamados] nfe com erros (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n",
-      "comentarioExtra": "SUABE",
-      "descricao": "paz",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joao Pedro 🤙",
-      "modificadoEm": 1793474068754,
-      "horaRegistro": "16:14",
-      "criadoEm": 1793474068754
-    },
-    {
       "id": "auto_31102026_Intermediário",
       "titulo": "31/10/2026 - Intermediário",
       "resumoAutomatico": "N/A",
@@ -1627,20 +1544,6 @@
       "horaRegistro": "16:00",
       "sistemaGerou": true,
       "criadoEm": 1793473679352
-    },
-    {
-      "id": "1793465139116",
-      "titulo": "31/10/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (31/10/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [DEMANDA] Devolução da maquina (Status: concluido)\n- [Chamados] nfe com erros (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n",
-      "comentarioExtra": "",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1793465139116,
-      "horaRegistro": "13:45",
-      "criadoEm": 1793465139116
     },
     {
       "id": "auto_30102026_Manhã",
