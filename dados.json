@@ -80,10 +80,15 @@
         "João Infomático",
         "Kaell Pragmático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "iremos fazer um teste: vamos rodar a shell \"parateste.sh\" a noite 22:00, só iremos deixando rodando e ir embora, pois nao vai precisa mudar a data para o dia atual.",
+          "data": 1794398290523
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1794218218395,
-      "modificadoEm": 1794242326172
+      "modificadoEm": 1794398290523
     },
     {
       "id": "1794155756648",
