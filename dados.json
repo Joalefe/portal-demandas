@@ -26,11 +26,13 @@
       "titulo": "portal dos cupons ",
       "mensagem": "Não precisa por enquanto ser att diariamente.",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794302050597,
-      "modificadoEm": 1794302050597
+      "modificadoEm": 1794388380801
     },
     {
       "id": "1794239506151",
