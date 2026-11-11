@@ -413,10 +413,10 @@
       "descricao1": "problema com o questionário externo",
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026111085001887",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [],
       "criadoEm": 1794315082643,
-      "modificadoEm": 1794315082643
+      "modificadoEm": 1794395213951
     },
     {
       "id": "1794302075871",
