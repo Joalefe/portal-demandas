@@ -75,6 +75,25 @@
       "modificadoEm": 1794302075881
     },
     {
+      "id": "1794218218395",
+      "titulo": "srt35 vindo zipado",
+      "mensagem": "analises",
+      "cor": "postit-purple",
+      "lidosPor": [
+        "João Infomático",
+        "Kaell Pragmático"
+      ],
+      "respostas": [
+        {
+          "texto": "iremos fazer um teste: vamos rodar a shell \"parateste.sh\" a noite 22:00, só iremos deixando rodando e ir embora, pois nao vai precisa mudar a data para o dia atual.",
+          "data": 1794398290523
+        }
+      ],
+      "arquivado": false,
+      "criadoEm": 1794218218395,
+      "modificadoEm": 1794398290523
+    },
+    {
       "id": "1794155756648",
       "titulo": "situação PDV 1",
       "mensagem": "Caso pegue uma situação parecida do erro que deu o PDV01, a minha tratativa foi: excluir e gerar um novo token pelo sitef web e logo em seguida configurar tls pelo menu tplinux e o pdv voltou a operar",
@@ -90,6 +109,25 @@
       "modificadoEm": 1794302097350
     },
     {
+      "id": "1794152490987",
+      "titulo": "Shell 15  mais vendidos",
+      "mensagem": "O shell que esta dentro da \"TOP.sh\" nao enviou o relatorio dos 15 mais vendidos hoje, caso problema persista, rode o shell \"joalefe.sh\", com isso o relatorio de 15 mais vendidos chegara nos emails, se acharem melhore, mesclem o shell dentro de outro shell, so dar um \"cd /fs1/save\" desce uma linha e escreve \" joalefe.sh\" escreva exatamente assim dentro da outra shel que queira fazer com que chame a \"joalefe.sh",
+      "cor": "postit-yellow",
+      "lidosPor": [
+        "João Infomático",
+        "Kaell Pragmático"
+      ],
+      "respostas": [
+        {
+          "texto": "shell no dia de hoje funcionou.",
+          "data": 1794302139630
+        }
+      ],
+      "arquivado": false,
+      "criadoEm": 1794152490987,
+      "modificadoEm": 1794302139630
+    },
+    {
       "id": "1794134406222",
       "titulo": "limpar pasta SHELL",
       "mensagem": "Igual fizemos com o DIR. Portal, criar uma pasta \"MORTO\" e alocar os shells que foram descontinuados, ou testes que nao sao mais uteis.",
@@ -102,6 +140,25 @@
       "arquivado": false,
       "criadoEm": 1794134406222,
       "modificadoEm": 1794422765290
+    },
+    {
+      "id": "1794134150415",
+      "titulo": "Atts da Abertura",
+      "mensagem": "Email com nova shell mostrando produtos mais vendidos, nao chegou automaticamente. \n\nabertura.sh 45 min rodando\n\nGERENCIAL sem problemas",
+      "cor": "postit-purple",
+      "lidosPor": [
+        "Kaell Pragmático",
+        "João Infomático"
+      ],
+      "respostas": [
+        {
+          "texto": "hoje ja foi mais rapido, em media 25 min, acredito que o parametro errado estava impactando bastante",
+          "data": 1794218257632
+        }
+      ],
+      "arquivado": false,
+      "criadoEm": 1794134150415,
+      "modificadoEm": 1794422767802
     },
     {
       "id": "1794131245652",
@@ -1060,7 +1117,7 @@
       "etiquetasRibbon": "N/A",
       "horaRegistro": "16:00",
       "sistemaGerou": true,
-      "criadoEm": 1794510016672
+      "criadoEm": 1794510037525
     },
     {
       "id": "auto_12112026_Manhã",
@@ -1073,7 +1130,7 @@
       "etiquetasRibbon": "N/A",
       "horaRegistro": "14:00",
       "sistemaGerou": true,
-      "criadoEm": 1794502869474
+      "criadoEm": 1794502837452
     },
     {
       "id": "1794443664261",
