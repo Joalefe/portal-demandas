@@ -1044,6 +1044,20 @@
   ],
   "plantao": [
     {
+      "id": "1794443664261",
+      "titulo": "11/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (11/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] script abertura (Status: pendente)\n- [Chamados] chamado luara  (Status: concluido)\n- [Chamados] Chamado 2 de requerimento de toner (Status: pendente)\n- [Chamados] estorno com erro 1095 (Status: concluido)\n- [Chamados] maquina devolução (Status: em_andamento)\n",
+      "comentarioExtra": "tudo dboa ",
+      "descricao": "😎",
+      "rubsDesvinculados": "yep",
+      "rubsBloqueados": "até o momento, rub 4 desaparecido. USER: Eduardo",
+      "etiquetasRibbon": "yep",
+      "responsavel": "joao pedro 🫡",
+      "modificadoEm": 1794443664261,
+      "horaRegistro": "21:33",
+      "criadoEm": 1794443664261
+    },
+    {
       "id": "auto_11112026_Intermediário",
       "titulo": "11/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
