@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1794500717610",
+      "titulo": "mais vendidos (quantidade)",
+      "mensagem": "está na shell top.sh (finalizado)",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1794500717610,
+      "modificadoEm": 1794500717610
+    },
+    {
       "id": "1794302050597",
       "titulo": "portal dos cupons ",
       "mensagem": "Não precisa por enquanto ser att diariamente.",
