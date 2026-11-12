@@ -403,6 +403,17 @@
   ],
   "demandas": [
     {
+      "id": "1794488119859",
+      "titulo": "loja sem cadastro",
+      "descricao1": "mudei o job da tatiane oliveira para aux. de cadastro. (vamos testar se ela consegue logar no caixa empresa, com o job de cadastro) ",
+      "descricao2": "fazer isso 13/11",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1794488119859,
+      "modificadoEm": 1794488119859
+    },
+    {
       "id": "1794478281584",
       "titulo": "Abrir chamado para o rub 6",
       "descricao1": "botao virtual nao funciona",
