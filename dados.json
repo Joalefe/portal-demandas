@@ -15,11 +15,13 @@
       "titulo": "mais vendidos (quantidade)",
       "mensagem": "está na shell top.sh (finalizado)",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794500717610,
-      "modificadoEm": 1794500717610
+      "modificadoEm": 1794500720733
     },
     {
       "id": "1794302050597",
