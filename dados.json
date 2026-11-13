@@ -15,11 +15,14 @@
       "titulo": "Rub 14 ",
       "mensagem": "Rub 14 - Ruan não entregado",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático",
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794531600354,
-      "modificadoEm": 1794531600354
+      "modificadoEm": 1794583520354
     },
     {
       "id": "1794500717610",
