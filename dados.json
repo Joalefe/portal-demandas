@@ -1118,6 +1118,20 @@
   ],
   "plantao": [
     {
+      "id": "1794531808410",
+      "titulo": "12/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (12/11/2026) ===\n\n📌 Avisos Criados (2):\n- [Rub 14 ]: Rub 14 - Ruan não entregado\n- [mais vendidos (quantidade)]: está na shell top.sh (finalizado)\n\n📋 Demandas Modificadas/Concluídas (11):\n- [Chamados] Chamado RUB 06 (Status: em_andamento)\n- [DEMANDA] formatar pdv P/ Black (Status: pendente)\n- [Chamados] chamado estorno nao migrou para TPLWEB (Status: pendente)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: pendente)\n- [DEMANDA] loja sem cadastro (Status: pendente)\n- [DEMANDA] login PAULO (Status: concluido)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [DEMANDA] Tv (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: concluido)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
+      "comentarioExtra": "rub 14 sumido\nbalança 10 ta zoada, a opção c20 conforme a faq da prix5 não tem as config que precisamos, talvez eu esteja cabaando, mas n foi nem lascando",
+      "descricao": "okok",
+      "rubsDesvinculados": "ok!",
+      "rubsBloqueados": "rub 14 ta com vergonha de aparecer",
+      "etiquetasRibbon": "ok!",
+      "responsavel": "joalis",
+      "modificadoEm": 1794531808410,
+      "horaRegistro": "22:00",
+      "criadoEm": 1794531808410
+    },
+    {
       "id": "auto_12112026_Tarde",
       "titulo": "12/11/2026 - Tarde",
       "resumoAutomatico": "N/A",
