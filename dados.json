@@ -1901,5 +1901,14 @@
       "criadoEm": 1792953891534
     }
   ],
-  "rubs": []
+  "rubs": [
+    {
+      "id": "1794583476958",
+      "nome": "RUB 14 - RUAN PABLO",
+      "motivo": "3ª PERDA EM 1 MÊS",
+      "dataDesbloqueio": "2026-12-13",
+      "criadoEm": 1794583476958,
+      "modificadoEm": 1794583476958
+    }
+  ]
 }
