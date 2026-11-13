@@ -471,17 +471,6 @@
       "modificadoEm": 1794488119859
     },
     {
-      "id": "1794478281584",
-      "titulo": "Abrir chamado para o rub 6",
-      "descricao1": "botao virtual nao funciona",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "em_andamento",
-      "respostas": [],
-      "criadoEm": 1794478281584,
-      "modificadoEm": 1794478281584
-    },
-    {
       "id": "1794395356350",
       "titulo": "script abertura",
       "descricao1": "incluir valor de estoque",
