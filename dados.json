@@ -1162,6 +1162,20 @@
   ],
   "plantao": [
     {
+      "id": "1794586985333",
+      "titulo": "13/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (13/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (6):\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [Chamados] Sinal Rub (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: pendente)\n- [DEMANDA] loja sem cadastro (Status: pendente)\n- [DEMANDA] script abertura (Status: pendente)\n- [Chamados] balança 17 (Status: concluido)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1794586985333,
+      "horaRegistro": "13:23",
+      "criadoEm": 1794586985333
+    },
+    {
       "id": "1794531808410",
       "titulo": "12/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (12/11/2026) ===\n\n📌 Avisos Criados (2):\n- [Rub 14 ]: Rub 14 - Ruan não entregado\n- [mais vendidos (quantidade)]: está na shell top.sh (finalizado)\n\n📋 Demandas Modificadas/Concluídas (11):\n- [Chamados] Chamado RUB 06 (Status: em_andamento)\n- [DEMANDA] formatar pdv P/ Black (Status: pendente)\n- [Chamados] chamado estorno nao migrou para TPLWEB (Status: pendente)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: pendente)\n- [DEMANDA] loja sem cadastro (Status: pendente)\n- [DEMANDA] login PAULO (Status: concluido)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [DEMANDA] Tv (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: concluido)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
