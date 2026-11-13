@@ -1175,6 +1175,20 @@
   ],
   "plantao": [
     {
+      "id": "1794596269245",
+      "titulo": "13/11/2026 - Intermediário",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (13/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (7):\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [Chamados] Sinal Rub (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: pendente)\n- [DEMANDA] loja sem cadastro (Status: pendente)\n- [DEMANDA] script abertura (Status: pendente)\n- [Chamados] balança 17 (Status: concluido)\n- [DEMANDA] Buscapreço (Status: concluido)\n",
+      "comentarioExtra": "busca preço operante, chamados respondidos passados para os responsaveis, sinal rub aindaé uma igonita,porém a teoria mais aceita é de q a atualização c4m prejudicou a captagem de sinal",
+      "descricao": "missoes concluidas, CPD DESCANSAR 😊🤙",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joao Pedro 🤙",
+      "modificadoEm": 1794596269245,
+      "horaRegistro": "15:55",
+      "criadoEm": 1794596269245
+    },
+    {
       "id": "1794586985333",
       "titulo": "13/11/2026 - Manhã",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (13/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (6):\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [Chamados] Sinal Rub (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: pendente)\n- [DEMANDA] loja sem cadastro (Status: pendente)\n- [DEMANDA] script abertura (Status: pendente)\n- [Chamados] balança 17 (Status: concluido)\n",
