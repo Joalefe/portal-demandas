@@ -509,9 +509,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "em processo",
+          "data": 1794583068610
+        }
+      ],
       "criadoEm": 1794395356350,
-      "modificadoEm": 1794395356350
+      "modificadoEm": 1794583068610
     },
     {
       "id": "1794315082643",
