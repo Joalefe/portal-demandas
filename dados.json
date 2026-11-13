@@ -439,6 +439,17 @@
   ],
   "demandas": [
     {
+      "id": "1794586898726",
+      "titulo": "balança com problema de rede",
+      "descricao1": "passei para o tecnico",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "em_andamento",
+      "respostas": [],
+      "criadoEm": 1794586898726,
+      "modificadoEm": 1794586898726
+    },
+    {
       "id": "1794586860364",
       "titulo": "Sinal Rub",
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026111385002353",
