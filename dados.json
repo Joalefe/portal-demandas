@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1794669134340",
+      "titulo": "rub da Ruana foi achado",
+      "mensagem": ".",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1794669134340,
+      "modificadoEm": 1794669134340
+    },
+    {
       "id": "1794659976789",
       "titulo": "ajeitar portal de etiquetas",
       "mensagem": "ETIQ cafeteria (DEITADA) esta com tamanho errado.",
