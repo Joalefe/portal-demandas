@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1794659976789",
+      "titulo": "ajeitar portal de etiquetas",
+      "mensagem": "ETIQ cafeteria (DEITADA) esta com tamanho errado.",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1794659976789,
+      "modificadoEm": 1794659976789
+    },
+    {
       "id": "1794659033604",
       "titulo": "# Desbloquear saeou09",
       "mensagem": "\n\ndfrun exe saebu85 1 675 1\ndfrun exe saebu85 1 675 2",
