@@ -103,11 +103,15 @@
         {
           "texto": "save não entra também",
           "data": 1794601664624
+        },
+        {
+          "texto": "login operante, porém nao iremos utilizar, pois o da Cibele se encontra operante tbm, caso pare, ai temos esse de reserva",
+          "data": 1794674152879
         }
       ],
       "arquivado": false,
       "criadoEm": 1794596744538,
-      "modificadoEm": 1794656386190
+      "modificadoEm": 1794674152879
     },
     {
       "id": "1794531600354",
