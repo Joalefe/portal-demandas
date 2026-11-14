@@ -543,6 +543,17 @@
   ],
   "demandas": [
     {
+      "id": "1794679729120",
+      "titulo": "atualização portal Sergio",
+      "descricao1": "Ele quer que a busca do portal também busque por marcas dos produtos, nao somente pela descrição do produto.\n\n+/- como no nosso portal de giro",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "em_andamento",
+      "respostas": [],
+      "criadoEm": 1794679729120,
+      "modificadoEm": 1794679729120
+    },
+    {
       "id": "1794586898726",
       "titulo": "balança com problema de rede",
       "descricao1": "passei para o tecnico",
