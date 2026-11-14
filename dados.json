@@ -609,7 +609,7 @@
       "descricao1": "incluir valor de estoque",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "em processo",
@@ -617,7 +617,7 @@
         }
       ],
       "criadoEm": 1794395356350,
-      "modificadoEm": 1794583068610
+      "modificadoEm": 1794652788717
     },
     {
       "id": "1794315082643",
