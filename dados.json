@@ -15,11 +15,13 @@
       "titulo": "Nf com erro",
       "mensagem": "resolvido",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794647323812,
-      "modificadoEm": 1794648142693
+      "modificadoEm": 1794648147403
     },
     {
       "id": "1794596744538",
