@@ -1277,6 +1277,20 @@
   ],
   "plantao": [
     {
+      "id": "1794669156262",
+      "titulo": "14/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (14/11/2026) ===\n\n📌 Avisos Criados (5):\n- [rub da Ruana foi achado]: .\n- [ajeitar portal de etiquetas]: ETIQ cafeteria (DEITADA) esta com tamanho errado.\n- [# Desbloquear saeou09 (CASO PRECISEM) (ANOTADO NO NOTION)]: \n\ndfrun exe saebu85 1 675 1\ndfrun exe saebu85 1 675 2\n- [script abertura]: foi add mais um relatorio o (sinoi67). todo dia tem que gerar ele pelo saveweb para alimentar o portal.\n- [Nf com erro]: resolvido\n\n📋 Demandas Modificadas/Concluídas (15):\n- [DEMANDA] usuarios novos (Status: em_andamento)\n- [DEMANDA] formatar pdv P/ Black (Status: pendente)\n- [Chamados] chamado estorno nao migrou para TPLWEB (Status: concluido)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: em_andamento)\n- [DEMANDA] loja sem cadastro (Status: concluido)\n- [DEMANDA] script abertura (Status: concluido)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: concluido)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA]  férias (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: em_andamento)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: em_andamento)\n- [DEMANDA] cabo adaptador pdv (Status: pendente)\n",
+      "comentarioExtra": "",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1794669156262,
+      "horaRegistro": "12:12",
+      "criadoEm": 1794669156262
+    },
+    {
       "id": "1794596269245",
       "titulo": "13/11/2026 - Intermediário",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (13/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (7):\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [Chamados] Sinal Rub (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: pendente)\n- [DEMANDA] loja sem cadastro (Status: pendente)\n- [DEMANDA] script abertura (Status: pendente)\n- [Chamados] balança 17 (Status: concluido)\n- [DEMANDA] Buscapreço (Status: concluido)\n",
