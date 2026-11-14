@@ -566,10 +566,10 @@
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026111285004335",
       "descricao2": "ACOMPANHAR",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [],
       "criadoEm": 1794498427921,
-      "modificadoEm": 1794498427921
+      "modificadoEm": 1794651611390
     },
     {
       "id": "1794493706184",
