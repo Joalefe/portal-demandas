@@ -15,7 +15,9 @@
       "titulo": "ajeitar portal de etiquetas",
       "mensagem": "ETIQ cafeteria (DEITADA) esta com tamanho errado.",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [
         {
           "texto": "FEITO",
@@ -24,7 +26,7 @@
       ],
       "arquivado": false,
       "criadoEm": 1794659976789,
-      "modificadoEm": 1794669030087
+      "modificadoEm": 1794669031460
     },
     {
       "id": "1794659033604",
