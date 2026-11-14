@@ -593,7 +593,7 @@
       "descricao1": "mudei o job da tatiane oliveira para aux. de cadastro. (vamos testar se ela consegue logar no caixa empresa, com o job de cadastro) ",
       "descricao2": "fazer isso 13/11",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "atualizado JOB, verificar amanha",
@@ -601,7 +601,7 @@
         }
       ],
       "criadoEm": 1794488119859,
-      "modificadoEm": 1794583057682
+      "modificadoEm": 1794652784614
     },
     {
       "id": "1794395356350",
