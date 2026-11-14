@@ -15,11 +15,13 @@
       "titulo": "rub da Ruana foi achado",
       "mensagem": ".",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794669134340,
-      "modificadoEm": 1794669134340
+      "modificadoEm": 1794674096170
     },
     {
       "id": "1794659976789",
