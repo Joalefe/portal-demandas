@@ -577,10 +577,10 @@
       "descricao1": "11/26",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [],
       "criadoEm": 1794502675671,
-      "modificadoEm": 1794662396107
+      "modificadoEm": 1794662397178
     },
     {
       "id": "1794498427921",
