@@ -578,9 +578,14 @@
       "descricao2": "ACOMPANHAR",
       "categoria": "Chamados",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "encaminhado resposta para luara",
+          "data": 1794651742884
+        }
+      ],
       "criadoEm": 1794493706184,
-      "modificadoEm": 1794493706184
+      "modificadoEm": 1794651742884
     },
     {
       "id": "1794488119859",
