@@ -519,17 +519,6 @@
   ],
   "demandas": [
     {
-      "id": "1794646980457",
-      "titulo": "Email para adm referente ao rub perdido",
-      "descricao1": ".",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "pendente",
-      "respostas": [],
-      "criadoEm": 1794646980457,
-      "modificadoEm": 1794646980457
-    },
-    {
       "id": "1794586898726",
       "titulo": "balança com problema de rede",
       "descricao1": "passei para o tecnico",
