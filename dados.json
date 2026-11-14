@@ -1182,7 +1182,7 @@
       "descricao1": "Contato feito com Vtech, enviado para cadastrar ",
       "descricao2": "Whatsapp: (11) 99558-5051\n\nhttps://mail.google.com/mail/u/0/?ogbl#sent/KtbxLvGzbqCmQdSpGZTtMRlbFpkBmbdFlB",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [
         {
           "texto": "esperando aprovação, documentos enviados!",
@@ -1201,7 +1201,7 @@
           "data": 1794249232398
         }
       ],
-      "modificadoEm": 1794249232398
+      "modificadoEm": 1794662354841
     },
     {
       "id": "1792500630190",
