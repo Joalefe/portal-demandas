@@ -521,10 +521,10 @@
     {
       "id": "1794564119351",
       "titulo": "usuarios novos",
-      "descricao1": "* Juliana prevenção\n* antonio prevenção \n* mirela operadora\n* cibeli\n* mario",
+      "descricao1": "* Juliana prevenção OK\n* antonio prevenção OK\n* mirela operadora (AGUARDAR SUBIR PARA O TPL)\n* cibeli (AGURDAR PROM SUBIR)\n* mario (AGURDAR PROM SUBIR)",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [
         {
           "texto": "Jobs Juliana, Mirella, antonio feitos",
@@ -536,7 +536,7 @@
         }
       ],
       "criadoEm": 1794564119351,
-      "modificadoEm": 1794595297579
+      "modificadoEm": 1794652744833
     },
     {
       "id": "1794525961576",
