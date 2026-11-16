@@ -594,9 +594,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "aguardando respostas",
+          "data": 1794843263259
+        }
+      ],
       "criadoEm": 1794586898726,
-      "modificadoEm": 1794586898726
+      "modificadoEm": 1794843263259
     },
     {
       "id": "1794586860364",
