@@ -1354,6 +1354,20 @@
   ],
   "plantao": [
     {
+      "id": "1794849016897",
+      "titulo": "16/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (16/11/2026) ===\n\n📌 Avisos Criados (1):\n- [MGV 7]: Nenhuma novidade sobre ainda, coloquei  pasta solicitada no BALANCA, e o responsavel me disse que ira iniicar as configurações e que ao terminar teremos um meet para ativação da ferramenta\n\n📋 Demandas Modificadas/Concluídas (15):\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [Chamados] Sinal Rub (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: em_andamento)\n- [Chamados] Chamado RUB 06 (Status: em_andamento)\n- [DEMANDA] formatar pdv P/ Black (Status: pendente)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: em_andamento)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: em_andamento)\n- [DEMANDA] Tv (Status: concluido)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA]  férias (Status: pendente)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: em_andamento)\n- [DEMANDA] cabo adaptador pdv (Status: pendente)\n",
+      "comentarioExtra": "maquina recebida, porém uma nao veio, formalizado email. portal Sergio, feito a parte da Ultima entrada para mostrar a entrada mais recente.",
+      "descricao": "😎🫡",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "joao pedro 🫡",
+      "modificadoEm": 1794849016897,
+      "horaRegistro": "14:07",
+      "criadoEm": 1794849016897
+    },
+    {
       "id": "auto_16112026_Manhã",
       "titulo": "16/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
