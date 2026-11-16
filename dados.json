@@ -600,10 +600,10 @@
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026111385002353",
       "descricao2": "",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [],
       "criadoEm": 1794586860364,
-      "modificadoEm": 1794586860364
+      "modificadoEm": 1794831172966
     },
     {
       "id": "1794564119351",
