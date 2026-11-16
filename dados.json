@@ -143,11 +143,15 @@
         {
           "texto": "login operante, porém nao iremos utilizar, pois o da Cibele se encontra operante tbm, caso pare, ai temos esse de reserva",
           "data": 1794674152879
+        },
+        {
+          "texto": "tela e adm operantes",
+          "data": 1794863855180
         }
       ],
       "arquivado": false,
       "criadoEm": 1794596744538,
-      "modificadoEm": 1794674152879
+      "modificadoEm": 1794863855180
     },
     {
       "id": "1794531600354",
