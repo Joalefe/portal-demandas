@@ -1226,7 +1226,7 @@
       "descricao1": "Preencher programação de férias.",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [
         {
           "texto": "resta so Kaell para preencher",
@@ -1234,7 +1234,7 @@
         }
       ],
       "criadoEm": 1792686083624,
-      "modificadoEm": 1794662362630
+      "modificadoEm": 1794843317378
     },
     {
       "id": "1792607555380",
