@@ -601,9 +601,14 @@
       "descricao2": "",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "ainda dado como NOVO",
+          "data": 1794831189662
+        }
+      ],
       "criadoEm": 1794586860364,
-      "modificadoEm": 1794831174228
+      "modificadoEm": 1794831189662
     },
     {
       "id": "1794564119351",
