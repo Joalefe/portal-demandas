@@ -1215,10 +1215,10 @@
       "descricao1": "Iremos organizar",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [],
       "criadoEm": 1792787963981,
-      "modificadoEm": 1794843311258
+      "modificadoEm": 1794843312258
     },
     {
       "id": "1792686083624",
