@@ -637,9 +637,14 @@
       "descricao2": "chamado abertoooooooooooooooooo",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "chamdo com status \"AGUARDANDO\"",
+          "data": 1794831607845
+        }
+      ],
       "criadoEm": 1794525961576,
-      "modificadoEm": 1794525961576
+      "modificadoEm": 1794831607845
     },
     {
       "id": "1794502675671",
