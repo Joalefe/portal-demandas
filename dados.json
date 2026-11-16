@@ -573,17 +573,6 @@
   ],
   "demandas": [
     {
-      "id": "1794752474467",
-      "titulo": "Demanda sérgio",
-      "descricao1": "em andamento...",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "em_andamento",
-      "respostas": [],
-      "criadoEm": 1794752474467,
-      "modificadoEm": 1794752482761
-    },
-    {
       "id": "1794679729120",
       "titulo": "atualização portal Sergio",
       "descricao1": "Ele quer que a busca do portal também busque por marcas dos produtos, nao somente pela descrição do produto.\n\n+/- como no nosso portal de giro",
