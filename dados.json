@@ -1328,6 +1328,20 @@
   ],
   "plantao": [
     {
+      "id": "1794931411157",
+      "titulo": "17/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (17/11/2026) ===\n\n📌 Avisos Criados (1):\n- [SINAL RUB]: IREMOS CONFIG TODOS OS RUB CONFORME MANDEI NO GRUPO, FAVOR IR SINALIZANDO OS FEITOS NO QUADRO.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] MAQUINA ZHAZ (Status: em_andamento)\n- [DEMANDA] atualização portal Sergio (Status: em_andamento)\n- [Chamados] Chamado RUB 06 (Status: concluido)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: concluido)\n- [DEMANDA] zhaz maquina queimada (Status: concluido)\n",
+      "comentarioExtra": "",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1794931411157,
+      "horaRegistro": "13:03",
+      "criadoEm": 1794931411157
+    },
+    {
       "id": "1794877507879",
       "titulo": "16/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (16/11/2026) ===\n\n📌 Avisos Criados (1):\n- [MGV 7]: Nenhuma novidade sobre ainda, coloquei  pasta solicitada no BALANCA, e o responsavel me disse que ira iniicar as configurações e que ao terminar teremos um meet para ativação da ferramenta\n\n📋 Demandas Modificadas/Concluídas (15):\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [Chamados] Sinal Rub (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: em_andamento)\n- [Chamados] Chamado RUB 06 (Status: em_andamento)\n- [DEMANDA] formatar pdv P/ Black (Status: pendente)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: em_andamento)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: em_andamento)\n- [DEMANDA] Tv (Status: concluido)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA]  férias (Status: concluido)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: em_andamento)\n- [DEMANDA] cabo adaptador pdv (Status: pendente)\n",
