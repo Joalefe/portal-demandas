@@ -672,7 +672,7 @@
       "descricao1": "https://atendimento.yepsolutions.com.br/front/ticket.form.php?id=7562",
       "descricao2": "chamado abertoooooooooooooooooo",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "chamdo com status \"AGUARDANDO\"",
@@ -680,7 +680,7 @@
         }
       ],
       "criadoEm": 1794525961576,
-      "modificadoEm": 1794831607845
+      "modificadoEm": 1794931234521
     },
     {
       "id": "1794502675671",
