@@ -1329,7 +1329,7 @@
       "descricao1": "Situação: Aguardando importação das peças",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "ainda aguardando peças para concluir o reparo. OS Nº132425",
@@ -1348,7 +1348,7 @@
           "data": 1794843372707
         }
       ],
-      "modificadoEm": 1794843372707
+      "modificadoEm": 1794918166625
     },
     {
       "id": "1792493737390",
