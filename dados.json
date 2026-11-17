@@ -710,7 +710,7 @@
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026111285003587",
       "descricao2": "ACOMPANHAR",
       "categoria": "Chamados",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "encaminhado resposta para luara",
@@ -718,7 +718,7 @@
         }
       ],
       "criadoEm": 1794493706184,
-      "modificadoEm": 1794843276955
+      "modificadoEm": 1794931263641
     },
     {
       "id": "1794488119859",
