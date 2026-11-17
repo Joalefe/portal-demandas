@@ -578,6 +578,17 @@
   ],
   "demandas": [
     {
+      "id": "1794932159747",
+      "titulo": "Colocar cx empresa para operar (iremos testa-lo para a black)",
+      "descricao1": ";",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1794932159747,
+      "modificadoEm": 1794932159747
+    },
+    {
       "id": "1794932119187",
       "titulo": "Att quadro de promovidos",
       "descricao1": "ja mandei msg para o pessoal vim no cpd tirar uma foto",
