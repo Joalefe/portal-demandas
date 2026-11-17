@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1794926884945",
+      "titulo": "SINAL RUB",
+      "mensagem": "Sendo realizados diversos testes para descobrirmos o real problema, até o momento sem novidades\n\nDESCARTADOS:\n-pico (sobrecarga das antenas por muitos aparelhos conectados)\n-configuração (5G only / 2.4G only)\n-alcance das antenas\n",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1794926884945,
+      "modificadoEm": 1794926884945
+    },
+    {
       "id": "1794828153775",
       "titulo": "MGV 7",
       "mensagem": "Nenhuma novidade sobre ainda, coloquei  pasta solicitada no BALANCA, e o responsavel me disse que ira iniicar as configurações e que ao terminar teremos um meet para ativação da ferramenta",
