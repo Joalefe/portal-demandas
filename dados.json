@@ -640,9 +640,14 @@
       "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026111885005734",
       "categoria": "Chamados",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "acessos criados, porém o meu (JOAOZIN MINECRAFT 2011) nao esta funcionando pq precisa de um parametro que nao foi colocado, abri um chat com nicolas do IAM para corrigir",
+          "data": 1795045081364
+        }
+      ],
       "criadoEm": 1795029017309,
-      "modificadoEm": 1795029017309
+      "modificadoEm": 1795045081364
     },
     {
       "id": "1795004421768",
