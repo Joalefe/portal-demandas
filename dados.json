@@ -640,9 +640,14 @@
       "descricao2": "",
       "categoria": "Chamados",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "concluido",
+          "data": 1795029030021
+        }
+      ],
       "criadoEm": 1795004421768,
-      "modificadoEm": 1795004421768
+      "modificadoEm": 1795029030021
     },
     {
       "id": "1794933571379",
