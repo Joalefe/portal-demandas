@@ -742,7 +742,7 @@
       "descricao1": "passei para o tecnico",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [
         {
           "texto": "aguardando respostas",
@@ -750,7 +750,7 @@
         }
       ],
       "criadoEm": 1794586898726,
-      "modificadoEm": 1795029126297
+      "modificadoEm": 1795029127581
     },
     {
       "id": "1794586860364",
