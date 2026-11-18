@@ -1441,6 +1441,20 @@
   ],
   "plantao": [
     {
+      "id": "1795022558995",
+      "titulo": "18/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (18/11/2026) ===\n\n📌 Avisos Criados (2):\n- [Assinar folhar de ponto]: .\n- [senha rub (salvo no notion)]: $aTaC#Wi-Fi@rUb!\n\n📋 Demandas Modificadas/Concluídas (1):\n- [Chamados] chamado abraao armazenamento  (Status: em_andamento)\n",
+      "comentarioExtra": "",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1795022558995,
+      "horaRegistro": "14:22",
+      "criadoEm": 1795022558995
+    },
+    {
       "id": "auto_18112026_Manhã",
       "titulo": "18/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
