@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1795022538294",
+      "titulo": "Assinar folhar de ponto",
+      "mensagem": ".",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1795022538294,
+      "modificadoEm": 1795022538294
+    },
+    {
       "id": "1795004660370",
       "titulo": "senha rub (salvo no notion)",
       "mensagem": "$aTaC#Wi-Fi@rUb!",
