@@ -1,13 +1,13 @@
 {
   "pessoas": [
-    "João Infomático",
-    "Joalefe Performático",
-    "Kaell Pragmático"
+    "Ana",
+    "Carlos",
+    "Mariana"
   ],
   "categorias": [
     "Chamados",
-    "DEMANDA",
-    "Projetos"
+    "Projetos",
+    "Manutenção"
   ],
   "avisos": [
     {
@@ -1520,7 +1520,7 @@
       "etiquetasRibbon": "N/A",
       "horaRegistro": "16:00",
       "sistemaGerou": true,
-      "criadoEm": 1795119274880
+      "criadoEm": 1795119464479
     },
     {
       "id": "auto_19112026_Manhã",
@@ -1533,7 +1533,7 @@
       "etiquetasRibbon": "N/A",
       "horaRegistro": "14:00",
       "sistemaGerou": true,
-      "criadoEm": 1795107622043
+      "criadoEm": 1795119464479
     },
     {
       "id": "1795048969780",
