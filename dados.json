@@ -732,10 +732,14 @@
         {
           "texto": "5 rubs com configuração nova realizada, separados para testes amanha",
           "data": 1795029185155
+        },
+        {
+          "texto": "FIZEMOS UMA NOVA CONFIG, IREMOS TESTAR AMANHA",
+          "data": 1795104695502
         }
       ],
       "criadoEm": 1794931426934,
-      "modificadoEm": 1795029185156
+      "modificadoEm": 1795104695502
     },
     {
       "id": "1794918261348",
