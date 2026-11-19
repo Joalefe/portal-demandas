@@ -1,13 +1,13 @@
 {
   "pessoas": [
-    "Ana",
-    "Carlos",
-    "Mariana"
+    "João Infomático",
+    "Joalefe Performático",
+    "Kaell Pragmático"
   ],
   "categorias": [
     "Chamados",
-    "Projetos",
-    "Manutenção"
+    "DEMANDA",
+    "Projetos"
   ],
   "avisos": [
     {
@@ -26,11 +26,13 @@
       "titulo": "Assinar folhar de ponto",
       "mensagem": ".",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Kaell Pragmático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1795022538294,
-      "modificadoEm": 1795022538294
+      "modificadoEm": 1795119483665
     },
     {
       "id": "1795004660370",
@@ -1520,7 +1522,7 @@
       "etiquetasRibbon": "N/A",
       "horaRegistro": "16:00",
       "sistemaGerou": true,
-      "criadoEm": 1795119464479
+      "criadoEm": 1795119274880
     },
     {
       "id": "auto_19112026_Manhã",
@@ -1533,7 +1535,7 @@
       "etiquetasRibbon": "N/A",
       "horaRegistro": "14:00",
       "sistemaGerou": true,
-      "criadoEm": 1795119464479
+      "criadoEm": 1795107622043
     },
     {
       "id": "1795048969780",
