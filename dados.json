@@ -1495,6 +1495,20 @@
   ],
   "plantao": [
     {
+      "id": "1795048969780",
+      "titulo": "18/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (18/11/2026) ===\n\n📌 Avisos Criados (3):\n- [RESUMAO DA MEET VISUALMIX]:                 VISUAL MIX\n\n\n3 links principais \n\nVIDEOS EXPLICATIVOS:\nhttps://srvsupdoc.br-atacadao.corp/pt-br/visualmix/videos\n\nLOJA - http://srvmixlnx0675:8091/vm_visualstore_adm/br/com/visualmix/generico/acesso/jsplogin/Event.jsp\n\nCENTRAL -  https://srvmixctr-prod.br-atacadao.corp/vm_visualstore_adm/br/com/visualmix/generico/acesso/jsplogin/Event.jsp\n\nOP. FRENTE DE CAIXA -  https://gestaofcx.br-atacadao.corp/\n\nTudo sobre usuarios é feito no Link CENTRAL\n\n\ncadastro:\n\ncriar no ad, trocar a senha, entrar no pc, ira aparecer no portal central.\n\n- Senha nao pode começar com 0\n\n-conferir cargas de parametros, ir no link da loja\n\n\ncartao supervisor\n\n- Para trocar a senha de um cartao supervisor, precisara entrar com o login do lider ou sup da fcx\n\n- aparentemente todas as etapas de cadastro precisam de IMPORTAR OS PARAMETROS\n\nlink para consultar perfil dos colaboradores: https://usuarios-vmix.br-atacadao.corp/\n\nINICIO DA CONVERSAO DOS PDVS - SEGUNDA FEIRA \n\nEssa semana - CONVERSAO DE USUARIOS\n\n\nse errar na hora de formatar (IP, MASK, NOME DO PDV... ) irá ter de formatar tudo dnv\n\norientação: fazer 1 à 2 pdvs por dia, e assim vai ao decorrer da semana, e nao fazer ao mesmo tempo para nao impactar na operação, fazer 1 pela manha e outro a tarde...\n\netapa para pos formatação:\n\nConfigurar scanner (scanner de mao sera utilizado agora direto no pdv) \nConfigurar nota fiscal no pdv\nconfigurar tls e realizar testes de venda\n\n\n\n- [Assinar folhar de ponto]: .\n- [senha rub (salvo no notion)]: $aTaC#Wi-Fi@rUb!\n\n📋 Demandas Modificadas/Concluídas (8):\n- [Chamados] CHAMADO ESTORNO COM ERRO DA FCX (Status: pendente)\n- [Chamados] chamado ACESSO VISUAL MIX (Status: pendente)\n- [Chamados] chamado abraao armazenamento  (Status: concluido)\n- [DEMANDA] SINAL RUB (Status: pendente)\n- [DEMANDA] atualização portal Sergio (Status: em_andamento)\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: pendente)\n- [Chamados] Rub 29 (Status: pendente)\n",
+      "comentarioExtra": "meet sobre a visualmix todo explicado na aba de anotações, sinal de rubs, sem reclamações na parte da tarde, GAUCHO ME CHAMOU DE JOALEFE, rubs para testes amanha estao separados ao lado dos que estao carregando, chamados abertos so acompanhar msm, GTA VI muito bom.",
+      "descricao": "dboa :)",
+      "rubsDesvinculados": "yes",
+      "rubsBloqueados": "nobody",
+      "etiquetasRibbon": "yes",
+      "responsavel": "Joao Pedro ✋😔",
+      "modificadoEm": 1795048969780,
+      "horaRegistro": "21:39",
+      "criadoEm": 1795048969780
+    },
+    {
       "id": "auto_18112026_Intermediário",
       "titulo": "18/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
