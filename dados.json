@@ -1523,6 +1523,20 @@
   ],
   "plantao": [
     {
+      "id": "1795121979685",
+      "titulo": "19/11/2026 - Intermediário",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (19/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (8):\n- [DEMANDA] Formatar rub 09 (Status: concluido)\n- [Chamados] chamado ACESSO VISUAL MIX (Status: concluido)\n- [DEMANDA] criar acesso para:  (Status: em_andamento)\n- [DEMANDA] Att quadro de promovidos (Status: concluido)\n- [DEMANDA] SINAL RUB (Status: pendente)\n- [Chamados] Sinal Rub (Status: concluido)\n- [DEMANDA] formatar pdv P/ Black (Status: concluido)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joao Pedro ✋😔",
+      "modificadoEm": 1795121979686,
+      "horaRegistro": "17:59",
+      "criadoEm": 1795121979686
+    },
+    {
       "id": "auto_19112026_Intermediário",
       "titulo": "19/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
