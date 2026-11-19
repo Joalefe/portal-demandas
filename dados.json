@@ -50,11 +50,13 @@
       "titulo": "Meet 17/11",
       "mensagem": "tmj mano jota, boa sorte!\n\nhttps://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQjgzmZbXKGzVdglqKtrjnHZRpj",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1794948915114,
-      "modificadoEm": 1794948915114
+      "modificadoEm": 1795104405787
     },
     {
       "id": "1794926884945",
