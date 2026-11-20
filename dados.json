@@ -12,7 +12,7 @@
   "avisos": [
     {
       "id": "1795179559620",
-      "titulo": "Portal de resumo de perdas",
+      "titulo": "Portal de resumo de perdas (necessario att todo dia na abertura)",
       "mensagem": "Guia Rápido — Portal Resumo de Perdas\n\nImportar Relatório: Clique em + Importar SAEOI051 (ou arraste o arquivo SAEOI051.xlsx para a tela) e volte para a Home.\n\nLançar Inventário: Na Home, clique em Adicionar Manual, digite o valor no campo Valor do Inventário (informativo, não altera o total) e pressione Enter.\n\nBaixar Imagem: Confira os valores no card e clique em Baixar Imagem PNG no topo da tela.\n\nEnviar à Gerência: Anexe o arquivo .png baixado no WhatsApp ou e-mail da gerência.",
       "cor": "postit-yellow",
       "lidosPor": [
@@ -21,7 +21,7 @@
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1795179559620,
-      "modificadoEm": 1795179564274
+      "modificadoEm": 1795179588147
     },
     {
       "id": "1795028946283",
