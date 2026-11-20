@@ -1556,6 +1556,20 @@
   ],
   "plantao": [
     {
+      "id": "1795135555326",
+      "titulo": "19/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (19/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (11):\n- [DEMANDA] Portal Pre-venda (Status: pendente)\n- [DEMANDA] Logins novos para o sistema novo (Status: pendente)\n- [DEMANDA] Problema do pc com rede  (Status: pendente)\n- [DEMANDA] Formatar rub 09 (Status: concluido)\n- [Chamados] chamado ACESSO VISUAL MIX (Status: concluido)\n- [DEMANDA] criar acesso para:  (Status: em_andamento)\n- [DEMANDA] Att quadro de promovidos (Status: concluido)\n- [DEMANDA] SINAL RUB (Status: pendente)\n- [Chamados] Sinal Rub (Status: concluido)\n- [DEMANDA] formatar pdv P/ Black (Status: concluido)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n",
+      "comentarioExtra": "Bom dia!\nAmanhã darei continuidade aos usuários do visual mix, não precisa se preocupar por agora!\n\n",
+      "descricao": "ok",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "nenhum até o momento",
+      "etiquetasRibbon": "ok!",
+      "responsavel": "joalis",
+      "modificadoEm": 1795135555326,
+      "horaRegistro": "21:44",
+      "criadoEm": 1795135555326
+    },
+    {
       "id": "1795121979685",
       "titulo": "19/11/2026 - Intermediário",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (19/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (8):\n- [DEMANDA] Formatar rub 09 (Status: concluido)\n- [Chamados] chamado ACESSO VISUAL MIX (Status: concluido)\n- [DEMANDA] criar acesso para:  (Status: em_andamento)\n- [DEMANDA] Att quadro de promovidos (Status: concluido)\n- [DEMANDA] SINAL RUB (Status: pendente)\n- [Chamados] Sinal Rub (Status: concluido)\n- [DEMANDA] formatar pdv P/ Black (Status: concluido)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n",
