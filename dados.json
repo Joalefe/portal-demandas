@@ -15,11 +15,13 @@
       "titulo": "Backup das etiquetas",
       "mensagem": "Senhores(a) a partir de segunda feira o local do segundo Backup das etiquetas será alterado.\n\n/fs1/integra/balanca/etiq - será desativado.\n\nlocal  novo:srvsave675/fs1/save/files/cpd/etiquetas/",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1795259676103,
-      "modificadoEm": 1795259676103
+      "modificadoEm": 1795277951835
     },
     {
       "id": "1795179559620",
