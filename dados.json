@@ -1732,6 +1732,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_21112026_Intermediário",
+      "titulo": "21/11/2026 - Intermediário",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Intermediário (Prazo limite das 16:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "16:00",
+      "sistemaGerou": true,
+      "criadoEm": 1795299163367
+    },
+    {
       "id": "1795278029341",
       "titulo": "21/11/2026 - Manhã",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (21/11/2026) ===\n\n📌 Avisos Criados (1):\n- [Backup das etiquetas]: Senhores(a) a partir de segunda feira o local do segundo Backup das etiquetas será alterado.\n\n/fs1/integra/balanca/etiq - será desativado.\n\nlocal  novo:srvsave675/fs1/save/files/cpd/etiquetas/\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] problema com pc cpd02 (Status: pendente)\n- [DEMANDA] Configurar rubs (Status: pendente)\n- [DEMANDA] nf com erro (Status: pendente)\n- [DEMANDA] problema pc  (Status: pendente)\n",
