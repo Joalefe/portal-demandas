@@ -1605,6 +1605,20 @@
   ],
   "plantao": [
     {
+      "id": "1795221489104",
+      "titulo": "20/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (20/11/2026) ===\n\n📌 Avisos Criados (1):\n- [Portal de resumo de perdas (necessario att todo dia na abertura)]: Guia Rápido — Portal Resumo de Perdas\n\nImportar Relatório: Clique em + Importar SAEOI051 (ou arraste o arquivo SAEOI051.xlsx para a tela) e volte para a Home.\n\nLançar Inventário: Na Home, clique em Adicionar Manual, digite o valor no campo Valor do Inventário (informativo, não altera o total) e pressione Enter.\n\nBaixar Imagem: Confira os valores no card e clique em Baixar Imagem PNG no topo da tela.\n\nEnviar à Gerência: Anexe o arquivo .png baixado no WhatsApp ou e-mail da gerência.\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] Formatar rubs  (Status: pendente)\n- [Chamados] autenticador cartao (Status: concluido)\n- [DEMANDA] Self com erro (Status: pendente)\n- [DEMANDA] Portal Pre-venda (Status: concluido)\n",
+      "comentarioExtra": "Bom dia Jô!\nHoje só tivemos o cadastro das operadoras, dei um jeito de descobrir quais já subiram e quais ainda faltam, amanhã darei continuidade.\n",
+      "descricao": "Rub 31 - Thiciane não compareceu ao setor.",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "Rub 31 - Thiciane não entregue.",
+      "etiquetasRibbon": "ok.",
+      "responsavel": "joalis",
+      "modificadoEm": 1795221489104,
+      "horaRegistro": "21:33",
+      "criadoEm": 1795221489104
+    },
+    {
       "id": "auto_20112026_Intermediário",
       "titulo": "20/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
