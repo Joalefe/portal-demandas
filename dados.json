@@ -688,10 +688,14 @@
         {
           "texto": "TELA DANIFICADA, TOUCH NA PARTE SUPERIOR DIREITO NAO FUNCIONA",
           "data": 1795282088368
+        },
+        {
+          "texto": "https://atendimento.yepsolutions.com.br/front/ticket.form.php?id=7647",
+          "data": 1795283137358
         }
       ],
       "criadoEm": 1795278334468,
-      "modificadoEm": 1795282088368
+      "modificadoEm": 1795283137358
     },
     {
       "id": "1795278180124",
