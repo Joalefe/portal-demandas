@@ -692,10 +692,14 @@
         {
           "texto": "https://atendimento.yepsolutions.com.br/front/ticket.form.php?id=7647",
           "data": 1795283137358
+        },
+        {
+          "texto": "chamado aberto",
+          "data": 1795283141885
         }
       ],
       "criadoEm": 1795278334468,
-      "modificadoEm": 1795283137358
+      "modificadoEm": 1795283141885
     },
     {
       "id": "1795278180124",
