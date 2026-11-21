@@ -1626,7 +1626,7 @@
       "descricao1": "Conserto do rub, aguardando yeep trocar o CNPJ para continuarmos com o procedimento (mandar msg para 1196857-8264)",
       "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/QgrcJHsHlmlzstzLPMRSQgzDvmvDrzZWdsV",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [
         {
           "texto": "alteração solicitada\"!",
@@ -1645,7 +1645,7 @@
           "data": 1794652022244
         }
       ],
-      "modificadoEm": 1795029038920
+      "modificadoEm": 1795281884673
     },
     {
       "id": "1792493802528",
