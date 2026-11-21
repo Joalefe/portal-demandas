@@ -15,11 +15,13 @@
       "titulo": "imprimir etiquetas para refeitório ",
       "mensagem": "imprimir ",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "João Infomático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1795279429713,
-      "modificadoEm": 1795279429713
+      "modificadoEm": 1795279431386
     },
     {
       "id": "1795259676103",
