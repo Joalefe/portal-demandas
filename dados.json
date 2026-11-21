@@ -1029,7 +1029,7 @@
     {
       "id": "1794564119351",
       "titulo": "usuarios novos",
-      "descricao1": "* Juliana de Araújo 501024254 - ABC@2026\n* Antonio Barboza 501024711 - def@2026\n* Mirella Veras 501025011 - ABC@@2026\n* cibeli (AGURDAR PROM SUBIR)\n* mario (AGURDAR PROM SUBIR)",
+      "descricao1": "* Juliana de Araújo 501024254 - ABC@2026\n* Antonio Barboza 501024711 - def@2026\n* Mirella Veras 501025011 - ABC@@2026 Op - 232\n* cibeli (AGURDAR PROM SUBIR)\n* mario (AGURDAR PROM SUBIR)",
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "em_andamento",
@@ -1044,7 +1044,7 @@
         }
       ],
       "criadoEm": 1794564119351,
-      "modificadoEm": 1795285845387
+      "modificadoEm": 1795286446181
     },
     {
       "id": "1794525961576",
