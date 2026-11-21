@@ -11,6 +11,17 @@
   ],
   "avisos": [
     {
+      "id": "1795259676103",
+      "titulo": "Backup das etiquetas",
+      "mensagem": "Senhores(a) a partir de segunda feira o local do segundo Backup das etiquetas será alterado.\n\n/fs1/integra/balanca/etiq - será desativado.\n\nlocal  novo:srvsave675/fs1/save/files/cpd/etiquetas/",
+      "cor": "postit-yellow",
+      "lidosPor": [],
+      "respostas": [],
+      "arquivado": false,
+      "criadoEm": 1795259676103,
+      "modificadoEm": 1795259676103
+    },
+    {
       "id": "1795221512824",
       "titulo": "Rub não entregue",
       "mensagem": "20/11\nRub 31 - Thiciane não foi entregue",
