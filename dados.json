@@ -758,10 +758,10 @@
       "descricao1": "rub 17\nrub 19 (sinal esta caindo e nao esta voltando, apenas se reiniciar, nao é config)",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [],
       "criadoEm": 1795192074817,
-      "modificadoEm": 1795192074817
+      "modificadoEm": 1795282768865
     },
     {
       "id": "1795183387837",
