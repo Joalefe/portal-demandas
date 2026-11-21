@@ -1544,10 +1544,10 @@
       "descricao1": "Iremos organizar",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [],
       "criadoEm": 1792787963981,
-      "modificadoEm": 1795282006808
+      "modificadoEm": 1795282007926
     },
     {
       "id": "1792686083624",
