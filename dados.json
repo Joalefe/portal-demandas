@@ -665,6 +665,17 @@
   ],
   "demandas": [
     {
+      "id": "1795278180124",
+      "titulo": "qrcode hf",
+      "descricao1": "foi feito agora tem que ser colado na bancada (pode pedir para fazerem, mas acompanhem se de fato foi feito)\n\ntem uma lista com produtos, tem que manter conversando com a kimberly pra ver quais de fato precisa fazer. ",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1795278180124,
+      "modificadoEm": 1795278180124
+    },
+    {
       "id": "1795278013476",
       "titulo": "problema com pc cpd02",
       "descricao1": "nao esta ligando",
