@@ -781,9 +781,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "adaptador com problema, feito a troca porem sem sucesso. Iremos tentar mais algumas trataticas",
+          "data": 1795282726857
+        }
+      ],
       "criadoEm": 1795176674973,
-      "modificadoEm": 1795176674973
+      "modificadoEm": 1795282726857
     },
     {
       "id": "1795123979914",
