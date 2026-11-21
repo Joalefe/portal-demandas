@@ -665,6 +665,17 @@
   ],
   "demandas": [
     {
+      "id": "1795278334468",
+      "titulo": "rub 14 com problema",
+      "descricao1": "entender o problema e tratar",
+      "descricao2": ",.",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1795278334468,
+      "modificadoEm": 1795278334468
+    },
+    {
       "id": "1795278180124",
       "titulo": "qrcode hf",
       "descricao1": "foi feito agora tem que ser colado na bancada (pode pedir para fazerem, mas acompanhem se de fato foi feito)\n\ntem uma lista com produtos, tem que manter conversando com a kimberly pra ver quais de fato precisa fazer. ",
