@@ -957,7 +957,7 @@
       "descricao1": "A Zhaz enviou somente uma maquina para nós, ficando com a outra quebrada. \n\nSegundo os mesmos, irão postar a maquina ainda HOJE (17/11) e assim que tiverem o COD. de Rastreio, vao mandar para nós.",
       "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQjgghBzcfRDQnKqbSMSZzPTTdM",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "entregue",
@@ -965,7 +965,7 @@
         }
       ],
       "criadoEm": 1794918261348,
-      "modificadoEm": 1795283561773
+      "modificadoEm": 1795283564798
     },
     {
       "id": "1794679729120",
