@@ -780,7 +780,7 @@
       "descricao1": "favor verificar",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [
         {
           "texto": "adaptador com problema, feito a troca porem sem sucesso. Iremos tentar mais algumas trataticas",
@@ -788,7 +788,7 @@
         }
       ],
       "criadoEm": 1795176674973,
-      "modificadoEm": 1795282726857
+      "modificadoEm": 1795282728922
     },
     {
       "id": "1795123979914",
