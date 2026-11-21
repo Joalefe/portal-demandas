@@ -681,6 +681,17 @@
   ],
   "demandas": [
     {
+      "id": "1795299445872",
+      "titulo": "Encaminhar link do pre vendas para a gerencia. via chat, orienta salvar nos favoritos",
+      "descricao1": ".",
+      "descricao2": ".",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1795299445872,
+      "modificadoEm": 1795299445872
+    },
+    {
       "id": "1795278334468",
       "titulo": "rub 14 com problema",
       "descricao1": "entender o problema e tratar",
