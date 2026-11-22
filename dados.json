@@ -765,10 +765,14 @@
         {
           "texto": "QRCODES FEITOS, VERIFICANDO SE FOI POSTO",
           "data": 1795282172120
+        },
+        {
+          "texto": "verificar com a kimberly se é necessário mais qrcodes",
+          "data": 1795363022823
         }
       ],
       "criadoEm": 1795278180124,
-      "modificadoEm": 1795282172120
+      "modificadoEm": 1795363022823
     },
     {
       "id": "1795278013476",
