@@ -813,10 +813,14 @@
         {
           "texto": "adaptador com problema, feito a troca porem sem sucesso. Iremos tentar mais algumas trataticas",
           "data": 1795282726857
+        },
+        {
+          "texto": "foi posto vga, verificar possiveis falhas",
+          "data": 1795309212314
         }
       ],
       "criadoEm": 1795176674973,
-      "modificadoEm": 1795282728922
+      "modificadoEm": 1795309212314
     },
     {
       "id": "1795123979914",
