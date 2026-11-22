@@ -850,10 +850,14 @@
         {
           "texto": "foi posto vga, verificar possiveis falhas",
           "data": 1795309212314
+        },
+        {
+          "texto": "feito, chamado aberto relacionado a outra situação",
+          "data": 1795362103649
         }
       ],
       "criadoEm": 1795176674973,
-      "modificadoEm": 1795309212314
+      "modificadoEm": 1795362103649
     },
     {
       "id": "1795123979914",
