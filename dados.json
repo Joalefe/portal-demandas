@@ -1792,6 +1792,20 @@
   ],
   "plantao": [
     {
+      "id": "1795380923409",
+      "titulo": "22/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (22/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (6):\n- [Chamados] Chamado Monitor Self (Status: em_andamento)\n- [DEMANDA] nf com erros (Status: pendente)\n- [DEMANDA] qrcode hf (Status: pendente)\n- [DEMANDA] Self com erro (Status: concluido)\n- [DEMANDA] problema pc  (Status: pendente)\n- [DEMANDA] criar acesso para:  (Status: concluido)\n",
+      "comentarioExtra": "Bom dia Jota!\n\nNada demais por agora, só acompanhar os chamados e é isso.",
+      "descricao": "ok",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "ok!",
+      "etiquetasRibbon": "ok!",
+      "responsavel": "joalis",
+      "modificadoEm": 1795380923409,
+      "horaRegistro": "17:54",
+      "criadoEm": 1795380923409
+    },
+    {
       "id": "auto_22112026_Intermediário",
       "titulo": "22/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
