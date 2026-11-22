@@ -1792,6 +1792,20 @@
   ],
   "plantao": [
     {
+      "id": "1795366298621",
+      "titulo": "22/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (22/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (6):\n- [Chamados] Chamado Monitor Self (Status: em_andamento)\n- [DEMANDA] nf com erros (Status: pendente)\n- [DEMANDA] qrcode hf (Status: pendente)\n- [DEMANDA] Self com erro (Status: concluido)\n- [DEMANDA] problema pc  (Status: pendente)\n- [DEMANDA] criar acesso para:  (Status: concluido)\n",
+      "comentarioExtra": ",",
+      "descricao": ",",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "joalis",
+      "modificadoEm": 1795366298621,
+      "horaRegistro": "13:51",
+      "criadoEm": 1795366298621
+    },
+    {
       "id": "1795309525468",
       "titulo": "21/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (21/11/2026) ===\n\n📌 Avisos Criados (2):\n- [imprimir etiquetas para refeitório ]: imprimir \n- [Backup das etiquetas]: Senhores(a) a partir de segunda feira o local do segundo Backup das etiquetas será alterado.\n\n/fs1/integra/balanca/etiq - será desativado.\n\nlocal  novo:srvsave675/fs1/save/files/cpd/etiquetas/\n\n📋 Demandas Modificadas/Concluídas (21):\n- [DEMANDA] Encaminhar link do pre vendas para a gerencia. via chat, orienta salvar nos favoritos (Status: concluido)\n- [DEMANDA] rub 14 com problema (Status: pendente)\n- [DEMANDA] qrcode hf (Status: pendente)\n- [DEMANDA] problema com pc cpd02 (Status: pendente)\n- [DEMANDA] Configurar rubs (Status: pendente)\n- [DEMANDA] nf com erro (Status: concluido)\n- [DEMANDA] Formatar rubs  (Status: concluido)\n- [DEMANDA] Self com erro (Status: em_andamento)\n- [DEMANDA] problema pc  (Status: pendente)\n- [Chamados] CHAMADO ESTORNO COM ERRO DA FCX (Status: concluido)\n- [DEMANDA] Colocar cx empresa bk para operar (iremos testa-lo para a black) (Status: concluido)\n- [DEMANDA] SINAL RUB (Status: em_andamento)\n- [DEMANDA] MAQUINA ZHAZ (Status: concluido)\n- [DEMANDA] atualização portal Sergio (Status: em_andamento)\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: em_andamento)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: pendente)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] cabo adaptador pdv (Status: concluido)\n",
