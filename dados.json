@@ -884,8 +884,8 @@
     {
       "id": "1795123169711",
       "titulo": "problema pc ",
-      "descricao1": "retornou sem as devidas peças",
-      "descricao2": ".",
+      "descricao1": "retornou sem as devidas peças, email em anexo para verificação\n",
+      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#sent/KtbxLwgxBjbtVWvQVfQWKjrwXsdtZHRBKL",
       "categoria": "DEMANDA",
       "status": "pendente",
       "respostas": [
@@ -895,7 +895,7 @@
         }
       ],
       "criadoEm": 1795123169711,
-      "modificadoEm": 1795362149802
+      "modificadoEm": 1795362167827
     },
     {
       "id": "1795082644795",
