@@ -693,6 +693,17 @@
   ],
   "demandas": [
     {
+      "id": "1795344033477",
+      "titulo": "nf com erros",
+      "descricao1": "\n\n67279\t274 - REJEIÇÃO: CÓDIGO MUNICÍPIO DO DESTINATÁRIO INEXISTENTE\n\n67306\t274 - REJEIÇÃO: CÓDIGO MUNICÍPIO DO DESTINATÁRIO INEXISTENTE",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1795344033477,
+      "modificadoEm": 1795344033477
+    },
+    {
       "id": "1795299445872",
       "titulo": "Encaminhar link do pre vendas para a gerencia. via chat, orienta salvar nos favoritos",
       "descricao1": ".",
