@@ -698,7 +698,7 @@
       "descricao1": "\n\n67279\t274 - REJEIÇÃO: CÓDIGO MUNICÍPIO DO DESTINATÁRIO INEXISTENTE\n\n67306\t274 - REJEIÇÃO: CÓDIGO MUNICÍPIO DO DESTINATÁRIO INEXISTENTE",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "status 100",
@@ -706,7 +706,7 @@
         }
       ],
       "criadoEm": 1795344033477,
-      "modificadoEm": 1795432630103
+      "modificadoEm": 1795432631586
     },
     {
       "id": "1795299445872",
