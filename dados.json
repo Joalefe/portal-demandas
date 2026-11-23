@@ -1808,6 +1808,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_23112026_Manhã",
+      "titulo": "23/11/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1795453200628
+    },
+    {
       "id": "1795380923409",
       "titulo": "22/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (22/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (6):\n- [Chamados] Chamado Monitor Self (Status: em_andamento)\n- [DEMANDA] nf com erros (Status: pendente)\n- [DEMANDA] qrcode hf (Status: pendente)\n- [DEMANDA] Self com erro (Status: concluido)\n- [DEMANDA] problema pc  (Status: pendente)\n- [DEMANDA] criar acesso para:  (Status: concluido)\n",
