@@ -1156,7 +1156,7 @@
       "descricao1": "* Juliana de Araújo 501024254 - ABC@2026\n* Antonio Barboza 501024711 - def@2026\n* Mirella Veras 501025011 - ABC@@2026 Op - 232\n* cibeli (AGURDAR PROM SUBIR)\n* mario (AGURDAR PROM SUBIR)",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "Jobs Juliana, Mirella, antonio feitos",
@@ -1172,7 +1172,7 @@
         }
       ],
       "criadoEm": 1794564119351,
-      "modificadoEm": 1795470732627
+      "modificadoEm": 1795470735108
     },
     {
       "id": "1794525961576",
