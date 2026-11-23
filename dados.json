@@ -1808,6 +1808,20 @@
   ],
   "plantao": [
     {
+      "id": "1795455102599",
+      "titulo": "23/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (23/11/2026) ===\n\n📌 Avisos Criados (1):\n- [PENDRIVE MUSICAS ABRAAO]: ENTREGAR ATÉ SEXTA\n\n📋 Demandas Modificadas/Concluídas (2):\n- [DEMANDA] nf com erros (Status: concluido)\n- [DEMANDA] Configurar rubs (Status: concluido)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joao Pedro 😶‍🌫️😶‍🌫️",
+      "modificadoEm": 1795455102599,
+      "horaRegistro": "14:31",
+      "criadoEm": 1795455102599
+    },
+    {
       "id": "auto_23112026_Manhã",
       "titulo": "23/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
