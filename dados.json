@@ -47,10 +47,15 @@
         "Joalefe Performático",
         "Kaell Pragmático"
       ],
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "encontrado e operante",
+          "data": 1795564179751
+        }
+      ],
       "arquivado": false,
       "criadoEm": 1795512023082,
-      "modificadoEm": 1795564044103
+      "modificadoEm": 1795564179751
     },
     {
       "id": "1795442472636",
