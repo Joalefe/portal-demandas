@@ -856,7 +856,7 @@
       "descricao1": "foi feito agora tem que ser colado na bancada (pode pedir para fazerem, mas acompanhem se de fato foi feito)\n\ntem uma lista com produtos, tem que manter conversando com a kimberly pra ver quais de fato precisa fazer. ",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "QRCODES FEITOS, VERIFICANDO SE FOI POSTO",
@@ -868,7 +868,7 @@
         }
       ],
       "criadoEm": 1795278180124,
-      "modificadoEm": 1795363022823,
+      "modificadoEm": 1795537996622,
       "visualizadoEm": 1795537991157
     },
     {
