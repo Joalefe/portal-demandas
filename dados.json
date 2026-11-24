@@ -1913,6 +1913,20 @@
   ],
   "plantao": [
     {
+      "id": "1795538069167",
+      "titulo": "24/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/11/2026) ===\n\n📌 Avisos Criados (3):\n- [portal ofertao (caso precisem)]: https://drive.google.com/drive/folders/1e6-6bJrqaqTI2VAdBcXuFFLo090zWC4V\n- [prix]: Bem-vindo(a) à Cloud Prix, TOLEDO675.\n\nUtilize o e-mail: CPD_675@ATACADAO.COM.BR\nSua senha inicial é: -C2id@?L\n- [Inventariante esqueceu o rub]: favor conversar com o carlos a respeito disso. era o rub 23 e estava vinculado ao inventariante 2.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [Chamados] Chamado Monitor Self (Status: concluido)\n- [DEMANDA] qrcode hf (Status: concluido)\n- [DEMANDA] problema pc  (Status: pendente)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1795538069167,
+      "horaRegistro": "13:34",
+      "criadoEm": 1795538069167
+    },
+    {
       "id": "1795482421824",
       "titulo": "23/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (23/11/2026) ===\n\n📌 Avisos Criados (2):\n- [login FERNANDA PREVENÇÃO]: 1\n- [PENDRIVE MUSICAS ABRAAO]: ENTREGAR ATÉ SEXTA\n\n📋 Demandas Modificadas/Concluídas (7):\n- [DEMANDA] Login Fernanda Prevenção (Status: em_andamento)\n- [DEMANDA] lentidao saveweb (Status: em_andamento)\n- [DEMANDA] PDV VisuaMix (Status: em_andamento)\n- [DEMANDA] nf com erros (Status: concluido)\n- [DEMANDA] Configurar rubs (Status: concluido)\n- [DEMANDA] problema pc  (Status: pendente)\n- [DEMANDA] usuarios novos (Status: concluido)\n",
