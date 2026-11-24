@@ -741,6 +741,17 @@
   ],
   "demandas": [
     {
+      "id": "1795561787594",
+      "titulo": "Botão cancela off",
+      "descricao1": "https://stac.telematica.com.br/suporte/telematica/chamado/chamado-status?id=8w1i%2BNwAn%2F7Wo%2BQLAPu1mQ%3D%3D",
+      "descricao2": "",
+      "categoria": "Chamados",
+      "status": "em_andamento",
+      "respostas": [],
+      "criadoEm": 1795561787594,
+      "modificadoEm": 1795561787594
+    },
+    {
       "id": "1795554296094",
       "titulo": "OS 132425 - Retorno / Defeito (Máquina Queimada com Orçamento Aprovado)",
       "descricao1": "Número da OS: OS132425 Status: Manutenção feita e PC entregue. Número de Série: PE0AQMMQ Problemas relatados:\n\n• Erro de número de série inválido (Invalid Serial Number)\n• Bipes da placa-mãe\n• Parou de funcionar após alguns dias de uso",
