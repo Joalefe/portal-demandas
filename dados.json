@@ -41,11 +41,13 @@
       "titulo": "Inventariante esqueceu o rub",
       "mensagem": "favor conversar com o carlos a respeito disso. era o rub 23 e estava vinculado ao inventariante 2.",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [],
       "arquivado": false,
       "criadoEm": 1795512023082,
-      "modificadoEm": 1795512023082
+      "modificadoEm": 1795537954932
     },
     {
       "id": "1795457868434",
