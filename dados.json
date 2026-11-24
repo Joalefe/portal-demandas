@@ -222,26 +222,6 @@
       "modificadoEm": 1794758998226
     },
     {
-      "id": "1794659976789",
-      "titulo": "ajeitar portal de etiquetas",
-      "mensagem": "ETIQ cafeteria (DEITADA) esta com tamanho errado.",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [
-        {
-          "texto": "FEITO",
-          "data": 1794669030087
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1794659976789,
-      "modificadoEm": 1794674104153
-    },
-    {
       "id": "1794659033604",
       "titulo": "# Desbloquear saeou09 (CASO PRECISEM) (ANOTADO NO NOTION)",
       "mensagem": "\n\ndfrun exe saebu85 1 675 1\ndfrun exe saebu85 1 675 2",
@@ -270,21 +250,6 @@
       "arquivado": true,
       "criadoEm": 1794648358085,
       "modificadoEm": 1795119490025
-    },
-    {
-      "id": "1794647323812",
-      "titulo": "Nf com erro",
-      "mensagem": "resolvido",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1794647323812,
-      "modificadoEm": 1794674115448
     },
     {
       "id": "1794596744538",
@@ -317,432 +282,6 @@
       "arquivado": true,
       "criadoEm": 1794596744538,
       "modificadoEm": 1795104415788
-    },
-    {
-      "id": "1794531600354",
-      "titulo": "Rub 14 ",
-      "mensagem": "Rub 14 - Ruan não entregado",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Joalefe Performático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1794531600354,
-      "modificadoEm": 1794583520771
-    },
-    {
-      "id": "1794500717610",
-      "titulo": "mais vendidos (quantidade)",
-      "mensagem": "está na shell top.sh (finalizado)",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1794500717610,
-      "modificadoEm": 1794583541860
-    },
-    {
-      "id": "1794302050597",
-      "titulo": "portal dos cupons ",
-      "mensagem": "Não precisa por enquanto ser att diariamente.",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1794302050597,
-      "modificadoEm": 1794583545585
-    },
-    {
-      "id": "1794239506151",
-      "titulo": "login PAULO",
-      "mensagem": "Login do op Paulo esta inativo. Feita as tratativas padroes, mas sem sucesso. RH verificando ",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático"
-      ],
-      "respostas": [
-        {
-          "texto": "📋 Transformado em demanda",
-          "data": 1794302066694
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1794239506151,
-      "modificadoEm": 1794302066694
-    },
-    {
-      "id": "1794232900758",
-      "titulo": "TONER Black CUPECE",
-      "mensagem": "DEVOLVER",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [
-        {
-          "texto": "📋 Transformado em demanda",
-          "data": 1794302075881
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1794232900758,
-      "modificadoEm": 1794302075881
-    },
-    {
-      "id": "1794218218395",
-      "titulo": "srt35 vindo zipado",
-      "mensagem": "analises",
-      "cor": "postit-purple",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "iremos fazer um teste: vamos rodar a shell \"parateste.sh\" a noite 22:00, só iremos deixando rodando e ir embora, pois nao vai precisa mudar a data para o dia atual.",
-          "data": 1794398290523
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1794218218395,
-      "modificadoEm": 1794566270785
-    },
-    {
-      "id": "1794155756648",
-      "titulo": "situação PDV 1",
-      "mensagem": "Caso pegue uma situação parecida do erro que deu o PDV01, a minha tratativa foi: excluir e gerar um novo token pelo sitef web e logo em seguida configurar tls pelo menu tplinux e o pdv voltou a operar",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1794155756648,
-      "modificadoEm": 1794302097350
-    },
-    {
-      "id": "1794152490987",
-      "titulo": "Shell 15  mais vendidos",
-      "mensagem": "O shell que esta dentro da \"TOP.sh\" nao enviou o relatorio dos 15 mais vendidos hoje, caso problema persista, rode o shell \"joalefe.sh\", com isso o relatorio de 15 mais vendidos chegara nos emails, se acharem melhore, mesclem o shell dentro de outro shell, so dar um \"cd /fs1/save\" desce uma linha e escreve \" joalefe.sh\" escreva exatamente assim dentro da outra shel que queira fazer com que chame a \"joalefe.sh",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "shell no dia de hoje funcionou.",
-          "data": 1794302139630
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1794152490987,
-      "modificadoEm": 1794566273512
-    },
-    {
-      "id": "1794134406222",
-      "titulo": "limpar pasta SHELL",
-      "mensagem": "Igual fizemos com o DIR. Portal, criar uma pasta \"MORTO\" e alocar os shells que foram descontinuados, ou testes que nao sao mais uteis.",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1794134406222,
-      "modificadoEm": 1794583535338
-    },
-    {
-      "id": "1794134150415",
-      "titulo": "Atts da Abertura",
-      "mensagem": "Email com nova shell mostrando produtos mais vendidos, nao chegou automaticamente. \n\nabertura.sh 45 min rodando\n\nGERENCIAL sem problemas",
-      "cor": "postit-purple",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "hoje ja foi mais rapido, em media 25 min, acredito que o parametro errado estava impactando bastante",
-          "data": 1794218257632
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1794134150415,
-      "modificadoEm": 1794566281240
-    },
-    {
-      "id": "1794131245652",
-      "titulo": "Senha SITEF expirando ",
-      "mensagem": "Senha do sitef expira em 6 dias, trocar!",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1794131245652,
-      "modificadoEm": 1794302148206
-    },
-    {
-      "id": "1794065089359",
-      "titulo": "balanca 17",
-      "mensagem": "Balança dando erro de \"TECLA NAO ASSOCIADA\"",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1794065089359,
-      "modificadoEm": 1794566286385
-    },
-    {
-      "id": "1794047061272",
-      "titulo": "Rub para o sergio",
-      "mensagem": "reservar um rub ecommerce para o sergio",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "FEITO",
-          "data": 1794242397848
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1794047061272,
-      "modificadoEm": 1794242399031
-    },
-    {
-      "id": "1793986238243",
-      "titulo": "Buscapreço",
-      "mensagem": "Busca pintos com problema",
-      "cor": "postit-yellow",
-      "lidosPor": [],
-      "respostas": [
-        {
-          "texto": "📋 Transformado em demanda",
-          "data": 1794048041009
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793986238243,
-      "modificadoEm": 1794048041009
-    },
-    {
-      "id": "1793870610639",
-      "titulo": "gerencial funcionando qualquer novidade avisar aqui",
-      "mensagem": ".",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Joalefe Performático",
-        "Kaell Pragmático",
-        "João Infomático"
-      ],
-      "respostas": [
-        {
-          "texto": "operante !!",
-          "data": 1793957304509
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793870610639,
-      "modificadoEm": 1794068871898
-    },
-    {
-      "id": "1793741321947",
-      "titulo": "att do portal de demandas",
-      "mensagem": "- função de alerta caso uma demanda não tenha interação durante dois dias (para fazer que pare de alertar para demandas que estamos aguardando, clique na lupa e feche)\n- o chat vai mostrar em primeiro a ultima resposta.\n- local para bloquear rub, com alerta quando for para desbloquear.",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "Joalefe Performático",
-        "João Infomático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793741321947,
-      "modificadoEm": 1794131258315
-    },
-    {
-      "id": "1793723793879",
-      "titulo": "Colaboradores Novos ",
-      "mensagem": "Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  ",
-      "cor": "postit-yellow",
-      "lidosPor": [],
-      "respostas": [
-        {
-          "texto": "📋 Transformado em demanda",
-          "data": 1793724225760
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793723793879,
-      "modificadoEm": 1793724225760
-    },
-    {
-      "id": "1793720418216",
-      "titulo": "Office",
-      "mensagem": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWTnkwFsVSsWCnBPvWprHJcpn",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "João Infomático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793720418216,
-      "modificadoEm": 1793985783758
-    },
-    {
-      "id": "1793541807087",
-      "titulo": "senhas colaboradores",
-      "mensagem": "Atentar-se sempre ao trocar senhas de colaboradores, principalmente operadores de caixa e apoios, pois a senha tem que ser padrao (ABC ou def) pois os mesmos operam empresa e so tem essas letras la\n\nOP estava com senha \"Serraria@675'",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "Kaell Pragmático",
-        "Joalefe Performático",
-        "João Infomático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793541807087,
-      "modificadoEm": 1793985781725
-    },
-    {
-      "id": "1793537361392",
-      "titulo": "GERENCIAL BAMBA",
-      "mensagem": "analisar se a planilha gerencial ira funcionar normalmente amanha ",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Joalefe Performático",
-        "Kaell Pragmático"
-      ],
-      "respostas": [
-        {
-          "texto": "02/11: Gerencial atualizando normalmente!",
-          "data": 1793611288348
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793537361392,
-      "modificadoEm": 1793644633429
-    },
-    {
-      "id": "1793474036197",
-      "titulo": "colocar link do portal novo email ifood",
-      "mensagem": "https://srvsave675.br-atacadao.corp/ETIQUETAS/etiquetaxx.php",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1793474036197,
-      "modificadoEm": 1793611316668
-    },
-    {
-      "id": "1793384837980",
-      "titulo": "NF 62660  | 62605 ",
-      "mensagem": "observar relatorio de nf amanha para ver se vao continuar chegando as nfs, pois o chamado foi solucionado e elas tao constando com status 155",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "62660 status 100",
-          "data": 1794068989490
-        },
-        {
-          "texto": "62605 status 100",
-          "data": 1794069016745
-        },
-        {
-          "texto": "solucionado!",
-          "data": 1794069026266
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793384837980,
-      "modificadoEm": 1794069027354
-    },
-    {
-      "id": "1793353464364",
-      "titulo": "manoela bloq no rub",
-      "mensagem": "devolveu o rub possivelmente sem avisar que quebrou a coleira (favor confirmar) \n\nbloq até: 01/10",
-      "cor": "postit-blue",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [
-        {
-          "texto": "a mesma disse que pegou quebrada",
-          "data": 1793467265052
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793353464365,
-      "modificadoEm": 1793566682731
-    },
-    {
-      "id": "1793006031853",
-      "titulo": "silvio bloq no rub",
-      "mensagem": "até 01.11\n",
-      "cor": "postit-blue",
-      "lidosPor": [
-        "Joalefe Performático",
-        "Kaell Pragmático",
-        "João Infomático"
-      ],
-      "respostas": [
-        {
-          "texto": "BLOQUEADO, 7 dias",
-          "data": 1793012218269
-        },
-        {
-          "texto": "desbloqueado!",
-          "data": 1793611340916
-        }
-      ],
-      "arquivado": true,
-      "criadoEm": 1793006031853,
-      "modificadoEm": 1793644674973
     }
   ],
   "demandas": [
@@ -1377,17 +916,6 @@
       "modificadoEm": 1795104710830
     },
     {
-      "id": "1794498427921",
-      "titulo": "chamado estorno nao migrou para TPLWEB",
-      "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026111285004335",
-      "descricao2": "ACOMPANHAR",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1794498427921,
-      "modificadoEm": 1794651611390
-    },
-    {
       "id": "1794493706184",
       "titulo": "chamado VICTOR APROVADOR WORKSPACE",
       "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026111285003587",
@@ -1404,76 +932,6 @@
       "modificadoEm": 1794931263641
     },
     {
-      "id": "1794488119859",
-      "titulo": "loja sem cadastro",
-      "descricao1": "mudei o job da tatiane oliveira para aux. de cadastro. (vamos testar se ela consegue logar no caixa empresa, com o job de cadastro) ",
-      "descricao2": "fazer isso 13/11",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "atualizado JOB, verificar amanha",
-          "data": 1794583057682
-        }
-      ],
-      "criadoEm": 1794488119859,
-      "modificadoEm": 1794652784614
-    },
-    {
-      "id": "1794395356350",
-      "titulo": "script abertura",
-      "descricao1": "incluir valor de estoque",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "em processo",
-          "data": 1794583068610
-        }
-      ],
-      "criadoEm": 1794395356350,
-      "modificadoEm": 1794652788717
-    },
-    {
-      "id": "1794315082643",
-      "titulo": "chamado luara ",
-      "descricao1": "problema com o questionário externo",
-      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026111085001887",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1794315082643,
-      "modificadoEm": 1794395213951
-    },
-    {
-      "id": "1794302075871",
-      "titulo": "TONER Black CUPECE",
-      "descricao1": "DEVOLVER",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "feito",
-          "data": 1794322874741
-        }
-      ],
-      "criadoEm": 1794302075871,
-      "modificadoEm": 1794322876918
-    },
-    {
-      "id": "1794302066687",
-      "titulo": "login PAULO",
-      "descricao1": "Login do op Paulo esta inativo. Feita as tratativas padroes, mas sem sucesso. RH verificando ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1794302066687,
-      "modificadoEm": 1794494021410
-    },
-    {
       "id": "1794250681532",
       "titulo": "Usuário Milene Vitoria MOB2COM",
       "descricao1": "https://mail.google.com/mail/u/0/?ogbl#sent/QgrcJHrhxnRZlkWwjKSBXHwSjJqDKPMjQwl",
@@ -1484,283 +942,6 @@
       "criadoEm": 1794250681532,
       "modificadoEm": 1795281882254,
       "visualizadoEm": 1795511190282
-    },
-    {
-      "id": "1794231431345",
-      "titulo": "balança 17",
-      "descricao1": "balanca com teclado travado, impedindo que entre em modo menu!\n\nBAC balanca acionado.",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Bac marcou visita para terça.",
-          "data": 1794235544360
-        }
-      ],
-      "criadoEm": 1794231431345,
-      "modificadoEm": 1794586871627
-    },
-    {
-      "id": "1794095000284",
-      "titulo": "PDV 1 com problema",
-      "descricao1": "PDV 1 não está aceitando débito nem crédito, foi trocado maquininha, pdv de lugar e nada.\n\n",
-      "descricao2": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026110785004096",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1794095000284,
-      "modificadoEm": 1794242563548
-    },
-    {
-      "id": "1794066384052",
-      "titulo": "RUB 35",
-      "descricao1": "FORMATAR.\n\nAPP do MOB fica so aparecendo \"carregando..\" e nao sai disso. ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "feito",
-          "data": 1794073264759
-        }
-      ],
-      "criadoEm": 1794066384052,
-      "modificadoEm": 1794073266144
-    },
-    {
-      "id": "1794056438684",
-      "titulo": "estorno com erro 1095",
-      "descricao1": "estorno valor de 1412, erro 1095 \n\nNF:65006\n\nhttps://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026110785001884",
-      "descricao2": "",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "NOVO",
-          "data": 1794240501744
-        }
-      ],
-      "criadoEm": 1794056438684,
-      "modificadoEm": 1794394064190
-    },
-    {
-      "id": "1794048041003",
-      "titulo": "Buscapreço",
-      "descricao1": "Busca pintos com problema",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Iremos inciar essa demanda na quinta.",
-          "data": 1794235613224
-        },
-        {
-          "texto": "inico de missao hj as 13h30",
-          "data": 1794494036554
-        },
-        {
-          "texto": "solucionado",
-          "data": 1794593309759
-        }
-      ],
-      "criadoEm": 1794048041003,
-      "modificadoEm": 1794593311104
-    },
-    {
-      "id": "1793870100951",
-      "titulo": "cadastrar svd62 na abertura",
-      "descricao1": ".",
-      "descricao2": ".",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1793870100951,
-      "modificadoEm": 1793998160148
-    },
-    {
-      "id": "1793836984161",
-      "titulo": "Projeto victor",
-      "descricao1": "Meio autoexplicativo, trocar as infos da planilha pelas infos da nossa filial, não precisa aplicar o que não temos na filial, tipo iwof e paf, ao longo do tempo vamos vendo com o Victor sobre o que falta ser aplicado ",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQjggsZRPFTwcsghhrQwkDrLRXs",
-      "categoria": "Projetos",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "ok",
-          "data": 1793985867414
-        }
-      ],
-      "criadoEm": 1793836984161,
-      "modificadoEm": 1793985869022
-    },
-    {
-      "id": "1793803655835",
-      "titulo": "criação de acesso para lideres MOB2",
-      "descricao1": "solicitado via email\n\nhttps://mail.google.com/mail/u/0/?ogbl#drafts/FMfcgzQjggrQGVkdXlhwKsJVKrLDQSfr",
-      "descricao2": "falta: milene, alice e os dois novos lideres",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "email eviado para terceiros para inclusão",
-          "data": 1793822028151
-        },
-        {
-          "texto": "iremos aguardar segunda para solicitar via email o restantes dos lideres:",
-          "data": 1794047937728
-        },
-        {
-          "texto": "líderes com devido acesso.",
-          "data": 1794069075138
-        }
-      ],
-      "criadoEm": 1793803655835,
-      "modificadoEm": 1794069079082
-    },
-    {
-      "id": "1793741628639",
-      "titulo": "mob2com - victor",
-      "descricao1": "O victor inventou que precisa que os lideres tenham rubs com mob2com, o problema é que na teoria não tem como colocar os dois juntos. prazo de entrega até quinta-feira",
-      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQjggrQGVkdXlhwKsJVKrLDQSfr\n\nlink do email com informações incrivelmente úteis",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "que merda de prazo é essa",
-          "data": 1793741824578
-        },
-        {
-          "texto": "no link tem o usuário dos líderes vinculados, no mais, agora é seguir o que mais o victor pedir",
-          "data": 1793747371311
-        }
-      ],
-      "criadoEm": 1793741628639,
-      "modificadoEm": 1793806184971
-    },
-    {
-      "id": "1793724225750",
-      "titulo": "Colaboradores Novos ",
-      "descricao1": "Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  ",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "job aplicado para todos",
-          "data": 1793731709129
-        },
-        {
-          "texto": "perfis: ad, save, rub aplicados, aguardar subir amanhã",
-          "data": 1793731729313
-        }
-      ],
-      "criadoEm": 1793724225750,
-      "modificadoEm": 1794048004090
-    },
-    {
-      "id": "1793721069121",
-      "titulo": "Salva mensal ",
-      "descricao1": "Salva mensal ",
-      "descricao2": "Mandr evidência por email ",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "verificar no sudo a salva mensal",
-          "data": 1793726410938
-        },
-        {
-          "texto": "enviar via email",
-          "data": 1793726424762
-        },
-        {
-          "texto": "ok",
-          "data": 1793986001749
-        }
-      ],
-      "criadoEm": 1793721069121,
-      "modificadoEm": 1793986003414
-    },
-    {
-      "id": "1793720954626",
-      "titulo": "Pegar nota para denize ",
-      "descricao1": "Nota: 62378",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "enviada",
-          "data": 1793731049667
-        }
-      ],
-      "criadoEm": 1793720954626,
-      "modificadoEm": 1793731051284
-    },
-    {
-      "id": "1793700027083",
-      "titulo": "Portal de Etiquetas (para João)",
-      "descricao1": "- acompanhar o setor do eccomerce e verificar se esta dando certo. \n",
-      "descricao2": "",
-      "categoria": "Projetos",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "a todo vapor@",
-          "data": 1793806209531
-        }
-      ],
-      "criadoEm": 1793700027083,
-      "modificadoEm": 1793822044296
-    },
-    {
-      "id": "1793635385661",
-      "titulo": "numerar rubs",
-      "descricao1": "imprimir novos numeros para os rubs, pois os antigos tao ficando ilegiveis ja",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "foram adesivados a maioria, só completar",
-          "data": 1793736027783
-        }
-      ],
-      "criadoEm": 1793635385661,
-      "modificadoEm": 1794048007490
-    },
-    {
-      "id": "1793473737185",
-      "titulo": "Fazer arte dos aniversariantes ",
-      "descricao1": "‘",
-      "descricao2": "",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [],
-      "criadoEm": 1793473737185,
-      "modificadoEm": 1793555122072
-    },
-    {
-      "id": "1793379184141",
-      "titulo": "ABRIR CHAMADO PARA O BOTAO DO SELF",
-      "descricao1": "https://stac.telematica.com.br/chamado/chamado-status?id=S9bmRWJuawFYSAQMnVuDww%3D%3D",
-      "descricao2": "chamado aberto\n",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "direcionado para o técnico",
-          "data": 1793728859294
-        },
-        {
-          "texto": "solucionado.",
-          "data": 1793822005111
-        }
-      ],
-      "criadoEm": 1793379184141,
-      "modificadoEm": 1793822006904
     },
     {
       "id": "1793189565019",
@@ -1785,103 +966,6 @@
       ],
       "criadoEm": 1793189565019,
       "modificadoEm": 1794843308618
-    },
-    {
-      "id": "1793135450549",
-      "titulo": "Pre vendas (para kaell)",
-      "descricao1": "refazer pre-vendas formato portal \n",
-      "descricao2": "- add função para não ter conflito quando duas pessoas cadastrar um código de barras. \n- add função de: se o sistema não gerar o codigo de barras (devido não estar cadastrado) abrir janela para realizar o cadastro. \n- retirar botão de \"atualizar base\" ou deixar em outra aba. para tela inical ficar o mais limpo possivel.\n- deixar opção de cadastrar codigo de barras na tela inicial. \n- add função de procurar a empresa usando o CNPJ/ CPF \n- ao ser impresso precisa sair com as linhas, entre uma infromação  e outra. ]\n- usar a mesma base de dados do portal da fcx para um alimentar o outro. ",
-      "categoria": "Projetos",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "novas inf.",
-          "data": 1793698920201
-        },
-        {
-          "texto": "voltando ao projeto!",
-          "data": 1794050160426
-        },
-        {
-          "texto": "projeto finalizado, chegamos a fase de testes , por para rodar e pedir feedback",
-          "data": 1794066434296
-        },
-        {
-          "texto": "solucionado",
-          "data": 1794071685845
-        }
-      ],
-      "criadoEm": 1793135450549,
-      "modificadoEm": 1794071687182
-    },
-    {
-      "id": "1793048100590",
-      "titulo": "Email suspeito da daniela",
-      "descricao1": "https://csc.br-atacadao.corp/znuny/customer.pl?Action=CustomerTicketZoom;TicketNumber=2026102685008772",
-      "descricao2": "ela recebeu um email dizendo que houve uma troca de senhas, mas a mesma desconhece",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "chamado dado como aceito",
-          "data": 1793225681971
-        }
-      ],
-      "criadoEm": 1793048100590,
-      "modificadoEm": 1793985849934,
-      "visualizadoEm": 1793741329866
-    },
-    {
-      "id": "1792954373537",
-      "titulo": "Requerimento de Toner",
-      "descricao1": "Protocolo 20261025-8784957",
-      "descricao2": "toners requeridos: konica - preto, ciano, magenta e amarelo",
-      "categoria": "Chamados",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "rapazes, não consigo achar a possilga do link no portal tagsell",
-          "data": 1792954768099
-        },
-        {
-          "texto": "amarelo vai ser enviado quinzenalmente.",
-          "data": 1793034535315
-        },
-        {
-          "texto": "demais toners estão sob análise pela tecnoset",
-          "data": 1793034549771
-        },
-        {
-          "texto": "toner amarelo segundo tecnoset esta para vir, demais previstos para acabar dia 20/11",
-          "data": 1794064699097
-        },
-        {
-          "texto": "toner amarelo acabou, tecnoset cobrada. aguardando",
-          "data": 1794240495632
-        }
-      ],
-      "criadoEm": 1792954373537,
-      "modificadoEm": 1794651778795
-    },
-    {
-      "id": "1792791010367",
-      "titulo": "pc no almox",
-      "descricao1": "inserir chave office no pc que esta no almox",
-      "descricao2": ".",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "Chave: 8TDBX-FNXQ8-79GD3-KW6RF-K4TFP. Ainda nao colocada, pois Luara esta usando la desde cedo",
-          "data": 1793384411948
-        },
-        {
-          "texto": "JÁ ESTAVA ATIVO",
-          "data": 1794249124654
-        }
-      ],
-      "criadoEm": 1792791010367,
-      "modificadoEm": 1794249126070
     },
     {
       "id": "1792787963981",
@@ -1914,30 +998,6 @@
       ],
       "criadoEm": 1792686083624,
       "modificadoEm": 1794862488869
-    },
-    {
-      "id": "1792607555380",
-      "titulo": "Att planilha Dani ",
-      "descricao1": "Relatorio > Portal ADM> Razão Despesas\nFOCO PRINCIPAL: ROR\nIDEIAS: Portal (+1)\n*amanhã envio o email um arquivo .zip da versão 90% do portal*\nLink portal em teste: https://srvsave675.br-atacadao.corp/ROR/\n",
-      "descricao2": ".",
-      "categoria": "DEMANDA",
-      "status": "concluido",
-      "respostas": [
-        {
-          "texto": "TESTAR COM A DANI A QUESTAO DA %",
-          "data": 1793445533799
-        },
-        {
-          "texto": "planilha ja em posse da dani, segundo a mesma, a planilha ja da para a mesma utilizar, mas temos que verificar ainda",
-          "data": 1794064576641
-        },
-        {
-          "texto": "OK",
-          "data": 1794242477064
-        }
-      ],
-      "criadoEm": 1792607555380,
-      "modificadoEm": 1794494067112
     },
     {
       "id": "1792500901709",
@@ -2527,48 +1587,6 @@
       "criadoEm": 1794669156262
     },
     {
-      "id": "1794596269245",
-      "titulo": "13/11/2026 - Intermediário",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (13/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (7):\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [Chamados] Sinal Rub (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: pendente)\n- [DEMANDA] loja sem cadastro (Status: pendente)\n- [DEMANDA] script abertura (Status: pendente)\n- [Chamados] balança 17 (Status: concluido)\n- [DEMANDA] Buscapreço (Status: concluido)\n",
-      "comentarioExtra": "busca preço operante, chamados respondidos passados para os responsaveis, sinal rub aindaé uma igonita,porém a teoria mais aceita é de q a atualização c4m prejudicou a captagem de sinal",
-      "descricao": "missoes concluidas, CPD DESCANSAR 😊🤙",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joao Pedro 🤙",
-      "modificadoEm": 1794596269245,
-      "horaRegistro": "15:55",
-      "criadoEm": 1794596269245
-    },
-    {
-      "id": "1794586985333",
-      "titulo": "13/11/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (13/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (6):\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n- [Chamados] Sinal Rub (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: pendente)\n- [DEMANDA] loja sem cadastro (Status: pendente)\n- [DEMANDA] script abertura (Status: pendente)\n- [Chamados] balança 17 (Status: concluido)\n",
-      "comentarioExtra": ".",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1794586985333,
-      "horaRegistro": "13:23",
-      "criadoEm": 1794586985333
-    },
-    {
-      "id": "1794531808410",
-      "titulo": "12/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (12/11/2026) ===\n\n📌 Avisos Criados (2):\n- [Rub 14 ]: Rub 14 - Ruan não entregado\n- [mais vendidos (quantidade)]: está na shell top.sh (finalizado)\n\n📋 Demandas Modificadas/Concluídas (11):\n- [Chamados] Chamado RUB 06 (Status: em_andamento)\n- [DEMANDA] formatar pdv P/ Black (Status: pendente)\n- [Chamados] chamado estorno nao migrou para TPLWEB (Status: pendente)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: pendente)\n- [DEMANDA] loja sem cadastro (Status: pendente)\n- [DEMANDA] login PAULO (Status: concluido)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [DEMANDA] Tv (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: concluido)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "rub 14 sumido\nbalança 10 ta zoada, a opção c20 conforme a faq da prix5 não tem as config que precisamos, talvez eu esteja cabaando, mas n foi nem lascando",
-      "descricao": "okok",
-      "rubsDesvinculados": "ok!",
-      "rubsBloqueados": "rub 14 ta com vergonha de aparecer",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1794531808410,
-      "horaRegistro": "22:00",
-      "criadoEm": 1794531808410
-    },
-    {
       "id": "auto_12112026_Tarde",
       "titulo": "12/11/2026 - Tarde",
       "resumoAutomatico": "N/A",
@@ -2606,20 +1624,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1794502837452
-    },
-    {
-      "id": "1794443664261",
-      "titulo": "11/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (11/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] script abertura (Status: pendente)\n- [Chamados] chamado luara  (Status: concluido)\n- [Chamados] Chamado 2 de requerimento de toner (Status: pendente)\n- [Chamados] estorno com erro 1095 (Status: concluido)\n- [Chamados] maquina devolução (Status: em_andamento)\n",
-      "comentarioExtra": "tudo dboa ",
-      "descricao": "😎",
-      "rubsDesvinculados": "yep",
-      "rubsBloqueados": "até o momento, rub 4 desaparecido. USER: Eduardo",
-      "etiquetasRibbon": "yep",
-      "responsavel": "joao pedro 🫡",
-      "modificadoEm": 1794443664261,
-      "horaRegistro": "21:33",
-      "criadoEm": 1794443664261
     },
     {
       "id": "auto_11112026_Intermediário",
@@ -2661,20 +1665,6 @@
       "criadoEm": 1794358856413
     },
     {
-      "id": "1794351625076",
-      "titulo": "10/11/2026 - Intermediário",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (10/11/2026) ===\n\n📌 Avisos Criados (2):\n- [Busca preço (corredor de temperos)]: Problema provavelmente devido alguma coisa que foi feito no dia que estavamos testasdo. \n\ntem que subir no rack e verificar o ponto. \n- [portal dos cupons ]: Não precisa por enquanto ser att diariamente.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [Chamados] chamado luara  (Status: em_andamento)\n- [DEMANDA] TONER Black CUPECE (Status: concluido)\n- [DEMANDA] login PAULO (Status: pendente)\n",
-      "comentarioExtra": "nada de novo até então.",
-      "descricao": "ok",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joalis",
-      "modificadoEm": 1794351625076,
-      "horaRegistro": "19:59",
-      "criadoEm": 1794351625076
-    },
-    {
       "id": "auto_10112026_Intermediário",
       "titulo": "10/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
@@ -2699,20 +1689,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1794351587169
-    },
-    {
-      "id": "1794273579945",
-      "titulo": "09/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (09/11/2026) ===\n\n📌 Avisos Criados (3):\n- [login PAULO]: Login do op Paulo esta inativo. Feita as tratativas padroes, mas sem sucesso. RH verificando \n- [TONER Black CUPECE]: DEVOLVER\n- [srt35 vindo zipado]: analises\n\n📋 Demandas Modificadas/Concluídas (13):\n- [Chamados] Chamado 2 de requerimento de toner (Status: pendente)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: pendente)\n- [Chamados] balança 17 (Status: em_andamento)\n- [Chamados] PDV 1 com problema (Status: concluido)\n- [Chamados] estorno com erro 1095 (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] pc no almox (Status: concluido)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "só o toner mermo",
-      "descricao": "tudo ok de resto, so acompanhar",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "nenhum",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1794273579945,
-      "horaRegistro": "22:19",
-      "criadoEm": 1794273579945
     },
     {
       "id": "auto_09112026_Tarde",
@@ -2741,20 +1717,6 @@
       "criadoEm": 1794250844314
     },
     {
-      "id": "1794242147367",
-      "titulo": "09/11/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (09/11/2026) ===\n\n📌 Avisos Criados (3):\n- [login PAULO]: Login do op Paulo esta inativo. Feita as tratativas padroes, mas sem sucesso. RH verificando \n- [TONER Black CUPECE]: DEVOLVER\n- [srt35 vindo zipado]: analises\n\n📋 Demandas Modificadas/Concluídas (6):\n- [Chamados] balança 17 (Status: em_andamento)\n- [Chamados] estorno com erro 1095 (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [Chamados] Rub 29 (Status: em_andamento)\n",
-      "comentarioExtra": "balança com problema, passado para iniciar o checklist, zhaz confirmou que PC's. chegam nos proximos dias.",
-      "descricao": "🫡",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joao pedro 🫡",
-      "modificadoEm": 1794242147367,
-      "horaRegistro": "13:34",
-      "criadoEm": 1794242147367
-    },
-    {
       "id": "auto_08112026_Manhã",
       "titulo": "08/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
@@ -2766,20 +1728,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1794157258606
-    },
-    {
-      "id": "1794100200705",
-      "titulo": "07/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (07/11/2026) ===\n\n📌 Avisos Criados (2):\n- [balanca 17]: Balança dando erro de \"TECLA NAO ASSOCIADA\"\n- [Rub para o sergio]: reservar um rub ecommerce para o sergio\n\n📋 Demandas Modificadas/Concluídas (15):\n- [Chamados] PDV 1 com problema (Status: pendente)\n- [DEMANDA] RUB 35 (Status: concluido)\n- [Chamados] estorno com erro 1095 (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [Chamados] criação de acesso para lideres MOB2 (Status: concluido)\n- [DEMANDA] Colaboradores Novos  (Status: concluido)\n- [DEMANDA] numerar rubs (Status: concluido)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Projetos] Pre vendas (para kaell) (Status: concluido)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "olá amigos! nada novo além do pdv01. ",
-      "descricao": "ok!",
-      "rubsDesvinculados": "ok!",
-      "rubsBloqueados": "ok!",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1794100200705,
-      "horaRegistro": "22:09",
-      "criadoEm": 1794100200705
     },
     {
       "id": "auto_07112026_Tarde",
@@ -2795,20 +1743,6 @@
       "criadoEm": 1794100158277
     },
     {
-      "id": "1794076993658",
-      "titulo": "07/11/2026 - Intermediário",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (07/11/2026) ===\n\n📌 Avisos Criados (2):\n- [balanca 17]: Balança dando erro de \"TECLA NAO ASSOCIADA\"\n- [Rub para o sergio]: reservar um rub ecommerce para o sergio\n\n📋 Demandas Modificadas/Concluídas (14):\n- [DEMANDA] RUB 35 (Status: concluido)\n- [Chamados] estorno com erro 1095 (Status: pendente)\n- [DEMANDA] Buscapreço (Status: pendente)\n- [Chamados] criação de acesso para lideres MOB2 (Status: concluido)\n- [DEMANDA] Colaboradores Novos  (Status: concluido)\n- [DEMANDA] numerar rubs (Status: concluido)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Projetos] Pre vendas (para kaell) (Status: concluido)\n- [Chamados] maquina devolução (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: em_andamento)\n- [DEMANDA] Att planilha Dani  (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: pendente)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: pendente)\n",
-      "comentarioExtra": "portal de prevenda finalizado, relatorio ja vinculado para chegar todos os dias e atualizar a planilha.\n\nchamados abertos, ainda como novo.\n\n😊",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joao Pedro 🤙",
-      "modificadoEm": 1794076993658,
-      "horaRegistro": "15:37",
-      "criadoEm": 1794076993658
-    },
-    {
       "id": "auto_07112026_Manhã",
       "titulo": "07/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
@@ -2820,20 +1754,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1794070835181
-    },
-    {
-      "id": "1794012023885",
-      "titulo": "06/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (06/11/2026) ===\n\n📌 Avisos Criados (1):\n- [Buscapreço]: Busca pintos com problema\n\n📋 Demandas Modificadas/Concluídas (4):\n- [DEMANDA] cadastrar svd62 na abertura (Status: concluido)\n- [Projetos] Projeto victor (Status: concluido)\n- [DEMANDA] Salva mensal  (Status: concluido)\n- [Chamados] Email suspeito da daniela (Status: concluido)\n",
-      "comentarioExtra": "olá amigos, nada de novidade por enquanto, tenham uma ótima abertura",
-      "descricao": "Será um lugar frio, escuro e muito gentil. E um dia, será um bom lar para alguém.  \n- O Pintor",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "só sobrou o da galera da noite",
-      "etiquetasRibbon": "okok",
-      "responsavel": "joalis",
-      "modificadoEm": 1794012023885,
-      "horaRegistro": "21:37",
-      "criadoEm": 1794012023885
     },
     {
       "id": "auto_06112026_Intermediário",
@@ -2862,20 +1782,6 @@
       "criadoEm": 1793984413879
     },
     {
-      "id": "1793924087483",
-      "titulo": "05/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (05/11/2026) ===\n\n📌 Avisos Criados (1):\n- [gerencial bamba funcionando a dois dias ]: .\n\n📋 Demandas Modificadas/Concluídas (2):\n- [DEMANDA] cadastrar svd62 na abertura (Status: pendente)\n- [Chamados] maquina devolução (Status: em_andamento)\n",
-      "comentarioExtra": "Bom dia pessoal!\nDe começo já peço perdão, não deu tempo de fazer qusse nenhuma demanda nossa de hoje, teve demasiados trabalhos a fazer (por incrível que pareça)",
-      "descricao": "o b.o todo vai se resumir no visualmix, abri uma pasta com os principais links, creio que vão explicar novamente no meet amanhã, mas caso não, no \"base de conhecimento\" tem TUDO bem explicadinho! \n\nno meet, não deixem de perguntar sobre o erro que está dando na hora de formatar o pc, quebrei a cabeça tentando dar um jeito lá e nada. \n\npeço perdão se tiver esquecido algo, boa abertura guys!",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "nenhum",
-      "etiquetasRibbon": "okok",
-      "responsavel": "joalis",
-      "modificadoEm": 1793924087483,
-      "horaRegistro": "21:09",
-      "criadoEm": 1793924087483
-    },
-    {
       "id": "auto_05112026_Intermediário",
       "titulo": "05/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
@@ -2900,34 +1806,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1793902896845
-    },
-    {
-      "id": "1793840336368",
-      "titulo": "04/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (04/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (5):\n- [Projetos] Projeto victor (Status: em_andamento)\n- [Chamados] criação de acesso para lideres MOB2 (Status: em_andamento)\n- [DEMANDA] mob2com - victor (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: concluido)\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: concluido)\n",
-      "comentarioExtra": "portal pré venda ainda em manutencion (gastei os token tudo)\natenção no projeto victor\natenção no chat com a 821, eles tem um tagsell melhorado, vamos testar pra ver se é bom mesmo!",
-      "descricao": "no mais ta tudo ok",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "rub maycon não foi encontrado",
-      "etiquetasRibbon": "ok",
-      "responsavel": "joalis",
-      "modificadoEm": 1793840336368,
-      "horaRegistro": "21:57",
-      "criadoEm": 1793840336368
-    },
-    {
-      "id": "1793819354315",
-      "titulo": "04/11/2026 - Intermediário",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (04/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [Chamados] criação de acesso para lideres MOB2 (Status: em_andamento)\n- [DEMANDA] mob2com - victor (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: em_andamento)\n",
-      "comentarioExtra": "Portal pre venda 90%, falta somente linkar o banco de dados para ficar parelho ao do portal da fcx",
-      "descricao": "✋😔",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joao Pedro 🤙",
-      "modificadoEm": 1793819354315,
-      "horaRegistro": "16:07",
-      "criadoEm": 1793819354315
     },
     {
       "id": "auto_04112026_Intermediário",
@@ -2956,34 +1834,6 @@
       "criadoEm": 1793811612885
     },
     {
-      "id": "1793811500411",
-      "titulo": "04/11/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (04/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (3):\n- [Chamados] criação de acesso para lideres MOB2 (Status: em_andamento)\n- [DEMANDA] mob2com - victor (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: em_andamento)\n",
-      "comentarioExtra": ".",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1793811500411,
-      "horaRegistro": "13:58",
-      "criadoEm": 1793811500411
-    },
-    {
-      "id": "1793754397043",
-      "titulo": "03/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (03/11/2026) ===\n\n📌 Avisos Criados (3):\n- [att do portal de demandas]: - função de alerta caso uma demanda não tenha interação durante dois dias (para fazer que pare de alertar para demandas que estamos aguardando, clique na lupa e feche)\n- o chat vai mostrar em primeiro a ultima resposta.\n- local para bloquear rub, com alerta quando for para desbloquear.\n- [Colaboradores Novos ]: Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  \n- [Office]: https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWTnkwFsVSsWCnBPvWprHJcpn\n\n📋 Demandas Modificadas/Concluídas (8):\n- [DEMANDA] mob2com - victor (Status: pendente)\n- [DEMANDA] Colaboradores Novos  (Status: pendente)\n- [DEMANDA] Salva mensal  (Status: pendente)\n- [DEMANDA] Pegar nota para denize  (Status: concluido)\n- [Projetos] Portal de Etiquetas (para João) (Status: em_andamento)\n- [DEMANDA] numerar rubs (Status: pendente)\n- [Chamados] ABRIR CHAMADO PARA O BOTAO DO SELF (Status: pendente)\n- [Projetos] Pre vendas (para kaell) (Status: em_andamento)\n",
-      "comentarioExtra": "dar continuidade no projeto do victor, agora é só aguardar pra saber oq ele vai fazer mesmo, os usuários dos lideres que ele requeriu estão funcionando conforme foi testado.",
-      "descricao": "no mais, tudo ok!\nresenhax no clubex",
-      "rubsDesvinculados": "ok!",
-      "rubsBloqueados": "ok!",
-      "etiquetasRibbon": "100%",
-      "responsavel": "joalis",
-      "modificadoEm": 1793754397043,
-      "horaRegistro": "22:05",
-      "criadoEm": 1793754397043
-    },
-    {
       "id": "auto_03112026_Tarde",
       "titulo": "03/11/2026 - Tarde",
       "resumoAutomatico": "N/A",
@@ -3010,20 +1860,6 @@
       "criadoEm": 1793732410082
     },
     {
-      "id": "1793726379578",
-      "titulo": "03/11/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (03/11/2026) ===\n\n📌 Avisos Criados (2):\n- [Colaboradores Novos ]: Lucileia de Souza - op de caixa \n\nveronica conceicao - op caixa\n\nRodrigo jorge - conferente \n\nJuliana de Araújo - prevençao  \n- [Office]: https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQhWTnkwFsVSsWCnBPvWprHJcpn\n\n📋 Demandas Modificadas/Concluídas (5):\n- [DEMANDA] Colaboradores Novos  (Status: pendente)\n- [DEMANDA] Salva mensal  (Status: pendente)\n- [DEMANDA] Pegar nota para denize  (Status: pendente)\n- [DEMANDA] Portal de Etiquetas (para João) (Status: em_andamento)\n- [DEMANDA] Pre vendas (para kaell) (Status: em_andamento)\n",
-      "comentarioExtra": ".",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joalis",
-      "modificadoEm": 1793726379578,
-      "horaRegistro": "14:19",
-      "criadoEm": 1793726379578
-    },
-    {
       "id": "auto_03112026_Manhã",
       "titulo": "03/11/2026 - Manhã",
       "resumoAutomatico": "N/A",
@@ -3035,20 +1871,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1793725225066
-    },
-    {
-      "id": "1793663751703",
-      "titulo": "02/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (02/11/2026) ===\n\n📌 Avisos Criados (1):\n- [Bloqueio Líder Rodrigo]: Bloqueio por 1 dia. Devolução de rub sem corda\n\n📋 Demandas Modificadas/Concluídas (2):\n- [DEMANDA] numerar rubs (Status: pendente)\n- [DEMANDA] Pre vendas (para kaell) (Status: em_andamento)\n",
-      "comentarioExtra": "Samantha pediu pra imprimir umas coisas do canva, deixei salva pra entregar amanhã",
-      "descricao": "ok",
-      "rubsDesvinculados": "ok!",
-      "rubsBloqueados": "Rub 10 - maycon não foi entregue",
-      "etiquetasRibbon": "ok!",
-      "responsavel": "joalis",
-      "modificadoEm": 1793663751703,
-      "horaRegistro": "20:54",
-      "criadoEm": 1793663751703
     },
     {
       "id": "auto_02112026_Intermediário",
@@ -3101,20 +1923,6 @@
       "horaRegistro": "16:00",
       "sistemaGerou": true,
       "criadoEm": 1793559643898
-    },
-    {
-      "id": "1793556030614",
-      "titulo": "01/11/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (01/11/2026) ===\n\n📌 Avisos Criados (2):\n- [senhas colaboradores]: Atentar-se sempre ao trocar senhas de colaboradores, principalmente operadores de caixa e apoios, pois a senha tem que ser padrao (ABC ou def) pois os mesmos operam empresa e so tem essas letras la\n\nOP estava com senha \"Serraria@675'\n- [GERENCIAL BAMBA]: analisar se a planilha gerencial ira funcionar normalmente amanha \n\n📋 Demandas Modificadas/Concluídas (1):\n- [DEMANDA] Fazer arte dos aniversariantes  (Status: concluido)\n",
-      "comentarioExtra": "domingo paz, fitas trocadas, rubs desvinculados e portal do ifood operando!",
-      "descricao": "😎",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joao pedro 🫡",
-      "modificadoEm": 1793556030614,
-      "horaRegistro": "14:59",
-      "criadoEm": 1793556030614
     },
     {
       "id": "auto_01112026_Manhã",
