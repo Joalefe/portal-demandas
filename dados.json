@@ -26,7 +26,9 @@
       "titulo": "PENDRIVE MUSICAS ABRAAO",
       "mensagem": "ENTREGAR ATÉ SEXTA",
       "cor": "postit-yellow",
-      "lidosPor": [],
+      "lidosPor": [
+        "Joalefe Performático"
+      ],
       "respostas": [
         {
           "texto": "Joalefe não consegue ajudar;",
@@ -35,7 +37,7 @@
       ],
       "arquivado": false,
       "criadoEm": 1795442472636,
-      "modificadoEm": 1795511074354
+      "modificadoEm": 1795511075865
     },
     {
       "id": "1795279429713",
