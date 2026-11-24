@@ -811,7 +811,7 @@
       "descricao1": "Abrir chamado para a telemática, botão com problema ",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "feito",
@@ -819,7 +819,7 @@
         }
       ],
       "criadoEm": 1795541335710,
-      "modificadoEm": 1795561811105
+      "modificadoEm": 1795561812817
     },
     {
       "id": "1795539192613",
