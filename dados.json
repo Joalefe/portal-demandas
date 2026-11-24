@@ -822,9 +822,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "em_andamento",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "Iremos retomar apenas depois da black.",
+          "data": 1795552368462
+        }
+      ],
       "criadoEm": 1795455204320,
-      "modificadoEm": 1795455204320
+      "modificadoEm": 1795552368462
     },
     {
       "id": "1795358974716",
