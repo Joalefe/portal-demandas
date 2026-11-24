@@ -741,6 +741,17 @@
   ],
   "demandas": [
     {
+      "id": "1795539192613",
+      "titulo": "Formatar PDV ",
+      "descricao1": "formatar o pdv que esta com o visual mix",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1795539192613,
+      "modificadoEm": 1795539192613
+    },
+    {
       "id": "1795466899506",
       "titulo": "Login Fernanda Prevenção",
       "descricao1": "Fernanda Martins Fontes",
