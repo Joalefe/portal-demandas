@@ -991,14 +991,9 @@
       "descricao2": "https://mail.google.com/mail/u/0/?ogbl#sent/KtbxLwgxBjbtVWvQVfQWKjrwXsdtZHRBKL",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [
-        {
-          "texto": "zhaz cobrada",
-          "data": 1795309226490
-        }
-      ],
+      "respostas": [],
       "criadoEm": 1795123169711,
-      "modificadoEm": 1795538041901
+      "modificadoEm": 1795538043733
     },
     {
       "id": "1795082644795",
