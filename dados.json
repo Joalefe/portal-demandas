@@ -1869,6 +1869,20 @@
   ],
   "plantao": [
     {
+      "id": "1795482421824",
+      "titulo": "23/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (23/11/2026) ===\n\n📌 Avisos Criados (2):\n- [login FERNANDA PREVENÇÃO]: 1\n- [PENDRIVE MUSICAS ABRAAO]: ENTREGAR ATÉ SEXTA\n\n📋 Demandas Modificadas/Concluídas (7):\n- [DEMANDA] Login Fernanda Prevenção (Status: em_andamento)\n- [DEMANDA] lentidao saveweb (Status: em_andamento)\n- [DEMANDA] PDV VisuaMix (Status: em_andamento)\n- [DEMANDA] nf com erros (Status: concluido)\n- [DEMANDA] Configurar rubs (Status: concluido)\n- [DEMANDA] problema pc  (Status: pendente)\n- [DEMANDA] usuarios novos (Status: concluido)\n",
+      "comentarioExtra": "Bom dia!\n\nNada demais hoje, apenas problemas resolvidos!",
+      "descricao": "tudo ok.",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "nenhum",
+      "etiquetasRibbon": "ok!\n",
+      "responsavel": "joalis",
+      "modificadoEm": 1795482421824,
+      "horaRegistro": "22:05",
+      "criadoEm": 1795482421824
+    },
+    {
       "id": "auto_23112026_Tarde",
       "titulo": "23/11/2026 - Tarde",
       "resumoAutomatico": "N/A",
