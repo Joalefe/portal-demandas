@@ -742,6 +742,17 @@
   ],
   "demandas": [
     {
+      "id": "1795564038251",
+      "titulo": "balança de piso com problema",
+      "descricao1": "tecnico acionado",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1795564038251,
+      "modificadoEm": 1795564038251
+    },
+    {
       "id": "1795561787594",
       "titulo": "Botão cancela off",
       "descricao1": "https://stac.telematica.com.br/suporte/telematica/chamado/chamado-status?id=8w1i%2BNwAn%2F7Wo%2BQLAPu1mQ%3D%3D",
