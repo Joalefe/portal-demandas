@@ -741,6 +741,17 @@
   ],
   "demandas": [
     {
+      "id": "1795553088604",
+      "titulo": "OS 132426 - Orçamento Não Aprovado (Máquina Queimada)",
+      "descricao1": "Número da OS: OS132426 Número de Série (n/s): PE0AQDGQ\nO PC retornou, mas sem a Memória RAM e o NVMe. As peças foram solicitadas novamente, porém apenas a Memória RAM retornou e o NVMe veio errado.",
+      "descricao2": "https://mail.google.com/mail/u/0/?ogbl#sent/KtbxLvgppFSKvVzwbrSbFDsZBhfsDCTqtL",
+      "categoria": "DEMANDA",
+      "status": "em_andamento",
+      "respostas": [],
+      "criadoEm": 1795553088604,
+      "modificadoEm": 1795553088604
+    },
+    {
       "id": "1795552212967",
       "titulo": "passar fita em todas as balanças ",
       "descricao1": "Passar fita nos cabos de conexao das balanças dos pdv (aquele cabo que costuma soltar)\nfazer entre 25, 26) ",
