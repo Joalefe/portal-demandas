@@ -741,6 +741,17 @@
   ],
   "demandas": [
     {
+      "id": "1795552212967",
+      "titulo": "passar fita em todas as balanças ",
+      "descricao1": "Passar fita nos cabos de conexao das balanças dos pdv (aquele cabo que costuma soltar)\nfazer entre 25, 26) ",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1795552212967,
+      "modificadoEm": 1795552212967
+    },
+    {
       "id": "1795541989227",
       "titulo": "Telas thiciane ",
       "descricao1": "Verifica se ela está com job de trocas mesmo. ",
