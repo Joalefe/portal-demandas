@@ -318,7 +318,7 @@
       "descricao1": "tecnico acionado",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "concertada",
@@ -326,7 +326,7 @@
         }
       ],
       "criadoEm": 1795564038251,
-      "modificadoEm": 1795634408680
+      "modificadoEm": 1795634411953
     },
     {
       "id": "1795561787594",
