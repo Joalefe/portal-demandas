@@ -959,9 +959,14 @@
       "descricao2": "add: milene, gustavo, cibeli e mario.",
       "categoria": "Chamados",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "usuarios criados, ja disponiveis no notion",
+          "data": 1795638416949
+        }
+      ],
       "criadoEm": 1794250681532,
-      "modificadoEm": 1795281882254,
+      "modificadoEm": 1795638416949,
       "visualizadoEm": 1795511190282
     },
     {
@@ -1130,7 +1135,7 @@
       "etiquetasRibbon": "N/A",
       "horaRegistro": "16:00",
       "sistemaGerou": true,
-      "criadoEm": 1795633208749
+      "criadoEm": 1795633200719
     },
     {
       "id": "1795624386533",
