@@ -240,6 +240,16 @@
 
     <!-- ABA 2: DEMANDAS -->
     <section id="tab-content-demandas" class="space-y-6 hidden">
+      <!-- Barra de pesquisa -->
+      <div class="relative">
+        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none">🔍</span>
+        <input type="text" id="busca-demandas" oninput="setBuscaDemandas(this.value)" autocomplete="off"
+          placeholder="Pesquisar por título, descrição, categoria ou respostas..."
+          class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-11 pr-10 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+        <button id="busca-demandas-limpar" type="button" onclick="limparBuscaDemandas()" title="Limpar pesquisa"
+          class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-sm">✕</button>
+      </div>
+
       <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
         <div class="flex items-center gap-3">
           <button id="demanda-subtab-ativas" onclick="switchDemandasSubtab('ativas')" class="text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30">
@@ -1114,6 +1124,31 @@
 
     // --- DEMANDAS ---
     let filtroTipo = 'todos';
+    let buscaDemandas = '';
+
+    const normalizarTexto = (t) => String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    function setBuscaDemandas(valor) {
+      buscaDemandas = valor || '';
+      const btn = document.getElementById('busca-demandas-limpar');
+      if (btn) btn.classList.toggle('hidden', !buscaDemandas);
+      renderDemandas();
+    }
+
+    function limparBuscaDemandas() {
+      const el = document.getElementById('busca-demandas');
+      if (el) { el.value = ''; el.focus(); }
+      setBuscaDemandas('');
+    }
+
+    function demandaCombinaComBusca(d) {
+      const termos = normalizarTexto(buscaDemandas).split(/\s+/).filter(Boolean);
+      if (!termos.length) return true;
+      const textoRespostas = (d.respostas || []).map(r => r.texto).join(' ');
+      const alvo = normalizarTexto([d.titulo, d.descricao1, d.descricao2, d.categoria, textoRespostas].join(' '));
+      return termos.every(t => alvo.includes(t));
+    }
+
     function setFiltroTipo(tipo) {
       filtroTipo = tipo;
       renderDemandas();
@@ -1133,6 +1168,7 @@
       const filterCat = document.getElementById('filter-demandas-categoria').value;
       let list = state.demandas || [];
       if (filterCat !== 'todas') list = list.filter(d => d.categoria === filterCat);
+      list = list.filter(demandaCombinaComBusca);
 
       const ativas = list.filter(d => d.status !== 'concluido');
       const concluidas = list.filter(d => d.status === 'concluido');
@@ -1223,8 +1259,8 @@
               ${itens.map(renderCardDemanda).join('') || `<p class="text-xs text-slate-500 col-span-full">${msgVazia}</p>`}
             </div>
           </div>`;
-        const colChamados = coluna('Chamados', '📞', lista.filter(ehChamado), 'bg-emerald-950/50 text-emerald-300 border-emerald-800/70', 'Nenhum chamado.', 'chamado');
-        const colDemandas = coluna('Demandas', '📋', lista.filter(d => !ehChamado(d)), 'bg-sky-950/50 text-sky-300 border-sky-800/70', 'Nenhuma demanda.', 'demanda');
+        const colChamados = coluna('Chamados', '📞', lista.filter(ehChamado), 'bg-emerald-950/50 text-emerald-300 border-emerald-800/70', (buscaDemandas ? 'Nenhum chamado encontrado para a pesquisa.' : 'Nenhum chamado.'), 'chamado');
+        const colDemandas = coluna('Demandas', '📋', lista.filter(d => !ehChamado(d)), 'bg-sky-950/50 text-sky-300 border-sky-800/70', (buscaDemandas ? 'Nenhuma demanda encontrada para a pesquisa.' : 'Nenhuma demanda.'), 'demanda');
         const cols = filtroTipo === 'chamado' ? colChamados : filtroTipo === 'demanda' ? colDemandas : colChamados + colDemandas;
         const gridCls = filtroTipo === 'todos' ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
         return `<div class="col-span-full grid grid-cols-1 ${gridCls} gap-8 items-start">` + cols + `</div>`;
