@@ -1104,6 +1104,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_24112026_Tarde",
+      "titulo": "24/11/2026 - Tarde",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Tarde (Prazo limite das 22:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "22:00",
+      "sistemaGerou": true,
+      "criadoEm": 1795568425023
+    },
+    {
       "id": "1795567929618",
       "titulo": "24/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (24/11/2026) ===\n\n📌 Avisos Criados (3):\n- [portal ofertao (caso precisem)]: https://drive.google.com/drive/folders/1e6-6bJrqaqTI2VAdBcXuFFLo090zWC4V\n- [prix]: Bem-vindo(a) à Cloud Prix, TOLEDO675.\n\nUtilize o e-mail: CPD_675@ATACADAO.COM.BR\nSua senha inicial é: -C2id@?L\n- [Inventariante esqueceu o rub]: favor conversar com o carlos a respeito disso. era o rub 23 e estava vinculado ao inventariante 2.\n\n📋 Demandas Modificadas/Concluídas (14):\n- [DEMANDA] balança de piso com problema (Status: pendente)\n- [Chamados] Botão cancela off (Status: em_andamento)\n- [DEMANDA] OS 132425 - Retorno / Defeito (Máquina Queimada com Orçamento Aprovado) (Status: em_andamento)\n- [DEMANDA] OS 132426 - Orçamento Não Aprovado (Máquina Queimada) (Status: em_andamento)\n- [DEMANDA] passar fita em todas as balanças  (Status: pendente)\n- [DEMANDA] Telas thiciane  (Status: concluido)\n- [DEMANDA] Botão cancela  (Status: concluido)\n- [DEMANDA] Formatar PDV  (Status: pendente)\n- [DEMANDA] Login Fernanda Prevenção (Status: concluido)\n- [DEMANDA] PDV VisuaMix (Status: em_andamento)\n- [Chamados] Chamado Monitor Self (Status: concluido)\n- [DEMANDA] qrcode hf (Status: concluido)\n- [DEMANDA] problema pc  (Status: concluido)\n- [DEMANDA] SINAL RUB (Status: em_andamento)\n",
