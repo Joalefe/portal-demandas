@@ -1141,12 +1141,27 @@
       setBuscaDemandas('');
     }
 
+    // Remove tudo que não é letra/número (espaços, hífens, pontos...), para "rub14" = "rub 14" = "rub-14"
+    const compactarTexto = (t) => normalizarTexto(t).replace(/[^a-z0-9]/g, '');
+
     function demandaCombinaComBusca(d) {
-      const termos = normalizarTexto(buscaDemandas).split(/\s+/).filter(Boolean);
-      if (!termos.length) return true;
+      const consulta = normalizarTexto(buscaDemandas).trim();
+      if (!consulta) return true;
       const textoRespostas = (d.respostas || []).map(r => r.texto).join(' ');
-      const alvo = normalizarTexto([d.titulo, d.descricao1, d.descricao2, d.categoria, textoRespostas].join(' '));
-      return termos.every(t => alvo.includes(t));
+      const bruto = [d.titulo, d.descricao1, d.descricao2, d.categoria, textoRespostas].join(' ');
+      const alvo = normalizarTexto(bruto);
+      const alvoCompacto = compactarTexto(bruto);
+
+      // 1) Busca exata por palavras (qualquer ordem)
+      const termos = consulta.split(/\s+/).filter(Boolean);
+      if (termos.every(t => alvo.includes(t))) return true;
+
+      // 2) Ignorando espaços e símbolos: "rub14" encontra "rub 14", "rub-14", "RUB_14"
+      const consultaCompacta = compactarTexto(consulta);
+      if (consultaCompacta && alvoCompacto.includes(consultaCompacta)) return true;
+
+      // 3) Cada palavra ignorando símbolos (ex.: "rub 14 sala" encontra "RUB14 ... sala")
+      return termos.every(t => { const c = compactarTexto(t); return !c || alvoCompacto.includes(c); });
     }
 
     function setFiltroTipo(tipo) {
