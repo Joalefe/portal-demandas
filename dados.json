@@ -1126,6 +1126,20 @@
   ],
   "plantao": [
     {
+      "id": "1795624386533",
+      "titulo": "25/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (25/11/2026) ===\n\n📌 Avisos Criados (0):\n- Nenhum aviso registrado hoje.\n\n📋 Demandas Modificadas/Concluídas (2):\n- [DEMANDA] caixa empresa na mesa da luara (Status: pendente)\n- [DEMANDA] Video Final de ANo (Status: pendente)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1795624386533,
+      "horaRegistro": "13:33",
+      "criadoEm": 1795624386533
+    },
+    {
       "id": "auto_24112026_Tarde",
       "titulo": "24/11/2026 - Tarde",
       "resumoAutomatico": "N/A",
