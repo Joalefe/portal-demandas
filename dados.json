@@ -216,21 +216,6 @@
       "modificadoEm": 1795119493121
     },
     {
-      "id": "1794669134340",
-      "titulo": "rub da Ruana foi achado",
-      "mensagem": ".",
-      "cor": "postit-yellow",
-      "lidosPor": [
-        "João Infomático",
-        "Kaell Pragmático",
-        "Joalefe Performático"
-      ],
-      "respostas": [],
-      "arquivado": true,
-      "criadoEm": 1794669134340,
-      "modificadoEm": 1794758998226
-    },
-    {
       "id": "1794659033604",
       "titulo": "# Desbloquear saeou09 (CASO PRECISEM) (ANOTADO NO NOTION)",
       "mensagem": "\n\ndfrun exe saebu85 1 675 1\ndfrun exe saebu85 1 675 2",
@@ -1624,62 +1609,6 @@
       "horaRegistro": "14:00",
       "sistemaGerou": true,
       "criadoEm": 1794848433788
-    },
-    {
-      "id": "1794759441635",
-      "titulo": "15/11/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (15/11/2026) ===\n\n📌 Avisos Criados (1):\n- [isv sergio]: * coluna de \"Última compra\" colocar filtro do menor para o maior \n\n📋 Demandas Modificadas/Concluídas (1):\n- [DEMANDA] Demanda sérgio (Status: em_andamento)\n",
-      "comentarioExtra": ".",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "joalis",
-      "modificadoEm": 1794759441635,
-      "horaRegistro": "13:17",
-      "criadoEm": 1794759441635
-    },
-    {
-      "id": "1794698856299",
-      "titulo": "14/11/2026 - Tarde",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (14/11/2026) ===\n\n📌 Avisos Criados (5):\n- [rub da Ruana foi achado]: .\n- [ajeitar portal de etiquetas]: ETIQ cafeteria (DEITADA) esta com tamanho errado.\n- [# Desbloquear saeou09 (CASO PRECISEM) (ANOTADO NO NOTION)]: \n\ndfrun exe saebu85 1 675 1\ndfrun exe saebu85 1 675 2\n- [script abertura]: foi add mais um relatorio o (sinoi67). todo dia tem que gerar ele pelo saveweb para alimentar o portal.\n- [Nf com erro]: resolvido\n\n📋 Demandas Modificadas/Concluídas (16):\n- [DEMANDA] atualização portal Sergio (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: em_andamento)\n- [DEMANDA] formatar pdv P/ Black (Status: pendente)\n- [Chamados] chamado estorno nao migrou para TPLWEB (Status: concluido)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: em_andamento)\n- [DEMANDA] loja sem cadastro (Status: concluido)\n- [DEMANDA] script abertura (Status: concluido)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: concluido)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA]  férias (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: em_andamento)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: em_andamento)\n- [DEMANDA] cabo adaptador pdv (Status: pendente)\n",
-      "comentarioExtra": "tudo ok!",
-      "descricao": "boa abertura",
-      "rubsDesvinculados": "ok",
-      "rubsBloqueados": "ok",
-      "etiquetasRibbon": "ok",
-      "responsavel": "joalis",
-      "modificadoEm": 1794698856300,
-      "horaRegistro": "20:27",
-      "criadoEm": 1794698856300
-    },
-    {
-      "id": "1794682394393",
-      "titulo": "14/11/2026 - Intermediário",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (14/11/2026) ===\n\n📌 Avisos Criados (5):\n- [rub da Ruana foi achado]: .\n- [ajeitar portal de etiquetas]: ETIQ cafeteria (DEITADA) esta com tamanho errado.\n- [# Desbloquear saeou09 (CASO PRECISEM) (ANOTADO NO NOTION)]: \n\ndfrun exe saebu85 1 675 1\ndfrun exe saebu85 1 675 2\n- [script abertura]: foi add mais um relatorio o (sinoi67). todo dia tem que gerar ele pelo saveweb para alimentar o portal.\n- [Nf com erro]: resolvido\n\n📋 Demandas Modificadas/Concluídas (16):\n- [DEMANDA] atualização portal Sergio (Status: em_andamento)\n- [DEMANDA] usuarios novos (Status: em_andamento)\n- [DEMANDA] formatar pdv P/ Black (Status: pendente)\n- [Chamados] chamado estorno nao migrou para TPLWEB (Status: concluido)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: em_andamento)\n- [DEMANDA] loja sem cadastro (Status: concluido)\n- [DEMANDA] script abertura (Status: concluido)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: concluido)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA]  férias (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: em_andamento)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: em_andamento)\n- [DEMANDA] cabo adaptador pdv (Status: pendente)\n",
-      "comentarioExtra": ".",
-      "descricao": "👌",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joao Pedro ✋😔",
-      "modificadoEm": 1794682394393,
-      "horaRegistro": "15:52",
-      "criadoEm": 1794682394393
-    },
-    {
-      "id": "1794669156262",
-      "titulo": "14/11/2026 - Manhã",
-      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (14/11/2026) ===\n\n📌 Avisos Criados (5):\n- [rub da Ruana foi achado]: .\n- [ajeitar portal de etiquetas]: ETIQ cafeteria (DEITADA) esta com tamanho errado.\n- [# Desbloquear saeou09 (CASO PRECISEM) (ANOTADO NO NOTION)]: \n\ndfrun exe saebu85 1 675 1\ndfrun exe saebu85 1 675 2\n- [script abertura]: foi add mais um relatorio o (sinoi67). todo dia tem que gerar ele pelo saveweb para alimentar o portal.\n- [Nf com erro]: resolvido\n\n📋 Demandas Modificadas/Concluídas (15):\n- [DEMANDA] usuarios novos (Status: em_andamento)\n- [DEMANDA] formatar pdv P/ Black (Status: pendente)\n- [Chamados] chamado estorno nao migrou para TPLWEB (Status: concluido)\n- [Chamados] chamado VICTOR APROVADOR WORKSPACE (Status: em_andamento)\n- [DEMANDA] loja sem cadastro (Status: concluido)\n- [DEMANDA] script abertura (Status: concluido)\n- [Chamados] Usuário Milene Vitoria MOB2COM (Status: em_andamento)\n- [DEMANDA] Tv (Status: em_andamento)\n- [Chamados] Requerimento de Toner (Status: concluido)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA]  férias (Status: em_andamento)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: em_andamento)\n- [Chamados] Rub 29 (Status: em_andamento)\n- [DEMANDA] zhaz maquina queimada (Status: em_andamento)\n- [DEMANDA] cabo adaptador pdv (Status: pendente)\n",
-      "comentarioExtra": "",
-      "descricao": ".",
-      "rubsDesvinculados": "N/A",
-      "rubsBloqueados": "N/A",
-      "etiquetasRibbon": "N/A",
-      "responsavel": "Joalefe",
-      "modificadoEm": 1794669156262,
-      "horaRegistro": "12:12",
-      "criadoEm": 1794669156262
     },
     {
       "id": "auto_12112026_Tarde",
