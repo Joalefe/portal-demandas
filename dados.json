@@ -67,7 +67,8 @@
       "cor": "postit-yellow",
       "lidosPor": [
         "Joalefe Performático",
-        "Kaell Pragmático"
+        "Kaell Pragmático",
+        "João Infomático"
       ],
       "respostas": [
         {
@@ -75,9 +76,9 @@
           "data": 1795511074354
         }
       ],
-      "arquivado": false,
+      "arquivado": true,
       "criadoEm": 1795442472636,
-      "modificadoEm": 1795564048295
+      "modificadoEm": 1795683861616
     },
     {
       "id": "1795279429713",
