@@ -286,9 +286,14 @@
       "descricao2": "",
       "categoria": "DEMANDA",
       "status": "pendente",
-      "respostas": [],
+      "respostas": [
+        {
+          "texto": "ao tentar vincular ao perfil de conferente de datas, aparece \"USUARIO SEM PERMISSÃO< ABRA CHMADO PARA SUPORTE RUB\", alterado o job position para ver se da para subir amanha",
+          "data": 1795692809057
+        }
+      ],
       "criadoEm": 1795691681444,
-      "modificadoEm": 1795691681444
+      "modificadoEm": 1795692809057
     },
     {
       "id": "1795687127067",
