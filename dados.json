@@ -17,12 +17,13 @@
       "cor": "postit-yellow",
       "lidosPor": [
         "Joalefe Performático",
-        "Kaell Pragmático"
+        "Kaell Pragmático",
+        "João Infomático"
       ],
       "respostas": [],
-      "arquivado": false,
+      "arquivado": true,
       "criadoEm": 1795527860140,
-      "modificadoEm": 1795564024079
+      "modificadoEm": 1795683853296
     },
     {
       "id": "1795523940637",
@@ -46,7 +47,8 @@
       "cor": "postit-yellow",
       "lidosPor": [
         "Joalefe Performático",
-        "Kaell Pragmático"
+        "Kaell Pragmático",
+        "João Infomático"
       ],
       "respostas": [
         {
@@ -54,9 +56,9 @@
           "data": 1795564179751
         }
       ],
-      "arquivado": false,
+      "arquivado": true,
       "criadoEm": 1795512023082,
-      "modificadoEm": 1795564179751
+      "modificadoEm": 1795683856696
     },
     {
       "id": "1795442472636",
