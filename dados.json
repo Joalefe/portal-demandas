@@ -886,7 +886,7 @@
       "descricao1": "Ele quer que a busca do portal também busque por marcas dos produtos, nao somente pela descrição do produto.\n\n+/- como no nosso portal de giro",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [
         {
           "texto": "ainda ajustando a função de evolução, numeros nao estao batendo.",
@@ -898,7 +898,7 @@
         }
       ],
       "criadoEm": 1794679729120,
-      "modificadoEm": 1795281991603,
+      "modificadoEm": 1795785995923,
       "visualizadoEm": 1795538014797
     },
     {
