@@ -475,7 +475,7 @@
       "descricao1": "Passar fita nos cabos de conexao das balanças dos pdv (aquele cabo que costuma soltar)\nfazer entre 25, 26) ",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "ok",
@@ -483,7 +483,7 @@
         }
       ],
       "criadoEm": 1795552212967,
-      "modificadoEm": 1795820374023
+      "modificadoEm": 1795820375528
     },
     {
       "id": "1795541989227",
