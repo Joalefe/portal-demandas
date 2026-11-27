@@ -499,7 +499,7 @@
       "descricao1": "PDV mesmo configurado certo, nao sobe para finalizar arquivos pra rodar.\n\nCesar Cavalcante disse que esta realizando algumas alterações nos servidores da VisualMIX pode ser que tenha a ver. \n\nANALISAR",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [
         {
           "texto": "Iremos retomar apenas depois da black.",
@@ -507,7 +507,7 @@
         }
       ],
       "criadoEm": 1795455204320,
-      "modificadoEm": 1795552368462
+      "modificadoEm": 1795785968312
     },
     {
       "id": "1795358974716",
