@@ -383,10 +383,10 @@
       "descricao1": "https://stac.telematica.com.br/suporte/telematica/chamado/chamado-status?id=8w1i%2BNwAn%2F7Wo%2BQLAPu1mQ%3D%3D",
       "descricao2": "",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [],
       "criadoEm": 1795561787594,
-      "modificadoEm": 1795786014478
+      "modificadoEm": 1795786015812
     },
     {
       "id": "1795554296094",
