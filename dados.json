@@ -1178,6 +1178,20 @@
   ],
   "plantao": [
     {
+      "id": "1795741335831",
+      "titulo": "26/11/2026 - Tarde",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (26/11/2026) ===\n\n📌 Avisos Criados (1):\n- [LOGINS PARA A BLACK]: para fazer com que outros cargos operem o pdv: \n\nLUCINEIDE: 0061 10203040 \n\n\n📋 Demandas Modificadas/Concluídas (7):\n- [DEMANDA] Taciane  (Status: em_andamento)\n- [DEMANDA] Som  (Status: pendente)\n- [Chamados] Escala CPD (Status: concluido)\n- [DEMANDA] pdv 1 (pin pad com problema) (Status: concluido)\n- [DEMANDA] caixa empresa na mesa da luara (Status: em_andamento)\n- [DEMANDA] problema com pc cpd02 (Status: concluido)\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n",
+      "comentarioExtra": "Bom dia!\n\nPdv 12 operante.\nNão consegui fazer mais nada hoje",
+      "descricao": "ok!",
+      "rubsDesvinculados": "ok",
+      "rubsBloqueados": "ok",
+      "etiquetasRibbon": "ok",
+      "responsavel": "joalis",
+      "modificadoEm": 1795741335831,
+      "horaRegistro": "22:01",
+      "criadoEm": 1795741335831
+    },
+    {
       "id": "auto_26112026_Tarde",
       "titulo": "26/11/2026 - Tarde",
       "resumoAutomatico": "N/A",
