@@ -394,10 +394,10 @@
       "descricao1": "Número da OS: OS132425 Status: Manutenção feita e PC entregue. Número de Série: PE0AQMMQ Problemas relatados:\n\n• Erro de número de série inválido (Invalid Serial Number)\n• Bipes da placa-mãe\n• Parou de funcionar após alguns dias de uso",
       "descricao2": "https://mail.google.com/mail/u/0/?ogbl#sent/QgrcJHrhvXLlNVlxqSXWNNLkDhsBlqfdwNG",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [],
       "criadoEm": 1795554296094,
-      "modificadoEm": 1795554296094
+      "modificadoEm": 1795785951995
     },
     {
       "id": "1795553088604",
