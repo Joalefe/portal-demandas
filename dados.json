@@ -1204,6 +1204,19 @@
   ],
   "plantao": [
     {
+      "id": "auto_27112026_Manhã",
+      "titulo": "27/11/2026 - Manhã",
+      "resumoAutomatico": "N/A",
+      "comentarioExtra": "Gerado automaticamente por falta de entrega.",
+      "descricao": "⚠️ PLANTAO NÃO ENTREGUE PELO TURNO: Manhã (Prazo limite das 14:00 expirado sem registro).",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "horaRegistro": "14:00",
+      "sistemaGerou": true,
+      "criadoEm": 1795798828659
+    },
+    {
       "id": "1795741335831",
       "titulo": "26/11/2026 - Tarde",
       "resumoAutomatico": "=== RESUMO AUTOMÁTICO (26/11/2026) ===\n\n📌 Avisos Criados (1):\n- [LOGINS PARA A BLACK]: para fazer com que outros cargos operem o pdv: \n\nLUCINEIDE: 0061 10203040 \n\n\n📋 Demandas Modificadas/Concluídas (7):\n- [DEMANDA] Taciane  (Status: em_andamento)\n- [DEMANDA] Som  (Status: pendente)\n- [Chamados] Escala CPD (Status: concluido)\n- [DEMANDA] pdv 1 (pin pad com problema) (Status: concluido)\n- [DEMANDA] caixa empresa na mesa da luara (Status: em_andamento)\n- [DEMANDA] problema com pc cpd02 (Status: concluido)\n- [DEMANDA] balança com problema de rede (Status: em_andamento)\n",
