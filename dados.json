@@ -1237,6 +1237,20 @@
   ],
   "plantao": [
     {
+      "id": "1795809180816",
+      "titulo": "27/11/2026 - Manhã",
+      "resumoAutomatico": "=== RESUMO AUTOMÁTICO (27/11/2026) ===\n\n📌 Avisos Criados (1):\n- [ASDAS]: CONTRA FILE NAO ENTRA DISCONTO DE 39.90\n\n\n📋 Demandas Modificadas/Concluídas (20):\n- [DEMANDA] Formatar rub 14 (Status: pendente)\n- [DEMANDA] Nota da DAni (Status: pendente)\n- [DEMANDA] Arrumar pre vendas (Status: pendente)\n- [DEMANDA] formsatar 14 (Status: concluido)\n- [DEMANDA] Taciane  (Status: concluido)\n- [DEMANDA] caixa empresa na mesa da luara (Status: concluido)\n- [DEMANDA] Video Final de ANo (Status: pendente)\n- [Chamados] Botão cancela off (Status: em_andamento)\n- [DEMANDA] OS 132425 - Retorno / Defeito (Máquina Queimada com Orçamento Aprovado) (Status: em_andamento)\n- [DEMANDA] OS 132426 - Orçamento Não Aprovado (Máquina Queimada) (Status: em_andamento)\n- [DEMANDA] Formatar PDV  (Status: concluido)\n- [DEMANDA] PDV VisuaMix (Status: pendente)\n- [Chamados] rub 14 com problema (Status: concluido)\n- [DEMANDA] Logins novos para o sistema novo (Status: em_andamento)\n- [DEMANDA] SINAL RUB (Status: em_andamento)\n- [DEMANDA] atualização portal Sergio (Status: pendente)\n- [DEMANDA] balança com problema de rede (Status: concluido)\n- [DEMANDA] Limpeza Banheiro (Status: pendente)\n- [DEMANDA] Cadastro de Forncecedor MAQUINA QUEIMADA (Status: em_andamento)\n- [Chamados] Rub 29 (Status: em_andamento)\n",
+      "comentarioExtra": ".",
+      "descricao": ".",
+      "rubsDesvinculados": "N/A",
+      "rubsBloqueados": "N/A",
+      "etiquetasRibbon": "N/A",
+      "responsavel": "Joalefe",
+      "modificadoEm": 1795809180816,
+      "horaRegistro": "16:52",
+      "criadoEm": 1795809180816
+    },
+    {
       "id": "auto_27112026_Intermediário",
       "titulo": "27/11/2026 - Intermediário",
       "resumoAutomatico": "N/A",
