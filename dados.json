@@ -841,7 +841,7 @@
       "descricao1": "IREMOS CONFIG TODOS OS RUB CONFORME MANDEI NO GRUPO, FAVOR IR SINALIZANDO OS FEITOS NO QUADRO.",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [
         {
           "texto": "5 rubs com configuração nova realizada, separados para testes amanha",
@@ -857,7 +857,7 @@
         }
       ],
       "criadoEm": 1794931426934,
-      "modificadoEm": 1795561977760,
+      "modificadoEm": 1795785976431,
       "visualizadoEm": 1795538007141
     },
     {
