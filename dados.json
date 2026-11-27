@@ -356,10 +356,10 @@
       "descricao1": "apenas para 10/12",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "pendente",
       "respostas": [],
       "criadoEm": 1795602588478,
-      "modificadoEm": 1795785946977
+      "modificadoEm": 1795785948954
     },
     {
       "id": "1795564038251",
