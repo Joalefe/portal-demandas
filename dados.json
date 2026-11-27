@@ -558,7 +558,7 @@
       "descricao1": "entender o problema e tratar",
       "descricao2": ",.",
       "categoria": "Chamados",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [
         {
           "texto": "TELA DANIFICADA, TOUCH NA PARTE SUPERIOR DIREITO NAO FUNCIONA",
@@ -574,7 +574,7 @@
         }
       ],
       "criadoEm": 1795278334468,
-      "modificadoEm": 1795641978497,
+      "modificadoEm": 1795786017765,
       "visualizadoEm": 1795537983454
     },
     {
