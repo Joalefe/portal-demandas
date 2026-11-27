@@ -907,7 +907,7 @@
       "descricao1": "passei para o tecnico",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "em_andamento",
+      "status": "concluido",
       "respostas": [
         {
           "texto": "aguardando respostas",
@@ -919,7 +919,7 @@
         }
       ],
       "criadoEm": 1794586898726,
-      "modificadoEm": 1795693439195,
+      "modificadoEm": 1795786001999,
       "visualizadoEm": 1795538011781
     },
     {
