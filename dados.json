@@ -340,10 +340,10 @@
       "descricao1": "algum pode funcionar",
       "descricao2": "",
       "categoria": "DEMANDA",
-      "status": "pendente",
+      "status": "em_andamento",
       "respostas": [],
       "criadoEm": 1795856478230,
-      "modificadoEm": 1795856478230
+      "modificadoEm": 1795865573923
     },
     {
       "id": "1795856386144",
