@@ -291,6 +291,17 @@
   ],
   "demandas": [
     {
+      "id": "1795856371600",
+      "titulo": "verificar ips e config das balaças",
+      "descricao1": "anotar aqui ip da balança, e o ip do mgv6 ",
+      "descricao2": "",
+      "categoria": "DEMANDA",
+      "status": "pendente",
+      "respostas": [],
+      "criadoEm": 1795856371600,
+      "modificadoEm": 1795856371600
+    },
+    {
       "id": "1795856279312",
       "titulo": "nf com erro",
       "descricao1": "68147\n\n234 - REJEIÇÃO: IE DO DESTINATARIO NÃO VINCULADA AO CNPJ",
